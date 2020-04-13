@@ -17,8 +17,12 @@ public class UpgradeSystem : MonoBehaviour
     private CanvasGroup _canvasGroup;
 
 
-    void Start() {
+    void Start()
+    {
+        // Initialize private fields
         _canvasGroup = GameObject.Find("Canvas").GetComponent<CanvasGroup>();
+
+        // Hide canvas
         _canvasGroup.alpha = 0;
     }
 
@@ -27,7 +31,8 @@ public class UpgradeSystem : MonoBehaviour
     /// Shows the Upgrade UI for a given tower.
     /// <param name="tower">Selected tower.</param>
     /// </summary>
-    public void ShowUI(GameObject tower) {
+    public void ShowUI(GameObject tower)
+    {
         _focusedTower = tower;
         setButtonActivation(tower.GetComponent<UpgradeTree>());
         _canvasGroup.alpha = 1;
@@ -37,7 +42,8 @@ public class UpgradeSystem : MonoBehaviour
     /// <summary>
     /// Hide the Upgrade UI on screen.
     /// </summary>
-    public void HideUI() {
+    public void HideUI()
+    {
         _focusedTower = null; // probably have a Tower.Empty() instead?
         _canvasGroup.alpha = 0;
     }
@@ -47,18 +53,22 @@ public class UpgradeSystem : MonoBehaviour
     /// Callback for the Upgrade UI.
     /// <param name="type">String indicating the type of tower upgrade requested.</param>
     /// </summary>
-    public void OnClicked(string type) {
+    public void OnClicked(string type)
+    {
         switch (type)
         {  
             case "green":
                 createNewTower(_greenPrefab);
                 break;
+
             case "red":
                 createNewTower(_redPrefab);
                 break;
+
             case "gold":
                 createNewTower(_goldPrefab);
                 break;
+
             default:
                 Debug.Log("Failed to upgrade tower.");
                 break;
@@ -70,7 +80,8 @@ public class UpgradeSystem : MonoBehaviour
     /// Sets the <c>Interactable </c> property on buttons for upgrades based on the provided <c>UpgradeTree</c>.
     /// <param name="tree"><c>UpgradeTree </c> object to set button activation.</param>
     /// </summary>
-    void setButtonActivation(UpgradeTree tree) {
+    void setButtonActivation(UpgradeTree tree)
+    {
         //
     }
 
@@ -79,7 +90,8 @@ public class UpgradeSystem : MonoBehaviour
     /// Creates a new tower where the currently focused tower is and then destroys the focused tower.
     /// <param name="newTowerPrefab">Prefab for the new tower to create.</param>
     /// </summary>
-    void createNewTower(GameObject newTowerPrefab) {
+    void createNewTower(GameObject newTowerPrefab)
+    {
         GameObject newTower = Instantiate(newTowerPrefab, _focusedTower.transform.position, _focusedTower.transform.rotation);
         GameObject.Destroy(_focusedTower);
         _focusedTower = newTower;
