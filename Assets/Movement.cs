@@ -13,13 +13,11 @@ public class Movement : MonoBehaviour
     {
         if(Input.GetButtonDown("Fire1"))
         {
-            print("hi");
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if(Physics.Raycast(ray, out hit))
             {
                 agent.SetDestination(hit.point);
-                print("hello");
             }
         }
     }
