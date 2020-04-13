@@ -1,6 +1,10 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// Manager class that holds references to all UI layers and handles the UI stack.
+/// </summary>
 public class UIManager : MonoBehaviour
 {
     private UpgradeMenuUISystem _upgradeMenuSystem;
@@ -11,6 +15,7 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
+        // Initialize private fields
         _towerMenuSystem = transform.Find("TowerMenuUI").GetComponent<TowerMenuUISystem>();
         _upgradeMenuSystem = transform.Find("UpgradeUI").GetComponent<UpgradeMenuUISystem>();
         _screenStack = new Stack<IUISystem>();
@@ -36,6 +41,9 @@ public class UIManager : MonoBehaviour
         }
     }    
 
+    /// <summary>
+    /// Hide all UI layers in the stack.
+    /// </summary>
     public void HideAll()
     {
         // TODO: This should receive an event instead.
