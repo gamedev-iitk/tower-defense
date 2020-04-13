@@ -25,4 +25,9 @@ public class AIController : MonoBehaviour
     {
         _agent.SetDestination(dest);
     }
+
+    public bool IsStopped()
+    {
+        return _agent.isStopped;
+    }
 }
