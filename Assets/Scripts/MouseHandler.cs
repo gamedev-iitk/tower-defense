@@ -1,12 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
+﻿using UnityEngine;
 
+
+/// <summary>
+/// Manager class for handling mouse input.
+/// </summary>
 public class MouseHandler : MonoBehaviour
 {    
     private Camera _mainCamera;
     private UpgradeSystem _upgradeSystem;
+
 
     void Start()
     {
@@ -14,6 +16,7 @@ public class MouseHandler : MonoBehaviour
         _upgradeSystem = GameObject.Find("TowerUpgradeSystem").GetComponent<UpgradeSystem>();
         Cursor.visible = true;
     }
+
 
     void Update()
     {
