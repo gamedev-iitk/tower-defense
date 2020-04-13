@@ -81,7 +81,6 @@ public class UpgradeSystem : MonoBehaviour
     /// </summary>
     void createNewTower(GameObject newTowerPrefab) {
         GameObject newTower = Instantiate(newTowerPrefab, _focusedTower.transform.position, _focusedTower.transform.rotation);
-        Debug.Log(newTower);
         GameObject.Destroy(_focusedTower);
         _focusedTower = newTower;
     }

@@ -4,12 +4,11 @@
 /// <summary>
 /// Manager class for handling mouse input.
 /// </summary>
-public class MouseHandler : MonoBehaviour
-{    
+public class InputSystem : MonoBehaviour
+{
     private Camera _mainCamera;
     private UpgradeSystem _upgradeSystem;
-
-
+    
     void Start()
     {
         _mainCamera = Camera.main;
@@ -17,10 +16,9 @@ public class MouseHandler : MonoBehaviour
         Cursor.visible = true;
     }
 
-
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetButtonDown("Fire1")) {
             RaycastHit hit;
             if (Physics.Raycast(_mainCamera.ScreenPointToRay(Input.mousePosition), out hit)) {
                 GameObject hitObject = hit.transform.gameObject;
@@ -30,7 +28,7 @@ public class MouseHandler : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape)) {
+        if (Input.GetButtonDown("Cancel")) {
             _upgradeSystem.HideUI();
         }
     }

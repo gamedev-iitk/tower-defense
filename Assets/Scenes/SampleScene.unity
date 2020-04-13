@@ -286,7 +286,7 @@ GameObject:
   - component: {fileID: 171167830}
   - component: {fileID: 171167829}
   m_Layer: 0
-  m_Name: MouseHandler
+  m_Name: InputSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 171167828}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acfe37952e68c714eb50b68c9ddb2731, type: 3}
+  m_Script: {fileID: 11500000, guid: 87b021cac198de548872642890e243c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &171167830
