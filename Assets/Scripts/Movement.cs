@@ -8,7 +8,6 @@ public class Movement : MonoBehaviour
     public Camera cam;
     public NavMeshAgent agent;
 
-
     void Update()
     {
         if(Input.GetButtonDown("Fire1"))
