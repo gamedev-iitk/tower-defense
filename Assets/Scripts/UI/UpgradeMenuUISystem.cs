@@ -4,7 +4,7 @@
 /// <summary>
 /// Manager class for tower upgrades. Handles UI and tower object instantiation/deletion.
 /// </summary>
-public class UpgradeSystem : MonoBehaviour
+public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
 {
     [SerializeField]
     private GameObject _goldPrefab;
@@ -20,7 +20,7 @@ public class UpgradeSystem : MonoBehaviour
     void Start()
     {
         // Initialize private fields
-        _canvasGroup = GameObject.Find("Canvas").GetComponent<CanvasGroup>();
+        _canvasGroup = GameObject.Find("UpgradeUI").GetComponent<CanvasGroup>();
 
         // Hide canvas
         _canvasGroup.alpha = 0;
@@ -31,21 +31,27 @@ public class UpgradeSystem : MonoBehaviour
     /// Shows the Upgrade UI for a given tower.
     /// <param name="tower">Selected tower.</param>
     /// </summary>
-    public void ShowUI(GameObject tower)
+    public bool Create(GameObject tower)
     {
         _focusedTower = tower;
         setButtonActivation(tower.GetComponent<UpgradeTree>());
         _canvasGroup.alpha = 1;
+        return true;
     }
 
 
     /// <summary>
     /// Hide the Upgrade UI on screen.
     /// </summary>
-    public void HideUI()
+    public void Hide()
     {
-        _focusedTower = null; // probably have a Tower.Empty() instead?
         _canvasGroup.alpha = 0;
+    }
+
+    public void Destroy()
+    {
+        Hide();
+        _focusedTower = null; // probably have a Tower.Empty() instead?
     }
 
 
@@ -53,7 +59,7 @@ public class UpgradeSystem : MonoBehaviour
     /// Callback for the Upgrade UI.
     /// <param name="type">String indicating the type of tower upgrade requested.</param>
     /// </summary>
-    public void OnClicked(string type)
+    public void OnClick(string type)
     {
         switch (type)
         {  

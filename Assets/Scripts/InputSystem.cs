@@ -7,15 +7,15 @@
 public class InputSystem : MonoBehaviour
 {
     private Camera _mainCamera;
-    private UpgradeSystem _upgradeSystem;
     private GameObject _player;
+    private UIManager _UIManager;
     
     void Start()
     {
         // Initialize private fields
         _mainCamera = Camera.main;
         _player = GameObject.Find("Player");
-        _upgradeSystem = GameObject.Find("TowerUpgradeSystem").GetComponent<UpgradeSystem>();
+        _UIManager = GameObject.Find("UIManager").GetComponent<UIManager>();
 
         // Show mouse in game
         Cursor.visible = true;
@@ -32,7 +32,8 @@ public class InputSystem : MonoBehaviour
                 GameObject hitObject = hit.transform.gameObject;
                 if (hitObject.CompareTag("Tower")) 
                 {
-                    _upgradeSystem.ShowUI(hitObject);
+                    // TODO: This should fire an even instead.
+                    _UIManager.ShowTowerMenu(hitObject);
                 }
             }
         }
@@ -50,7 +51,8 @@ public class InputSystem : MonoBehaviour
         // Check escape button or cancel
         if (Input.GetButtonDown("Cancel")) 
         {
-            _upgradeSystem.HideUI();
+            // TODO: This should fire an event instead.
+            _UIManager.HideAll();
         }
     }
 }
