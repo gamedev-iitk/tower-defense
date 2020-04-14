@@ -21,7 +21,7 @@ public class AIController : MonoBehaviour
     /// Moves the AI object to the given point.
     /// </summary>
     /// <param name="dest"><c>Vector3 </c> for the destination point</param>
-    public void MoveTo(Vector3 dest)
+    public void MoveTo( Vector3 dest)
     {
         _agent.SetDestination(dest);
     }
