@@ -1,0 +1,9 @@
+---
+image: restyled/restyler-dotnet-format:v0.0.1-2
+command:
+- dotnet-format-files
+arguments: []
+include:
+- "**/*.cs"
+- "**/*.vb"
+interpreters: []
