@@ -6,7 +6,7 @@ public class node : MonoBehaviour
 {
     public Color hovercolor;
 
-    private Renderer rend;  
+    private Renderer rend;
     private Color startcolor;
     private Collider collider;
     private int key = 1;
@@ -35,7 +35,7 @@ public class node : MonoBehaviour
             rend.material.color = Color.red;
         }
 
-        
+
     }
 
     void OnMouseExit()

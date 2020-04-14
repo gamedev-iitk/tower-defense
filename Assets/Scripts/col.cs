@@ -32,14 +32,20 @@ public class col : MonoBehaviour
 
     void Update()
     {
-       // rend.material.color.a = 0.3f;
+        // rend.material.color.a = 0.3f;
 
         switch (colorPicker)
         {
-            case 0: rend.material.color = Color.green; break;
-            case 1: rend.material.color = Color.red; break;
+        case 0:
+            rend.material.color = Color.green;
+            break;
+        case 1:
+            rend.material.color = Color.red;
+            break;
 
-            default: rend.material.color = Color.white; break;
+        default:
+            rend.material.color = Color.white;
+            break;
         }
 
     }

@@ -40,7 +40,9 @@ public class dragmesh : MonoBehaviour
         transform.position = coord1;
         plane.transform.position = coord2;
 
-        if (trigg) { colorPicker = 1; }
+        if (trigg) {
+            colorPicker = 1;
+        }
         else colorPicker = 0;
 
 
