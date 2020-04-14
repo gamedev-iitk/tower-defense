@@ -13,7 +13,7 @@ public class AIController : MonoBehaviour
     void Start()
     {
         // Initialize private fields
-        _agent = GetComponent<NavMeshAgent>();
+        _agent = GetComponent<NavMeshAgent> (    );
     }
 
 
