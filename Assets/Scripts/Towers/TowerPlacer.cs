@@ -11,9 +11,24 @@ public class TowerPlacer : MonoBehaviour
         _renderer = GetComponent<Renderer>();
     }
 
+    void Update()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if(Physics.Raycast(ray, out RaycastHit hit))
+        {
+            if (hit.transform.gameObject.CompareTag("Ground"))
+            {
+                Debug.Log("I hit the ground");
+
+                // TODO: Interpolate values instead of directly setting them for a smoother experience
+                float oldY = transform.position.y;
+                transform.position = new Vector3(hit.point.x, oldY, hit.point.z);
+            }
+        }
+    }
+
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Called Trigger Enter with " + other.ToString());
         if (!other.gameObject.CompareTag("Ground"))
         {
             _renderer.material.color = _red;
@@ -22,7 +37,6 @@ public class TowerPlacer : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        Debug.Log("Called Trigger Exit with " + other.ToString());
         if (!other.gameObject.CompareTag("Ground"))
         {
             _renderer.material.color = _green;

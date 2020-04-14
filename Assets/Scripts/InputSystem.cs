@@ -9,13 +9,17 @@ public class InputSystem : MonoBehaviour
     private Camera _mainCamera;
     private GameObject _player;
     private UIManager _UIManager;
+    public GameObject selector;
+
+    private RaycastHit mouseToWorld;
+    private GameObject selectorInstance;
 
     void Start()
     {
         // Initialize private fields
         _mainCamera = Camera.main;
-        _player = GameObject.Find("Player");
-        _UIManager = GameObject.Find("UIManager").GetComponent<UIManager>();
+        // _player = GameObject.Find("Player");
+        // _UIManager = GameObject.Find("UIManager").GetComponent<UIManager>();
 
         // Show mouse in game
         Cursor.visible = true;
@@ -32,7 +36,7 @@ public class InputSystem : MonoBehaviour
                 if (hitObject.CompareTag("Tower"))
                 {
                     // TODO: This should fire an even instead.
-                    _UIManager.ShowTowerMenu(hitObject);
+                    // _UIManager.ShowTowerMenu(hitObject);
                 }
             }
         }
@@ -42,7 +46,7 @@ public class InputSystem : MonoBehaviour
         {
             if (Physics.Raycast(_mainCamera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
             {
-                _player.GetComponent<AIController>().MoveTo(hit.point);
+                // _player.GetComponent<AIController>().MoveTo(hit.point);
             }
         }
 
@@ -50,12 +54,17 @@ public class InputSystem : MonoBehaviour
         if (Input.GetButtonDown("Cancel"))
         {
             // TODO: This should fire an event instead.
-            _UIManager.HideAll();
+            // _UIManager.HideAll();
         }
 
         // Check the X button or "place"
         if (Input.GetKeyDown(KeyCode.X)) {
-            //
+            CreateSelector();
         }
+    }
+
+    private void CreateSelector()
+    {
+        selectorInstance = Instantiate(selector, mouseToWorld.point, Quaternion.identity);
     }
 }
