@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 
 /// <summary>
@@ -34,7 +35,7 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
     public bool Create(GameObject tower)
     {
         _focusedTower = tower;
-        setButtonActivation(tower.GetComponent<UpgradeTree>());
+        SetButtonActivation(tower.GetComponent<UpgradeTree>());
         _canvasGroup.alpha = 1;
         return true;
     }
@@ -62,17 +63,17 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
     public void OnClick(string type)
     {
         switch (type)
-        {  
+        {
             case "green":
-                createNewTower(_greenPrefab);
+                CreateNewTower(_greenPrefab);
                 break;
 
             case "red":
-                createNewTower(_redPrefab);
+                CreateNewTower(_redPrefab);
                 break;
 
             case "gold":
-                createNewTower(_goldPrefab);
+                CreateNewTower(_goldPrefab);
                 break;
 
             default:
@@ -86,7 +87,7 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
     /// Sets the <c>Interactable </c> property on buttons for upgrades based on the provided <c>UpgradeTree</c>.
     /// <param name="tree"><c>UpgradeTree </c> object to set button activation.</param>
     /// </summary>
-    void setButtonActivation(UpgradeTree tree)
+    void SetButtonActivation(UpgradeTree tree)
     {
         //
     }
@@ -96,7 +97,7 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
     /// Creates a new tower where the currently focused tower is and then destroys the focused tower.
     /// <param name="newTowerPrefab">Prefab for the new tower to create.</param>
     /// </summary>
-    void createNewTower(GameObject newTowerPrefab)
+    void CreateNewTower(GameObject newTowerPrefab)
     {
         GameObject newTower = Instantiate(newTowerPrefab, _focusedTower.transform.position, _focusedTower.transform.rotation);
         GameObject.Destroy(_focusedTower);

@@ -9,7 +9,7 @@ public class InputSystem : MonoBehaviour
     private Camera _mainCamera;
     private GameObject _player;
     private UIManager _UIManager;
-    
+
     void Start()
     {
         // Initialize private fields
@@ -24,13 +24,12 @@ public class InputSystem : MonoBehaviour
     void Update()
     {
         // Check left mouse click or selections
-        if (Input.GetButtonDown("Fire1")) 
+        if (Input.GetButtonDown("Fire1"))
         {
-            RaycastHit hit;
-            if (Physics.Raycast(_mainCamera.ScreenPointToRay(Input.mousePosition), out hit)) 
+            if (Physics.Raycast(_mainCamera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
             {
                 GameObject hitObject = hit.transform.gameObject;
-                if (hitObject.CompareTag("Tower")) 
+                if (hitObject.CompareTag("Tower"))
                 {
                     // TODO: This should fire an even instead.
                     _UIManager.ShowTowerMenu(hitObject);
@@ -39,17 +38,16 @@ public class InputSystem : MonoBehaviour
         }
 
         // Check right mouse click or movement
-        if (Input.GetButtonDown("Fire2")) 
+        if (Input.GetButtonDown("Fire2"))
         {
-            RaycastHit hit;
-            if (Physics.Raycast(_mainCamera.ScreenPointToRay(Input.mousePosition), out hit)) 
+            if (Physics.Raycast(_mainCamera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
             {
                 _player.GetComponent<AIController>().MoveTo(hit.point);
             }
         }
 
         // Check escape button or cancel
-        if (Input.GetButtonDown("Cancel")) 
+        if (Input.GetButtonDown("Cancel"))
         {
             // TODO: This should fire an event instead.
             _UIManager.HideAll();
