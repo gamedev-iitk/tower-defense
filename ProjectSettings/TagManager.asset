@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tower
+  - sphere
+  - Ground
   layers:
   - Default
   - TransparentFX

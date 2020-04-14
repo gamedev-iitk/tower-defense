@@ -23,7 +23,7 @@ public class InputSystem : MonoBehaviour
 
     void Update()
     {
-        // Check left mouse click or selections
+        // Check left mouse click or "select"
         if (Input.GetButtonDown("Fire1"))
         {
             if (Physics.Raycast(_mainCamera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
@@ -37,7 +37,7 @@ public class InputSystem : MonoBehaviour
             }
         }
 
-        // Check right mouse click or movement
+        // Check right mouse click or "walk"
         if (Input.GetButtonDown("Fire2"))
         {
             if (Physics.Raycast(_mainCamera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
@@ -46,11 +46,16 @@ public class InputSystem : MonoBehaviour
             }
         }
 
-        // Check escape button or cancel
+        // Check escape button or "cancel"
         if (Input.GetButtonDown("Cancel"))
         {
             // TODO: This should fire an event instead.
             _UIManager.HideAll();
+        }
+
+        // Check the X button or "place"
+        if (Input.GetKeyDown(KeyCode.X)) {
+            //
         }
     }
 }
