@@ -9,9 +9,9 @@ public class UIManager : MonoBehaviour
 {
     private UpgradeMenuUISystem _upgradeMenuSystem;
     private TowerMenuUISystem _towerMenuSystem;
-    
+
     private Stack<IUISystem> _screenStack;
-    
+
 
     void Start()
     {
@@ -39,7 +39,7 @@ public class UIManager : MonoBehaviour
         {
             _screenStack.Push(_upgradeMenuSystem);
         }
-    }    
+    }
 
     /// <summary>
     /// Hide all UI layers in the stack.

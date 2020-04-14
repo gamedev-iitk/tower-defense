@@ -12,7 +12,7 @@ public interface IUISystem
     /// <param name="obj"><c>GameObject </c> used to populate the layer</param>
     /// <returns>Boolean. True if repopulated.</returns>
     bool Create(GameObject obj);
-    
+
     /// <summary>
     /// Hides the canvas layer using its alpha value.
     /// </summary>
