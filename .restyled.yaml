@@ -30,9 +30,5 @@ ignore_labels:
   - restyled-ignore
 
 restylers:
-  - dotnet-format:
-      image: restyled/restyler-dotnet-format:v0.0.1-2
-      arguments: ["--folder .\Assets\Scripts"]
-      include:
-      - "**/*.cs"
-      - "**/*.vb"
+  - name: dotnet-format
+    arguments: ["--folder .\Assets\Scripts"]
