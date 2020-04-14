@@ -64,21 +64,21 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
     {
         switch (type)
         {
-            case "green":
-                CreateNewTower(_greenPrefab);
-                break;
+        case "green":
+            CreateNewTower(_greenPrefab);
+            break;
 
-            case "red":
-                CreateNewTower(_redPrefab);
-                break;
+        case "red":
+            CreateNewTower(_redPrefab);
+            break;
 
-            case "gold":
-                CreateNewTower(_goldPrefab);
-                break;
+        case "gold":
+            CreateNewTower(_goldPrefab);
+            break;
 
-            default:
-                Debug.Log("Failed to upgrade tower.");
-                break;
+        default:
+            Debug.Log("Failed to upgrade tower.");
+            break;
         }
     }
 
