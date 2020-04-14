@@ -1,3 +1,0 @@
-linter:
-  fxcop:
-    root_dir: Assets/Scripts/
