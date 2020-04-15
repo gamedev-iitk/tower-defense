@@ -7,37 +7,41 @@ using UnityEngine;
 /// </summary>
 public class UIManager : MonoBehaviour
 {
-    private UpgradeMenuUISystem _upgradeMenuSystem;
-    private TowerMenuUISystem _towerMenuSystem;
-
-    private Stack<IUISystem> _screenStack;
-
+    private UpgradeMenuUISystem upgradeMenuSystem;
+    private TowerMenuUISystem towerMenuSystem;
+    private Stack<IUISystem> screenStack;
 
     void Start()
     {
         // Initialize private fields
-        _towerMenuSystem = transform.Find("TowerMenuUI").GetComponent<TowerMenuUISystem>();
-        _upgradeMenuSystem = transform.Find("UpgradeUI").GetComponent<UpgradeMenuUISystem>();
-        _screenStack = new Stack<IUISystem>();
+        towerMenuSystem = transform.Find("TowerMenuUI").GetComponent<TowerMenuUISystem>();
+        upgradeMenuSystem = transform.Find("UpgradeUI").GetComponent<UpgradeMenuUISystem>();
+        screenStack = new Stack<IUISystem>();
     }
 
+    /// <summary>
+    /// Creates the tower menu for a given tower
+    /// </summary>
+    /// <param name="tower"><c>GameObject </c>for the selected tower</param>
     public void ShowTowerMenu(GameObject tower)
     {
         // TODO: This should receive an event instead.
-        if (_towerMenuSystem.Create(tower))
+        if (towerMenuSystem.Create(tower))
         {
-            _screenStack.Push(_towerMenuSystem);
+            screenStack.Push(towerMenuSystem);
         }
-
-        Debug.Log(_screenStack);
     }
 
+    /// <summary>
+    /// Creates the upgrade menu for a given tower
+    /// </summary>
+    /// <param name="tower"><c>GameObject </c>for the selected tower</param>
     public void ShowUpgradeMenu(GameObject tower)
     {
         // TODO: This should receive an event instead.
-        if (_upgradeMenuSystem.Create(tower))
+        if (upgradeMenuSystem.Create(tower))
         {
-            _screenStack.Push(_upgradeMenuSystem);
+            screenStack.Push(upgradeMenuSystem);
         }
     }
 
@@ -47,11 +51,11 @@ public class UIManager : MonoBehaviour
     public void HideAll()
     {
         // TODO: This should receive an event instead.
-        foreach (IUISystem ui in _screenStack)
+        foreach (IUISystem ui in screenStack)
         {
             ui.Destroy();
         }
 
-        _screenStack.Clear();
+        screenStack.Clear();
     }
 }

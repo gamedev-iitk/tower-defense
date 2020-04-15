@@ -6,20 +6,21 @@
 /// </summary>
 public class InputSystem : MonoBehaviour
 {
-    private Camera _mainCamera;
-    private GameObject _player;
-    private UIManager _UIManager;
+    // TODO: Have a single utils class for doing these raycasts
     public GameObject selector;
 
-    private RaycastHit mouseToWorld;
+    private bool placer = false;
+    private GameObject player;
     private GameObject selectorInstance;
+    private Camera mainCamera;
+    private UIManager uiManager;
 
     void Start()
     {
         // Initialize private fields
-        _mainCamera = Camera.main;
-        // _player = GameObject.Find("Player");
-        // _UIManager = GameObject.Find("UIManager").GetComponent<UIManager>();
+        mainCamera = Camera.main;
+        player = GameObject.Find("Player");
+        uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
 
         // Show mouse in game
         Cursor.visible = true;
@@ -30,13 +31,14 @@ public class InputSystem : MonoBehaviour
         // Check left mouse click or "select"
         if (Input.GetButtonDown("Fire1"))
         {
-            if (Physics.Raycast(_mainCamera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
+            if (Physics.Raycast(mainCamera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
             {
                 GameObject hitObject = hit.transform.gameObject;
                 if (hitObject.CompareTag("Tower"))
                 {
                     // TODO: This should fire an even instead.
-                    // _UIManager.ShowTowerMenu(hitObject);
+                    // TODO: This actually sends in the "cube" now and not the empty root. Maybe add the collider to the root? Or get the parent and then pass that here 
+                    uiManager.ShowTowerMenu(hitObject);
                 }
             }
         }
@@ -44,9 +46,9 @@ public class InputSystem : MonoBehaviour
         // Check right mouse click or "walk"
         if (Input.GetButtonDown("Fire2"))
         {
-            if (Physics.Raycast(_mainCamera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
+            if (Physics.Raycast(mainCamera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
             {
-                // _player.GetComponent<AIController>().MoveTo(hit.point);
+                player.GetComponent<AIController>().MoveTo(hit.point);
             }
         }
 
@@ -54,18 +56,29 @@ public class InputSystem : MonoBehaviour
         if (Input.GetButtonDown("Cancel"))
         {
             // TODO: This should fire an event instead.
-            // _UIManager.HideAll();
+            uiManager.HideAll();
         }
 
-        // Check the X button or "place"
-        if (Input.GetKeyDown(KeyCode.X)) {
-            CreateSelector();
+        // Check the X button or "place", toggle the selector
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            switch (placer)
+            {
+                case true:
+                    {
+                        Destroy(selectorInstance);
+                        placer = false;
+                    }
+                    break;
 
+                case false:
+                    {
+                        Physics.Raycast(mainCamera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, LayerMask.GetMask("Ground"));
+                        selectorInstance = Instantiate(selector, hit.point, Quaternion.identity);
+                        placer = true;
+                    }
+                    break;
+            }
         }
-    }
-
-    private void CreateSelector()
-    {
-        selectorInstance = Instantiate(selector, mouseToWorld.point, Quaternion.identity);
     }
 }

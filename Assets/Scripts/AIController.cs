@@ -7,15 +7,13 @@ using UnityEngine.AI;
 /// </summary>
 public class AIController : MonoBehaviour
 {
-    private NavMeshAgent _agent;
-
+    private NavMeshAgent agent;
 
     void Start()
     {
         // Initialize private fields
-        _agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>();
     }
-
 
     /// <summary>
     /// Moves the AI object to the given point.
@@ -23,6 +21,6 @@ public class AIController : MonoBehaviour
     /// <param name="dest"><c>Vector3 </c> for the destination point</param>
     public void MoveTo(Vector3 dest)
     {
-        _agent.SetDestination(dest);
+        agent.SetDestination(dest);
     }
 }
