@@ -60,6 +60,7 @@ public class InputSystem : MonoBehaviour
         // Check the X button or "place"
         if (Input.GetKeyDown(KeyCode.X)) {
             CreateSelector();
+
         }
     }
 
