@@ -817,6 +817,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3853379933644821908, guid: 9646c53cdda622f4494bf7de2122c3c0,
         type: 3}
+    - target: {fileID: 1608300310646589192, guid: f8da79642fd4d444586ede966e9b02bf,
+        type: 3}
+      propertyPath: goldPrefab
+      value: 
+      objectReference: {fileID: 2899500939617485174, guid: e1ce2f9e8a8c6f14d9a13d0f5cc48636,
+        type: 3}
+    - target: {fileID: 1608300310646589192, guid: f8da79642fd4d444586ede966e9b02bf,
+        type: 3}
+      propertyPath: greenPrefab
+      value: 
+      objectReference: {fileID: 4841134012778833169, guid: 33864fe838e9472409552800b5adc2e8,
+        type: 3}
+    - target: {fileID: 1608300310646589192, guid: f8da79642fd4d444586ede966e9b02bf,
+        type: 3}
+      propertyPath: redPrefab
+      value: 
+      objectReference: {fileID: 3853379933644821908, guid: 9646c53cdda622f4494bf7de2122c3c0,
+        type: 3}
     - target: {fileID: 3065623225550051771, guid: f8da79642fd4d444586ede966e9b02bf,
         type: 3}
       propertyPath: m_Name

@@ -6,45 +6,43 @@
 /// </summary>
 public class TowerMenuUISystem : MonoBehaviour, IUISystem
 {
-    private CanvasGroup _canvasGroup;
-    private GameObject _focusedTower;
-    private UIManager _uiManager;
-
+    private CanvasGroup canvasGroup;
+    private GameObject focusedTower;
+    private UIManager uiManager;
 
     void Start()
     {
         // Initialize private fields
-        _canvasGroup = GetComponent<CanvasGroup>();
-        _uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
+        canvasGroup = GetComponent<CanvasGroup>();
+        uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
 
         // Hide the canvas group
-        _canvasGroup.alpha = 0;
+        canvasGroup.alpha = 0;
     }
-
 
     public bool Create(GameObject tower)
     {
-        if (GameObject.Equals(_focusedTower, tower))
+        if (Equals(focusedTower, tower))
         {
             return false;
         }
         else
         {
-            _focusedTower = tower;
-            _canvasGroup.alpha = 1;
+            focusedTower = tower;
+            canvasGroup.alpha = 1;
             return true;
         }
     }
 
     public void Hide()
     {
-        _canvasGroup.alpha = 0;
+        canvasGroup.alpha = 0;
     }
 
     public void Destroy()
     {
         Hide();
-        _focusedTower = null;
+        focusedTower = null;
     }
 
     /// <summary>
@@ -57,6 +55,6 @@ public class TowerMenuUISystem : MonoBehaviour, IUISystem
 
         // Move player to the tower.
 
-        _uiManager.ShowUpgradeMenu(_focusedTower);
+        uiManager.ShowUpgradeMenu(focusedTower);
     }
 }
