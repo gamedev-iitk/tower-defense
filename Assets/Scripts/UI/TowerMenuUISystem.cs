@@ -30,7 +30,6 @@ public class TowerMenuUISystem : MonoBehaviour, IUISystem
         }
         else
         {
-            Debug.Log("This is actually a new menu.");
             _focusedTower = tower;
             _canvasGroup.alpha = 1;
             return true;

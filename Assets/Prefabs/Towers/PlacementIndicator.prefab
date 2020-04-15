@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1631759602778768988}
   - component: {fileID: 4008135463542406025}
   - component: {fileID: 2718387611034546999}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: PlacementIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feb33911c64c9ad43908765c3268a024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basetower: {fileID: 5632990819778525498, guid: c3f33bd9d6e48cf43a6c01ebb8060a3f,
+  basetower: {fileID: 379762198253035637, guid: c3f33bd9d6e48cf43a6c01ebb8060a3f,
     type: 3}
 --- !u!54 &2718387611034546999
 Rigidbody:

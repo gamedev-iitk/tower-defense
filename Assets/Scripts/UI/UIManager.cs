@@ -28,8 +28,6 @@ public class UIManager : MonoBehaviour
         {
             _screenStack.Push(_towerMenuSystem);
         }
-
-        Debug.Log(_screenStack);
     }
 
     public void ShowUpgradeMenu(GameObject tower)

@@ -77,7 +77,7 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
                 break;
 
             default:
-                Debug.Log("Failed to upgrade tower.");
+                Debug.LogError("Failed to upgrade tower.");
                 break;
         }
     }
@@ -99,8 +99,10 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
     /// </summary>
     void CreateNewTower(GameObject newTowerPrefab)
     {
-        GameObject newTower = Instantiate(newTowerPrefab, _focusedTower.transform.position, _focusedTower.transform.rotation);
-        GameObject.Destroy(_focusedTower);
+        Vector3 focusedTowerPosition = _focusedTower.transform.position;
+        Vector3 spawnPoint = new Vector3(focusedTowerPosition.x, 0, focusedTowerPosition.z);
+        GameObject newTower = Instantiate(newTowerPrefab, spawnPoint, _focusedTower.transform.rotation);
+        Destroy(_focusedTower);
         _focusedTower = newTower;
     }
 }
