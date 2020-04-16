@@ -1,6 +1,8 @@
 using UnityEngine;
-using UnityEngine.Events;
 
+/// <summary>
+/// A class to test the event system.false Place callbacks here.
+/// </summary>
 public class TestCallback : MonoBehaviour
 {
     void Start()

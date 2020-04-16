@@ -1,8 +1,11 @@
 using UnityEngine;
 
+/// <summary>
+/// A class to test the event system. Fire events here.
+/// </summary>
 public class TestEventCall : MonoBehaviour
 {
-    public TDEvent<string, int> a = new TDEvent<string, int>();
+    private TDEvent<string, int> a = new TDEvent<string, int>();
     void Start()
     {
         EventRegistry.RegisterEvent("test", a);
