@@ -1,14 +1,15 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TestCallback : MonoBehaviour
 {
     void Start()
     {
-        EventRegistry.RegisterAction("test", Callback);
+        EventRegistry.RegisterAction<string, int>("test", Callback);
     }
 
-    void Callback()
+    void Callback(string a, int b)
     {
-        Debug.Log("print");
+        Debug.Log("Printed the generic version");
     }
 }

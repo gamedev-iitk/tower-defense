@@ -1,10 +1,8 @@
 using UnityEngine;
-using UnityEngine.Events;
 
 public class TestEventCall : MonoBehaviour
 {
-    private float timer = 0;
-    public UnityEvent a;
+    public TDEvent<string, int> a = new TDEvent<string, int>();
     void Start()
     {
         EventRegistry.RegisterEvent("test", a);
@@ -12,15 +10,6 @@ public class TestEventCall : MonoBehaviour
 
     void Update()
     {
-        timer += Time.deltaTime;
-        if (timer > 3)
-        {
-            EventRegistry.Invoke("test");
-        }
-    }
-
-    public void Hello()
-    {
-        Debug.LogWarning("Hello");
+        a.Invoke("Hello", 1);
     }
 }
