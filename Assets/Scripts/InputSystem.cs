@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 
 /// <summary>
@@ -7,11 +8,9 @@
 public class InputSystem : MonoBehaviour
 {
     // TODO: Have a single utils class for doing these raycasts
-    public GameObject selector;
+    public GameObject BaseTower;
 
-    private bool placer = false;
     private GameObject player;
-    private GameObject selectorInstance;
     private Camera mainCamera;
     private UIManager uiManager;
 
@@ -33,11 +32,10 @@ public class InputSystem : MonoBehaviour
         {
             if (Physics.Raycast(mainCamera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
             {
-                GameObject hitObject = hit.transform.gameObject;
+                GameObject hitObject = hit.transform.parent.gameObject;
                 if (hitObject.CompareTag("Tower"))
                 {
                     // TODO: This should fire an even instead.
-                    // TODO: This actually sends in the "cube" now and not the empty root. Maybe add the collider to the root? Or get the parent and then pass that here 
                     uiManager.ShowTowerMenu(hitObject);
                 }
             }
@@ -62,23 +60,8 @@ public class InputSystem : MonoBehaviour
         // Check the X button or "place", toggle the selector
         if (Input.GetKeyDown(KeyCode.X))
         {
-            switch (placer)
-            {
-                case true:
-                    {
-                        Destroy(selectorInstance);
-                        placer = false;
-                    }
-                    break;
-
-                case false:
-                    {
-                        Physics.Raycast(mainCamera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, LayerMask.GetMask("Ground"));
-                        selectorInstance = Instantiate(selector, hit.point, Quaternion.identity);
-                        placer = true;
-                    }
-                    break;
-            }
+            Physics.Raycast(mainCamera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, LayerMask.GetMask("Ground"));
+            EventRegistry.Invoke("togglePlacer", BaseTower, hit.point);
         }
     }
 }

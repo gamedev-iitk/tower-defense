@@ -9,132 +9,89 @@ public static class EventRegistry
 {
     private readonly static GenericMap<string> container = new GenericMap<string>();
 
-    #region events
     /// <summary>
-    /// Register an event with no parameters.
+    /// Gets you the event associated with the key. Creates one if no event found.
     /// </summary>
-    /// <param name="name"></param>
-    /// <param name="unityEvent"></param>
-    /// <returns></returns>
-    public static bool RegisterEvent(string name, TDEvent unityEvent)
+    /// <param name="name">Key for event lookup</param>
+    /// <returns>TDEvent corresponding to the string</returns>
+    public static TDEvent GetEvent(string name)
     {
-        if (!container.ContainsKey(name))
+        TDEvent ev;
+        if (container.ContainsKey(name))
         {
-            container.Add(name, unityEvent);
-            return true;
+            container.TryGetValue(name, out ev);
         }
         else
         {
-            return false;
+            Debug.LogWarning("No event found. Creating a new event.");
+            ev = new TDEvent();
+            container.Add(name, ev);
         }
+        return ev;
     }
 
-    /// <summary>
-    /// Register an event with one parameter
-    /// </summary>
-    /// <param name="name"></param>
-    /// <param name="unityEvent"></param>
-    /// <typeparam name="TParam"></typeparam>
-    /// <returns></returns>
-    public static bool RegisterEvent<TParam>(string name, TDEvent<TParam> unityEvent)
+    public static TDEvent<TParam1, TParam2> GetEvent<TParam1, TParam2>(string name)
     {
-        if (!container.ContainsKey(name))
+        TDEvent<TParam1, TParam2> ev;
+        if (container.ContainsKey(name))
         {
-            container.Add(name, unityEvent);
-            return true;
+            container.TryGetValue(name, out ev);
         }
         else
         {
-            return false;
+            ev = new TDEvent<TParam1, TParam2>();
+            container.Add(name, ev);
         }
+        return ev;
     }
 
     /// <summary>
-    /// Register an event with two parameters
+    /// Registers a zero argument callback for an event. Creates the event if it doesn't exist.
     /// </summary>
-    /// <param name="name"></param>
-    /// <param name="unityEvent"></param>
-    /// <typeparam name="TParam1"></typeparam>
-    /// <typeparam name="TParam2"></typeparam>
-    /// <returns></returns>
-    public static bool RegisterEvent<TParam1, TParam2>(string name, TDEvent<TParam1, TParam2> unityEvent)
-    {
-        if (!container.ContainsKey(name))
-        {
-            container.Add(name, unityEvent);
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-    #endregion
-
-
-    #region actions
-    /// <summary>
-    /// Register an action with no parameters
-    /// </summary>
-    /// <param name="name"></param>
-    /// <param name="callback"></param>
-    /// <returns></returns>
+    /// <param name="name">Name of the event</param>
+    /// <param name="callback">Callback to register</param>
+    /// <returns>True if successfully registered</returns>
     public static bool RegisterAction(string name, UnityAction callback)
     {
-        if (container.TryGetValue(name, out TDEvent value))
+        TDEvent ev = GetEvent(name);
+        if (ev == null)
         {
-            value?.AddListener(callback);
-            return true;
+            Debug.LogError("Failed to register callback. Type mismatch.");
+            return false;
         }
         else
         {
-            Debug.LogError("Failed to register callback. Name name supplied does not have an associated event or type argument mismatch.");
-            return false;
-        }
-    }
-
-    /// <summary>
-    /// Register an action with one parameter
-    /// </summary>
-    /// <param name="name"></param>
-    /// <param name="callback"></param>
-    /// <typeparam name="TParam"></typeparam>
-    /// <returns></returns>
-    public static bool RegisterAction<TParam>(string name, UnityAction<TParam> callback)
-    {
-        if (container.TryGetValue(name, out TDEvent<TParam> value))
-        {
-            value?.AddListener(callback);
+            ev?.AddListener(callback);
             return true;
         }
-        else
-        {
-            Debug.LogError("Failed to register callback. Name name supplied does not have an associated event or type argument mismatch.");
-            return false;
-        }
     }
 
-    /// <summary>
-    /// Register an action with two parameters
-    /// </summary>
-    /// <param name="name"></param>
-    /// <param name="callback"></param>
-    /// <typeparam name="TParam1"></typeparam>
-    /// <typeparam name="TParam2"></typeparam>
-    /// <returns></returns>
     public static bool RegisterAction<TParam1, TParam2>(string name, UnityAction<TParam1, TParam2> callback)
     {
-        if (container.TryGetValue(name, out TDEvent<TParam1, TParam2> value))
+        TDEvent<TParam1, TParam2> ev = GetEvent<TParam1, TParam2>(name);
+        if (ev == null)
         {
-            value?.AddListener(callback);
-            return true;
+            Debug.LogError("Failed to register callback. Type mismatch.");
+            return false;
         }
         else
         {
-            Debug.LogError("Failed to register callback. Name name supplied does not have an associated event or type argument mismatch.");
-            return false;
+            ev?.AddListener(callback);
+            return true;
         }
     }
-    #endregion
 
+    public static void Invoke<TParam1, TParam2>(string name, TParam1 param1, TParam2 param2)
+    {
+        container.TryGetValue(name, out TDEvent<TParam1, TParam2> ev);
+        if (ev == null)
+        {
+            Debug.LogError("No callback registered for the event " + name + " that supports the supplied parameters. Cannot invoke.");
+            return;
+        }
+        else
+        {
+            ev.Invoke(param1, param2);
+        }
+    }
 }

@@ -48,7 +48,7 @@ public class TowerMenuUISystem : MonoBehaviour, IUISystem
     /// <summary>
     /// Callback for the upgrade button.
     /// </summary>
-    public void OnClick()
+    public void OnUpgradeClick()
     {
         // TODO: this should fire an event instead. We should not have a reference to the UI manager here.
         Hide();
@@ -56,5 +56,16 @@ public class TowerMenuUISystem : MonoBehaviour, IUISystem
         // Move player to the tower.
 
         uiManager.ShowUpgradeMenu(focusedTower);
+    }
+
+    /// <summary>
+    /// Callback for the Move button
+    /// </summary>
+    public void OnMoveClick()
+    {
+        Hide();
+        Vector3 spawnLocation = focusedTower.transform.position;
+        spawnLocation.y = 0;
+        EventRegistry.Invoke("togglePlacer", focusedTower, spawnLocation);
     }
 }
