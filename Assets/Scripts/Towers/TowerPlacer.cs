@@ -7,14 +7,33 @@
 public class TowerPlacer : MonoBehaviour
 {
     /// <summary>
-    /// A reference to the base tower prefab that is to be placed
+    /// A reference to the tower prefab that is to be placed
     /// </summary>
-    public GameObject BaseTower;
+    public GameObject TowerObject;
 
     private bool blocked = false;
     private readonly Color green = new Color(0, 1, 0, 0.3f);
     private readonly Color red = new Color(1, 0, 0, 0.3f);
     private new Renderer renderer;
+
+    public void SetTower(GameObject reference)
+    {
+        TowerObject = reference;
+    }
+
+    public bool PlaceTower()
+    {
+        if (!blocked)
+        {
+            Instantiate(TowerObject, transform.position, transform.rotation);
+            Destroy(TowerObject);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 
     void Start()
     {
@@ -29,12 +48,6 @@ public class TowerPlacer : MonoBehaviour
             // TODO: Interpolate values instead of directly setting them for a smoother experience
             float oldY = transform.position.y;
             transform.position = new Vector3(hit.point.x, oldY, hit.point.z);
-        }
-
-        // TODO: This should be done by receiving an event fired from the InputSystem
-        if (Input.GetButtonDown("Fire1") && !blocked)
-        {
-            Instantiate(BaseTower, transform.position, transform.rotation);
         }
     }
 

@@ -5,10 +5,10 @@ using UnityEngine;
 /// </summary>
 public class TestEventCall : MonoBehaviour
 {
-    private TDEvent<string, int> a = new TDEvent<string, int>();
+    private TDEvent<string, int> a;
     void Start()
     {
-        EventRegistry.RegisterEvent("test", a);
+        a = EventRegistry.GetEvent<string, int>("test");
     }
 
     void Update()
