@@ -14,7 +14,7 @@
     ],
     "build": {
         "globalMetadata": {
-            "_appTitle": "Tower Defense Documentation",
+            "_appTitle": "Tower Defense",
             "_appFooter": "GameDev Society, IIT Kanpur",
             "_enableSearch": true
         },

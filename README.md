@@ -1,6 +1,7 @@
 # tower-defense
 A tower defense game
 
+![docs](https://github.com/gamedev-iitk/tower-defense/workflows/docs/badge.svg)
 
 ### Using the serializable dictionary
 
