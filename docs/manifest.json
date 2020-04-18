@@ -1,0 +1,452 @@
+{
+  "sitemap": {
+    "fileOptions": {
+      "api/*": {
+        "baseUrl": "https://gamedev-iitk.github.io/tower-defense/",
+        "changefreq": "daily"
+      }
+    },
+    "baseUrl": "https://gamedev-iitk.github.io/tower-defense/",
+    "changefreq": "weekly"
+  },
+  "homepages": [],
+  "source_base_path": "D:/GitProjects/tower-defense/docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.AIController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.AIController.html",
+          "hash": "bc9T+yMjzZVIRG6lXmLMVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.EventRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.EventRegistry.html",
+          "hash": "ThWQB+QYx+s8LP5tseGY3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.GenericMap-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.GenericMap-1.html",
+          "hash": "zEyNXOX5cHbsObwgAg6tZg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.IUISystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.IUISystem.html",
+          "hash": "dyKoVPVa41IGDWMweHIM8g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.InputSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.InputSystem.html",
+          "hash": "KHLnnS6iyTbkxtsoLqVxXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.SerializableDictionary-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.SerializableDictionary-2.html",
+          "hash": "h3K4qXOTTdMB2bGQpZspvg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.SerializableDictionary-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.SerializableDictionary-3.html",
+          "hash": "z0csWO9VKj7d1YX9WjBGBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.SerializableDictionary.Storage-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.SerializableDictionary.Storage-1.html",
+          "hash": "F+9q9/6RC8sxvKApqGyFDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.SerializableDictionary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.SerializableDictionary.html",
+          "hash": "718x8cFQqqLk9WTCo1x3Sg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.SerializableDictionaryBase-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.SerializableDictionaryBase-3.html",
+          "hash": "Ycpm0mautPBtOobIZme+JA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.SerializableDictionaryPropertyDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.SerializableDictionaryPropertyDrawer.html",
+          "hash": "niWmQeDJcqZehzUP/QHpXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.SerializableDictionaryStoragePropertyDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.SerializableDictionaryStoragePropertyDrawer.html",
+          "hash": "RGH6w5wKzB2YWYKrGPkdFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.TDEvent-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.TDEvent-1.html",
+          "hash": "jmE97km3Fh3k3USc0bXBnw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.TDEvent-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.TDEvent-2.html",
+          "hash": "ZVAlSc3WJ71iP8h0Ht1o/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.TDEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.TDEvent.html",
+          "hash": "FTtwDou6tL85xBNCVlxDHw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.TestCallback.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.TestCallback.html",
+          "hash": "R89fbwkTOzlxNCFd4pO+LQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.TestEventCall.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.TestEventCall.html",
+          "hash": "W3Q1a2wiGf8RfHdJGSeIRw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.TowerMenuUISystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.TowerMenuUISystem.html",
+          "hash": "46aUoxQkPtdCA0lvLe4uCg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.TowerPlacementSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.TowerPlacementSystem.html",
+          "hash": "AUmlQdPz2G1NwcXizlCF4A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.TowerPlacer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.TowerPlacer.html",
+          "hash": "roLDJq3BGAPzuFE1R3I3GQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.UIManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.UIManager.html",
+          "hash": "3rMe+DacG6KpJE1SNYXBPw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.UpgradeMenuUISystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.UpgradeMenuUISystem.html",
+          "hash": "O/OBC6yxR502y7EGMOWKBQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.UpgradeTree.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.UpgradeTree.html",
+          "hash": "Q3KBTZLENaKFXuD8vpxnmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.html",
+          "hash": "TF36HwUPwUYf3HMHZdgt8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "sj2pWUrhbsanbZvF72CZrg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "blBvUbfw5Ik7ZWFHfGXz9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/Events.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/Events.html",
+          "hash": "Fr4QCoBCpU7Ptf+loKFeVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "manual/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "manual/toc.html",
+          "hash": "b9PnySZ2HofYbvWwbJ3n4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/ExampleManual.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/ExampleManual.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/ExampleScriptingApi.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/ExampleScriptingApi.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "+llPt57WieESXjsnkwIxAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 2,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 24,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
