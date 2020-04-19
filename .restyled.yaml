@@ -29,6 +29,17 @@ request_review: author
 ignore_labels:
   - restyled-ignore
 
-restylers:
-  - name: dotnet-format
-    arguments: ["--folder .\\Assets\\Scripts"]
+#restylers:
+# - name: dotnet-format
+# - arguments: ["-w tower-defense.sln"]
+
+
+image: restyled/restyler-dotnet-format:v0.0.1-2
+
+command:
+  - dotnet-format-files
+
+arguments: ["-w tower-defense.sln"]
+
+include:
+  - "**/*.cs"
