@@ -4,11 +4,6 @@
     "title": "Class AIController | Tower Defense",
     "keywords": "Class AIController AIController class to control AI movement. Inheritance Object UnityEngine.Object UnityEngine.Component UnityEngine.Behaviour UnityEngine.MonoBehaviour AIController Namespace : Global Assembly : TowerDefense.dll Syntax public class AIController : MonoBehaviour Methods MoveTo(Vector3) Moves the AI object to the given point. Declaration public void MoveTo(Vector3 dest) Parameters Type Name Description UnityEngine.Vector3 dest Vector3 for the destination point"
   },
-  "api/Global.EditModeSampleTest.html": {
-    "href": "api/Global.EditModeSampleTest.html",
-    "title": "Class EditModeSampleTest | Tower Defense",
-    "keywords": "Class EditModeSampleTest Inheritance Object EditModeSampleTest Namespace : Global Assembly : EditorTests.dll Syntax public class EditModeSampleTest Methods EditModeSampleTestSimplePasses() Declaration [Test] public void EditModeSampleTestSimplePasses() EditModeSampleTestWithEnumeratorPasses() Declaration [UnityTest] public IEnumerator EditModeSampleTestWithEnumeratorPasses() Returns Type Description IEnumerator"
-  },
   "api/Global.EventRegistry.html": {
     "href": "api/Global.EventRegistry.html",
     "title": "Class EventRegistry | Tower Defense",
@@ -22,7 +17,7 @@
   "api/Global.html": {
     "href": "api/Global.html",
     "title": "Namespace Global | Tower Defense",
-    "keywords": "Namespace Global Classes AIController AIController class to control AI movement. EditModeSampleTest EventRegistry A class to orchestrate all events GenericMap<TKey> A wrapper around dictionary to support generic values. InputSystem Manager class for handling mouse input. MovementTests SerializableDictionary SerializableDictionary.Storage<T> SerializableDictionary<TKey, TValue> SerializableDictionary<TKey, TValue, TValueStorage> SerializableDictionaryBase<TKey, TValue, TValueStorage> SerializableDictionaryPropertyDrawer SerializableDictionaryStoragePropertyDrawer TDEvent An event that takes callbacks with no parameters TDEvent<TParam> An event that takes callbacks with one parameter TDEvent<TParam1, TParam2> An event that takes callbacks with two parameters TestCallback A class to test the event system.false Place callbacks here. TestEventCall A class to test the event system. Fire events here. TowerMenuUISystem Brings up the tower menu when a tower is selected. TowerPlacementSystem TowerPlacer Implements the tower placement location selector UIManager Manager class that holds references to all UI layers and handles the UI stack. UpgradeMenuUISystem Manager class for tower upgrades. Handles UI and tower object instantiation/deletion. UpgradeTree This component stores information about possible upgrades in the upgrade tree. Interfaces IUISystem Exposes basic UI functionality. All MenuUISystems should implement this interface."
+    "keywords": "Namespace Global Classes AIController AIController class to control AI movement. EventRegistry A class to orchestrate all events GenericMap<TKey> A wrapper around dictionary to support generic values. InputSystem Manager class for handling mouse input. SerializableDictionary SerializableDictionary.Storage<T> SerializableDictionary<TKey, TValue> SerializableDictionary<TKey, TValue, TValueStorage> SerializableDictionaryBase<TKey, TValue, TValueStorage> SerializableDictionaryPropertyDrawer SerializableDictionaryStoragePropertyDrawer TDEvent An event that takes callbacks with no parameters TDEvent<TParam> An event that takes callbacks with one parameter TDEvent<TParam1, TParam2> An event that takes callbacks with two parameters TestCallback A class to test the event system.false Place callbacks here. TestEventCall A class to test the event system. Fire events here. TowerMenuUISystem Brings up the tower menu when a tower is selected. TowerPlacementSystem TowerPlacer Implements the tower placement location selector UIManager Manager class that holds references to all UI layers and handles the UI stack. UpgradeMenuUISystem Manager class for tower upgrades. Handles UI and tower object instantiation/deletion. UpgradeTree This component stores information about possible upgrades in the upgrade tree. Interfaces IUISystem Exposes basic UI functionality. All MenuUISystems should implement this interface."
   },
   "api/Global.InputSystem.html": {
     "href": "api/Global.InputSystem.html",
@@ -33,11 +28,6 @@
     "href": "api/Global.IUISystem.html",
     "title": "Interface IUISystem | Tower Defense",
     "keywords": "Interface IUISystem Exposes basic UI functionality. All MenuUISystems should implement this interface. Namespace : Global Assembly : TowerDefense.dll Syntax public interface IUISystem Methods Create(GameObject) \"Create\" a new UI screen, i.e. repopulate the canvas layer with details from the given object. Declaration bool Create(GameObject obj) Parameters Type Name Description UnityEngine.GameObject obj GameObject used to populate the layer Returns Type Description Boolean Boolean. True if repopulated. Destroy() Hides and resets the focused item for the associated UI. Declaration void Destroy() Hide() Hides the canvas layer using its alpha value. Declaration void Hide()"
-  },
-  "api/Global.MovementTests.html": {
-    "href": "api/Global.MovementTests.html",
-    "title": "Class MovementTests | Tower Defense",
-    "keywords": "Class MovementTests Inheritance Object MovementTests Namespace : Global Assembly : RuntimeTests.dll Syntax public class MovementTests Methods ControllerMovesPlayer() Declaration [UnityTest] public IEnumerator ControllerMovesPlayer() Returns Type Description IEnumerator Setup() Declaration [SetUp] public void Setup() Teardown() Declaration [TearDown] public void Teardown()"
   },
   "api/Global.SerializableDictionary.html": {
     "href": "api/Global.SerializableDictionary.html",
@@ -128,6 +118,26 @@
     "href": "api/Global.UpgradeTree.html",
     "title": "Class UpgradeTree | Tower Defense",
     "keywords": "Class UpgradeTree This component stores information about possible upgrades in the upgrade tree. Inheritance Object UnityEngine.Object UnityEngine.Component UnityEngine.Behaviour UnityEngine.MonoBehaviour UpgradeTree Namespace : Global Assembly : TowerDefense.dll Syntax public class UpgradeTree : MonoBehaviour Fields gold Declaration public bool gold Field Value Type Description Boolean green Declaration public bool green Field Value Type Description Boolean red Declaration public bool red Field Value Type Description Boolean"
+  },
+  "api/Tests.EditModeSampleTest.html": {
+    "href": "api/Tests.EditModeSampleTest.html",
+    "title": "Class EditModeSampleTest | Tower Defense",
+    "keywords": "Class EditModeSampleTest Sample editor tests Inheritance Object EditModeSampleTest Namespace : Tests Assembly : EditorTests.dll Syntax public class EditModeSampleTest Methods EditModeSampleTestSimplePasses() Declaration [Test] public void EditModeSampleTestSimplePasses() EditModeSampleTestWithEnumeratorPasses() Declaration [UnityTest] public IEnumerator EditModeSampleTestWithEnumeratorPasses() Returns Type Description IEnumerator"
+  },
+  "api/Tests.html": {
+    "href": "api/Tests.html",
+    "title": "Namespace Tests | Tower Defense",
+    "keywords": "Namespace Tests Classes EditModeSampleTest Sample editor tests PlayerTests Tests for the player functionality TowerUIMenuTests Tests for the tower menu UI functions"
+  },
+  "api/Tests.PlayerTests.html": {
+    "href": "api/Tests.PlayerTests.html",
+    "title": "Class PlayerTests | Tower Defense",
+    "keywords": "Class PlayerTests Tests for the player functionality Inheritance Object PlayerTests Namespace : Tests Assembly : RuntimeTests.dll Syntax public class PlayerTests Methods AIMovePlayer() Tests if the player can move Declaration [UnityTest] public IEnumerator AIMovePlayer() Returns Type Description IEnumerator Setup() Declaration [SetUp] public void Setup()"
+  },
+  "api/Tests.TowerUIMenuTests.html": {
+    "href": "api/Tests.TowerUIMenuTests.html",
+    "title": "Class TowerUIMenuTests | Tower Defense",
+    "keywords": "Class TowerUIMenuTests Tests for the tower menu UI functions Inheritance Object TowerUIMenuTests Namespace : Tests Assembly : RuntimeTests.dll Syntax public class TowerUIMenuTests Methods CreateNewTower() Tests if a new tower can be created Declaration [UnityTest] public IEnumerator CreateNewTower() Returns Type Description IEnumerator Setup() Declaration [SetUp] public void Setup()"
   },
   "index.html": {
     "href": "index.html",

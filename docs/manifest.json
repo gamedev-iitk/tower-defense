@@ -36,18 +36,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Global.EditModeSampleTest.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Global.EditModeSampleTest.html",
-          "hash": "ztxCJcGbhCEldZkk0qMQ+Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Global.EventRegistry.yml",
       "output": {
         ".html": {
@@ -89,18 +77,6 @@
         ".html": {
           "relative_path": "api/Global.InputSystem.html",
           "hash": "CfYoNfmwqdNJbD9HYuXKVw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Global.MovementTests.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Global.MovementTests.html",
-          "hash": "6aSy4OLcgN1zIAGYUOWz7w=="
         }
       },
       "is_incremental": false,
@@ -328,7 +304,55 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "msC+KKHCLFqXcbyYoaEDCg=="
+          "hash": "TF36HwUPwUYf3HMHZdgt8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tests.EditModeSampleTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tests.EditModeSampleTest.html",
+          "hash": "qWS3ut4GMlPIxtMuTiNguA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tests.PlayerTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tests.PlayerTests.html",
+          "hash": "K6noNQ0fHwWJVxpBdL3+1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tests.TowerUIMenuTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tests.TowerUIMenuTests.html",
+          "hash": "FsaPWy0LL5fr+CqeklqF3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tests.html",
+          "hash": "o+cSoTIuWtSBCaddULkflg=="
         }
       },
       "is_incremental": false,
@@ -340,7 +364,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "0Pz30CJIPgt2wLmS7LuhlQ=="
+          "hash": "94Y7Aa5vn/tzOX4oCrt4Hg=="
         }
       },
       "is_incremental": false,
@@ -431,25 +455,23 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because config changed.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "ConfigChanged"
+        "skipped_file_count": 0
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 2,
-          "skipped_file_count": 0
+          "skipped_file_count": 2
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 26,
-          "skipped_file_count": 0
+          "total_file_count": 28,
+          "skipped_file_count": 24
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
