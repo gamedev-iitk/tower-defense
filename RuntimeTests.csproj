@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Tests\PlayMode\MovementTests.cs" />
+     <Compile Include="Assets\Tests\PlayMode\TowerTests.cs" />
      <None Include="Assets\Tests\PlayMode\RuntimeTests.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

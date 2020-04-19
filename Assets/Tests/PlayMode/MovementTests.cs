@@ -4,26 +4,32 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.SceneManagement;
 
-public class MovementTests
+namespace Tests
 {
-    [SetUp]
-    public void Setup()
+    /// <summary>
+    /// Tests for the player functionality
+    /// </summary>
+    public class PlayerTests
     {
-        SceneManager.LoadScene("MainScene");
-    }
+        [SetUp]
+        public void Setup()
+        {
+            SceneManager.LoadScene("MainScene");
+        }
 
-    [TearDown]
-    public void Teardown() { }
+        /// <summary>
+        /// Tests if the player can move
+        /// </summary>
+        /// <returns></returns>
+        [UnityTest]
+        public IEnumerator AIMovePlayer()
+        {
+            GameObject player = GameObject.Find("Player");
+            Vector3 initial = player.transform.position;
+            player.GetComponent<AIController>().MoveTo(initial + new Vector3(-1, 0, -1));
 
-    [UnityTest]
-    public IEnumerator ControllerMovesPlayer()
-    {
-        GameObject player = GameObject.Find("Player");
-        Vector3 initial = player.transform.position;
-        player.GetComponent<AIController>().MoveTo(initial + new Vector3(-1, 0, -1));
-
-        yield return new WaitForSeconds(2f);
-        Assert.AreNotEqual(initial, player.transform.position);
+            yield return new WaitForSeconds(2f);
+            Assert.AreNotEqual(initial, player.transform.position);
+        }
     }
 }
-

@@ -2,19 +2,25 @@
 using NUnit.Framework;
 using UnityEngine.TestTools;
 
-public class EditModeSampleTest
+namespace Tests
 {
-    [Test]
-    public void EditModeSampleTestSimplePasses()
+    /// <summary>
+    /// Sample editor tests
+    /// </summary>
+    public class EditModeSampleTest
     {
-        // Use the Assert class to test conditions
-    }
+        [Test]
+        public void EditModeSampleTestSimplePasses()
+        {
+            // Use the Assert class to test conditions
+        }
 
-    [UnityTest]
-    public IEnumerator EditModeSampleTestWithEnumeratorPasses()
-    {
-        // Use the Assert class to test conditions.
-        // Use yield to skip a frame.
-        yield return null;
+        [UnityTest]
+        public IEnumerator EditModeSampleTestWithEnumeratorPasses()
+        {
+            // Use the Assert class to test conditions.
+            // Use yield to skip a frame.
+            yield return null;
+        }
     }
 }
