@@ -1,9 +1,8 @@
 {
-    "name": "Tests",
+    "name": "PlayMode",
     "references": [
         "UnityEngine.TestRunner",
-        "UnityEditor.TestRunner",
-        "AssemblyReference"
+        "tower-defense"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
@@ -12,7 +11,7 @@
     "precompiledReferences": [
         "nunit.framework.dll"
     ],
-    "autoReferenced": false,
+    "autoReferenced": true,
     "defineConstraints": [
         "UNITY_INCLUDE_TESTS"
     ],
