@@ -31,4 +31,4 @@ ignore_labels:
 
 restylers:
   - name: dotnet-format
-    arguments: ["-w tower-defense.sln"]
+  - arguments: ["-w tower-defense.sln"]
