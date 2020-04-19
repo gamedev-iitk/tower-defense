@@ -1,0 +1,34 @@
+enabled: true
+
+exclude:
+  - "**/node_modules/**/*"
+  - "**/vendor/**/*"
+  - ".github/workflows/**/*" # https://github.com/restyled-io/restyler/issues/73
+  - "*.meta"
+
+# Push the style fixes directly to the original PR
+#
+# This setting implies pull_requests: false for origin PRs, and has no effect on
+# forked PRs (since we can't push to those).
+#
+auto: false
+
+# Open Restyle PRs?
+pull_requests: true
+
+# Leave comments on the original PR linking to the Restyle PR?
+comments: true
+
+# Set commit statuses?
+statuses: true
+
+# Request review on the Restyle PR?
+request_review: author
+
+# Labels to ignore
+ignore_labels:
+  - restyled-ignore
+
+restylers:
+  - name: dotnet-format
+
