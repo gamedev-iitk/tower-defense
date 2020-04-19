@@ -31,4 +31,4 @@ ignore_labels:
 
 restylers:
   - name: dotnet-format
-    arguments: ["--folder .\\Assets\\Scripts"]
+    arguments: ["-w tower-defense.sln"]
