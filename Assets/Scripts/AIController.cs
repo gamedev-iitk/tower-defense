@@ -22,5 +22,6 @@ public class AIController : MonoBehaviour
     public void MoveTo(Vector3 dest)
     {
         agent.SetDestination(dest);
+        bool f =true;
     }
 }
