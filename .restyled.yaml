@@ -29,9 +29,12 @@ request_review: author
 ignore_labels:
   - restyled-ignore
 
-restylers:
- - name: dotnet-format
-   command :["-w"]
-   arguments: ["tower-defense.sln"]
+name: dotnet-format
+image: restyled/restyler-dotnet-format:v0.0.2
+command:
+- w
+arguments: ["tower-defense.sln"]
+
+
 
 
