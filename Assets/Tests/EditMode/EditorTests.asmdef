@@ -1,10 +1,12 @@
 {
-    "name": "PlayMode",
+    "name": "EditorTests",
     "references": [
         "UnityEngine.TestRunner",
-        "tower-defense"
+        "UnityEditor.TestRunner"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
