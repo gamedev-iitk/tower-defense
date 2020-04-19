@@ -28,6 +28,38 @@ references:
   isSpec: "True"
   fullName: AIController.MoveTo
   nameWithType: AIController.MoveTo
+- uid: Global.EditModeSampleTest
+  name: EditModeSampleTest
+  href: api/Global.EditModeSampleTest.html
+  commentId: T:Global.EditModeSampleTest
+  fullName: EditModeSampleTest
+  nameWithType: EditModeSampleTest
+- uid: Global.EditModeSampleTest.EditModeSampleTestSimplePasses
+  name: EditModeSampleTestSimplePasses()
+  href: api/Global.EditModeSampleTest.html#Global_EditModeSampleTest_EditModeSampleTestSimplePasses
+  commentId: M:Global.EditModeSampleTest.EditModeSampleTestSimplePasses
+  fullName: EditModeSampleTest.EditModeSampleTestSimplePasses()
+  nameWithType: EditModeSampleTest.EditModeSampleTestSimplePasses()
+- uid: Global.EditModeSampleTest.EditModeSampleTestSimplePasses*
+  name: EditModeSampleTestSimplePasses
+  href: api/Global.EditModeSampleTest.html#Global_EditModeSampleTest_EditModeSampleTestSimplePasses_
+  commentId: Overload:Global.EditModeSampleTest.EditModeSampleTestSimplePasses
+  isSpec: "True"
+  fullName: EditModeSampleTest.EditModeSampleTestSimplePasses
+  nameWithType: EditModeSampleTest.EditModeSampleTestSimplePasses
+- uid: Global.EditModeSampleTest.EditModeSampleTestWithEnumeratorPasses
+  name: EditModeSampleTestWithEnumeratorPasses()
+  href: api/Global.EditModeSampleTest.html#Global_EditModeSampleTest_EditModeSampleTestWithEnumeratorPasses
+  commentId: M:Global.EditModeSampleTest.EditModeSampleTestWithEnumeratorPasses
+  fullName: EditModeSampleTest.EditModeSampleTestWithEnumeratorPasses()
+  nameWithType: EditModeSampleTest.EditModeSampleTestWithEnumeratorPasses()
+- uid: Global.EditModeSampleTest.EditModeSampleTestWithEnumeratorPasses*
+  name: EditModeSampleTestWithEnumeratorPasses
+  href: api/Global.EditModeSampleTest.html#Global_EditModeSampleTest_EditModeSampleTestWithEnumeratorPasses_
+  commentId: Overload:Global.EditModeSampleTest.EditModeSampleTestWithEnumeratorPasses
+  isSpec: "True"
+  fullName: EditModeSampleTest.EditModeSampleTestWithEnumeratorPasses
+  nameWithType: EditModeSampleTest.EditModeSampleTestWithEnumeratorPasses
 - uid: Global.EventRegistry
   name: EventRegistry
   href: api/Global.EventRegistry.html
@@ -231,6 +263,51 @@ references:
   isSpec: "True"
   fullName: IUISystem.Hide
   nameWithType: IUISystem.Hide
+- uid: Global.MovementTests
+  name: MovementTests
+  href: api/Global.MovementTests.html
+  commentId: T:Global.MovementTests
+  fullName: MovementTests
+  nameWithType: MovementTests
+- uid: Global.MovementTests.ControllerMovesPlayer
+  name: ControllerMovesPlayer()
+  href: api/Global.MovementTests.html#Global_MovementTests_ControllerMovesPlayer
+  commentId: M:Global.MovementTests.ControllerMovesPlayer
+  fullName: MovementTests.ControllerMovesPlayer()
+  nameWithType: MovementTests.ControllerMovesPlayer()
+- uid: Global.MovementTests.ControllerMovesPlayer*
+  name: ControllerMovesPlayer
+  href: api/Global.MovementTests.html#Global_MovementTests_ControllerMovesPlayer_
+  commentId: Overload:Global.MovementTests.ControllerMovesPlayer
+  isSpec: "True"
+  fullName: MovementTests.ControllerMovesPlayer
+  nameWithType: MovementTests.ControllerMovesPlayer
+- uid: Global.MovementTests.Setup
+  name: Setup()
+  href: api/Global.MovementTests.html#Global_MovementTests_Setup
+  commentId: M:Global.MovementTests.Setup
+  fullName: MovementTests.Setup()
+  nameWithType: MovementTests.Setup()
+- uid: Global.MovementTests.Setup*
+  name: Setup
+  href: api/Global.MovementTests.html#Global_MovementTests_Setup_
+  commentId: Overload:Global.MovementTests.Setup
+  isSpec: "True"
+  fullName: MovementTests.Setup
+  nameWithType: MovementTests.Setup
+- uid: Global.MovementTests.Teardown
+  name: Teardown()
+  href: api/Global.MovementTests.html#Global_MovementTests_Teardown
+  commentId: M:Global.MovementTests.Teardown
+  fullName: MovementTests.Teardown()
+  nameWithType: MovementTests.Teardown()
+- uid: Global.MovementTests.Teardown*
+  name: Teardown
+  href: api/Global.MovementTests.html#Global_MovementTests_Teardown_
+  commentId: Overload:Global.MovementTests.Teardown
+  isSpec: "True"
+  fullName: MovementTests.Teardown
+  nameWithType: MovementTests.Teardown
 - uid: Global.SerializableDictionary
   name: SerializableDictionary
   href: api/Global.SerializableDictionary.html

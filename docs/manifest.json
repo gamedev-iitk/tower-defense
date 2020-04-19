@@ -28,7 +28,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.AIController.html",
-          "hash": "bc9T+yMjzZVIRG6lXmLMVA=="
+          "hash": "60FXA52qy0iT8NGNdPhP/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.EditModeSampleTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.EditModeSampleTest.html",
+          "hash": "ztxCJcGbhCEldZkk0qMQ+Q=="
         }
       },
       "is_incremental": false,
@@ -40,7 +52,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.EventRegistry.html",
-          "hash": "ThWQB+QYx+s8LP5tseGY3A=="
+          "hash": "XWdqqIzFwKBr+55ke2myJA=="
         }
       },
       "is_incremental": false,
@@ -52,7 +64,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.GenericMap-1.html",
-          "hash": "zEyNXOX5cHbsObwgAg6tZg=="
+          "hash": "0gutQLWknJLsBniiqPNEFQ=="
         }
       },
       "is_incremental": false,
@@ -64,7 +76,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.IUISystem.html",
-          "hash": "dyKoVPVa41IGDWMweHIM8g=="
+          "hash": "ziL8KSLVBd00j4VzOPnuoA=="
         }
       },
       "is_incremental": false,
@@ -76,7 +88,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.InputSystem.html",
-          "hash": "KHLnnS6iyTbkxtsoLqVxXQ=="
+          "hash": "CfYoNfmwqdNJbD9HYuXKVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.MovementTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.MovementTests.html",
+          "hash": "6aSy4OLcgN1zIAGYUOWz7w=="
         }
       },
       "is_incremental": false,
@@ -88,7 +112,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SerializableDictionary-2.html",
-          "hash": "h3K4qXOTTdMB2bGQpZspvg=="
+          "hash": "tXvFHS9zk6SirInHC3a15A=="
         }
       },
       "is_incremental": false,
@@ -100,7 +124,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SerializableDictionary-3.html",
-          "hash": "z0csWO9VKj7d1YX9WjBGBw=="
+          "hash": "rxrL/YRRVXh7vrGguyftXg=="
         }
       },
       "is_incremental": false,
@@ -112,7 +136,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SerializableDictionary.Storage-1.html",
-          "hash": "F+9q9/6RC8sxvKApqGyFDg=="
+          "hash": "LyaQ/bn3mnht0BJfj3FE9w=="
         }
       },
       "is_incremental": false,
@@ -124,7 +148,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SerializableDictionary.html",
-          "hash": "718x8cFQqqLk9WTCo1x3Sg=="
+          "hash": "zQyR3D59IxQN2twmdxQGew=="
         }
       },
       "is_incremental": false,
@@ -136,7 +160,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SerializableDictionaryBase-3.html",
-          "hash": "Ycpm0mautPBtOobIZme+JA=="
+          "hash": "tZqe+IkiJ0K9aCPoGljozw=="
         }
       },
       "is_incremental": false,
@@ -148,7 +172,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SerializableDictionaryPropertyDrawer.html",
-          "hash": "niWmQeDJcqZehzUP/QHpXA=="
+          "hash": "7ogabPX4p42cmC+u3fAphg=="
         }
       },
       "is_incremental": false,
@@ -160,7 +184,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SerializableDictionaryStoragePropertyDrawer.html",
-          "hash": "RGH6w5wKzB2YWYKrGPkdFQ=="
+          "hash": "qzK39UrcVuFAO799nlKJcA=="
         }
       },
       "is_incremental": false,
@@ -172,7 +196,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.TDEvent-1.html",
-          "hash": "jmE97km3Fh3k3USc0bXBnw=="
+          "hash": "Wusrx/nP6ipL963Y9SboZQ=="
         }
       },
       "is_incremental": false,
@@ -184,7 +208,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.TDEvent-2.html",
-          "hash": "ZVAlSc3WJ71iP8h0Ht1o/w=="
+          "hash": "ETd6rAfbPwg28Eoze0D36Q=="
         }
       },
       "is_incremental": false,
@@ -196,7 +220,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.TDEvent.html",
-          "hash": "FTtwDou6tL85xBNCVlxDHw=="
+          "hash": "CQPmFF5qQ7JfzHaFZNp86Q=="
         }
       },
       "is_incremental": false,
@@ -208,7 +232,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.TestCallback.html",
-          "hash": "R89fbwkTOzlxNCFd4pO+LQ=="
+          "hash": "+dI5o49HddPtKWap35V2ag=="
         }
       },
       "is_incremental": false,
@@ -220,7 +244,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.TestEventCall.html",
-          "hash": "W3Q1a2wiGf8RfHdJGSeIRw=="
+          "hash": "ZIefpqDCFXQkpWA0Z9h1xQ=="
         }
       },
       "is_incremental": false,
@@ -232,7 +256,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.TowerMenuUISystem.html",
-          "hash": "46aUoxQkPtdCA0lvLe4uCg=="
+          "hash": "3PMio93BBDSivl+MdJ80IQ=="
         }
       },
       "is_incremental": false,
@@ -244,7 +268,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.TowerPlacementSystem.html",
-          "hash": "AUmlQdPz2G1NwcXizlCF4A=="
+          "hash": "VjK+Gd08HKDccnTAA+sSLg=="
         }
       },
       "is_incremental": false,
@@ -256,7 +280,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.TowerPlacer.html",
-          "hash": "roLDJq3BGAPzuFE1R3I3GQ=="
+          "hash": "oVTGgk5mQnNTR+ix/44VhA=="
         }
       },
       "is_incremental": false,
@@ -268,7 +292,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.UIManager.html",
-          "hash": "3rMe+DacG6KpJE1SNYXBPw=="
+          "hash": "G7/VIhuP4rrRTcLXsB4mfw=="
         }
       },
       "is_incremental": false,
@@ -280,7 +304,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.UpgradeMenuUISystem.html",
-          "hash": "O/OBC6yxR502y7EGMOWKBQ=="
+          "hash": "c6MqsZuiooh8cPDDxspO8w=="
         }
       },
       "is_incremental": false,
@@ -292,7 +316,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.UpgradeTree.html",
-          "hash": "Q3KBTZLENaKFXuD8vpxnmw=="
+          "hash": "mZu+FGZ07yl/5RUgN8okIQ=="
         }
       },
       "is_incremental": false,
@@ -304,7 +328,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "TF36HwUPwUYf3HMHZdgt8w=="
+          "hash": "msC+KKHCLFqXcbyYoaEDCg=="
         }
       },
       "is_incremental": false,
@@ -316,7 +340,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "sj2pWUrhbsanbZvF72CZrg=="
+          "hash": "0Pz30CJIPgt2wLmS7LuhlQ=="
         }
       },
       "is_incremental": false,
@@ -328,7 +352,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "blBvUbfw5Ik7ZWFHfGXz9g=="
+          "hash": "sxASilJTfZJ+dL2W15BeaQ=="
         }
       },
       "is_incremental": false,
@@ -381,6 +405,17 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "resources/logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
@@ -397,11 +432,11 @@
     {
       "status": {
         "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
+        "details": "Cannot build incrementally because config changed.",
         "incrementalPhase": "build",
         "total_file_count": 0,
         "skipped_file_count": 0,
-        "full_build_reason_code": "NoAvailableBuildCache"
+        "full_build_reason_code": "ConfigChanged"
       },
       "processors": {
         "ConceptualDocumentProcessor": {
@@ -413,7 +448,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 24,
+          "total_file_count": 26,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
