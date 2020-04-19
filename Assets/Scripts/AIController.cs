@@ -23,7 +23,7 @@ public class AIController : MonoBehaviour
     {
         agent.SetDestination(dest);
 
-        bool f =true;
+        bool f = true;
 
     }
 }
