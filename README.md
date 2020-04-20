@@ -1,21 +1,12 @@
 # tower-defense
-A tower defense game
+A tower defense game by Game Development Society, IIT Kanpur
 
-![docs](https://github.com/gamedev-iitk/tower-defense/workflows/docs/badge.svg)
+[![<gamedev-iitk>](https://circleci.com/<github>/<gamedev-iitk>/<tower-defense>.svg?style=svg)](https://app.circleci.com/pipelines/github/gamedev-iitk/tower-defense)
 
-### Using the serializable dictionary
 
-We've used azixMcAze's implementation: https://github.com/azixMcAze/Unity-SerializableDictionary
+### Links
 
-**Instructions**
-1. Subclass `SerializableDictionary`. Generic classes won't be serialized.
-```cs
-[System.Serializable]
-public class StringStringDictionary : SerializableDictionary<string, string>  { }
-```
-1. Subclass `SerializableDictionaryPropertyDrawer` in the Editor folder. Add the `CustomPropertyDrawer` attribute.
-```cs
-[UnityEditor.CustomPropertyDrawer(typeof(StringStringDictionary))]
-public class StringStringPropertyDrawer : SerializableDictionaryPropertyDrawer { }
-```
-1. Profit!
+- [Documentation](https://gamedev-iitk.github.io/tower-defense/)
+- [Devlogs](https://gamedev-iitk.github.io/blog/)
+
+Follow us on [facebook](https://www.facebook.com/gamedev.iitk/)!

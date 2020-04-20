@@ -388,7 +388,19 @@
       "output": {
         ".html": {
           "relative_path": "manual/Events.html",
-          "hash": "Fr4QCoBCpU7Ptf+loKFeVA=="
+          "hash": "khi2+JiFzWRsWEVZAQjr2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/SerializableDictionary.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/SerializableDictionary.html",
+          "hash": "Uu0jBC3C+WO9Rrt/CqSa8A=="
         }
       },
       "is_incremental": false,
@@ -400,7 +412,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/toc.html",
-          "hash": "b9PnySZ2HofYbvWwbJ3n4Q=="
+          "hash": "1PTyt7IWouLsvJnGg52S7g=="
         }
       },
       "is_incremental": false,
@@ -464,14 +476,14 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 2,
+          "total_file_count": 3,
           "skipped_file_count": 2
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 28,
-          "skipped_file_count": 24
+          "skipped_file_count": 28
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Tower Defense Event System | Tower Defense </title>
+    <title>Usage Guide for the Serializable Dictionary | Tower Defense </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Tower Defense Event System | Tower Defense ">
+    <meta name="title" content="Usage Guide for the Serializable Dictionary | Tower Defense ">
     <meta name="generator" content="docfx 2.52.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -77,8 +77,20 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="tower-defense-event-system">Tower Defense Event System</h1>
+<h1 id="usage-guide-for-the-serializable-dictionary">Usage Guide for the Serializable Dictionary</h1>
 
+<p>We&#39;ve used azixMcAze&#39;s implementation: <a href="https://github.com/azixMcAze/Unity-SerializableDictionary">https://github.com/azixMcAze/Unity-SerializableDictionary</a></p>
+<p><strong>Instructions</strong></p>
+<ol>
+<li>Subclass <code>SerializableDictionary</code>. Generic classes won&#39;t be serialized.
+<code>cs
+[System.Serializable]
+public class StringStringDictionary : SerializableDictionary&lt;string, string&gt;  { }</code></li>
+<li>Subclass <code>SerializableDictionaryPropertyDrawer</code> in the Editor folder. Add the <code>CustomPropertyDrawer</code> attribute.
+<code>cs
+[UnityEditor.CustomPropertyDrawer(typeof(StringStringDictionary))]
+public class StringStringPropertyDrawer : SerializableDictionaryPropertyDrawer { }</code></li>
+</ol>
 </article>
           </div>
           
