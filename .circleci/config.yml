@@ -1,0 +1,44 @@
+version: 2.1
+
+orbs:
+ win: circleci/windows@2.2.0
+
+jobs:
+  build:
+    executor: win/default
+    steps:
+      - checkout
+      - run: choco install docfx -y
+      - run: docfx docfx\docfx.json
+      - store_artifacts:
+          path: docs
+      - persist_to_workspace:
+          root: .
+          paths:
+            - docs
+  deploy:
+    executor: win/default
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "cd:31:d5:7f:00:da:c8:8d:ba:4b:8c:6f:1e:40:c1:66"
+      - attach_workspace:
+          at: .
+      - run: cd docs
+      - run: dir
+      - run: git init
+      - run: git remote add origin https://github.com/gamedev-iitk/tower-defense.git
+      - run: git config user.email "mayantmukul@hotmail.com"
+      - run: git config user.name "Mayant Mukul"
+      - run: git add .
+      - run: git commit -m "Trigger build and update docs"
+      - run: git push --force origin HEAD:gh-pages
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
