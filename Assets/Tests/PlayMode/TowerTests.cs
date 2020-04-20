@@ -35,7 +35,7 @@ namespace Tests
             Assert.True(check);
         }
 
-           /// <summary>
+        /// <summary>
         /// Tests if clicking on a tower brings up UI
         /// </summary>
         /// <returns></returns>
@@ -44,17 +44,17 @@ namespace Tests
 
         public IEnumerator ClickingOnTowerBringsUpUI()
         {
-            UIManager  uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
-            Camera mainCamera=Camera.main;
-            GameObject towerui=GameObject.Find("TowerMenuUI");
-            GameObject BaseTower=GameObject.Find("BaseTower");
+            UIManager uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
+            Camera mainCamera = Camera.main;
+            GameObject towerui = GameObject.Find("TowerMenuUI");
+            GameObject BaseTower = GameObject.Find("BaseTower");
             //create an indicator
             Physics.Raycast(mainCamera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, LayerMask.GetMask("Ground"));
             EventRegistry.Invoke("togglePlacer", BaseTower, hit.point);
             yield return new WaitForSeconds(0.5f);
-            GameObject pointer=GameObject.Find("PlacementIndicator(Clone)");
+            GameObject pointer = GameObject.Find("PlacementIndicator(Clone)");
             //create tower and remove indicator
-            GameObject.Instantiate(GameObject.Find("BaseTower"),pointer.transform.position,pointer.transform.rotation);
+            GameObject.Instantiate(GameObject.Find("BaseTower"), pointer.transform.position, pointer.transform.rotation);
             GameObject.Destroy(pointer);
             yield return new WaitForSeconds(0.5f);
             //create ui through its intended pathway
@@ -67,9 +67,9 @@ namespace Tests
                     yield return new WaitForSeconds(0.5f);
                 }
             }
-            Assert.AreEqual(towerui.GetComponent<CanvasGroup>().alpha,1);
+            Assert.AreEqual(towerui.GetComponent<CanvasGroup>().alpha, 1);
         }
-          /// <summary>
+        /// <summary>
         /// Tests if pressing esc makes UI go away
         /// </summary>
         /// <returns></returns>
@@ -78,20 +78,20 @@ namespace Tests
 
         public IEnumerator EscapeKeyMakesUIGoAway()
         {
-            UIManager  uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
-            GameObject towerui=GameObject.Find("TowerMenuUI");
-             GameObject hitObject = GameObject.Find("BaseTower");
-             //show ui then hide it
+            UIManager uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
+            GameObject towerui = GameObject.Find("TowerMenuUI");
+            GameObject hitObject = GameObject.Find("BaseTower");
+            //show ui then hide it
             if (hitObject.CompareTag("Tower"))
             {
-              uiManager.ShowTowerMenu(hitObject);
-              yield return new WaitForSeconds(0.5f);
+                uiManager.ShowTowerMenu(hitObject);
+                yield return new WaitForSeconds(0.5f);
             }
             uiManager.HideAll();
             yield return new WaitForSeconds(0.5f);
-            Assert.AreEqual(towerui.GetComponent<CanvasGroup>().alpha,0);
+            Assert.AreEqual(towerui.GetComponent<CanvasGroup>().alpha, 0);
         }
-          /// <summary>
+        /// <summary>
         /// Tests if upgrade UI changes tower
         /// </summary>
         /// <returns></returns>
@@ -100,7 +100,7 @@ namespace Tests
 
         public IEnumerator UpgradeChangesTowerColor()
         {
-            UpgradeMenuUISystem ui=GameObject.Find("UpgradeUI").GetComponent<UpgradeMenuUISystem>();
+            UpgradeMenuUISystem ui = GameObject.Find("UpgradeUI").GetComponent<UpgradeMenuUISystem>();
             ui.Create(GameObject.Find("BaseTower"));
             ui.OnClick("red");
             yield return new WaitForSeconds(1f);
