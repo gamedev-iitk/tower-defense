@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class SerializableDictionaryStoragePropertyDrawer
+    <title>Class TowerUIMenuTests
    | Tower Defense </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class SerializableDictionaryStoragePropertyDrawer
+    <meta name="title" content="Class TowerUIMenuTests
    | Tower Defense ">
     <meta name="generator" content="docfx 2.52.0.0">
     
@@ -78,60 +78,39 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Global.SerializableDictionaryStoragePropertyDrawer">
+            <article class="content wrap" id="_content" data-uid="Tests.TowerUIMenuTests">
   
   
-  <h1 id="Global_SerializableDictionaryStoragePropertyDrawer" data-uid="Global.SerializableDictionaryStoragePropertyDrawer" class="text-break">Class SerializableDictionaryStoragePropertyDrawer
+  <h1 id="Tests_TowerUIMenuTests" data-uid="Tests.TowerUIMenuTests" class="text-break">Class TowerUIMenuTests
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Tests for the tower menu UI functions</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">UnityEditor.GUIDrawer</span></div>
-    <div class="level2"><span class="xref">UnityEditor.PropertyDrawer</span></div>
-    <div class="level3"><span class="xref">SerializableDictionaryStoragePropertyDrawer</span></div>
+    <div class="level1"><span class="xref">TowerUIMenuTests</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Global.html">Global</a></h6>
-  <h6><strong>Assembly</strong>: TowerDefenseEditor.dll</h6>
-  <h5 id="Global_SerializableDictionaryStoragePropertyDrawer_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Tests.html">Tests</a></h6>
+  <h6><strong>Assembly</strong>: RuntimeTests.dll</h6>
+  <h5 id="Tests_TowerUIMenuTests_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SerializableDictionaryStoragePropertyDrawer : PropertyDrawer</code></pre>
+    <pre><code class="lang-csharp hljs">public class TowerUIMenuTests</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Global_SerializableDictionaryStoragePropertyDrawer_GetPropertyHeight_" data-uid="Global.SerializableDictionaryStoragePropertyDrawer.GetPropertyHeight*"></a>
-  <h4 id="Global_SerializableDictionaryStoragePropertyDrawer_GetPropertyHeight_UnityEditor_SerializedProperty_UnityEngine_GUIContent_" data-uid="Global.SerializableDictionaryStoragePropertyDrawer.GetPropertyHeight(UnityEditor.SerializedProperty,UnityEngine.GUIContent)">GetPropertyHeight(SerializedProperty, GUIContent)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Tests_TowerUIMenuTests_CreateNewTower_" data-uid="Tests.TowerUIMenuTests.CreateNewTower*"></a>
+  <h4 id="Tests_TowerUIMenuTests_CreateNewTower" data-uid="Tests.TowerUIMenuTests.CreateNewTower">CreateNewTower()</h4>
+  <div class="markdown level1 summary"><p>Tests if a new tower can be created</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override float GetPropertyHeight(SerializedProperty property, GUIContent label)</code></pre>
+    <pre><code class="lang-csharp hljs">[UnityTest]
+public IEnumerator CreateNewTower()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEditor.SerializedProperty</span></td>
-        <td><span class="parametername">property</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">UnityEngine.GUIContent</span></td>
-        <td><span class="parametername">label</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -142,52 +121,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">UnityEditor.PropertyDrawer.GetPropertyHeight(UnityEditor.SerializedProperty, UnityEngine.GUIContent)</span></div>
   
   
-  <a id="Global_SerializableDictionaryStoragePropertyDrawer_OnGUI_" data-uid="Global.SerializableDictionaryStoragePropertyDrawer.OnGUI*"></a>
-  <h4 id="Global_SerializableDictionaryStoragePropertyDrawer_OnGUI_UnityEngine_Rect_UnityEditor_SerializedProperty_UnityEngine_GUIContent_" data-uid="Global.SerializableDictionaryStoragePropertyDrawer.OnGUI(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)">OnGUI(Rect, SerializedProperty, GUIContent)</h4>
+  <a id="Tests_TowerUIMenuTests_Setup_" data-uid="Tests.TowerUIMenuTests.Setup*"></a>
+  <h4 id="Tests_TowerUIMenuTests_Setup" data-uid="Tests.TowerUIMenuTests.Setup">Setup()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)</code></pre>
+    <pre><code class="lang-csharp hljs">[SetUp]
+public void Setup()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.Rect</span></td>
-        <td><span class="parametername">position</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">UnityEditor.SerializedProperty</span></td>
-        <td><span class="parametername">property</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">UnityEngine.GUIContent</span></td>
-        <td><span class="parametername">label</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">UnityEditor.PropertyDrawer.OnGUI(UnityEngine.Rect, UnityEditor.SerializedProperty, UnityEngine.GUIContent)</span></div>
 </article>
           </div>
           
