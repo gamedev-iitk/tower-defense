@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\AIController.cs" />
+     <Compile Include="Assets\Scripts\Damageable.cs" />
      <Compile Include="Assets\Scripts\Events\EventRegistry.cs" />
      <Compile Include="Assets\Scripts\Events\GenericMap.cs" />
      <Compile Include="Assets\Scripts\Events\TDEvents.cs" />

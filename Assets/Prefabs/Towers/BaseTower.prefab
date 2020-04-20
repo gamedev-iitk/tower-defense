@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7873187413585461513}
   - component: {fileID: 7461649517091528299}
+  - component: {fileID: 7374056700535558545}
   m_Layer: 0
   m_Name: BaseTower
   m_TagString: Tower
@@ -47,6 +48,18 @@ MonoBehaviour:
   green: 1
   red: 0
   gold: 1
+--- !u!114 &7374056700535558545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379762198253035637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22f7099b43f78ae47aed864e20173a51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1680605942062172082
 GameObject:
   m_ObjectHideFlags: 0
