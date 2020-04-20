@@ -1,36 +1,56 @@
 version: 2.1
 
-parameters:
-  BUILD_NAME:
-    type: string
-    default: "tower-defense"
-  UNITY_ACTIVATION_FILE:
-    type: string
-    default: "./unity3d.alf"
-
 jobs:
-  authenticate:
+  test-editmode:
     docker:
       - image: gableroux/unity3d:2019.3.2f1
     environment:
       TEST_PLATFORM: editmode
     steps:
       - checkout
-      - chmod +x ./ci/get_activation_file.sh && ./ci/get_activation_file.sh
+      - run: 
+          name: Prepare licenses
+          command: chmod +x ./ci/validate_license.sh && ./ci/validate_license.sh
+          # command: chmod +x ./ci/before_script.sh && ./ci/before_script.sh
+      - run:
+          name: Run tests
+          command: chmod +x ./ci/test.sh && ./ci/test.sh
       - store_artifacts:
-          path: << pipeline.parameters.UNITY_ACTIVATION_FILE >>
-          destination: license
-  test:
+          path: editmode-results.xml
+      - store_test_results:
+          path: editmode-results.xml
+  test-playmode:
     docker:
       - image: gableroux/unity3d:2019.3.2f1
+    environment:
+      TEST_PLATFORM: playmode
     steps:
-      - run: chmod +x ./ci/before_script.sh && ./ci/before_script.sh
-      - run: chmod +x ./ci/test.sh && ./ci/test.sh
-      - run: echo "Hello World!"
+      - checkout
+      - run: 
+          name: Prepare licenses
+          command: chmod +x ./ci/validate_license.sh && ./ci/validate_license.sh
+          # command: chmod +x ./ci/before_script.sh && ./ci/before_script.sh
+      - run:
+          name: Run tests
+          command: chmod +x ./ci/test.sh && ./ci/test.sh
+      - store_artifacts:
+          path: playmode-results.xml
+      - store_test_results:
+          path: playmode-results.xml
+  # This job only needed to run once, to authenticate
+  # authenticate:
+  #   docker:
+  #     - image: gableroux/unity3d:2019.3.2f1
+  #   steps:
+  #     - checkout
+  #     - run: chmod +x ./ci/get_activation_file.sh && ./ci/get_activation_file.sh
+  #     - store_artifacts:
+  #         path: << pipeline.parameters.UNITY_ACTIVATION_FILE >>
+  #         destination: license
 
 workflows:
   version: 2
-  build-and-deploy:
+  test:
     jobs:
-      - authenticate
-      - test
+      - test-editmode
+      - test-playmode
