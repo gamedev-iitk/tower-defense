@@ -20,6 +20,7 @@ Assets/**/obj*
 # Test results and logs
 /[Rr]esults/
 
+.gitlab-ci.yml
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data

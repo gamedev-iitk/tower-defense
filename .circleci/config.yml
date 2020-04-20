@@ -1,44 +1,56 @@
 version: 2.1
 
-orbs:
- win: circleci/windows@2.2.0
-
 jobs:
-  build:
-    executor: win/default
+  test-editmode:
+    docker:
+      - image: gableroux/unity3d:2019.3.2f1
+    environment:
+      TEST_PLATFORM: editmode
     steps:
       - checkout
-      - run: choco install docfx -y
-      - run: docfx docfx\docfx.json
+      - run: 
+          name: Prepare licenses
+          command: chmod +x ./ci/validate_license.sh && ./ci/validate_license.sh
+          # command: chmod +x ./ci/before_script.sh && ./ci/before_script.sh
+      - run:
+          name: Run tests
+          command: chmod +x ./ci/test.sh && ./ci/test.sh
       - store_artifacts:
-          path: docs
-      - persist_to_workspace:
-          root: .
-          paths:
-            - docs
-  deploy:
-    executor: win/default
+          path: editmode-results.xml
+      - store_test_results:
+          path: editmode-results.xml
+  test-playmode:
+    docker:
+      - image: gableroux/unity3d:2019.3.2f1
+    environment:
+      TEST_PLATFORM: playmode
     steps:
-      - add_ssh_keys:
-          fingerprints:
-            - "cd:31:d5:7f:00:da:c8:8d:ba:4b:8c:6f:1e:40:c1:66"
-      - attach_workspace:
-          at: .
-      - run: cd docs
-      - run: dir
-      - run: git init
-      - run: git remote add origin https://github.com/gamedev-iitk/tower-defense.git
-      - run: git config user.email "mayantmukul@hotmail.com"
-      - run: git config user.name "Mayant Mukul"
-      - run: git add .
-      - run: git commit -m "Trigger build and update docs"
-      - run: git push --force origin HEAD:gh-pages
+      - checkout
+      - run: 
+          name: Prepare licenses
+          command: chmod +x ./ci/validate_license.sh && ./ci/validate_license.sh
+          # command: chmod +x ./ci/before_script.sh && ./ci/before_script.sh
+      - run:
+          name: Run tests
+          command: chmod +x ./ci/test.sh && ./ci/test.sh
+      - store_artifacts:
+          path: playmode-results.xml
+      - store_test_results:
+          path: playmode-results.xml
+  # This job only needed to run once, to authenticate
+  # authenticate:
+  #   docker:
+  #     - image: gableroux/unity3d:2019.3.2f1
+  #   steps:
+  #     - checkout
+  #     - run: chmod +x ./ci/get_activation_file.sh && ./ci/get_activation_file.sh
+  #     - store_artifacts:
+  #         path: << pipeline.parameters.UNITY_ACTIVATION_FILE >>
+  #         destination: license
 
 workflows:
   version: 2
-  build-and-deploy:
+  test:
     jobs:
-      - build
-      - deploy:
-          requires:
-            - build
+      - test-editmode
+      - test-playmode
