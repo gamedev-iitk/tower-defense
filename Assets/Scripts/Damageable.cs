@@ -3,6 +3,25 @@
 public class Damageable : MonoBehaviour
 {
     private float health = 100f;
+    private HealthBarUI healthBar;
+
+    void Start()
+    {
+        healthBar = transform.Find("Canvas").GetComponent<HealthBarUI>();
+    }
+
+    void Update()
+    {
+        // TODO: For testing only, remove later
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            ApplyDamage(20);
+        }
+    }
+    private void StartDeath()
+    {
+        // 
+    }
 
     /// <summary>
     /// Subtracts the given value from health and triggers death if health reaches 0
@@ -14,11 +33,11 @@ public class Damageable : MonoBehaviour
         if (health <= 0)
         {
             StartDeath();
+            healthBar.SetHealth(0);
         }
-    }
-
-    private void StartDeath()
-    {
-        // 
+        else
+        {
+            healthBar.SetHealth(health);
+        }
     }
 }
