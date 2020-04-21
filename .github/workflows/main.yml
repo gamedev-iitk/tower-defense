@@ -1,0 +1,22 @@
+name: Adding Card on Trello
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.x
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.x' # Semantic version range syntax or exact version of a Python version
+        architecture: 'x64' # Optional - x64 or x86, defaults to x64
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+    - name: Get latest issue and add the card
+      run: python .github\workflows\add_card.py ${{sercets.TRELLO_KEY}} ${{sercets.TRELLO_TOKEN}}
