@@ -7,9 +7,9 @@ using UnityEngine.SceneManagement;
 namespace Tests
 {
     /// <summary>
-    /// Tests for the player functionality
+    /// Tests for player movement systems
     /// </summary>
-    public class PlayerTests
+    public class MovementTests
     {
         [SetUp]
         public void Setup()
@@ -28,7 +28,7 @@ namespace Tests
             Vector3 initial = player.transform.position;
             player.GetComponent<AIController>().MoveTo(initial + new Vector3(-1, 0, -1));
 
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
             Assert.AreNotEqual(initial, player.transform.position);
         }
     }
