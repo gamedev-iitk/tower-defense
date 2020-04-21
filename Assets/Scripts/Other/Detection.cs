@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class Detection : MonoBehaviour
 {
-    public Battle battle;
-  public GameObject enemy;
+  public Battle battle;
 
   public GameObject target;
   public bool shouldRotate=false;
 
   void OnTriggerEnter(Collider other)
   {
-      Debug.Log("entered");
+      //checks if collider has tag "Enemy"
       if(other.gameObject.tag=="Enemy")
       {
-          Debug.Log("Called for attack");
           target=other.gameObject;
           shouldRotate=true;
           battle.Attack(target);
@@ -24,7 +22,7 @@ public class Detection : MonoBehaviour
 
   void OnTriggerExit(Collider other)
   {
-      Debug.Log("exited");
+      //stops attack if enemy is out of range
       shouldRotate=false;
       battle.stopAttack();
   }
@@ -33,6 +31,7 @@ public class Detection : MonoBehaviour
   {
       if(shouldRotate)
       {
+          //rotates to face enemy
           Vector3 look=transform.position-target.transform.position;
           look.y=0;
           Quaternion targetRotation=Quaternion.LookRotation(look);

@@ -1,29 +1,30 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Battle : MonoBehaviour
 {
   public bool isFighting=false;
-  public float attack,range,rateOfFire;
+  public float attack,defence,range,rateOfFire;
 
-  public bool isEnemyDead=true;
+  public bool isDamageable=false;
   public float timer;
 
   public GameObject enemytoTarget;
 
    void Start()
    {
+     //sets range 
         GetComponent<CapsuleCollider>().radius=range;
    }
   public void Attack(GameObject enemy)
   {
-      Debug.Log("Started fighting");
+    //strarts conditions for an attack
       enemytoTarget=enemy;
-      if(enemytoTarget.GetComponent<isDamageable>()!=null)
+      if(enemytoTarget.GetComponent<Damageable>()!=null)
       {
-          Debug.Log("enemy can be damaged");
-          isEnemyDead=false;
+          isDamageable=true;;
       }
       isFighting=true;
       timer=0f;
@@ -31,7 +32,7 @@ public class Battle : MonoBehaviour
 
   public void stopAttack()
   {
-      Debug.Log("stopped fighting");
+    //stops attack
       isFighting=false;
       enemytoTarget=null;
   }
@@ -41,22 +42,19 @@ public class Battle : MonoBehaviour
       timer+=Time.deltaTime;
       if(timer>=rateOfFire)
       {
+        //checks if to attack an enemy
          if(isFighting)
         {
-          Debug.Log("Attack");
-          if(!isEnemyDead)
+          //checks for a clear line of sight
+          Vector3 direction=enemytoTarget.transform.position-transform.position;
+          if(Physics.Raycast(transform.position,direction,out RaycastHit hit))
           {
-              isEnemyDead=enemytoTarget.GetComponent<isDamageable>().Damage(attack);
-              Debug.Log("damage Done");
-              if(isEnemyDead)
-              {
-                Debug.Log("enemy is dead");
-                GameObject.Destroy(enemytoTarget);
-                stopAttack();
-                this.GetComponent<Detection>().shouldRotate=false;
-                Debug.Log("attack has been stopped");
-              }
-          }  
+             if(isDamageable)
+             {
+               //damages enemy
+              enemytoTarget.GetComponent<Damageable>().ApplyDamage(attack);
+             }
+          }
         }
         timer=0f;
       }

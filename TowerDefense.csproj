@@ -48,7 +48,6 @@
      <Compile Include="Assets\Scripts\Other\Battle.cs" />
      <Compile Include="Assets\Scripts\Other\Detection.cs" />
      <Compile Include="Assets\Scripts\Other\Movement.cs" />
-     <Compile Include="Assets\Scripts\Other\isDamageable.cs" />
      <Compile Include="Assets\Scripts\SerializableDictionary.cs" />
      <Compile Include="Assets\Scripts\Towers\TowerPlacementSystem.cs" />
      <Compile Include="Assets\Scripts\Towers\TowerPlacer.cs" />
