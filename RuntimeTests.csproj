@@ -38,6 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets\Tests\PlayMode\MovementTests.cs" />
      <Compile Include="Assets\Tests\PlayMode\TowerPlacerTests.cs" />
+     <Compile Include="Assets\Tests\PlayMode\TowerTests.cs" />
      <Compile Include="Assets\Tests\PlayMode\TowerUIMenuTests.cs" />
      <Compile Include="Assets\Tests\PlayMode\UpgradeUIMenuTests.cs" />
      <None Include="Assets\Tests\PlayMode\RuntimeTests.asmdef" />

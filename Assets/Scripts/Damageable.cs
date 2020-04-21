@@ -40,4 +40,9 @@ public class Damageable : MonoBehaviour
             healthBar.SetHealth(health);
         }
     }
+
+    public float GetHealth()
+    {
+        return health;
+    }
 }
