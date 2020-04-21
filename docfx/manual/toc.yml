@@ -1,2 +1,4 @@
 - name: Event System
   href: events.md
+- name: Serializable Dictionary
+  href: SerializableDictionary.md
