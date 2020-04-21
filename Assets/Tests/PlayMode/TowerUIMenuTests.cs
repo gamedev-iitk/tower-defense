@@ -17,10 +17,6 @@ namespace Tests
             SceneManager.LoadScene("MainScene");
         }
 
-        /// <summary>
-        /// Tests if a new tower menu UI can be created
-        /// </summary>
-        /// <returns></returns>
         [UnityTest]
         public IEnumerator CreateNewTowerMenuUI()
         {
@@ -32,10 +28,6 @@ namespace Tests
             Assert.True(check);
         }
 
-        /// <summary>
-        /// Tests if clicking on a tower brings up UI
-        /// </summary>
-        /// <returns></returns>
         [UnityTest]
         public IEnumerator ClickingOnTowerBringsUpUI()
         {
@@ -50,10 +42,36 @@ namespace Tests
             Assert.AreEqual(towerUI.GetComponent<CanvasGroup>().alpha, 1);
         }
 
-        /// <summary>
-        /// Tests if pressing esc makes UI go away
-        /// </summary>
-        /// <returns></returns>
+        [UnityTest]
+        public IEnumerator StartTowerUpgradeFromTowerMenuUI()
+        {
+            GameObject baseTower = GameObject.Find("BaseTower");
+            GameObject towerMenu = GameObject.Find("TowerMenuUI");
+            towerMenu.GetComponent<TowerMenuUISystem>().Create(baseTower);
+
+            towerMenu.GetComponent<TowerMenuUISystem>().OnUpgradeClick();
+            CanvasGroup upgradeMenuCanvasGroup = GameObject.Find("UpgradeUI").GetComponent<CanvasGroup>();
+
+            yield return null;
+            Assert.AreEqual(1, upgradeMenuCanvasGroup.alpha);
+        }
+
+        [UnityTest]
+        public IEnumerator StartTowerMoveFromTowerUI()
+        {
+            GameObject baseTower = GameObject.Find("BaseTower");
+            GameObject towerMenu = GameObject.Find("TowerMenuUI");
+            towerMenu.GetComponent<TowerMenuUISystem>().Create(baseTower);
+
+            towerMenu.GetComponent<TowerMenuUISystem>().OnMoveClick();
+            GameObject indicator = GameObject.Find("PlacementIndicator(Clone)");
+            bool check = indicator.GetComponent<TowerPlacer>().PlaceTower();
+            
+            yield return null;
+            Assert.IsTrue(check);
+            Assert.IsNotNull(GameObject.Find("BaseTower(Clone)"));
+        }
+
         [UnityTest]
         public IEnumerator EscapeKeyMakesUIGoAway()
         {
@@ -69,21 +87,6 @@ namespace Tests
 
             yield return new WaitForSeconds(0.5f);
             Assert.AreEqual(towerui.GetComponent<CanvasGroup>().alpha, 0);
-        }
-
-        /// <summary>
-        /// Tests if upgrade UI changes tower
-        /// </summary>
-        /// <returns></returns>
-        [UnityTest]
-        public IEnumerator UpgradeChangesTowerColor()
-        {
-            UpgradeMenuUISystem ui = GameObject.Find("UpgradeUI").GetComponent<UpgradeMenuUISystem>();
-            ui.Create(GameObject.Find("BaseTower"));
-            ui.OnClick("red");
-
-            yield return new WaitForSeconds(1f);
-            Assert.IsNotNull(GameObject.Find("RedTower(Clone)"));
         }
     }
 }
