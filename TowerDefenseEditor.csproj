@@ -36,8 +36,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Editor\SerializableDictionaryPropertyDrawer.cs" />
-     <None Include="Assets\Editor\TowerDefenseEditor.asmdef" />
+     <Compile Include="Assets\Scripts\Editor\SerializableDictionaryPropertyDrawer.cs" />
+     <None Include="Assets\Scripts\Editor\TowerDefenseEditor.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

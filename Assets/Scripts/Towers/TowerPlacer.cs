@@ -40,7 +40,7 @@ public class TowerPlacer : MonoBehaviour
         renderer = GetComponent<Renderer>();
     }
 
-    void Update()
+    void LateUpdate()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit, LayerMask.GetMask("Ground")))
