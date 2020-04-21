@@ -34,5 +34,27 @@ namespace Tests
             // Check condition
             Assert.True(check);
         }
+        /// <summary>
+        /// tests  if focusedTower is destroyed
+        /// </summary>
+        /// <returns></returns>
+        [UnityTest]
+        public IEnumerator CheckingDestroyMethodInTowerMenu()
+        {
+            GameObject tower = GameObject.Find("BaseTower");
+         
+            GameObject towermenu = GameObject.Find("TowerMenuUI");
+           bool check = towermenu.GetComponent<TowerMenuUISystem>().Create(tower);
+            yield return null;
+           Assert.IsTrue(check);
+            check = false;
+            towermenu.GetComponent<TowerMenuUISystem>().Destroy();
+            check = towermenu.GetComponent<TowerMenuUISystem>().Create(tower);
+            yield return null;
+           Assert.IsTrue(check);
+
+
+
+        }
     }
 }

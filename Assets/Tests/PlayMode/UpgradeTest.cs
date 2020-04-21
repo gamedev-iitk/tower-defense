@@ -49,7 +49,7 @@ namespace Tests
             Assert.AreEqual(rpos, towerpos);
         }
         /// <summary>
-        /// tests for tower placement at different position when move button is clicked
+        /// tests for tower placement  
         /// </summary>
         /// <returns></returns>
         /// 

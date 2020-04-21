@@ -291,6 +291,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90f012ddb1a9cff4d8a26eb0cedaabd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1229032121 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1101803320531154667, guid: f8da79642fd4d444586ede966e9b02bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1101803319560029534}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1337933908
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,7 +479,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1101803319560029534}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1229032121}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fc3f86f9aa278c4fa37b266aa3ea2cc, type: 3}
@@ -760,11 +766,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1579299771}
+      objectReference: {fileID: 1229032121}
     - target: {fileID: 1101803320110623002, guid: f8da79642fd4d444586ede966e9b02bf,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnUpgradeClick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1101803320110623002, guid: f8da79642fd4d444586ede966e9b02bf,
         type: 3}
