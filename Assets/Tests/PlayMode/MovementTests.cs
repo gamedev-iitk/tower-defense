@@ -31,5 +31,30 @@ namespace Tests
             yield return new WaitForSeconds(2f);
             Assert.AreNotEqual(initial, player.transform.position);
         }
+        /// <summary>
+        /// checking calculations of aimovement
+        /// </summary>
+        /// <returns></returns>
+        [UnityTest]
+        public IEnumerator tocheckifplayerismoving()
+        {
+
+            GameObject player = GameObject.Find("Player");
+            Vector3 initialpos = player.transform.position;
+
+
+
+            player.GetComponent<AIController>().MoveTo(initialpos);
+
+            yield return new WaitForSeconds(0.1f);
+            Assert.AreEqual(player.transform.position, initialpos);
+            Vector3 destination = new Vector3(-1.4f, 0.3f, -3.87f);
+            player.GetComponent<AIController>().MoveTo(destination);
+            yield return new WaitForSeconds(0.5f);
+            Assert.AreEqual(player.transform.position.z, destination.z);
+            Assert.AreEqual(player.transform.position.x, destination.x);
+
+
+        }
     }
 }
