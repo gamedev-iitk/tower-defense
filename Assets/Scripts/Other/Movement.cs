@@ -8,8 +8,8 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        float H=Input.GetAxis("Horizontal");
-        float V=Input.GetAxis("Vertical");
-        transform.position+=new Vector3(H*movementSpeed,0,V*movementSpeed);
+        float H = Input.GetAxis("Horizontal");
+        float V = Input.GetAxis("Vertical");
+        transform.position += new Vector3(H * movementSpeed, 0, V * movementSpeed);
     }
 }
