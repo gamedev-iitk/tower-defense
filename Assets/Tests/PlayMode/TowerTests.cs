@@ -23,7 +23,7 @@ namespace Tests
 
             Image image = GameObject.Find("BaseTower/Canvas/HealthBG/ProgressBar").GetComponent<Image>();
             float initialFill = image.fillAmount;
-            
+
             damageable.ApplyDamage(20);
 
             yield return null;
