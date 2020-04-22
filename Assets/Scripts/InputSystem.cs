@@ -30,7 +30,7 @@ public class InputSystem : MonoBehaviour
         // Check left mouse click or "select"
         if (Input.GetButtonDown("Fire1"))
         {
-            if (Physics.Raycast(mainCamera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
+            if (Physics.Raycast(mainCamera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, LayerMask.GetMask("Default")))
             {
                 GameObject hitObject = hit.transform.parent.gameObject;
                 if (hitObject.CompareTag("Tower"))
