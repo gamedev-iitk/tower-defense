@@ -5,7 +5,7 @@ on:
     types: [opened]
 
 jobs:
-  build:
+  card:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -19,4 +19,4 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests
     - name: Get latest issue and add the card
-      run: python .github\workflows\add_card.py ${{sercets.TRELLO_KEY}} ${{sercets.TRELLO_TOKEN}}
+      run: python .github\\workflows\\add_card.py ${{secrets.TRELLO_KEY}} ${{secrets.TRELLO_TOKEN}}
