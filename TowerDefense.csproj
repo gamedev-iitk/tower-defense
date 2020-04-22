@@ -37,7 +37,9 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\AIController.cs" />
-     <Compile Include="Assets\Scripts\Damageable.cs" />
+     <Compile Include="Assets\Scripts\Common\AbstractAttacker.cs" />
+     <Compile Include="Assets\Scripts\Common\Damageable.cs" />
+     <Compile Include="Assets\Scripts\Common\Detection.cs" />
      <Compile Include="Assets\Scripts\Events\EventRegistry.cs" />
      <Compile Include="Assets\Scripts\Events\GenericMap.cs" />
      <Compile Include="Assets\Scripts\Events\TDEvents.cs" />
@@ -46,6 +48,7 @@
      <Compile Include="Assets\Scripts\FaceCamera.cs" />
      <Compile Include="Assets\Scripts\InputSystem.cs" />
      <Compile Include="Assets\Scripts\SerializableDictionary.cs" />
+     <Compile Include="Assets\Scripts\Towers\TowerBattle.cs" />
      <Compile Include="Assets\Scripts\Towers\TowerPlacementSystem.cs" />
      <Compile Include="Assets\Scripts\Towers\TowerPlacer.cs" />
      <Compile Include="Assets\Scripts\Towers\UpgradeTree.cs" />
@@ -248,7 +251,7 @@
         <HintPath>D:/Program Files/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.NRefactory">
-        <HintPath>D:/GitProjects/tower-defense/Library/PackageCache/com.unity.render-pipelines.core@7.1.8/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+        <HintPath>D:/GitProjects/tower-defense/Library/PackageCache/com.unity.render-pipelines.core@7.3.1/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>D:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
