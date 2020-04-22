@@ -56,6 +56,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\AIController.cs" />
+     <Compile Include="Assets\Scripts\Dialogue.cs" />
+     <Compile Include="Assets\Scripts\DialogueManager.cs" />
+     <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
      <Compile Include="Assets\Scripts\Events\EventRegistry.cs" />
      <Compile Include="Assets\Scripts\Events\GenericMap.cs" />
      <Compile Include="Assets\Scripts\Events\TDEvents.cs" />

@@ -9,6 +9,7 @@ public class TowerMenuUISystem : MonoBehaviour, IUISystem
     private CanvasGroup canvasGroup;
     private GameObject focusedTower;
     private UIManager uiManager;
+    
 
     void Start()
     {
