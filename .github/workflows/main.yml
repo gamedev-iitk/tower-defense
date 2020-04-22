@@ -2,7 +2,7 @@ name: Adding Card on Trello
 
 on:
   issues:
-    types: [opened]
+    types: [opened, edited]
 
 jobs:
   card:
@@ -19,4 +19,4 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests
     - name: Get latest issue and add the card
-      run: python .github\\workflows\\add_card.py ${{secrets.TRELLO_KEY}} ${{secrets.TRELLO_TOKEN}}
+      run: "python .github/workflows/add_card.py ${{secrets.TRELLO_KEY}} ${{secrets.TRELLO_TOKEN}}"
