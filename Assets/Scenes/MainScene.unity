@@ -158,7 +158,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: c8e2a30abd7663d4ebcd3da89296bdb0, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
@@ -260,7 +260,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: c8e2a30abd7663d4ebcd3da89296bdb0, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
@@ -320,8 +320,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 46.81134, y: -38.4}
-  m_SizeDelta: {x: -577.9, y: -186}
+  m_AnchoredPosition: {x: -38.9, y: -38.4}
+  m_SizeDelta: {x: -406.4, y: -186}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &245485835
 MonoBehaviour:
@@ -526,8 +526,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -142.69997, y: 48.4}
-  m_SizeDelta: {x: 285.4, y: -50.3}
+  m_AnchoredPosition: {x: -117.78, y: 48.4}
+  m_SizeDelta: {x: 235.55, y: -50.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &678707148
 MonoBehaviour:
@@ -999,7 +999,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: c8e2a30abd7663d4ebcd3da89296bdb0, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 19
     m_FontStyle: 0
     m_BestFit: 0
@@ -1254,7 +1254,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13, y: -8.875}
+  m_AnchoredPosition: {x: -10, y: -8.875}
   m_SizeDelta: {x: 180.3, y: 34.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1462380242
@@ -1288,7 +1288,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: c8e2a30abd7663d4ebcd3da89296bdb0, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
@@ -2094,6 +2094,11 @@ PrefabInstance:
       propertyPath: m_FontData.m_Alignment
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2788051992950407983, guid: 4db86608ff82d164ba048f6c36f301da,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 2788051993430065227, guid: 4db86608ff82d164ba048f6c36f301da,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
