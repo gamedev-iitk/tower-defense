@@ -150,7 +150,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -645,12 +645,12 @@ PrefabInstance:
     - target: {fileID: 379762198253035637, guid: c3f33bd9d6e48cf43a6c01ebb8060a3f,
         type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Tower
       objectReference: {fileID: 0}
     - target: {fileID: 3362462000056208341, guid: c3f33bd9d6e48cf43a6c01ebb8060a3f,
         type: 3}
       propertyPath: Range
-      value: 20
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7252183657876614786, guid: c3f33bd9d6e48cf43a6c01ebb8060a3f,
         type: 3}
