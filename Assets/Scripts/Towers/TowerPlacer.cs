@@ -54,18 +54,18 @@ public class TowerPlacer : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-          count++;
-          renderer.material.color = red;
-          blocked = true;
+        count++;
+        renderer.material.color = red;
+        blocked = true;
     }
 
     void OnTriggerExit(Collider other)
     {
         count--;
-        if(count==0)
+        if (count == 0)
         {
-          renderer.material.color = green;
-          blocked = false;
+            renderer.material.color = green;
+            blocked = false;
         }
     }
 }
