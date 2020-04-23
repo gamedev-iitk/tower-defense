@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 
 
 /// <summary>
@@ -6,7 +7,8 @@
 /// </summary>
 public class UpgradeTree : MonoBehaviour
 {
-    public bool green = true;
-    public bool red = false;
-    public bool gold = true;
+    public TowerTypeBoolDictionary valuePairs;
 }
+
+[Serializable]
+public class TowerTypeBoolDictionary : SerializableDictionary<ETowerType, bool> { }

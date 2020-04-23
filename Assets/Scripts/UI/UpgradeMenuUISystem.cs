@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
-
+using UnityEngine.UI;
+using System.Collections.Generic;
 
 /// <summary>
 /// Manager class for tower upgrades. Handles UI and tower object instantiation/deletion.
@@ -13,7 +14,7 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
     private GameObject greenPrefab;
     [SerializeField]
     private GameObject redPrefab;
-
+    private List<GameObject> upgradeButtons = new List<GameObject>();
     private GameObject focusedTower;
     private CanvasGroup canvasGroup;
 
@@ -22,6 +23,11 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
         // Initialize private fields
         canvasGroup = GameObject.Find("UpgradeUI").GetComponent<CanvasGroup>();
 
+        GameObject image = GameObject.Find("UpgradeUI/Image");
+        for (int i = 1; i < image.transform.childCount; i++)
+        {
+            upgradeButtons.Add(image.transform.GetChild(i).gameObject);
+        }
         // Hide canvas
         canvasGroup.alpha = 0;
     }
@@ -69,6 +75,7 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
                 Debug.LogError("Failed to upgrade tower.");
                 break;
         }
+        SetButtonActivation(focusedTower.GetComponent<UpgradeTree>());
     }
 
     /// <summary>
@@ -77,7 +84,11 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
     /// </summary>
     void SetButtonActivation(UpgradeTree tree)
     {
-        //
+        foreach (GameObject button in upgradeButtons)
+        {
+            tree.valuePairs.TryGetValue(button.GetComponent<TowerType>().Type, out bool isActive);
+            button.GetComponent<Button>().interactable = isActive;
+        }
     }
 
     /// <summary>

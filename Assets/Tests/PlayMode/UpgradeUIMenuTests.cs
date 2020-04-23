@@ -9,7 +9,7 @@ namespace Tests
     /// <summary>
     /// Tests for the UpgradeMenuUISystem
     /// </summary>
-    public class UpgradeTest
+    public class UpgradeUIMenuTests
     {
         [SetUp]
         public void Setup()
