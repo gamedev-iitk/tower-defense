@@ -1,7 +1,7 @@
 {
     "name": "TowerDefenseEditor",
     "references": [
-        ""
+        "TowerDefense"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

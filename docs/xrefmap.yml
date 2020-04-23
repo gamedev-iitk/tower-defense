@@ -9,6 +9,75 @@ references:
   fullName.vb: ''
   nameWithType: Global
   nameWithType.vb: ''
+- uid: Global.AbstractBattle
+  name: AbstractBattle
+  href: api/Global.AbstractBattle.html
+  commentId: T:Global.AbstractBattle
+  fullName: AbstractBattle
+  nameWithType: AbstractBattle
+- uid: Global.AbstractBattle.Attack
+  name: Attack
+  href: api/Global.AbstractBattle.html#Global_AbstractBattle_Attack
+  commentId: F:Global.AbstractBattle.Attack
+  fullName: AbstractBattle.Attack
+  nameWithType: AbstractBattle.Attack
+- uid: Global.AbstractBattle.Defense
+  name: Defense
+  href: api/Global.AbstractBattle.html#Global_AbstractBattle_Defense
+  commentId: F:Global.AbstractBattle.Defense
+  fullName: AbstractBattle.Defense
+  nameWithType: AbstractBattle.Defense
+- uid: Global.AbstractBattle.FireRate
+  name: FireRate
+  href: api/Global.AbstractBattle.html#Global_AbstractBattle_FireRate
+  commentId: F:Global.AbstractBattle.FireRate
+  fullName: AbstractBattle.FireRate
+  nameWithType: AbstractBattle.FireRate
+- uid: Global.AbstractBattle.OnDetect(UnityEngine.GameObject)
+  name: OnDetect(GameObject)
+  href: api/Global.AbstractBattle.html#Global_AbstractBattle_OnDetect_UnityEngine_GameObject_
+  commentId: M:Global.AbstractBattle.OnDetect(UnityEngine.GameObject)
+  fullName: AbstractBattle.OnDetect(UnityEngine.GameObject)
+  nameWithType: AbstractBattle.OnDetect(GameObject)
+- uid: Global.AbstractBattle.OnDetect*
+  name: OnDetect
+  href: api/Global.AbstractBattle.html#Global_AbstractBattle_OnDetect_
+  commentId: Overload:Global.AbstractBattle.OnDetect
+  isSpec: "True"
+  fullName: AbstractBattle.OnDetect
+  nameWithType: AbstractBattle.OnDetect
+- uid: Global.AbstractBattle.OnLose
+  name: OnLose()
+  href: api/Global.AbstractBattle.html#Global_AbstractBattle_OnLose
+  commentId: M:Global.AbstractBattle.OnLose
+  fullName: AbstractBattle.OnLose()
+  nameWithType: AbstractBattle.OnLose()
+- uid: Global.AbstractBattle.OnLose*
+  name: OnLose
+  href: api/Global.AbstractBattle.html#Global_AbstractBattle_OnLose_
+  commentId: Overload:Global.AbstractBattle.OnLose
+  isSpec: "True"
+  fullName: AbstractBattle.OnLose
+  nameWithType: AbstractBattle.OnLose
+- uid: Global.AbstractBattle.Range
+  name: Range
+  href: api/Global.AbstractBattle.html#Global_AbstractBattle_Range
+  commentId: F:Global.AbstractBattle.Range
+  fullName: AbstractBattle.Range
+  nameWithType: AbstractBattle.Range
+- uid: Global.AbstractBattle.SetRange
+  name: SetRange()
+  href: api/Global.AbstractBattle.html#Global_AbstractBattle_SetRange
+  commentId: M:Global.AbstractBattle.SetRange
+  fullName: AbstractBattle.SetRange()
+  nameWithType: AbstractBattle.SetRange()
+- uid: Global.AbstractBattle.SetRange*
+  name: SetRange
+  href: api/Global.AbstractBattle.html#Global_AbstractBattle_SetRange_
+  commentId: Overload:Global.AbstractBattle.SetRange
+  isSpec: "True"
+  fullName: AbstractBattle.SetRange
+  nameWithType: AbstractBattle.SetRange
 - uid: Global.AIController
   name: AIController
   href: api/Global.AIController.html
@@ -28,6 +97,74 @@ references:
   isSpec: "True"
   fullName: AIController.MoveTo
   nameWithType: AIController.MoveTo
+- uid: Global.Damageable
+  name: Damageable
+  href: api/Global.Damageable.html
+  commentId: T:Global.Damageable
+  fullName: Damageable
+  nameWithType: Damageable
+- uid: Global.Damageable.ApplyDamage(System.Single)
+  name: ApplyDamage(Single)
+  href: api/Global.Damageable.html#Global_Damageable_ApplyDamage_System_Single_
+  commentId: M:Global.Damageable.ApplyDamage(System.Single)
+  fullName: Damageable.ApplyDamage(System.Single)
+  nameWithType: Damageable.ApplyDamage(Single)
+- uid: Global.Damageable.ApplyDamage*
+  name: ApplyDamage
+  href: api/Global.Damageable.html#Global_Damageable_ApplyDamage_
+  commentId: Overload:Global.Damageable.ApplyDamage
+  isSpec: "True"
+  fullName: Damageable.ApplyDamage
+  nameWithType: Damageable.ApplyDamage
+- uid: Global.Damageable.GetHealth
+  name: GetHealth()
+  href: api/Global.Damageable.html#Global_Damageable_GetHealth
+  commentId: M:Global.Damageable.GetHealth
+  fullName: Damageable.GetHealth()
+  nameWithType: Damageable.GetHealth()
+- uid: Global.Damageable.GetHealth*
+  name: GetHealth
+  href: api/Global.Damageable.html#Global_Damageable_GetHealth_
+  commentId: Overload:Global.Damageable.GetHealth
+  isSpec: "True"
+  fullName: Damageable.GetHealth
+  nameWithType: Damageable.GetHealth
+- uid: Global.Detection
+  name: Detection
+  href: api/Global.Detection.html
+  commentId: T:Global.Detection
+  fullName: Detection
+  nameWithType: Detection
+- uid: Global.ETowerType
+  name: ETowerType
+  href: api/Global.ETowerType.html
+  commentId: T:Global.ETowerType
+  fullName: ETowerType
+  nameWithType: ETowerType
+- uid: Global.ETowerType.Base
+  name: Base
+  href: api/Global.ETowerType.html#Global_ETowerType_Base
+  commentId: F:Global.ETowerType.Base
+  fullName: ETowerType.Base
+  nameWithType: ETowerType.Base
+- uid: Global.ETowerType.Gold
+  name: Gold
+  href: api/Global.ETowerType.html#Global_ETowerType_Gold
+  commentId: F:Global.ETowerType.Gold
+  fullName: ETowerType.Gold
+  nameWithType: ETowerType.Gold
+- uid: Global.ETowerType.Green
+  name: Green
+  href: api/Global.ETowerType.html#Global_ETowerType_Green
+  commentId: F:Global.ETowerType.Green
+  fullName: ETowerType.Green
+  nameWithType: ETowerType.Green
+- uid: Global.ETowerType.Red
+  name: Red
+  href: api/Global.ETowerType.html#Global_ETowerType_Red
+  commentId: F:Global.ETowerType.Red
+  fullName: ETowerType.Red
+  nameWithType: ETowerType.Red
 - uid: Global.EventRegistry
   name: EventRegistry
   href: api/Global.EventRegistry.html
@@ -94,6 +231,12 @@ references:
   fullName.vb: EventRegistry.RegisterAction(Of TParam1, TParam2)(System.String, UnityEngine.Events.UnityAction(Of TParam1, TParam2))
   nameWithType: EventRegistry.RegisterAction<TParam1, TParam2>(String, UnityAction<TParam1, TParam2>)
   nameWithType.vb: EventRegistry.RegisterAction(Of TParam1, TParam2)(String, UnityAction(Of TParam1, TParam2))
+- uid: Global.FaceCamera
+  name: FaceCamera
+  href: api/Global.FaceCamera.html
+  commentId: T:Global.FaceCamera
+  fullName: FaceCamera
+  nameWithType: FaceCamera
 - uid: Global.GenericMap`1
   name: GenericMap<TKey>
   href: api/Global.GenericMap-1.html
@@ -174,6 +317,25 @@ references:
   fullName.vb: GenericMap(Of TKey).TryGetValue(Of TValue)(TKey, ByRef TValue)
   nameWithType: GenericMap<TKey>.TryGetValue<TValue>(TKey, out TValue)
   nameWithType.vb: GenericMap(Of TKey).TryGetValue(Of TValue)(TKey, ByRef TValue)
+- uid: Global.HealthBarUI
+  name: HealthBarUI
+  href: api/Global.HealthBarUI.html
+  commentId: T:Global.HealthBarUI
+  fullName: HealthBarUI
+  nameWithType: HealthBarUI
+- uid: Global.HealthBarUI.SetHealth(System.Single)
+  name: SetHealth(Single)
+  href: api/Global.HealthBarUI.html#Global_HealthBarUI_SetHealth_System_Single_
+  commentId: M:Global.HealthBarUI.SetHealth(System.Single)
+  fullName: HealthBarUI.SetHealth(System.Single)
+  nameWithType: HealthBarUI.SetHealth(Single)
+- uid: Global.HealthBarUI.SetHealth*
+  name: SetHealth
+  href: api/Global.HealthBarUI.html#Global_HealthBarUI_SetHealth_
+  commentId: Overload:Global.HealthBarUI.SetHealth
+  isSpec: "True"
+  fullName: HealthBarUI.SetHealth
+  nameWithType: HealthBarUI.SetHealth
 - uid: Global.InputSystem
   name: InputSystem
   href: api/Global.InputSystem.html
@@ -662,6 +824,51 @@ references:
   commentId: T:Global.TestEventCall
   fullName: TestEventCall
   nameWithType: TestEventCall
+- uid: Global.TowerBattle
+  name: TowerBattle
+  href: api/Global.TowerBattle.html
+  commentId: T:Global.TowerBattle
+  fullName: TowerBattle
+  nameWithType: TowerBattle
+- uid: Global.TowerBattle.OnDetect(UnityEngine.GameObject)
+  name: OnDetect(GameObject)
+  href: api/Global.TowerBattle.html#Global_TowerBattle_OnDetect_UnityEngine_GameObject_
+  commentId: M:Global.TowerBattle.OnDetect(UnityEngine.GameObject)
+  fullName: TowerBattle.OnDetect(UnityEngine.GameObject)
+  nameWithType: TowerBattle.OnDetect(GameObject)
+- uid: Global.TowerBattle.OnDetect*
+  name: OnDetect
+  href: api/Global.TowerBattle.html#Global_TowerBattle_OnDetect_
+  commentId: Overload:Global.TowerBattle.OnDetect
+  isSpec: "True"
+  fullName: TowerBattle.OnDetect
+  nameWithType: TowerBattle.OnDetect
+- uid: Global.TowerBattle.OnLose
+  name: OnLose()
+  href: api/Global.TowerBattle.html#Global_TowerBattle_OnLose
+  commentId: M:Global.TowerBattle.OnLose
+  fullName: TowerBattle.OnLose()
+  nameWithType: TowerBattle.OnLose()
+- uid: Global.TowerBattle.OnLose*
+  name: OnLose
+  href: api/Global.TowerBattle.html#Global_TowerBattle_OnLose_
+  commentId: Overload:Global.TowerBattle.OnLose
+  isSpec: "True"
+  fullName: TowerBattle.OnLose
+  nameWithType: TowerBattle.OnLose
+- uid: Global.TowerBattle.SetRange
+  name: SetRange()
+  href: api/Global.TowerBattle.html#Global_TowerBattle_SetRange
+  commentId: M:Global.TowerBattle.SetRange
+  fullName: TowerBattle.SetRange()
+  nameWithType: TowerBattle.SetRange()
+- uid: Global.TowerBattle.SetRange*
+  name: SetRange
+  href: api/Global.TowerBattle.html#Global_TowerBattle_SetRange_
+  commentId: Overload:Global.TowerBattle.SetRange
+  isSpec: "True"
+  fullName: TowerBattle.SetRange
+  nameWithType: TowerBattle.SetRange
 - uid: Global.TowerMenuUISystem
   name: TowerMenuUISystem
   href: api/Global.TowerMenuUISystem.html
@@ -796,6 +1003,30 @@ references:
   commentId: F:Global.TowerPlacer.TowerObject
   fullName: TowerPlacer.TowerObject
   nameWithType: TowerPlacer.TowerObject
+- uid: Global.TowerType
+  name: TowerType
+  href: api/Global.TowerType.html
+  commentId: T:Global.TowerType
+  fullName: TowerType
+  nameWithType: TowerType
+- uid: Global.TowerType.Type
+  name: Type
+  href: api/Global.TowerType.html#Global_TowerType_Type
+  commentId: F:Global.TowerType.Type
+  fullName: TowerType.Type
+  nameWithType: TowerType.Type
+- uid: Global.TowerTypeBoolDictionary
+  name: TowerTypeBoolDictionary
+  href: api/Global.TowerTypeBoolDictionary.html
+  commentId: T:Global.TowerTypeBoolDictionary
+  fullName: TowerTypeBoolDictionary
+  nameWithType: TowerTypeBoolDictionary
+- uid: Global.TowerTypeBoolDictionaryPropertyDrawer
+  name: TowerTypeBoolDictionaryPropertyDrawer
+  href: api/Global.TowerTypeBoolDictionaryPropertyDrawer.html
+  commentId: T:Global.TowerTypeBoolDictionaryPropertyDrawer
+  fullName: TowerTypeBoolDictionaryPropertyDrawer
+  nameWithType: TowerTypeBoolDictionaryPropertyDrawer
 - uid: Global.UIManager
   name: UIManager
   href: api/Global.UIManager.html
@@ -905,24 +1136,12 @@ references:
   commentId: T:Global.UpgradeTree
   fullName: UpgradeTree
   nameWithType: UpgradeTree
-- uid: Global.UpgradeTree.gold
-  name: gold
-  href: api/Global.UpgradeTree.html#Global_UpgradeTree_gold
-  commentId: F:Global.UpgradeTree.gold
-  fullName: UpgradeTree.gold
-  nameWithType: UpgradeTree.gold
-- uid: Global.UpgradeTree.green
-  name: green
-  href: api/Global.UpgradeTree.html#Global_UpgradeTree_green
-  commentId: F:Global.UpgradeTree.green
-  fullName: UpgradeTree.green
-  nameWithType: UpgradeTree.green
-- uid: Global.UpgradeTree.red
-  name: red
-  href: api/Global.UpgradeTree.html#Global_UpgradeTree_red
-  commentId: F:Global.UpgradeTree.red
-  fullName: UpgradeTree.red
-  nameWithType: UpgradeTree.red
+- uid: Global.UpgradeTree.valuePairs
+  name: valuePairs
+  href: api/Global.UpgradeTree.html#Global_UpgradeTree_valuePairs
+  commentId: F:Global.UpgradeTree.valuePairs
+  fullName: UpgradeTree.valuePairs
+  nameWithType: UpgradeTree.valuePairs
 - uid: Tests
   name: Tests
   href: api/Tests.html
@@ -961,57 +1180,186 @@ references:
   isSpec: "True"
   fullName: Tests.EditModeSampleTest.EditModeSampleTestWithEnumeratorPasses
   nameWithType: EditModeSampleTest.EditModeSampleTestWithEnumeratorPasses
-- uid: Tests.PlayerTests
-  name: PlayerTests
-  href: api/Tests.PlayerTests.html
-  commentId: T:Tests.PlayerTests
-  fullName: Tests.PlayerTests
-  nameWithType: PlayerTests
-- uid: Tests.PlayerTests.AIMovePlayer
+- uid: Tests.MovementTests
+  name: MovementTests
+  href: api/Tests.MovementTests.html
+  commentId: T:Tests.MovementTests
+  fullName: Tests.MovementTests
+  nameWithType: MovementTests
+- uid: Tests.MovementTests.AIMovePlayer
   name: AIMovePlayer()
-  href: api/Tests.PlayerTests.html#Tests_PlayerTests_AIMovePlayer
-  commentId: M:Tests.PlayerTests.AIMovePlayer
-  fullName: Tests.PlayerTests.AIMovePlayer()
-  nameWithType: PlayerTests.AIMovePlayer()
-- uid: Tests.PlayerTests.AIMovePlayer*
+  href: api/Tests.MovementTests.html#Tests_MovementTests_AIMovePlayer
+  commentId: M:Tests.MovementTests.AIMovePlayer
+  fullName: Tests.MovementTests.AIMovePlayer()
+  nameWithType: MovementTests.AIMovePlayer()
+- uid: Tests.MovementTests.AIMovePlayer*
   name: AIMovePlayer
-  href: api/Tests.PlayerTests.html#Tests_PlayerTests_AIMovePlayer_
-  commentId: Overload:Tests.PlayerTests.AIMovePlayer
+  href: api/Tests.MovementTests.html#Tests_MovementTests_AIMovePlayer_
+  commentId: Overload:Tests.MovementTests.AIMovePlayer
   isSpec: "True"
-  fullName: Tests.PlayerTests.AIMovePlayer
-  nameWithType: PlayerTests.AIMovePlayer
-- uid: Tests.PlayerTests.Setup
+  fullName: Tests.MovementTests.AIMovePlayer
+  nameWithType: MovementTests.AIMovePlayer
+- uid: Tests.MovementTests.Setup
   name: Setup()
-  href: api/Tests.PlayerTests.html#Tests_PlayerTests_Setup
-  commentId: M:Tests.PlayerTests.Setup
-  fullName: Tests.PlayerTests.Setup()
-  nameWithType: PlayerTests.Setup()
-- uid: Tests.PlayerTests.Setup*
+  href: api/Tests.MovementTests.html#Tests_MovementTests_Setup
+  commentId: M:Tests.MovementTests.Setup
+  fullName: Tests.MovementTests.Setup()
+  nameWithType: MovementTests.Setup()
+- uid: Tests.MovementTests.Setup*
   name: Setup
-  href: api/Tests.PlayerTests.html#Tests_PlayerTests_Setup_
-  commentId: Overload:Tests.PlayerTests.Setup
+  href: api/Tests.MovementTests.html#Tests_MovementTests_Setup_
+  commentId: Overload:Tests.MovementTests.Setup
   isSpec: "True"
-  fullName: Tests.PlayerTests.Setup
-  nameWithType: PlayerTests.Setup
+  fullName: Tests.MovementTests.Setup
+  nameWithType: MovementTests.Setup
+- uid: Tests.TowerPlacerTests
+  name: TowerPlacerTests
+  href: api/Tests.TowerPlacerTests.html
+  commentId: T:Tests.TowerPlacerTests
+  fullName: Tests.TowerPlacerTests
+  nameWithType: TowerPlacerTests
+- uid: Tests.TowerPlacerTests.IndicatorCanToggle
+  name: IndicatorCanToggle()
+  href: api/Tests.TowerPlacerTests.html#Tests_TowerPlacerTests_IndicatorCanToggle
+  commentId: M:Tests.TowerPlacerTests.IndicatorCanToggle
+  fullName: Tests.TowerPlacerTests.IndicatorCanToggle()
+  nameWithType: TowerPlacerTests.IndicatorCanToggle()
+- uid: Tests.TowerPlacerTests.IndicatorCanToggle*
+  name: IndicatorCanToggle
+  href: api/Tests.TowerPlacerTests.html#Tests_TowerPlacerTests_IndicatorCanToggle_
+  commentId: Overload:Tests.TowerPlacerTests.IndicatorCanToggle
+  isSpec: "True"
+  fullName: Tests.TowerPlacerTests.IndicatorCanToggle
+  nameWithType: TowerPlacerTests.IndicatorCanToggle
+- uid: Tests.TowerPlacerTests.IndicatorColorIsRedNearObstacles
+  name: IndicatorColorIsRedNearObstacles()
+  href: api/Tests.TowerPlacerTests.html#Tests_TowerPlacerTests_IndicatorColorIsRedNearObstacles
+  commentId: M:Tests.TowerPlacerTests.IndicatorColorIsRedNearObstacles
+  fullName: Tests.TowerPlacerTests.IndicatorColorIsRedNearObstacles()
+  nameWithType: TowerPlacerTests.IndicatorColorIsRedNearObstacles()
+- uid: Tests.TowerPlacerTests.IndicatorColorIsRedNearObstacles*
+  name: IndicatorColorIsRedNearObstacles
+  href: api/Tests.TowerPlacerTests.html#Tests_TowerPlacerTests_IndicatorColorIsRedNearObstacles_
+  commentId: Overload:Tests.TowerPlacerTests.IndicatorColorIsRedNearObstacles
+  isSpec: "True"
+  fullName: Tests.TowerPlacerTests.IndicatorColorIsRedNearObstacles
+  nameWithType: TowerPlacerTests.IndicatorColorIsRedNearObstacles
+- uid: Tests.TowerPlacerTests.IndicatorMovesWithCursor
+  name: IndicatorMovesWithCursor()
+  href: api/Tests.TowerPlacerTests.html#Tests_TowerPlacerTests_IndicatorMovesWithCursor
+  commentId: M:Tests.TowerPlacerTests.IndicatorMovesWithCursor
+  fullName: Tests.TowerPlacerTests.IndicatorMovesWithCursor()
+  nameWithType: TowerPlacerTests.IndicatorMovesWithCursor()
+- uid: Tests.TowerPlacerTests.IndicatorMovesWithCursor*
+  name: IndicatorMovesWithCursor
+  href: api/Tests.TowerPlacerTests.html#Tests_TowerPlacerTests_IndicatorMovesWithCursor_
+  commentId: Overload:Tests.TowerPlacerTests.IndicatorMovesWithCursor
+  isSpec: "True"
+  fullName: Tests.TowerPlacerTests.IndicatorMovesWithCursor
+  nameWithType: TowerPlacerTests.IndicatorMovesWithCursor
+- uid: Tests.TowerPlacerTests.IndicatorPlacesTower
+  name: IndicatorPlacesTower()
+  href: api/Tests.TowerPlacerTests.html#Tests_TowerPlacerTests_IndicatorPlacesTower
+  commentId: M:Tests.TowerPlacerTests.IndicatorPlacesTower
+  fullName: Tests.TowerPlacerTests.IndicatorPlacesTower()
+  nameWithType: TowerPlacerTests.IndicatorPlacesTower()
+- uid: Tests.TowerPlacerTests.IndicatorPlacesTower*
+  name: IndicatorPlacesTower
+  href: api/Tests.TowerPlacerTests.html#Tests_TowerPlacerTests_IndicatorPlacesTower_
+  commentId: Overload:Tests.TowerPlacerTests.IndicatorPlacesTower
+  isSpec: "True"
+  fullName: Tests.TowerPlacerTests.IndicatorPlacesTower
+  nameWithType: TowerPlacerTests.IndicatorPlacesTower
+- uid: Tests.TowerPlacerTests.Setup
+  name: Setup()
+  href: api/Tests.TowerPlacerTests.html#Tests_TowerPlacerTests_Setup
+  commentId: M:Tests.TowerPlacerTests.Setup
+  fullName: Tests.TowerPlacerTests.Setup()
+  nameWithType: TowerPlacerTests.Setup()
+- uid: Tests.TowerPlacerTests.Setup*
+  name: Setup
+  href: api/Tests.TowerPlacerTests.html#Tests_TowerPlacerTests_Setup_
+  commentId: Overload:Tests.TowerPlacerTests.Setup
+  isSpec: "True"
+  fullName: Tests.TowerPlacerTests.Setup
+  nameWithType: TowerPlacerTests.Setup
+- uid: Tests.TowerTests
+  name: TowerTests
+  href: api/Tests.TowerTests.html
+  commentId: T:Tests.TowerTests
+  fullName: Tests.TowerTests
+  nameWithType: TowerTests
+- uid: Tests.TowerTests.CanDamageTowersAndChangeHealthBar
+  name: CanDamageTowersAndChangeHealthBar()
+  href: api/Tests.TowerTests.html#Tests_TowerTests_CanDamageTowersAndChangeHealthBar
+  commentId: M:Tests.TowerTests.CanDamageTowersAndChangeHealthBar
+  fullName: Tests.TowerTests.CanDamageTowersAndChangeHealthBar()
+  nameWithType: TowerTests.CanDamageTowersAndChangeHealthBar()
+- uid: Tests.TowerTests.CanDamageTowersAndChangeHealthBar*
+  name: CanDamageTowersAndChangeHealthBar
+  href: api/Tests.TowerTests.html#Tests_TowerTests_CanDamageTowersAndChangeHealthBar_
+  commentId: Overload:Tests.TowerTests.CanDamageTowersAndChangeHealthBar
+  isSpec: "True"
+  fullName: Tests.TowerTests.CanDamageTowersAndChangeHealthBar
+  nameWithType: TowerTests.CanDamageTowersAndChangeHealthBar
+- uid: Tests.TowerTests.SetUp
+  name: SetUp()
+  href: api/Tests.TowerTests.html#Tests_TowerTests_SetUp
+  commentId: M:Tests.TowerTests.SetUp
+  fullName: Tests.TowerTests.SetUp()
+  nameWithType: TowerTests.SetUp()
+- uid: Tests.TowerTests.SetUp*
+  name: SetUp
+  href: api/Tests.TowerTests.html#Tests_TowerTests_SetUp_
+  commentId: Overload:Tests.TowerTests.SetUp
+  isSpec: "True"
+  fullName: Tests.TowerTests.SetUp
+  nameWithType: TowerTests.SetUp
 - uid: Tests.TowerUIMenuTests
   name: TowerUIMenuTests
   href: api/Tests.TowerUIMenuTests.html
   commentId: T:Tests.TowerUIMenuTests
   fullName: Tests.TowerUIMenuTests
   nameWithType: TowerUIMenuTests
-- uid: Tests.TowerUIMenuTests.CreateNewTower
-  name: CreateNewTower()
-  href: api/Tests.TowerUIMenuTests.html#Tests_TowerUIMenuTests_CreateNewTower
-  commentId: M:Tests.TowerUIMenuTests.CreateNewTower
-  fullName: Tests.TowerUIMenuTests.CreateNewTower()
-  nameWithType: TowerUIMenuTests.CreateNewTower()
-- uid: Tests.TowerUIMenuTests.CreateNewTower*
-  name: CreateNewTower
-  href: api/Tests.TowerUIMenuTests.html#Tests_TowerUIMenuTests_CreateNewTower_
-  commentId: Overload:Tests.TowerUIMenuTests.CreateNewTower
+- uid: Tests.TowerUIMenuTests.ClickingOnTowerBringsUpUI
+  name: ClickingOnTowerBringsUpUI()
+  href: api/Tests.TowerUIMenuTests.html#Tests_TowerUIMenuTests_ClickingOnTowerBringsUpUI
+  commentId: M:Tests.TowerUIMenuTests.ClickingOnTowerBringsUpUI
+  fullName: Tests.TowerUIMenuTests.ClickingOnTowerBringsUpUI()
+  nameWithType: TowerUIMenuTests.ClickingOnTowerBringsUpUI()
+- uid: Tests.TowerUIMenuTests.ClickingOnTowerBringsUpUI*
+  name: ClickingOnTowerBringsUpUI
+  href: api/Tests.TowerUIMenuTests.html#Tests_TowerUIMenuTests_ClickingOnTowerBringsUpUI_
+  commentId: Overload:Tests.TowerUIMenuTests.ClickingOnTowerBringsUpUI
   isSpec: "True"
-  fullName: Tests.TowerUIMenuTests.CreateNewTower
-  nameWithType: TowerUIMenuTests.CreateNewTower
+  fullName: Tests.TowerUIMenuTests.ClickingOnTowerBringsUpUI
+  nameWithType: TowerUIMenuTests.ClickingOnTowerBringsUpUI
+- uid: Tests.TowerUIMenuTests.CreateNewTowerMenuUI
+  name: CreateNewTowerMenuUI()
+  href: api/Tests.TowerUIMenuTests.html#Tests_TowerUIMenuTests_CreateNewTowerMenuUI
+  commentId: M:Tests.TowerUIMenuTests.CreateNewTowerMenuUI
+  fullName: Tests.TowerUIMenuTests.CreateNewTowerMenuUI()
+  nameWithType: TowerUIMenuTests.CreateNewTowerMenuUI()
+- uid: Tests.TowerUIMenuTests.CreateNewTowerMenuUI*
+  name: CreateNewTowerMenuUI
+  href: api/Tests.TowerUIMenuTests.html#Tests_TowerUIMenuTests_CreateNewTowerMenuUI_
+  commentId: Overload:Tests.TowerUIMenuTests.CreateNewTowerMenuUI
+  isSpec: "True"
+  fullName: Tests.TowerUIMenuTests.CreateNewTowerMenuUI
+  nameWithType: TowerUIMenuTests.CreateNewTowerMenuUI
+- uid: Tests.TowerUIMenuTests.EscapeKeyMakesUIGoAway
+  name: EscapeKeyMakesUIGoAway()
+  href: api/Tests.TowerUIMenuTests.html#Tests_TowerUIMenuTests_EscapeKeyMakesUIGoAway
+  commentId: M:Tests.TowerUIMenuTests.EscapeKeyMakesUIGoAway
+  fullName: Tests.TowerUIMenuTests.EscapeKeyMakesUIGoAway()
+  nameWithType: TowerUIMenuTests.EscapeKeyMakesUIGoAway()
+- uid: Tests.TowerUIMenuTests.EscapeKeyMakesUIGoAway*
+  name: EscapeKeyMakesUIGoAway
+  href: api/Tests.TowerUIMenuTests.html#Tests_TowerUIMenuTests_EscapeKeyMakesUIGoAway_
+  commentId: Overload:Tests.TowerUIMenuTests.EscapeKeyMakesUIGoAway
+  isSpec: "True"
+  fullName: Tests.TowerUIMenuTests.EscapeKeyMakesUIGoAway
+  nameWithType: TowerUIMenuTests.EscapeKeyMakesUIGoAway
 - uid: Tests.TowerUIMenuTests.Setup
   name: Setup()
   href: api/Tests.TowerUIMenuTests.html#Tests_TowerUIMenuTests_Setup
@@ -1025,3 +1373,87 @@ references:
   isSpec: "True"
   fullName: Tests.TowerUIMenuTests.Setup
   nameWithType: TowerUIMenuTests.Setup
+- uid: Tests.TowerUIMenuTests.StartTowerMoveFromTowerUI
+  name: StartTowerMoveFromTowerUI()
+  href: api/Tests.TowerUIMenuTests.html#Tests_TowerUIMenuTests_StartTowerMoveFromTowerUI
+  commentId: M:Tests.TowerUIMenuTests.StartTowerMoveFromTowerUI
+  fullName: Tests.TowerUIMenuTests.StartTowerMoveFromTowerUI()
+  nameWithType: TowerUIMenuTests.StartTowerMoveFromTowerUI()
+- uid: Tests.TowerUIMenuTests.StartTowerMoveFromTowerUI*
+  name: StartTowerMoveFromTowerUI
+  href: api/Tests.TowerUIMenuTests.html#Tests_TowerUIMenuTests_StartTowerMoveFromTowerUI_
+  commentId: Overload:Tests.TowerUIMenuTests.StartTowerMoveFromTowerUI
+  isSpec: "True"
+  fullName: Tests.TowerUIMenuTests.StartTowerMoveFromTowerUI
+  nameWithType: TowerUIMenuTests.StartTowerMoveFromTowerUI
+- uid: Tests.TowerUIMenuTests.StartTowerUpgradeFromTowerMenuUI
+  name: StartTowerUpgradeFromTowerMenuUI()
+  href: api/Tests.TowerUIMenuTests.html#Tests_TowerUIMenuTests_StartTowerUpgradeFromTowerMenuUI
+  commentId: M:Tests.TowerUIMenuTests.StartTowerUpgradeFromTowerMenuUI
+  fullName: Tests.TowerUIMenuTests.StartTowerUpgradeFromTowerMenuUI()
+  nameWithType: TowerUIMenuTests.StartTowerUpgradeFromTowerMenuUI()
+- uid: Tests.TowerUIMenuTests.StartTowerUpgradeFromTowerMenuUI*
+  name: StartTowerUpgradeFromTowerMenuUI
+  href: api/Tests.TowerUIMenuTests.html#Tests_TowerUIMenuTests_StartTowerUpgradeFromTowerMenuUI_
+  commentId: Overload:Tests.TowerUIMenuTests.StartTowerUpgradeFromTowerMenuUI
+  isSpec: "True"
+  fullName: Tests.TowerUIMenuTests.StartTowerUpgradeFromTowerMenuUI
+  nameWithType: TowerUIMenuTests.StartTowerUpgradeFromTowerMenuUI
+- uid: Tests.UpgradeUIMenuTests
+  name: UpgradeUIMenuTests
+  href: api/Tests.UpgradeUIMenuTests.html
+  commentId: T:Tests.UpgradeUIMenuTests
+  fullName: Tests.UpgradeUIMenuTests
+  nameWithType: UpgradeUIMenuTests
+- uid: Tests.UpgradeUIMenuTests.CanCreateUpgradeUIMenu
+  name: CanCreateUpgradeUIMenu()
+  href: api/Tests.UpgradeUIMenuTests.html#Tests_UpgradeUIMenuTests_CanCreateUpgradeUIMenu
+  commentId: M:Tests.UpgradeUIMenuTests.CanCreateUpgradeUIMenu
+  fullName: Tests.UpgradeUIMenuTests.CanCreateUpgradeUIMenu()
+  nameWithType: UpgradeUIMenuTests.CanCreateUpgradeUIMenu()
+- uid: Tests.UpgradeUIMenuTests.CanCreateUpgradeUIMenu*
+  name: CanCreateUpgradeUIMenu
+  href: api/Tests.UpgradeUIMenuTests.html#Tests_UpgradeUIMenuTests_CanCreateUpgradeUIMenu_
+  commentId: Overload:Tests.UpgradeUIMenuTests.CanCreateUpgradeUIMenu
+  isSpec: "True"
+  fullName: Tests.UpgradeUIMenuTests.CanCreateUpgradeUIMenu
+  nameWithType: UpgradeUIMenuTests.CanCreateUpgradeUIMenu
+- uid: Tests.UpgradeUIMenuTests.CanUpgradeToRedTower
+  name: CanUpgradeToRedTower()
+  href: api/Tests.UpgradeUIMenuTests.html#Tests_UpgradeUIMenuTests_CanUpgradeToRedTower
+  commentId: M:Tests.UpgradeUIMenuTests.CanUpgradeToRedTower
+  fullName: Tests.UpgradeUIMenuTests.CanUpgradeToRedTower()
+  nameWithType: UpgradeUIMenuTests.CanUpgradeToRedTower()
+- uid: Tests.UpgradeUIMenuTests.CanUpgradeToRedTower*
+  name: CanUpgradeToRedTower
+  href: api/Tests.UpgradeUIMenuTests.html#Tests_UpgradeUIMenuTests_CanUpgradeToRedTower_
+  commentId: Overload:Tests.UpgradeUIMenuTests.CanUpgradeToRedTower
+  isSpec: "True"
+  fullName: Tests.UpgradeUIMenuTests.CanUpgradeToRedTower
+  nameWithType: UpgradeUIMenuTests.CanUpgradeToRedTower
+- uid: Tests.UpgradeUIMenuTests.EscapeKeyMakesUIGoAway
+  name: EscapeKeyMakesUIGoAway()
+  href: api/Tests.UpgradeUIMenuTests.html#Tests_UpgradeUIMenuTests_EscapeKeyMakesUIGoAway
+  commentId: M:Tests.UpgradeUIMenuTests.EscapeKeyMakesUIGoAway
+  fullName: Tests.UpgradeUIMenuTests.EscapeKeyMakesUIGoAway()
+  nameWithType: UpgradeUIMenuTests.EscapeKeyMakesUIGoAway()
+- uid: Tests.UpgradeUIMenuTests.EscapeKeyMakesUIGoAway*
+  name: EscapeKeyMakesUIGoAway
+  href: api/Tests.UpgradeUIMenuTests.html#Tests_UpgradeUIMenuTests_EscapeKeyMakesUIGoAway_
+  commentId: Overload:Tests.UpgradeUIMenuTests.EscapeKeyMakesUIGoAway
+  isSpec: "True"
+  fullName: Tests.UpgradeUIMenuTests.EscapeKeyMakesUIGoAway
+  nameWithType: UpgradeUIMenuTests.EscapeKeyMakesUIGoAway
+- uid: Tests.UpgradeUIMenuTests.Setup
+  name: Setup()
+  href: api/Tests.UpgradeUIMenuTests.html#Tests_UpgradeUIMenuTests_Setup
+  commentId: M:Tests.UpgradeUIMenuTests.Setup
+  fullName: Tests.UpgradeUIMenuTests.Setup()
+  nameWithType: UpgradeUIMenuTests.Setup()
+- uid: Tests.UpgradeUIMenuTests.Setup*
+  name: Setup
+  href: api/Tests.UpgradeUIMenuTests.html#Tests_UpgradeUIMenuTests_Setup_
+  commentId: Overload:Tests.UpgradeUIMenuTests.Setup
+  isSpec: "True"
+  fullName: Tests.UpgradeUIMenuTests.Setup
+  nameWithType: UpgradeUIMenuTests.Setup

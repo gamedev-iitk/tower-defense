@@ -1,8 +1,13 @@
 ﻿using UnityEngine;
+<<<<<<< HEAD
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.UI;
 using System.Threading;
+=======
+using UnityEngine.UI;
+using System.Collections.Generic;
+>>>>>>> c4be30b69c51fa199dcd7ae443f7f46b1f44d4cf
 
 /// <summary>
 /// Manager class for tower upgrades. Handles UI and tower object instantiation/deletion.
@@ -16,7 +21,11 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
     private GameObject greenPrefab;
     [SerializeField]
     private GameObject redPrefab;
+<<<<<<< HEAD
     public Animator animator;
+=======
+    private List<GameObject> upgradeButtons = new List<GameObject>();
+>>>>>>> c4be30b69c51fa199dcd7ae443f7f46b1f44d4cf
     private GameObject focusedTower;
     public  CanvasGroup canvasGroup;
     GameObject towermenu;
@@ -29,6 +38,11 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
         // Initialize private fields
         canvasGroup = GameObject.Find("UpgradeUI").GetComponent<CanvasGroup>();
 
+        GameObject image = GameObject.Find("UpgradeUI/Image");
+        for (int i = 1; i < image.transform.childCount; i++)
+        {
+            upgradeButtons.Add(image.transform.GetChild(i).gameObject);
+        }
         // Hide canvas
         canvasGroup.alpha = 0;
         towermenu = GameObject.Find("TowerMenuUI");
@@ -126,6 +140,7 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
                 Debug.LogError("Failed to upgrade tower.");
                 break;
         }
+        SetButtonActivation(focusedTower.GetComponent<UpgradeTree>());
     }
 
     /// <summary>
@@ -134,7 +149,11 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
     /// </summary>
     void SetButtonActivation(UpgradeTree tree)
     {
-        //
+        foreach (GameObject button in upgradeButtons)
+        {
+            tree.valuePairs.TryGetValue(button.GetComponent<TowerType>().Type, out bool isActive);
+            button.GetComponent<Button>().interactable = isActive;
+        }
     }
    
 

@@ -36,6 +36,54 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.AbstractBattle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.AbstractBattle.html",
+          "hash": "HiFzlj96PBKwNJPGa14hpg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.Damageable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.Damageable.html",
+          "hash": "FWkK9b/nXTPSINGMrzQGcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.Detection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.Detection.html",
+          "hash": "4BQJIMIF0HgtEh7X18yoyw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.ETowerType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.ETowerType.html",
+          "hash": "91hrE7VfuCyAqswCpa7ixQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.EventRegistry.yml",
       "output": {
         ".html": {
@@ -48,11 +96,35 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.FaceCamera.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.FaceCamera.html",
+          "hash": "1pQNPZjDnFwVLqYJ/ReScw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.GenericMap-1.yml",
       "output": {
         ".html": {
           "relative_path": "api/Global.GenericMap-1.html",
           "hash": "0gutQLWknJLsBniiqPNEFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.HealthBarUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.HealthBarUI.html",
+          "hash": "v94UrWl3231esbwotwpDqQ=="
         }
       },
       "is_incremental": false,
@@ -88,7 +160,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SerializableDictionary-2.html",
-          "hash": "tXvFHS9zk6SirInHC3a15A=="
+          "hash": "2s3LMDdwW3qAZeLGKee8gQ=="
         }
       },
       "is_incremental": false,
@@ -148,7 +220,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SerializableDictionaryPropertyDrawer.html",
-          "hash": "7ogabPX4p42cmC+u3fAphg=="
+          "hash": "jCaBD4i0C5eNXQq36KyzYg=="
         }
       },
       "is_incremental": false,
@@ -228,6 +300,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.TowerBattle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.TowerBattle.html",
+          "hash": "fte8dIEgFHgv0WzuDpncpA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.TowerMenuUISystem.yml",
       "output": {
         ".html": {
@@ -264,6 +348,42 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.TowerType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.TowerType.html",
+          "hash": "HpBQiMvSLH2v76XPZtqTtw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.TowerTypeBoolDictionary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.TowerTypeBoolDictionary.html",
+          "hash": "5PZYRgZ+fUYmj/EMqGDVKQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.TowerTypeBoolDictionaryPropertyDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.TowerTypeBoolDictionaryPropertyDrawer.html",
+          "hash": "+bLyMycXqPHqs13Q+EhzwA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.UIManager.yml",
       "output": {
         ".html": {
@@ -292,7 +412,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.UpgradeTree.html",
-          "hash": "mZu+FGZ07yl/5RUgN8okIQ=="
+          "hash": "SNwEY02d1R/vRU63eHARKA=="
         }
       },
       "is_incremental": false,
@@ -304,7 +424,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "TF36HwUPwUYf3HMHZdgt8w=="
+          "hash": "6Zqce3JgeyTCR4z876SVCA=="
         }
       },
       "is_incremental": false,
@@ -324,11 +444,35 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Tests.PlayerTests.yml",
+      "source_relative_path": "api/Tests.MovementTests.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Tests.PlayerTests.html",
-          "hash": "K6noNQ0fHwWJVxpBdL3+1A=="
+          "relative_path": "api/Tests.MovementTests.html",
+          "hash": "yhC7343MyfNrc9IKAEDhRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tests.TowerPlacerTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tests.TowerPlacerTests.html",
+          "hash": "0u+SgJXjkCaUg78XxbBx2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tests.TowerTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tests.TowerTests.html",
+          "hash": "fK+HARnwPtR0xPNR+pXP+Q=="
         }
       },
       "is_incremental": false,
@@ -340,7 +484,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Tests.TowerUIMenuTests.html",
-          "hash": "FsaPWy0LL5fr+CqeklqF3g=="
+          "hash": "TU9NKgRDYFwqPnJjWfZVgQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tests.UpgradeUIMenuTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tests.UpgradeUIMenuTests.html",
+          "hash": "g716+GsMvTVRSR8vrjj/EA=="
         }
       },
       "is_incremental": false,
@@ -352,7 +508,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tests.html",
-          "hash": "o+cSoTIuWtSBCaddULkflg=="
+          "hash": "D2T0JIwy7zW4ZsnNMt7pvg=="
         }
       },
       "is_incremental": false,
@@ -364,7 +520,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "94Y7Aa5vn/tzOX4oCrt4Hg=="
+          "hash": "/nEYA2yQ2N0uXsnsUilX+g=="
         }
       },
       "is_incremental": false,
@@ -477,13 +633,13 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 3,
-          "skipped_file_count": 2
+          "skipped_file_count": 3
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 28,
-          "skipped_file_count": 28
+          "total_file_count": 41,
+          "skipped_file_count": 18
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
