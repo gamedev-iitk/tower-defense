@@ -15,6 +15,7 @@ public class TowerPlacer : MonoBehaviour
     private readonly Color green = new Color(0, 1, 0, 0.3f);
     private readonly Color red = new Color(1, 0, 0, 0.3f);
     private new Renderer renderer;
+    private int count;
 
     public void SetTower(GameObject reference)
     {
@@ -53,13 +54,18 @@ public class TowerPlacer : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        count++;
         renderer.material.color = red;
         blocked = true;
     }
 
     void OnTriggerExit(Collider other)
     {
-        renderer.material.color = green;
-        blocked = false;
+        count--;
+        if (count == 0)
+        {
+            renderer.material.color = green;
+            blocked = false;
+        }
     }
 }

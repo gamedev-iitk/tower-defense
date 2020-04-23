@@ -107,8 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feb33911c64c9ad43908765c3268a024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BaseTower: {fileID: 379762198253035637, guid: c3f33bd9d6e48cf43a6c01ebb8060a3f,
-    type: 3}
+  TowerObject: {fileID: 0}
 --- !u!54 &2718387611034546999
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -124,4 +123,4 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
