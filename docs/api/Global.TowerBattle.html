@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class UpgradeTree
+    <title>Class TowerBattle
    | Tower Defense </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class UpgradeTree
+    <meta name="title" content="Class TowerBattle
    | Tower Defense ">
     <meta name="generator" content="docfx 2.52.0.0">
     
@@ -78,13 +78,12 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Global.UpgradeTree">
+            <article class="content wrap" id="_content" data-uid="Global.TowerBattle">
   
   
-  <h1 id="Global_UpgradeTree" data-uid="Global.UpgradeTree" class="text-break">Class UpgradeTree
+  <h1 id="Global_TowerBattle" data-uid="Global.TowerBattle" class="text-break">Class TowerBattle
   </h1>
-  <div class="markdown level0 summary"><p>This component stores information about possible upgrades in the upgrade tree.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -93,40 +92,85 @@
     <div class="level2"><span class="xref">UnityEngine.Component</span></div>
     <div class="level3"><span class="xref">UnityEngine.Behaviour</span></div>
     <div class="level4"><span class="xref">UnityEngine.MonoBehaviour</span></div>
-    <div class="level5"><span class="xref">UpgradeTree</span></div>
+    <div class="level5"><a class="xref" href="Global.AbstractBattle.html">AbstractBattle</a></div>
+    <div class="level6"><span class="xref">TowerBattle</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Global.AbstractBattle.html#Global_AbstractBattle_Attack">AbstractBattle.Attack</a>
+    </div>
+    <div>
+      <a class="xref" href="Global.AbstractBattle.html#Global_AbstractBattle_Defense">AbstractBattle.Defense</a>
+    </div>
+    <div>
+      <a class="xref" href="Global.AbstractBattle.html#Global_AbstractBattle_Range">AbstractBattle.Range</a>
+    </div>
+    <div>
+      <a class="xref" href="Global.AbstractBattle.html#Global_AbstractBattle_FireRate">AbstractBattle.FireRate</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Global.html">Global</a></h6>
   <h6><strong>Assembly</strong>: TowerDefense.dll</h6>
-  <h5 id="Global_UpgradeTree_syntax">Syntax</h5>
+  <h5 id="Global_TowerBattle_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class UpgradeTree : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class TowerBattle : AbstractBattle</code></pre>
   </div>
-  <h3 id="fields">Fields
+  <h3 id="methods">Methods
   </h3>
   
   
-  <h4 id="Global_UpgradeTree_valuePairs" data-uid="Global.UpgradeTree.valuePairs">valuePairs</h4>
+  <a id="Global_TowerBattle_OnDetect_" data-uid="Global.TowerBattle.OnDetect*"></a>
+  <h4 id="Global_TowerBattle_OnDetect_UnityEngine_GameObject_" data-uid="Global.TowerBattle.OnDetect(UnityEngine.GameObject)">OnDetect(GameObject)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TowerTypeBoolDictionary valuePairs</code></pre>
+    <pre><code class="lang-csharp hljs">public override void OnDetect(GameObject enemy)</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Global.TowerTypeBoolDictionary.html">TowerTypeBoolDictionary</a></td>
+        <td><span class="xref">UnityEngine.GameObject</span></td>
+        <td><span class="parametername">enemy</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Global.AbstractBattle.html#Global_AbstractBattle_OnDetect_UnityEngine_GameObject_">AbstractBattle.OnDetect(GameObject)</a></div>
+  
+  
+  <a id="Global_TowerBattle_OnLose_" data-uid="Global.TowerBattle.OnLose*"></a>
+  <h4 id="Global_TowerBattle_OnLose" data-uid="Global.TowerBattle.OnLose">OnLose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnLose()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Global.AbstractBattle.html#Global_AbstractBattle_OnLose">AbstractBattle.OnLose()</a></div>
+  
+  
+  <a id="Global_TowerBattle_SetRange_" data-uid="Global.TowerBattle.SetRange*"></a>
+  <h4 id="Global_TowerBattle_SetRange" data-uid="Global.TowerBattle.SetRange">SetRange()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void SetRange()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Global.AbstractBattle.html#Global_AbstractBattle_SetRange">AbstractBattle.SetRange()</a></div>
 </article>
           </div>
           
