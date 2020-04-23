@@ -38,16 +38,16 @@ namespace Tests
         public IEnumerator CheckingDestroyMethodInTowerMenu()
         {
             GameObject tower = GameObject.Find("BaseTower");
-         
+
             GameObject towermenu = GameObject.Find("TowerMenuUI");
-           bool check = towermenu.GetComponent<TowerMenuUISystem>().Create(tower);
+            bool check = towermenu.GetComponent<TowerMenuUISystem>().Create(tower);
             yield return null;
-           Assert.IsTrue(check);
+            Assert.IsTrue(check);
             check = false;
             towermenu.GetComponent<TowerMenuUISystem>().Destroy();
             check = towermenu.GetComponent<TowerMenuUISystem>().Create(tower);
             yield return null;
-           Assert.IsTrue(check);
+            Assert.IsTrue(check);
 
 
 

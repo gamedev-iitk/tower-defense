@@ -18,7 +18,7 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
     private GameObject redPrefab;
     public Animator animator;
     private GameObject focusedTower;
-    public  CanvasGroup canvasGroup;
+    public CanvasGroup canvasGroup;
     GameObject towermenu;
     GameObject gameobject;
     public Text dialogueText;
@@ -32,7 +32,7 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
         // Hide canvas
         canvasGroup.alpha = 0;
         towermenu = GameObject.Find("TowerMenuUI");
-        gameobject  = GameObject.Find("GameObject"); 
+        gameobject = GameObject.Find("GameObject");
     }
 
     public bool Create(GameObject tower)
@@ -53,7 +53,7 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
         Hide();
         focusedTower = null; // probably have a Tower.Empty() instead?
     }
-    
+
     /// <summary>
     /// Callback for the Upgrade UI.
     /// <param name="type">String indicating the type of tower upgrade requested.</param>
@@ -67,16 +67,16 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
                 {
                     animator.SetBool("IsOpen", false);
                     gameobject.GetComponent<scoreup>().theScore -= 20;
-                    
+
                     CreateNewTower(greenPrefab);
-                  
-                } 
+
+                }
                 else
                 {
                     dialogueText.text = "You Don't Have Enough Money";
-                    
+
                 }
-               
+
                 break;
 
             case "red":
@@ -118,7 +118,7 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
                 {
                     dialogueText.text = "You Don't Have Enough Money";
                     canvasGroup.alpha = 0;
-                    
+
                 }
                 break;
 
@@ -136,7 +136,7 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
     {
         //
     }
-   
+
 
     /// <summary>
     /// Creates a new tower where the currently focused tower is and then destroys the focused tower.
