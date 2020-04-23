@@ -56,20 +56,25 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\AIController.cs" />
-     <Compile Include="Assets\Scripts\Dialogue.cs" />
-     <Compile Include="Assets\Scripts\DialogueManager.cs" />
-     <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
+     <Compile Include="Assets\Scripts\Damageable.cs" />
+     <Compile Include="Assets\Scripts\Dialogbox\Dialogue.cs" />
+     <Compile Include="Assets\Scripts\Dialogbox\DialogueManager.cs" />
+     <Compile Include="Assets\Scripts\Dialogbox\DialogueTrigger.cs" />
+     <Compile Include="Assets\Scripts\Dialogbox\scoreup.cs" />
      <Compile Include="Assets\Scripts\Events\EventRegistry.cs" />
      <Compile Include="Assets\Scripts\Events\GenericMap.cs" />
      <Compile Include="Assets\Scripts\Events\TDEvents.cs" />
      <Compile Include="Assets\Scripts\Events\TestCallback.cs" />
      <Compile Include="Assets\Scripts\Events\TestEventCall.cs" />
+     <Compile Include="Assets\Scripts\FaceCamera.cs" />
      <Compile Include="Assets\Scripts\InputSystem.cs" />
      <Compile Include="Assets\Scripts\SerializableDictionary.cs" />
      <Compile Include="Assets\Scripts\Towers\TowerPlacementSystem.cs" />
      <Compile Include="Assets\Scripts\Towers\TowerPlacer.cs" />
      <Compile Include="Assets\Scripts\Towers\UpgradeTree.cs" />
+     <Compile Include="Assets\Scripts\UI\HealthBarUI.cs" />
      <Compile Include="Assets\Scripts\UI\IUISystem.cs" />
+     <Compile Include="Assets\Scripts\UI\InitialMoney.cs" />
      <Compile Include="Assets\Scripts\UI\TowerMenuUISystem.cs" />
      <Compile Include="Assets\Scripts\UI\UIManager.cs" />
      <Compile Include="Assets\Scripts\UI\UpgradeMenuUISystem.cs" />

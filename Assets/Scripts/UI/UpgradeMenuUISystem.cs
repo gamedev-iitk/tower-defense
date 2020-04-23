@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
-
+using System.Collections.Generic;
+using System.Collections;
+using UnityEngine.UI;
+using System.Threading;
 
 /// <summary>
 /// Manager class for tower upgrades. Handles UI and tower object instantiation/deletion.
@@ -13,9 +16,13 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
     private GameObject greenPrefab;
     [SerializeField]
     private GameObject redPrefab;
-
+    public Animator animator;
     private GameObject focusedTower;
-    private CanvasGroup canvasGroup;
+    public  CanvasGroup canvasGroup;
+    GameObject towermenu;
+    GameObject gameobject;
+    public Text dialogueText;
+
 
     void Start()
     {
@@ -24,6 +31,8 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
 
         // Hide canvas
         canvasGroup.alpha = 0;
+        towermenu = GameObject.Find("TowerMenuUI");
+        gameobject  = GameObject.Find("GameObject"); 
     }
 
     public bool Create(GameObject tower)
@@ -44,7 +53,7 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
         Hide();
         focusedTower = null; // probably have a Tower.Empty() instead?
     }
-
+    
     /// <summary>
     /// Callback for the Upgrade UI.
     /// <param name="type">String indicating the type of tower upgrade requested.</param>
@@ -54,15 +63,63 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
         switch (type)
         {
             case "green":
-                CreateNewTower(greenPrefab);
+                if (gameobject.GetComponent<scoreup>().theScore >= 20)
+                {
+                    animator.SetBool("IsOpen", false);
+                    gameobject.GetComponent<scoreup>().theScore -= 20;
+                    
+                    CreateNewTower(greenPrefab);
+                  
+                } 
+                else
+                {
+                    dialogueText.text = "You Don't Have Enough Money";
+                    
+                }
+               
                 break;
 
             case "red":
-                CreateNewTower(redPrefab);
+                if (gameobject.GetComponent<scoreup>().theScore >= 20)
+                {
+                    animator.SetBool("IsOpen", false);
+                    gameobject.GetComponent<scoreup>().theScore -= 20;
+                    CreateNewTower(redPrefab);
+                }
+                else
+                {
+                    dialogueText.text = "You Don't Have Enough Money";
+
+                }
                 break;
 
             case "gold":
-                CreateNewTower(goldPrefab);
+                if (gameobject.GetComponent<scoreup>().theScore >= 20)
+                {
+                    animator.SetBool("IsOpen", false);
+                    gameobject.GetComponent<scoreup>().theScore -= 20;
+                    CreateNewTower(goldPrefab);
+                }
+                else
+                {
+                    dialogueText.text = "You Don't Have Enough Money";
+
+                }
+                break;
+
+            case "move":
+                if (gameobject.GetComponent<scoreup>().theScore >= 10)
+                {
+                    animator.SetBool("IsOpen", false);
+                    gameobject.GetComponent<scoreup>().theScore -= 10;
+                    towermenu.GetComponent<TowerMenuUISystem>().OnMoveClick();
+                }
+                else
+                {
+                    dialogueText.text = "You Don't Have Enough Money";
+                    canvasGroup.alpha = 0;
+                    
+                }
                 break;
 
             default:
@@ -79,6 +136,7 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
     {
         //
     }
+   
 
     /// <summary>
     /// Creates a new tower where the currently focused tower is and then destroys the focused tower.

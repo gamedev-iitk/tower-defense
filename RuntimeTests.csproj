@@ -56,8 +56,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Tests\PlayMode\MovementTests.cs" />
+     <Compile Include="Assets\Tests\PlayMode\TowerPlacerTests.cs" />
      <Compile Include="Assets\Tests\PlayMode\TowerTests.cs" />
-     <Compile Include="Assets\Tests\PlayMode\UpgradeTest.cs" />
+     <Compile Include="Assets\Tests\PlayMode\TowerUIMenuTests.cs" />
+     <Compile Include="Assets\Tests\PlayMode\UpgradeUIMenuTests.cs" />
      <None Include="Assets\Tests\PlayMode\RuntimeTests.asmdef" />
  <Reference Include="UnityEngine.TestRunner">
  <HintPath>C:/Users/Rahul/Desktop/tower-defense/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>

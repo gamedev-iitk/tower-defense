@@ -1,38 +1,34 @@
-﻿using System.Collections;
-using UnityEngine.TestTools;
+using System.Collections;
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.TestTools;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Tests
 {
-    /// <summary>
-    /// Tests for the tower menu UI functions
-    /// </summary>
-    public class TowerUIMenuTests
+    public class TowerTests
     {
         [SetUp]
-        public void Setup()
+        public void SetUp()
         {
             SceneManager.LoadScene("MainScene");
         }
 
-        /// <summary>
-        /// Tests if a new tower can be created
-        /// </summary>
-        /// <returns></returns>
         [UnityTest]
-        public IEnumerator CreateNewTower()
+        public IEnumerator CanDamageTowersAndChangeHealthBar()
         {
-            GameObject tower = GameObject.Find("BaseTower");
-            GameObject towermenu = GameObject.Find("UIManager/TowerMenuUI");
-            bool check = towermenu.GetComponent<TowerMenuUISystem>().Create(tower);
+            Damageable damageable = GameObject.Find("BaseTower").GetComponent<Damageable>();
+            float initialHealth = damageable.GetHealth();
 
-            // Advance one frame
+            Image image = GameObject.Find("BaseTower/Canvas/HealthBG/ProgressBar").GetComponent<Image>();
+            float initialFill = image.fillAmount;
+
+            damageable.ApplyDamage(20);
+
             yield return null;
-
-            // Check condition
-            Assert.True(check);
+            Assert.AreEqual(initialHealth - 20, damageable.GetHealth());
+            Assert.AreEqual(initialFill - 0.2f, image.fillAmount);
         }
         /// <summary>
         /// tests  if focusedTower is destroyed
