@@ -7,7 +7,7 @@ public class scoreup : MonoBehaviour
 {
     public GameObject scoreText;
     public  int theScore;
-
+    //
     void Update()
     {
 
