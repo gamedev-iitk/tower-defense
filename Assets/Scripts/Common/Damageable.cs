@@ -7,7 +7,7 @@ public class Damageable : MonoBehaviour
 
     void Start()
     {
-        healthBar = transform.Find("Canvas")?.GetComponent<HealthBarUI>();
+        healthBar = transform.Find("HealthBar")?.GetComponent<HealthBarUI>();
     }
 
     void Update()

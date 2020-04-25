@@ -36,6 +36,7 @@ public class TowerBattle : AbstractBattle
             timer += Time.deltaTime;
             if (timer >= FireRate)
             {
+                Debug.Log(enemyDamageable.GetHealth());
                 enemyDamageable?.ApplyDamage(Attack);
 
                 // TODO: Decide if we should do raycasts first, when most tower attacks are going to be area-of-effect
