@@ -39,6 +39,11 @@ public class TowerBattle : AbstractBattle
                 Debug.Log(enemyDamageable.GetHealth());
                 enemyDamageable?.ApplyDamage(Attack);
 
+                if (enemyDamageable.IsDead)
+                {
+                    OnLose();
+                }
+
                 // TODO: Decide if we should do raycasts first, when most tower attacks are going to be area-of-effect
                 // Vector3 direction = target.transform.position - transform.position;
                 // if (Physics.Raycast(transform.position, direction, out RaycastHit hit)) {}
