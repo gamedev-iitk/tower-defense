@@ -1,13 +1,9 @@
 ﻿using UnityEngine;
-<<<<<<< HEAD
+
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.UI;
 using System.Threading;
-=======
-using UnityEngine.UI;
-using System.Collections.Generic;
->>>>>>> c4be30b69c51fa199dcd7ae443f7f46b1f44d4cf
 
 /// <summary>
 /// Manager class for tower upgrades. Handles UI and tower object instantiation/deletion.
