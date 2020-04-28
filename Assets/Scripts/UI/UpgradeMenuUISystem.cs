@@ -17,11 +17,10 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
     private GameObject greenPrefab;
     [SerializeField]
     private GameObject redPrefab;
-<<<<<<< HEAD
+
     public Animator animator;
-=======
     private List<GameObject> upgradeButtons = new List<GameObject>();
->>>>>>> c4be30b69c51fa199dcd7ae443f7f46b1f44d4cf
+
     private GameObject focusedTower;
     public  CanvasGroup canvasGroup;
     GameObject towermenu;
