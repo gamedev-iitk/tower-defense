@@ -66,7 +66,7 @@ namespace Tests
             towerMenu.GetComponent<TowerMenuUISystem>().OnMoveClick();
             GameObject indicator = GameObject.Find("PlacementIndicator(Clone)");
             bool check = indicator.GetComponent<TowerPlacer>().PlaceTower();
-            
+
             yield return null;
             Assert.IsTrue(check);
             Assert.IsNotNull(GameObject.Find("BaseTower(Clone)"));

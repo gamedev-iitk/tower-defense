@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class scoreup : MonoBehaviour
 {
     public GameObject scoreText;
-    public  int theScore;
+    public int theScore;
     //
     void Update()
     {
 
 
 
-        scoreText.GetComponent<Text>().text =   theScore+ " $";
+        scoreText.GetComponent<Text>().text = theScore + " $";
 
 
     }

@@ -37,7 +37,7 @@ public class TowerPlacementSystem : MonoBehaviour
 
     private void CreatePlacer(GameObject targetTower, Vector3 location)
     {
-        location.y=0;  //so that indicator spawn on the ground
+        location.y = 0;  //so that indicator spawn on the ground
         instance = Instantiate(SelectorPrefab, location, Quaternion.identity);
         instance.GetComponent<TowerPlacer>().SetTower(targetTower);
         isActive = true;
