@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7304521332059732314}
   - component: {fileID: 5141389758979643607}
   - component: {fileID: 362618370743414663}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 7304521332059732316}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3311078, y: 0.29932, z: 0.3311078}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8960267717484967156}
   m_Father: {fileID: 0}
@@ -95,7 +95,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
-  m_Height: 2
+  m_Height: 2.5
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!195 &7304521332059732314
@@ -160,6 +160,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 642114022979103222, guid: 5bf47b8968d95cf46a88b9b871244b15,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2158106795149971263, guid: 5bf47b8968d95cf46a88b9b871244b15,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6341978705165544364, guid: 5bf47b8968d95cf46a88b9b871244b15,
         type: 3}
@@ -265,6 +275,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387999403585348765, guid: 5bf47b8968d95cf46a88b9b871244b15,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bf47b8968d95cf46a88b9b871244b15, type: 3}

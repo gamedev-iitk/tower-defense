@@ -78,6 +78,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c3f415b9bad6246893ee1e6c79d66a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  extremeAngle: 60
+  noOfRays: 120
 --- !u!135 &8947906116660353105
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -87,7 +89,7 @@ SphereCollider:
   m_GameObject: {fileID: 379762198253035637}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 7
   m_Center: {x: 0, y: 0, z: 0}

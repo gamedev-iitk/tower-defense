@@ -25,6 +25,7 @@ public class TowerBattle : AbstractBattle
     {
         isFighting = false;
         target = null;
+        GetComponent<Detection>().Reset();
     }
 
     void Update()
