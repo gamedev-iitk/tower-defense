@@ -5,9 +5,15 @@ public class Damageable : MonoBehaviour
     private float health = 100f;
     private HealthBarUI healthBar;
 
+    public bool IsDead {
+        get {
+            return health <= 0; 
+        }
+    }
+
     void Start()
     {
-        healthBar = transform.Find("Canvas")?.GetComponent<HealthBarUI>();
+        healthBar = transform.Find("HealthBar")?.GetComponent<HealthBarUI>();
     }
 
     void Update()
@@ -20,7 +26,7 @@ public class Damageable : MonoBehaviour
     }
     private void StartDeath()
     {
-        // 
+        GameObject.Destroy(this.gameObject);
     }
 
     /// <summary>

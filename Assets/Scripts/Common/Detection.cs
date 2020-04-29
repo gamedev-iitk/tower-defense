@@ -29,7 +29,7 @@ public class Detection : MonoBehaviour
 
     void Update()
     {
-        if (shouldRotate)
+        if (shouldRotate && target != null)
         {
             // Rotates to face enemy
             Vector3 look = transform.position - target.transform.position;
