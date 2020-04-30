@@ -1,9 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
-using System.Collections;
-
-using System.Threading;
 
 /// <summary>
 /// Manager class for tower upgrades. Handles UI and tower object instantiation/deletion.
@@ -18,15 +15,10 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
     [SerializeField]
     private GameObject redPrefab;
 
-    public Animator animator;
     private List<GameObject> upgradeButtons = new List<GameObject>();
-
     private GameObject focusedTower;
-    public  CanvasGroup canvasGroup;
-    GameObject towermenu;
-    GameObject gameobject;
-    public Text dialogueText;
-
+    private CanvasGroup canvasGroup;
+    private TDEvent<ETowerType> showUpgradeDialog;
 
     void Start()
     {
@@ -38,11 +30,17 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
         {
             upgradeButtons.Add(image.transform.GetChild(i).gameObject);
         }
+
         // Hide canvas
         canvasGroup.alpha = 0;
-        towermenu = GameObject.Find("TowerMenuUI");
-        gameobject  = GameObject.Find("GameObject"); 
+
+        // Register events and callbacks
+        showUpgradeDialog = EventRegistry.GetEvent<ETowerType>("showUpgradeDialog");
+        EventRegistry.RegisterAction<ETowerType>("createTower", CreateTower);
+        EventRegistry.RegisterAction("cancelTowerCreation", CancelTowerCreation);
     }
+
+    // Interface overrides
 
     public bool Create(GameObject tower)
     {
@@ -62,80 +60,53 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
         Hide();
         focusedTower = null; // probably have a Tower.Empty() instead?
     }
-    
+
     /// <summary>
     /// Callback for the Upgrade UI.
     /// <param name="type">String indicating the type of tower upgrade requested.</param>
     /// </summary>
     public void OnClick(string type)
     {
+        Hide();
+        ETowerType requestedType = ETowerTypeUtils.GetTowerType(type);
+        showUpgradeDialog.Invoke(requestedType);
+    }
+
+    /// <summary>
+    /// Callback for the "createTower" event. Called when the upgrade is confirmed through the dialog box.
+    /// </summary>
+    /// <param name="type">Type of the tower to create</param>
+    public void CreateTower(ETowerType type)
+    {
+        Debug.Log("Upgrade confirmed for tower type: " + type.GetString());
+        GameObject prefab;
+
+        // TODO: Can Unity use simplified "switch expressions" instead of this bulky thing?
         switch (type)
         {
-            case "green":
-                if (gameobject.GetComponent<scoreup>().theScore >= 20)
-                {
-                    animator.SetBool("IsOpen", false);
-                    gameobject.GetComponent<scoreup>().theScore -= 20;
-                    
-                    CreateNewTower(greenPrefab);
-                  
-                } 
-                else
-                {
-                    dialogueText.text = "You Don't Have Enough Money";
-                    
-                }
-               
+            case ETowerType.Red:
+                prefab = redPrefab;
                 break;
-
-            case "red":
-                if (gameobject.GetComponent<scoreup>().theScore >= 20)
-                {
-                    animator.SetBool("IsOpen", false);
-                    gameobject.GetComponent<scoreup>().theScore -= 20;
-                    CreateNewTower(redPrefab);
-                }
-                else
-                {
-                    dialogueText.text = "You Don't Have Enough Money";
-
-                }
+            case ETowerType.Gold:
+                prefab = goldPrefab;
                 break;
-
-            case "gold":
-                if (gameobject.GetComponent<scoreup>().theScore >= 20)
-                {
-                    animator.SetBool("IsOpen", false);
-                    gameobject.GetComponent<scoreup>().theScore -= 20;
-                    CreateNewTower(goldPrefab);
-                }
-                else
-                {
-                    dialogueText.text = "You Don't Have Enough Money";
-
-                }
+            case ETowerType.Green:
+                prefab = greenPrefab;
                 break;
-
-            case "move":
-                if (gameobject.GetComponent<scoreup>().theScore >= 10)
-                {
-                    animator.SetBool("IsOpen", false);
-                    gameobject.GetComponent<scoreup>().theScore -= 10;
-                    towermenu.GetComponent<TowerMenuUISystem>().OnMoveClick();
-                }
-                else
-                {
-                    dialogueText.text = "You Don't Have Enough Money";
-                    canvasGroup.alpha = 0;
-                    
-                }
-                break;
-
             default:
-                Debug.LogError("Failed to upgrade tower.");
+                prefab = null;
                 break;
         }
-        SetButtonActivation(focusedTower.GetComponent<UpgradeTree>());
+
+        InstantiateTower(prefab);
+    }
+
+    /// <summary>
+    /// Callback for "cancelTowerCreation" event. Called when upgrade confirmation dialog is closed.
+    /// </summary>
+    public void CancelTowerCreation()
+    {
+        Debug.Log("Cancelled tower creation.");
     }
 
     /// <summary>
@@ -150,18 +121,20 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
             button.GetComponent<Button>().interactable = isActive;
         }
     }
-   
 
     /// <summary>
     /// Creates a new tower where the currently focused tower is and then destroys the focused tower.
     /// <param name="newTowerPrefab">Prefab for the new tower to create.</param>
     /// </summary>
-    void CreateNewTower(GameObject newTowerPrefab)
+    void InstantiateTower(GameObject newTowerPrefab)
     {
         Vector3 focusedTowerPosition = focusedTower.transform.position;
         Vector3 spawnPoint = new Vector3(focusedTowerPosition.x, 0, focusedTowerPosition.z);
         GameObject newTower = Instantiate(newTowerPrefab, spawnPoint, focusedTower.transform.rotation);
+
         Destroy(focusedTower);
         focusedTower = newTower;
+
+        SetButtonActivation(focusedTower.GetComponent<UpgradeTree>());
     }
 }

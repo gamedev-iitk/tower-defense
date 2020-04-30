@@ -30,6 +30,22 @@ public static class EventRegistry
         return ev;
     }
 
+    public static TDEvent<TParam> GetEvent<TParam>(string name)
+    {
+        TDEvent<TParam> ev;
+        if (container.ContainsKey(name))
+        {
+            container.TryGetValue(name, out ev);
+        }
+        else
+        {
+            Debug.LogWarning("No event found. Creating a new event.");
+            ev = new TDEvent<TParam>();
+            container.Add(name, ev);
+        }
+        return ev;
+    }
+
     public static TDEvent<TParam1, TParam2> GetEvent<TParam1, TParam2>(string name)
     {
         TDEvent<TParam1, TParam2> ev;
@@ -54,6 +70,21 @@ public static class EventRegistry
     public static bool RegisterAction(string name, UnityAction callback)
     {
         TDEvent ev = GetEvent(name);
+        if (ev == null)
+        {
+            Debug.LogError("Failed to register callback. Type mismatch.");
+            return false;
+        }
+        else
+        {
+            ev?.AddListener(callback);
+            return true;
+        }
+    }
+
+    public static bool RegisterAction<TParam>(string name, UnityAction<TParam> callback)
+    {
+        TDEvent<TParam> ev = GetEvent<TParam>(name);
         if (ev == null)
         {
             Debug.LogError("Failed to register callback. Type mismatch.");

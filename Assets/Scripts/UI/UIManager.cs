@@ -7,9 +7,9 @@ using UnityEngine;
 /// </summary>
 public class UIManager : MonoBehaviour
 {
+    private Stack<IUISystem> screenStack;
     private UpgradeMenuUISystem upgradeMenuSystem;
     private TowerMenuUISystem towerMenuSystem;
-    private Stack<IUISystem> screenStack;
 
     void Start()
     {
