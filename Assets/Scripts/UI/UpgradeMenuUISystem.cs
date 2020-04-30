@@ -17,14 +17,11 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
 
     private List<GameObject> upgradeButtons = new List<GameObject>();
     private GameObject focusedTower;
-    private CanvasGroup canvasGroup;
     private TDEvent<ETowerType> showUpgradeDialog;
 
     void Start()
     {
         // Initialize private fields
-        canvasGroup = GameObject.Find("UpgradeUI").GetComponent<CanvasGroup>();
-
         GameObject image = GameObject.Find("UpgradeUI/Image");
         for (int i = 1; i < image.transform.childCount; i++)
         {
@@ -32,7 +29,7 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
         }
 
         // Hide canvas
-        canvasGroup.alpha = 0;
+        Hide();
 
         // Register events and callbacks
         showUpgradeDialog = EventRegistry.GetEvent<ETowerType>("showUpgradeDialog");
@@ -42,23 +39,16 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
 
     // Interface overrides
 
-    public bool Create(GameObject tower)
+    public void Show(GameObject tower)
     {
         focusedTower = tower;
         SetButtonActivation(tower.GetComponent<UpgradeTree>());
-        canvasGroup.alpha = 1;
-        return true;
+        gameObject.SetActive(true);
     }
 
     public void Hide()
     {
-        canvasGroup.alpha = 0;
-    }
-
-    public void Destroy()
-    {
-        Hide();
-        focusedTower = null; // probably have a Tower.Empty() instead?
+        gameObject.SetActive(false);
     }
 
     /// <summary>
@@ -78,7 +68,6 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
     /// <param name="type">Type of the tower to create</param>
     public void CreateTower(ETowerType type)
     {
-        Debug.Log("Upgrade confirmed for tower type: " + type.GetString());
         GameObject prefab;
 
         // TODO: Can Unity use simplified "switch expressions" instead of this bulky thing?

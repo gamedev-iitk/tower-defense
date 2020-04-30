@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IUISystem
+    <title>Class DialogSystem
    | Tower Defense </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IUISystem
+    <meta name="title" content="Class DialogSystem
    | Tower Defense ">
     <meta name="generator" content="docfx 2.52.0.0">
     
@@ -78,43 +78,72 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Global.IUISystem">
+            <article class="content wrap" id="_content" data-uid="Global.DialogSystem">
   
   
-  <h1 id="Global_IUISystem" data-uid="Global.IUISystem" class="text-break">Interface IUISystem
+  <h1 id="Global_DialogSystem" data-uid="Global.DialogSystem" class="text-break">Class DialogSystem
   </h1>
-  <div class="markdown level0 summary"><p>Exposes basic UI functionality. All MenuUISystems should implement this interface.</p>
+  <div class="markdown level0 summary"><p>Handles the apprearance and disappearance of the associated dialog box.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">UnityEngine.Object</span></div>
+    <div class="level2"><span class="xref">UnityEngine.Component</span></div>
+    <div class="level3"><span class="xref">UnityEngine.Behaviour</span></div>
+    <div class="level4"><span class="xref">UnityEngine.MonoBehaviour</span></div>
+    <div class="level5"><span class="xref">DialogSystem</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Global.html">Global</a></h6>
   <h6><strong>Assembly</strong>: TowerDefense.dll</h6>
-  <h5 id="Global_IUISystem_syntax">Syntax</h5>
+  <h5 id="Global_DialogSystem_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IUISystem</code></pre>
+    <pre><code class="lang-csharp hljs">public class DialogSystem : MonoBehaviour</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Global_IUISystem_Hide_" data-uid="Global.IUISystem.Hide*"></a>
-  <h4 id="Global_IUISystem_Hide" data-uid="Global.IUISystem.Hide">Hide()</h4>
-  <div class="markdown level1 summary"><p>Hides the UI screen.</p>
-</div>
+  <a id="Global_DialogSystem_CancelClicked_" data-uid="Global.DialogSystem.CancelClicked*"></a>
+  <h4 id="Global_DialogSystem_CancelClicked" data-uid="Global.DialogSystem.CancelClicked">CancelClicked()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Hide()</code></pre>
+    <pre><code class="lang-csharp hljs">public void CancelClicked()</code></pre>
   </div>
   
   
-  <a id="Global_IUISystem_Show_" data-uid="Global.IUISystem.Show*"></a>
-  <h4 id="Global_IUISystem_Show_UnityEngine_GameObject_" data-uid="Global.IUISystem.Show(UnityEngine.GameObject)">Show(GameObject)</h4>
-  <div class="markdown level1 summary"><p>Show the UI screen with values from the provided object.</p>
+  <a id="Global_DialogSystem_Hide_" data-uid="Global.DialogSystem.Hide*"></a>
+  <h4 id="Global_DialogSystem_Hide" data-uid="Global.DialogSystem.Hide">Hide()</h4>
+  <div class="markdown level1 summary"><p>Hide the dialog</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Show(GameObject obj)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Hide()</code></pre>
+  </div>
+  
+  
+  <a id="Global_DialogSystem_OKClicked_" data-uid="Global.DialogSystem.OKClicked*"></a>
+  <h4 id="Global_DialogSystem_OKClicked" data-uid="Global.DialogSystem.OKClicked">OKClicked()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OKClicked()</code></pre>
+  </div>
+  
+  
+  <a id="Global_DialogSystem_Show_" data-uid="Global.DialogSystem.Show*"></a>
+  <h4 id="Global_DialogSystem_Show_DialogConfig_" data-uid="Global.DialogSystem.Show(DialogConfig)">Show(DialogConfig)</h4>
+  <div class="markdown level1 summary"><p>Show the dialog</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Show(DialogConfig config)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -127,9 +156,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UnityEngine.GameObject</span></td>
-        <td><span class="parametername">obj</span></td>
-        <td><p>GameObject used to populate the layer</p>
+        <td><a class="xref" href="Global.DialogConfig.html">DialogConfig</a></td>
+        <td><span class="parametername">config</span></td>
+        <td><p>Settings with which the dialog should be created.</p>
 </td>
       </tr>
     </tbody>

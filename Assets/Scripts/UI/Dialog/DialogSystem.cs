@@ -7,19 +7,20 @@ using UnityEngine.Events;
 /// </summary>
 public class DialogSystem : MonoBehaviour
 {
+    // TODO: Add animations back to the dialog if required. The animator component on this is disabled through the editor.
     private Animator animator;
     private Text messageField;
     private DialogConfig activeConfig;
 
     void Start()
     {
+        gameObject.SetActive(false);
         animator = GetComponent<Animator>();
         messageField = transform.Find("Text")?.GetComponent<Text>();
     }
 
     public void OKClicked()
     {
-        Debug.LogError("OKClicked");
         activeConfig.OKCallback();
         Hide();
     }
@@ -39,6 +40,7 @@ public class DialogSystem : MonoBehaviour
         messageField.text = config.Message;
         activeConfig = config;
         animator.SetBool("IsOpen", true);
+        gameObject.SetActive(true);
     }
 
     /// <summary>
@@ -47,6 +49,7 @@ public class DialogSystem : MonoBehaviour
     public void Hide()
     {
         animator.SetBool("IsOpen", false);
+        gameObject.SetActive(false);
     }
 }
 

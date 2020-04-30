@@ -22,21 +22,20 @@ namespace Tests
         {
             GameObject tower = GameObject.Find("BaseTower");
             GameObject towerMenu = GameObject.Find("UIManager/TowerMenuUI");
-            bool check = towerMenu.GetComponent<TowerMenuUISystem>().Create(tower);
+            towerMenu.GetComponent<TowerMenuUISystem>().Show(tower);
 
             yield return null;
-            Assert.True(check);
+            Assert.True(towerMenu.activeSelf);
         }
 
         [UnityTest]
         public IEnumerator ClickingOnTowerBringsUpUI()
         {
-            UIManager uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
             GameObject towerUI = GameObject.Find("TowerMenuUI");
             GameObject baseTower = GameObject.Find("BaseTower");
 
             // Create the tower menu UI
-            uiManager.ShowTowerMenu(baseTower);
+            EventRegistry.Invoke("showMenu", baseTower, typeof(TowerMenuUISystem));
 
             yield return new WaitForSeconds(0.5f);
             Assert.AreEqual(towerUI.GetComponent<CanvasGroup>().alpha, 1);
@@ -47,7 +46,7 @@ namespace Tests
         {
             GameObject baseTower = GameObject.Find("BaseTower");
             GameObject towerMenu = GameObject.Find("TowerMenuUI");
-            towerMenu.GetComponent<TowerMenuUISystem>().Create(baseTower);
+            towerMenu.GetComponent<TowerMenuUISystem>().Show(baseTower);
 
             towerMenu.GetComponent<TowerMenuUISystem>().OnUpgradeClick();
             CanvasGroup upgradeMenuCanvasGroup = GameObject.Find("UpgradeUI").GetComponent<CanvasGroup>();
@@ -61,7 +60,7 @@ namespace Tests
         {
             GameObject baseTower = GameObject.Find("BaseTower");
             GameObject towerMenu = GameObject.Find("TowerMenuUI");
-            towerMenu.GetComponent<TowerMenuUISystem>().Create(baseTower);
+            towerMenu.GetComponent<TowerMenuUISystem>().Show(baseTower);
 
             towerMenu.GetComponent<TowerMenuUISystem>().OnMoveClick();
             GameObject indicator = GameObject.Find("PlacementIndicator(Clone)");
@@ -75,15 +74,14 @@ namespace Tests
         [UnityTest]
         public IEnumerator EscapeKeyMakesUIGoAway()
         {
-            UIManager uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
             GameObject towerui = GameObject.Find("TowerMenuUI");
             GameObject baseTower = GameObject.Find("BaseTower");
 
             // Bring up the UI
-            uiManager.ShowTowerMenu(baseTower);
+            EventRegistry.Invoke("showMenu", baseTower, typeof(TowerMenuUISystem));
 
             // Hide all UIs
-            uiManager.HideAll();
+            EventRegistry.Invoke("hideMenu");
 
             yield return new WaitForSeconds(0.5f);
             Assert.AreEqual(towerui.GetComponent<CanvasGroup>().alpha, 0);

@@ -112,6 +112,20 @@ public static class EventRegistry
         }
     }
 
+    public static void Invoke(string name)
+    {
+        container.TryGetValue(name, out TDEvent ev);
+        if (ev == null)
+        {
+            Debug.LogError("No callback registered for the event " + name + " that supports the supplied parameters. Cannot invoke.");
+            return;
+        }
+        else
+        {
+            ev.Invoke();
+        }
+    }
+
     public static void Invoke<TParam1, TParam2>(string name, TParam1 param1, TParam2 param2)
     {
         container.TryGetValue(name, out TDEvent<TParam1, TParam2> ev);

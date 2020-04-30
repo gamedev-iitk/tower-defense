@@ -1,61 +1,42 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
-
 
 /// <summary>
 /// Manager class that holds references to all UI layers and handles the UI stack.
 /// </summary>
 public class UIManager : MonoBehaviour
 {
-    private Stack<IUISystem> screenStack;
     private UpgradeMenuUISystem upgradeMenuSystem;
     private TowerMenuUISystem towerMenuSystem;
+    private IUISystem activeScreen;
 
     void Start()
     {
         // Initialize private fields
         towerMenuSystem = transform.Find("TowerMenuUI").GetComponent<TowerMenuUISystem>();
         upgradeMenuSystem = transform.Find("UpgradeUI").GetComponent<UpgradeMenuUISystem>();
-        screenStack = new Stack<IUISystem>();
+
+        // Register events and callbacks
+        EventRegistry.RegisterAction<GameObject, Type>("showMenu", ShowMenu);
+        EventRegistry.RegisterAction("hideMenu", HideMenu);
     }
 
-    /// <summary>
-    /// Creates the tower menu for a given tower
-    /// </summary>
-    /// <param name="tower"><c>GameObject </c>for the selected tower</param>
-    public void ShowTowerMenu(GameObject tower)
+    public void ShowMenu(GameObject tower, Type type)
     {
-        // TODO: This should receive an event instead.
-        if (towerMenuSystem.Create(tower))
+        if (type == typeof(UpgradeMenuUISystem))
         {
-            screenStack.Push(towerMenuSystem);
+            upgradeMenuSystem.Show(tower);
+            activeScreen = upgradeMenuSystem;
+        }
+        else if (type == typeof(TowerMenuUISystem))
+        {
+            towerMenuSystem.Show(tower);
+            activeScreen = towerMenuSystem;
         }
     }
 
-    /// <summary>
-    /// Creates the upgrade menu for a given tower
-    /// </summary>
-    /// <param name="tower"><c>GameObject </c>for the selected tower</param>
-    public void ShowUpgradeMenu(GameObject tower)
+    public void HideMenu()
     {
-        // TODO: This should receive an event instead.
-        if (upgradeMenuSystem.Create(tower))
-        {
-            screenStack.Push(upgradeMenuSystem);
-        }
-    }
-
-    /// <summary>
-    /// Hide all UI layers in the stack.
-    /// </summary>
-    public void HideAll()
-    {
-        // TODO: This should receive an event instead.
-        foreach (IUISystem ui in screenStack)
-        {
-            ui.Destroy();
-        }
-
-        screenStack.Clear();
+        activeScreen.Hide();
     }
 }
