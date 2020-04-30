@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace Tests
 {
-    public class TowerTests
+    public class DamageableTests
     {
         [SetUp]
         public void SetUp()
@@ -16,12 +16,12 @@ namespace Tests
         }
 
         [UnityTest]
-        public IEnumerator CanDamageTowersAndChangeHealthBar()
+        public IEnumerator DamageTowers()
         {
             Damageable damageable = GameObject.Find("BaseTower").GetComponent<Damageable>();
             float initialHealth = damageable.GetHealth();
 
-            Image image = GameObject.Find("BaseTower/Canvas/HealthBG/ProgressBar").GetComponent<Image>();
+            Image image = GameObject.Find("BaseTower/HealthBar/HealthBG/ProgressBar").GetComponent<Image>();
             float initialFill = image.fillAmount;
 
             damageable.ApplyDamage(20);

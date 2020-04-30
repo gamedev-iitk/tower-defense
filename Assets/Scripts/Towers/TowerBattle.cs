@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Component to handle tower attacks
+/// </summary>
 public class TowerBattle : AbstractBattle
 {
-    private bool isFighting = false;
-    private float timer;
     private Damageable enemyDamageable;
     private GameObject target;
+    private bool isFighting = false;
+    private float timer;
 
     override protected void SetRange()
     {
@@ -37,7 +40,6 @@ public class TowerBattle : AbstractBattle
             timer += Time.deltaTime;
             if (timer >= FireRate)
             {
-                Debug.Log(enemyDamageable.GetHealth());
                 enemyDamageable?.ApplyDamage(Attack);
 
                 if (enemyDamageable.IsDead)

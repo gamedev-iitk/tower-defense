@@ -40,7 +40,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.AbstractBattle.html",
-          "hash": "HiFzlj96PBKwNJPGa14hpg=="
+          "hash": "30NCALW69L8ZXwdGl1rqxg=="
         }
       },
       "is_incremental": false,
@@ -52,7 +52,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.Damageable.html",
-          "hash": "FWkK9b/nXTPSINGMrzQGcg=="
+          "hash": "EEZxDiwzhjlek+07t9aWjg=="
         }
       },
       "is_incremental": false,
@@ -64,7 +64,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.Detection.html",
-          "hash": "4BQJIMIF0HgtEh7X18yoyw=="
+          "hash": "oMHtWnv+SCrhNAY207bU+w=="
         }
       },
       "is_incremental": false,
@@ -304,7 +304,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.TowerBattle.html",
-          "hash": "fte8dIEgFHgv0WzuDpncpA=="
+          "hash": "UsHTpy7CRLkFKXiYM/bd1w=="
         }
       },
       "is_incremental": false,
@@ -424,7 +424,43 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "6Zqce3JgeyTCR4z876SVCA=="
+          "hash": "I5rqGvDWnT/iF2hMdSCsQw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tests.BattleTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tests.BattleTests.html",
+          "hash": "LrRLdoTD39uwnMZ3veHDwg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tests.DamageableTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tests.DamageableTests.html",
+          "hash": "K7aSsyPqVwAjVMzFazbEHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Tests.DetectionTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tests.DetectionTests.html",
+          "hash": "U5BxQkrxuZontWJWuIZebg=="
         }
       },
       "is_incremental": false,
@@ -468,18 +504,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Tests.TowerTests.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Tests.TowerTests.html",
-          "hash": "fK+HARnwPtR0xPNR+pXP+Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Tests.TowerUIMenuTests.yml",
       "output": {
         ".html": {
@@ -508,7 +532,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tests.html",
-          "hash": "D2T0JIwy7zW4ZsnNMt7pvg=="
+          "hash": "42yKDrVu3Btvujnlt2jECw=="
         }
       },
       "is_incremental": false,
@@ -520,7 +544,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "/nEYA2yQ2N0uXsnsUilX+g=="
+          "hash": "HogZChOjlt92eGOd+NlQNA=="
         }
       },
       "is_incremental": false,
@@ -638,8 +662,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 41,
-          "skipped_file_count": 18
+          "total_file_count": 43,
+          "skipped_file_count": 35
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
