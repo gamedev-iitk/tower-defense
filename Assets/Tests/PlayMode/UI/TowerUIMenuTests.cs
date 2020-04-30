@@ -4,7 +4,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Tests
+namespace Tests.UI
 {
     /// <summary>
     /// Tests for the tower menu UI functions
@@ -18,54 +18,47 @@ namespace Tests
         }
 
         [UnityTest]
-        public IEnumerator CreateNewTowerMenuUI()
-        {
-            GameObject tower = GameObject.Find("BaseTower");
-            GameObject towerMenu = GameObject.Find("UIManager/TowerMenuUI");
-            towerMenu.GetComponent<TowerMenuUISystem>().Show(tower);
-
-            yield return null;
-            Assert.True(towerMenu.activeSelf);
-        }
-
-        [UnityTest]
         public IEnumerator ClickingOnTowerBringsUpUI()
         {
-            GameObject towerUI = GameObject.Find("TowerMenuUI");
-            GameObject baseTower = GameObject.Find("BaseTower");
-
             // Create the tower menu UI
+            GameObject baseTower = GameObject.Find("BaseTower");
             EventRegistry.Invoke("showMenu", baseTower, typeof(TowerMenuUISystem));
+            GameObject towerUI = GameObject.Find("TowerMenuUI");
 
-            yield return new WaitForSeconds(0.5f);
-            Assert.AreEqual(towerUI.GetComponent<CanvasGroup>().alpha, 1);
+            yield return null;
+            Assert.True(towerUI.activeSelf);
         }
 
         [UnityTest]
         public IEnumerator StartTowerUpgradeFromTowerMenuUI()
         {
+            // Create the tower menu UI
             GameObject baseTower = GameObject.Find("BaseTower");
+            EventRegistry.Invoke("showMenu", baseTower, typeof(TowerMenuUISystem));
             GameObject towerMenu = GameObject.Find("TowerMenuUI");
-            towerMenu.GetComponent<TowerMenuUISystem>().Show(baseTower);
 
+            // Bring up the upgrade UI
             towerMenu.GetComponent<TowerMenuUISystem>().OnUpgradeClick();
-            CanvasGroup upgradeMenuCanvasGroup = GameObject.Find("UpgradeUI").GetComponent<CanvasGroup>();
+            GameObject upgradeMenu = GameObject.Find("UpgradeUI");
 
             yield return null;
-            Assert.AreEqual(1, upgradeMenuCanvasGroup.alpha);
+            Assert.True(upgradeMenu.activeSelf);
+            Assert.False(towerMenu.activeSelf);
         }
 
         [UnityTest]
         public IEnumerator StartTowerMoveFromTowerUI()
         {
+            // Create the tower menu UI
             GameObject baseTower = GameObject.Find("BaseTower");
+            EventRegistry.Invoke("showMenu", baseTower, typeof(TowerMenuUISystem));
             GameObject towerMenu = GameObject.Find("TowerMenuUI");
-            towerMenu.GetComponent<TowerMenuUISystem>().Show(baseTower);
 
+            // Bring up the move tool
             towerMenu.GetComponent<TowerMenuUISystem>().OnMoveClick();
             GameObject indicator = GameObject.Find("PlacementIndicator(Clone)");
             bool check = indicator.GetComponent<TowerPlacer>().PlaceTower();
-            
+
             yield return null;
             Assert.IsTrue(check);
             Assert.IsNotNull(GameObject.Find("BaseTower(Clone)"));
@@ -74,17 +67,16 @@ namespace Tests
         [UnityTest]
         public IEnumerator EscapeKeyMakesUIGoAway()
         {
-            GameObject towerui = GameObject.Find("TowerMenuUI");
+            // Create the tower menu UI
             GameObject baseTower = GameObject.Find("BaseTower");
-
-            // Bring up the UI
             EventRegistry.Invoke("showMenu", baseTower, typeof(TowerMenuUISystem));
+            GameObject towerMenu = GameObject.Find("TowerMenuUI");
 
-            // Hide all UIs
+            // Hide active UI
             EventRegistry.Invoke("hideMenu");
 
             yield return new WaitForSeconds(0.5f);
-            Assert.AreEqual(towerui.GetComponent<CanvasGroup>().alpha, 0);
+            Assert.False(towerMenu.activeSelf);
         }
     }
 }

@@ -4,7 +4,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Tests
+namespace Tests.UI
 {
     /// <summary>
     /// Tests for the UpgradeMenuUISystem
@@ -20,47 +20,48 @@ namespace Tests
         [UnityTest]
         public IEnumerator CanCreateUpgradeUIMenu()
         {
-            GameObject tower = GameObject.Find("BaseTower");
-            GameObject towerMenu = GameObject.Find("UIManager/UpgradeUI");
-            towerMenu.GetComponent<UpgradeMenuUISystem>().Show(tower);
+            // Create the upgrade menu UI
+            GameObject baseTower = GameObject.Find("BaseTower");
+            EventRegistry.Invoke("showMenu", baseTower, typeof(UpgradeMenuUISystem));
+            GameObject upgradeMenu = GameObject.Find("UIManager/UpgradeUI");
 
             yield return null;
-            Assert.True(towerMenu.activeSelf);
+            Assert.True(upgradeMenu.activeSelf);
         }
 
         [UnityTest]
         public IEnumerator CanUpgradeToRedTower()
         {
-            UpgradeMenuUISystem ui = GameObject.Find("UpgradeUI").GetComponent<UpgradeMenuUISystem>();
+            // Create the upgrade menu UI
             GameObject baseTower = GameObject.Find("BaseTower");
-            Vector3 initial = baseTower.transform.position;
-            ui.Show(baseTower);
-            ui.OnClick("red");
+            EventRegistry.Invoke("showMenu", baseTower, typeof(UpgradeMenuUISystem));
+            GameObject upgradeMenu = GameObject.Find("UIManager/UpgradeUI");
+            UpgradeMenuUISystem component = upgradeMenu.GetComponent<UpgradeMenuUISystem>();
 
-            yield return new WaitForSeconds(1f);
+            // Create the red tower and store initial position for comparison
+            Vector3 initial = baseTower.transform.position;
+            component.CreateTower(ETowerType.Red);
+
+            yield return new WaitForSeconds(0.5f);
             GameObject redTower = GameObject.Find("RedTower(Clone)");
 
-            // Check if a new tower was created
             Assert.IsNotNull(redTower);
-
-            // Check if it was created at the same location
             Assert.AreEqual(initial, redTower.transform.position);
         }
 
         [UnityTest]
         public IEnumerator EscapeKeyMakesUIGoAway()
         {
-            GameObject towerui = GameObject.Find("TowerMenuUI");
+            // Create the upgrade menu UI
             GameObject baseTower = GameObject.Find("BaseTower");
-
-            // Bring up the UI
             EventRegistry.Invoke("showMenu", baseTower, typeof(UpgradeMenuUISystem));
+            GameObject upgradeMenu = GameObject.Find("UIManager/UpgradeUI");
 
-            // Hide all UIs
+            // Hide active UI
             EventRegistry.Invoke("hideMenu");
 
-            yield return new WaitForSeconds(0.5f);
-            Assert.AreEqual(towerui.GetComponent<CanvasGroup>().alpha, 0);
+            yield return null;
+            Assert.False(upgradeMenu.activeSelf);
         }
     }
 }
