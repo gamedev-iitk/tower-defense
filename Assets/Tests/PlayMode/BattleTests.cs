@@ -3,7 +3,6 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 namespace Tests
 {
@@ -16,9 +15,16 @@ namespace Tests
         }
 
         [UnityTest]
-        public IEnumerator TowersDetecEnemies()
+        public IEnumerator TowersAttacksEnemies()
         {
-            yield return null;
+            GameObject tower = GameObject.FindWithTag("Tower");
+            GameObject enemy = GameObject.FindWithTag("Enemy");
+            tower.GetComponent<TowerBattle>().OnDetect(enemy);
+            tower.GetComponent<TowerBattle>().FireRate = 0.25f; // increase so that health changes fast
+
+            float health = enemy.GetComponent<Damageable>().GetHealth();
+            yield return new WaitForSeconds(0.5f);
+            Assert.AreNotEqual(health, enemy.GetComponent<Damageable>().GetHealth());
         }
     }
 }

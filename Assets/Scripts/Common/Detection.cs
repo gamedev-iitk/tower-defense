@@ -23,7 +23,7 @@ public class Detection : MonoBehaviour
     private float deltaAngle;
     private float angleMade = 0f;
     private bool shouldRotate = false;
-    private bool isOccupied = false;
+    public bool isOccupied = false;
     private int sweepDirection = +1;
 
     void Start()

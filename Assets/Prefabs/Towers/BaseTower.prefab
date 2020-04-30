@@ -78,8 +78,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c3f415b9bad6246893ee1e6c79d66a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExtremeAngle: 30
-  NumberOfRays: 5
+  ExtremeAngle: 45
+  NumberOfRays: 20
+  isOccupied: 0
 --- !u!135 &8947906116660353105
 SphereCollider:
   m_ObjectHideFlags: 0
