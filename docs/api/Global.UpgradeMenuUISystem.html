@@ -109,13 +109,25 @@
   </h3>
   
   
-  <a id="Global_UpgradeMenuUISystem_Create_" data-uid="Global.UpgradeMenuUISystem.Create*"></a>
-  <h4 id="Global_UpgradeMenuUISystem_Create_UnityEngine_GameObject_" data-uid="Global.UpgradeMenuUISystem.Create(UnityEngine.GameObject)">Create(GameObject)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Global_UpgradeMenuUISystem_CancelTowerCreation_" data-uid="Global.UpgradeMenuUISystem.CancelTowerCreation*"></a>
+  <h4 id="Global_UpgradeMenuUISystem_CancelTowerCreation" data-uid="Global.UpgradeMenuUISystem.CancelTowerCreation">CancelTowerCreation()</h4>
+  <div class="markdown level1 summary"><p>Callback for &quot;cancelTowerCreation&quot; event. Called when upgrade confirmation dialog is closed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Create(GameObject tower)</code></pre>
+    <pre><code class="lang-csharp hljs">public void CancelTowerCreation()</code></pre>
+  </div>
+  
+  
+  <a id="Global_UpgradeMenuUISystem_CreateTower_" data-uid="Global.UpgradeMenuUISystem.CreateTower*"></a>
+  <h4 id="Global_UpgradeMenuUISystem_CreateTower_ETowerType_" data-uid="Global.UpgradeMenuUISystem.CreateTower(ETowerType)">CreateTower(ETowerType)</h4>
+  <div class="markdown level1 summary"><p>Callback for the &quot;createTower&quot; event. Called when the upgrade is confirmed through the dialog box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateTower(ETowerType type)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -128,37 +140,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UnityEngine.GameObject</span></td>
-        <td><span class="parametername">tower</span></td>
-        <td></td>
+        <td><a class="xref" href="Global.ETowerType.html">ETowerType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>Type of the tower to create</p>
+</td>
       </tr>
     </tbody>
   </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Global_UpgradeMenuUISystem_Destroy_" data-uid="Global.UpgradeMenuUISystem.Destroy*"></a>
-  <h4 id="Global_UpgradeMenuUISystem_Destroy" data-uid="Global.UpgradeMenuUISystem.Destroy">Destroy()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Destroy()</code></pre>
-  </div>
   
   
   <a id="Global_UpgradeMenuUISystem_Hide_" data-uid="Global.UpgradeMenuUISystem.Hide*"></a>
@@ -194,6 +182,33 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Global_UpgradeMenuUISystem_Show_" data-uid="Global.UpgradeMenuUISystem.Show*"></a>
+  <h4 id="Global_UpgradeMenuUISystem_Show_UnityEngine_GameObject_" data-uid="Global.UpgradeMenuUISystem.Show(UnityEngine.GameObject)">Show(GameObject)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Show(GameObject tower)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.GameObject</span></td>
+        <td><span class="parametername">tower</span></td>
         <td></td>
       </tr>
     </tbody>

@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using UnityEngine.TestTools;
 
-namespace Tests
+namespace Tests.Gameplay
 {
     /// <summary>
     /// Sample editor tests

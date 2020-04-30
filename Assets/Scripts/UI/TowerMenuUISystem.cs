@@ -1,48 +1,27 @@
-﻿using UnityEngine;
-
+﻿using System;
+using UnityEngine;
 
 /// <summary>
 /// Brings up the tower menu when a tower is selected.
 /// </summary>
 public class TowerMenuUISystem : MonoBehaviour, IUISystem
 {
-    private CanvasGroup canvasGroup;
     private GameObject focusedTower;
-    private UIManager uiManager;
 
     void Start()
     {
-        // Initialize private fields
-        canvasGroup = GetComponent<CanvasGroup>();
-        uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
-
-        // Hide the canvas group
-        canvasGroup.alpha = 0;
+        Hide();
     }
 
-    public bool Create(GameObject tower)
+    public void Show(GameObject tower)
     {
-        if (Equals(focusedTower, tower))
-        {
-            return false;
-        }
-        else
-        {
-            focusedTower = tower;
-            canvasGroup.alpha = 1;
-            return true;
-        }
+        focusedTower = tower;
+        gameObject.SetActive(true);
     }
 
     public void Hide()
     {
-        canvasGroup.alpha = 0;
-    }
-
-    public void Destroy()
-    {
-        Hide();
-        focusedTower = null;
+        gameObject.SetActive(false);
     }
 
     /// <summary>
@@ -50,12 +29,11 @@ public class TowerMenuUISystem : MonoBehaviour, IUISystem
     /// </summary>
     public void OnUpgradeClick()
     {
-        // TODO: this should fire an event instead. We should not have a reference to the UI manager here.
         Hide();
 
         // Move player to the tower.
 
-        uiManager.ShowUpgradeMenu(focusedTower);
+        EventRegistry.Invoke("showMenu", focusedTower, typeof(UpgradeMenuUISystem));
     }
 
     /// <summary>

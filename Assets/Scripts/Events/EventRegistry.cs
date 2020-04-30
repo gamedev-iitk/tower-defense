@@ -30,6 +30,22 @@ public static class EventRegistry
         return ev;
     }
 
+    public static TDEvent<TParam> GetEvent<TParam>(string name)
+    {
+        TDEvent<TParam> ev;
+        if (container.ContainsKey(name))
+        {
+            container.TryGetValue(name, out ev);
+        }
+        else
+        {
+            Debug.LogWarning("No event found. Creating a new event.");
+            ev = new TDEvent<TParam>();
+            container.Add(name, ev);
+        }
+        return ev;
+    }
+
     public static TDEvent<TParam1, TParam2> GetEvent<TParam1, TParam2>(string name)
     {
         TDEvent<TParam1, TParam2> ev;
@@ -66,6 +82,21 @@ public static class EventRegistry
         }
     }
 
+    public static bool RegisterAction<TParam>(string name, UnityAction<TParam> callback)
+    {
+        TDEvent<TParam> ev = GetEvent<TParam>(name);
+        if (ev == null)
+        {
+            Debug.LogError("Failed to register callback. Type mismatch.");
+            return false;
+        }
+        else
+        {
+            ev?.AddListener(callback);
+            return true;
+        }
+    }
+
     public static bool RegisterAction<TParam1, TParam2>(string name, UnityAction<TParam1, TParam2> callback)
     {
         TDEvent<TParam1, TParam2> ev = GetEvent<TParam1, TParam2>(name);
@@ -78,6 +109,20 @@ public static class EventRegistry
         {
             ev?.AddListener(callback);
             return true;
+        }
+    }
+
+    public static void Invoke(string name)
+    {
+        container.TryGetValue(name, out TDEvent ev);
+        if (ev == null)
+        {
+            Debug.LogError("No callback registered for the event " + name + " that supports the supplied parameters. Cannot invoke.");
+            return;
+        }
+        else
+        {
+            ev.Invoke();
         }
     }
 

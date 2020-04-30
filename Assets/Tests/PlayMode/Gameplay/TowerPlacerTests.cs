@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.SceneManagement;
 
-namespace Tests
+namespace Tests.Gameplay
 {
     /// <summary>
     /// Tests for tower placement indicator
@@ -17,10 +17,6 @@ namespace Tests
             SceneManager.LoadScene("MainScene");
         }
 
-        /// <summary>
-        /// Tests if the placement indicator can be toggled
-        /// </summary>
-        /// <returns></returns>
         [UnityTest]
         public IEnumerator IndicatorCanToggle()
         {
@@ -38,35 +34,6 @@ namespace Tests
             Assert.IsNull(GameObject.Find("PlacementIndicator(Clone)"));
         }
 
-        /// <summary>
-        /// Tests if the placement indicator moves if cursor moves
-        /// </summary>
-        /// <returns></returns>
-        [UnityTest]
-        public IEnumerator IndicatorMovesWithCursor()
-        {
-            GameObject baseTower = GameObject.Find("BaseTower");
-            Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, LayerMask.GetMask("Ground"));
-            EventRegistry.Invoke("togglePlacer", baseTower, hit.point);
-            yield return new WaitForSeconds(0.5f);
-
-            Vector3 initial = GameObject.Find("PlacementIndicator(Clone)").transform.position;
-
-            // TODO: Find a better way to move here. UI testing? Ideally I should be able to move the cursor
-            // remove it
-            EventRegistry.Invoke("togglePlacer", baseTower, hit.point);
-            // spawn it at another location
-            EventRegistry.Invoke("togglePlacer", baseTower, hit.point + new Vector3(1, 1, 1));
-
-            yield return new WaitForSeconds(0.5f);
-            Assert.AreNotEqual(initial, GameObject.Find("PlacementIndicator(Clone)").transform.position);
-        }
-
-
-        /// <summary>
-        /// Tests if a tower can be placed through TowerPlacer
-        /// </summary>
-        /// <returns></returns>
         [UnityTest]
         public IEnumerator IndicatorPlacesTower()
         {
@@ -84,10 +51,6 @@ namespace Tests
             Assert.IsNotNull(GameObject.Find("BaseTower(Clone)"));
         }
 
-        /// <summary>
-        /// Tests if the placement indicator turns red near an object
-        /// </summary>
-        /// <returns></returns>
         [UnityTest]
         public IEnumerator IndicatorColorIsRedNearObstacles()
         {
@@ -105,6 +68,27 @@ namespace Tests
             Assert.AreEqual(new Color(1, 0, 0, 0.3f), pointer.GetComponent<Renderer>().material.color);
         }
 
+
+        // TODO: Find a better way to move here. UI testing?
+        // Ideally I should be able to move the cursor remove it
+
+        // [UnityTest]
+        // public IEnumerator IndicatorMovesWithCursor()
+        // {
+        //     GameObject baseTower = GameObject.Find("BaseTower");
+        //     Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, LayerMask.GetMask("Ground"));
+        //     EventRegistry.Invoke("togglePlacer", baseTower, hit.point);
+        //     yield return new WaitForSeconds(0.5f);
+
+        //     Vector3 initial = GameObject.Find("PlacementIndicator(Clone)").transform.position;
+
+        //     EventRegistry.Invoke("togglePlacer", baseTower, hit.point);
+        //     // spawn it at another location
+        //     EventRegistry.Invoke("togglePlacer", baseTower, hit.point + new Vector3(1, 1, 1));
+
+        //     yield return new WaitForSeconds(0.5f);
+        //     Assert.AreNotEqual(initial, GameObject.Find("PlacementIndicator(Clone)").transform.position);
+        // }
 
         // TODO: the test below wouldn't work. Setting pointer.transform doesn't work because TowerPlacer.Update overrides it
         // with the mouse position. We need to mock that.

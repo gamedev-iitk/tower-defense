@@ -7,11 +7,3 @@ public class TowerType : MonoBehaviour
 {
     public ETowerType Type;
 }
-
-public enum ETowerType : ushort
-{
-    Base,
-    Gold,
-    Red,
-    Green
-}

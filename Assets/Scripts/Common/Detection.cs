@@ -51,7 +51,6 @@ public class Detection : MonoBehaviour
             if (Physics.Raycast(transform.position, lookDirection, out RaycastHit hit, detectionRange, LayerMask.GetMask("Enemy")))
             {
                 Debug.DrawLine(transform.position, hit.transform.position, Color.black, 2f);
-                Debug.Log("Found " + hit.transform.gameObject.name);
                 Detected(hit.transform.gameObject);
             }
             lookDirection = Quaternion.Euler(0, deltaAngle * sweepDirection, 0) * lookDirection;

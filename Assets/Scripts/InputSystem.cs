@@ -1,6 +1,5 @@
-﻿using UnityEngine;
-using UnityEngine.Events;
-
+﻿using System;
+using UnityEngine;
 
 /// <summary>
 /// Manager class for handling mouse input.
@@ -8,21 +7,29 @@ using UnityEngine.Events;
 public class InputSystem : MonoBehaviour
 {
     // TODO: Have a single utils class for doing these raycasts
+
+    /// <summary>
+    /// Prefab that the tower placer will place by default
+    /// </summary>
     public GameObject BaseTower;
 
     private GameObject player;
     private Camera mainCamera;
-    private UIManager uiManager;
+    private TDEvent<GameObject, Type> showMenu;
+    private TDEvent hideMenu;
 
     void Start()
     {
         // Initialize private fields
         mainCamera = Camera.main;
         player = GameObject.Find("Player");
-        uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
 
         // Show mouse in game
         Cursor.visible = true;
+
+        // Register events and callbacks
+        showMenu = EventRegistry.GetEvent<GameObject, Type>("showMenu");
+        hideMenu = EventRegistry.GetEvent("hideMenu");
     }
 
     void Update()
@@ -35,8 +42,7 @@ public class InputSystem : MonoBehaviour
                 GameObject hitObject = hit.transform.parent.gameObject;
                 if (hitObject.CompareTag("Tower"))
                 {
-                    // TODO: This should fire an even instead.
-                    uiManager.ShowTowerMenu(hitObject);
+                    showMenu.Invoke(hitObject, typeof(TowerMenuUISystem));
                 }
             }
         }
@@ -53,8 +59,7 @@ public class InputSystem : MonoBehaviour
         // Check escape button or "cancel"
         if (Input.GetButtonDown("Cancel"))
         {
-            // TODO: This should fire an event instead.
-            uiManager.HideAll();
+            hideMenu.Invoke();
         }
 
         // Check the X button or "place", toggle the selector

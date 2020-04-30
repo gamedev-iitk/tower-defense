@@ -5,7 +5,7 @@ using UnityEngine.TestTools;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace Tests
+namespace Tests.Gameplay
 {
     public class DamageableTests
     {

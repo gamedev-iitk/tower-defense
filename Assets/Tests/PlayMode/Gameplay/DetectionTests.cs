@@ -3,9 +3,8 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-namespace Tests
+namespace Tests.Gameplay
 {
     public class DetectionTests
     {
@@ -15,60 +14,53 @@ namespace Tests
             SceneManager.LoadScene("MainScene");
         }
 
-         /// <summary>
-        /// Tests if the tower can detect an enemy in Range
-        /// </summary>
-        /// <returns></returns>
         [UnityTest]
         public IEnumerator TowersDetectsEnemies()
         {
             GameObject tower = GameObject.FindWithTag("Tower");
             GameObject enemy = GameObject.FindWithTag("Enemy");
             float distance = tower.GetComponent<TowerBattle>().Range;
-            //places the enmey within tower's range
+
+            // Place the enmey within tower's range
             enemy.transform.position = tower.transform.position + new Vector3(distance / 2, 0, distance / 2);
+
             yield return new WaitForSeconds(0.5f);
-            Assert.AreEqual(tower.GetComponent<Detection>().isOccupied, true);
+            Assert.AreEqual(true, tower.GetComponent<Detection>().isOccupied);
         }
 
-         /// <summary>
-        /// Tests if the tower stops attcaking when enemy goes out of range
-        /// </summary>
-        /// <returns></returns>
         [UnityTest]
-
-        public IEnumerator TowerStopAttackingWhenEnemyIsOutOfRange()
+        public IEnumerator TowerStopsAttackingWhenEnemyIsOutOfRange()
         {
             GameObject tower = GameObject.FindWithTag("Tower");
             GameObject enemy = GameObject.FindWithTag("Enemy");
             float distance = tower.GetComponent<TowerBattle>().Range;
-            //place the enemy within towers's range
+
+            // Place the enemy within towers's range
             enemy.transform.position = tower.transform.position + new Vector3(distance / 2, 0, distance / 2);
             yield return new WaitForSeconds(0.5f);
-            //place it outside the range
+
+            // Place it outside the range
             enemy.transform.position = tower.transform.position + new Vector3(distance, 0, distance);
-            yield return null;
-            Assert.AreEqual(tower.GetComponent<Detection>().isOccupied, false);
+            yield return new WaitForSeconds(0.5f);
+
+            Assert.AreEqual(false, tower.GetComponent<Detection>().isOccupied);
         }
 
-         /// <summary>
-        /// Tests if the tower stops attacking when tower is destroyed
-        /// </summary>
-        /// <returns></returns>
         [UnityTest]
-
         public IEnumerator TowersStartsRaycastingWhenEnemyIsDead()
         {
             GameObject tower = GameObject.FindWithTag("Tower");
             GameObject enemy = GameObject.FindWithTag("Enemy");
             float distance = tower.GetComponent<TowerBattle>().Range;
-            //place the enemy
+
+            // Place the enemy
             enemy.transform.position = tower.transform.position + new Vector3(distance / 2, 0, distance / 2);
             yield return new WaitForSeconds(0.5f);
-            //destroy it
+            // Destroy it
             GameObject.Destroy(enemy);
-            yield return null;
-            Assert.AreEqual(tower.GetComponent<Detection>().isOccupied, false);
+
+            yield return new WaitForSeconds(0.5f);
+            Assert.AreEqual(false, tower.GetComponent<Detection>().isOccupied);
         }
     }
 }

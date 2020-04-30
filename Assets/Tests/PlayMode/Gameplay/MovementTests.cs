@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.SceneManagement;
 
-namespace Tests
+namespace Tests.Gameplay
 {
     /// <summary>
     /// Tests for player movement systems
@@ -17,10 +17,6 @@ namespace Tests
             SceneManager.LoadScene("MainScene");
         }
 
-        /// <summary>
-        /// Tests if the player can move
-        /// </summary>
-        /// <returns></returns>
         [UnityTest]
         public IEnumerator AIMovePlayer()
         {

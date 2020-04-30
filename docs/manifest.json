@@ -72,11 +72,35 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.DialogConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.DialogConfig.html",
+          "hash": "wCzYTGTJZDKItWMY1LqppQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.DialogSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.DialogSystem.html",
+          "hash": "XumahMxurHfIq/453wHD9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.ETowerType.yml",
       "output": {
         ".html": {
           "relative_path": "api/Global.ETowerType.html",
-          "hash": "91hrE7VfuCyAqswCpa7ixQ=="
+          "hash": "IET2m2E4WNNK6DcflUn3/g=="
         }
       },
       "is_incremental": false,
@@ -88,7 +112,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.EventRegistry.html",
-          "hash": "XWdqqIzFwKBr+55ke2myJA=="
+          "hash": "fqkmBU+9rIkGZbEqzqkkfQ=="
         }
       },
       "is_incremental": false,
@@ -101,6 +125,18 @@
         ".html": {
           "relative_path": "api/Global.FaceCamera.html",
           "hash": "1pQNPZjDnFwVLqYJ/ReScw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.GameState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.GameState.html",
+          "hash": "wpIUZOT2iJh/xR00FJFVIA=="
         }
       },
       "is_incremental": false,
@@ -136,7 +172,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.IUISystem.html",
-          "hash": "ziL8KSLVBd00j4VzOPnuoA=="
+          "hash": "Ruf4yycvPJXmcYJE1+d7PA=="
         }
       },
       "is_incremental": false,
@@ -148,7 +184,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.InputSystem.html",
-          "hash": "CfYoNfmwqdNJbD9HYuXKVw=="
+          "hash": "MzR+W4dgC905A7gsGgX3Kg=="
         }
       },
       "is_incremental": false,
@@ -316,7 +352,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.TowerMenuUISystem.html",
-          "hash": "3PMio93BBDSivl+MdJ80IQ=="
+          "hash": "6HiCWTvPXKuXzPja1MXOXA=="
         }
       },
       "is_incremental": false,
@@ -388,7 +424,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.UIManager.html",
-          "hash": "G7/VIhuP4rrRTcLXsB4mfw=="
+          "hash": "6wj5Drh02q5iKbvlFsW9wg=="
         }
       },
       "is_incremental": false,
@@ -400,7 +436,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.UpgradeMenuUISystem.html",
-          "hash": "c6MqsZuiooh8cPDDxspO8w=="
+          "hash": "uSne2ffuPMMjJgvsqB8T2w=="
         }
       },
       "is_incremental": false,
@@ -420,11 +456,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.WalletUISystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.WalletUISystem.html",
+          "hash": "RO6kitWjuV0/EIbCzS0+Zg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.yml",
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "I5rqGvDWnT/iF2hMdSCsQw=="
+          "hash": "pT2qo535s46oEge9MYmlLg=="
         }
       },
       "is_incremental": false,
@@ -484,7 +532,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tests.MovementTests.html",
-          "hash": "yhC7343MyfNrc9IKAEDhRg=="
+          "hash": "g20xAfRakGLL32g58TERVw=="
         }
       },
       "is_incremental": false,
@@ -544,7 +592,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "HogZChOjlt92eGOd+NlQNA=="
+          "hash": "cF88dr3Mk/rxxoaW18g5DA=="
         }
       },
       "is_incremental": false,
@@ -662,8 +710,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 43,
-          "skipped_file_count": 35
+          "total_file_count": 47,
+          "skipped_file_count": 32
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

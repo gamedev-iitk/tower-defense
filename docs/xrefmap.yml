@@ -173,6 +173,88 @@ references:
   isSpec: "True"
   fullName: Detection.Reset
   nameWithType: Detection.Reset
+- uid: Global.DialogConfig
+  name: DialogConfig
+  href: api/Global.DialogConfig.html
+  commentId: T:Global.DialogConfig
+  fullName: DialogConfig
+  nameWithType: DialogConfig
+- uid: Global.DialogConfig.CancelCallback
+  name: CancelCallback
+  href: api/Global.DialogConfig.html#Global_DialogConfig_CancelCallback
+  commentId: F:Global.DialogConfig.CancelCallback
+  fullName: DialogConfig.CancelCallback
+  nameWithType: DialogConfig.CancelCallback
+- uid: Global.DialogConfig.Message
+  name: Message
+  href: api/Global.DialogConfig.html#Global_DialogConfig_Message
+  commentId: F:Global.DialogConfig.Message
+  fullName: DialogConfig.Message
+  nameWithType: DialogConfig.Message
+- uid: Global.DialogConfig.OKCallback
+  name: OKCallback
+  href: api/Global.DialogConfig.html#Global_DialogConfig_OKCallback
+  commentId: F:Global.DialogConfig.OKCallback
+  fullName: DialogConfig.OKCallback
+  nameWithType: DialogConfig.OKCallback
+- uid: Global.DialogSystem
+  name: DialogSystem
+  href: api/Global.DialogSystem.html
+  commentId: T:Global.DialogSystem
+  fullName: DialogSystem
+  nameWithType: DialogSystem
+- uid: Global.DialogSystem.CancelClicked
+  name: CancelClicked()
+  href: api/Global.DialogSystem.html#Global_DialogSystem_CancelClicked
+  commentId: M:Global.DialogSystem.CancelClicked
+  fullName: DialogSystem.CancelClicked()
+  nameWithType: DialogSystem.CancelClicked()
+- uid: Global.DialogSystem.CancelClicked*
+  name: CancelClicked
+  href: api/Global.DialogSystem.html#Global_DialogSystem_CancelClicked_
+  commentId: Overload:Global.DialogSystem.CancelClicked
+  isSpec: "True"
+  fullName: DialogSystem.CancelClicked
+  nameWithType: DialogSystem.CancelClicked
+- uid: Global.DialogSystem.Hide
+  name: Hide()
+  href: api/Global.DialogSystem.html#Global_DialogSystem_Hide
+  commentId: M:Global.DialogSystem.Hide
+  fullName: DialogSystem.Hide()
+  nameWithType: DialogSystem.Hide()
+- uid: Global.DialogSystem.Hide*
+  name: Hide
+  href: api/Global.DialogSystem.html#Global_DialogSystem_Hide_
+  commentId: Overload:Global.DialogSystem.Hide
+  isSpec: "True"
+  fullName: DialogSystem.Hide
+  nameWithType: DialogSystem.Hide
+- uid: Global.DialogSystem.OKClicked
+  name: OKClicked()
+  href: api/Global.DialogSystem.html#Global_DialogSystem_OKClicked
+  commentId: M:Global.DialogSystem.OKClicked
+  fullName: DialogSystem.OKClicked()
+  nameWithType: DialogSystem.OKClicked()
+- uid: Global.DialogSystem.OKClicked*
+  name: OKClicked
+  href: api/Global.DialogSystem.html#Global_DialogSystem_OKClicked_
+  commentId: Overload:Global.DialogSystem.OKClicked
+  isSpec: "True"
+  fullName: DialogSystem.OKClicked
+  nameWithType: DialogSystem.OKClicked
+- uid: Global.DialogSystem.Show(DialogConfig)
+  name: Show(DialogConfig)
+  href: api/Global.DialogSystem.html#Global_DialogSystem_Show_DialogConfig_
+  commentId: M:Global.DialogSystem.Show(DialogConfig)
+  fullName: DialogSystem.Show(DialogConfig)
+  nameWithType: DialogSystem.Show(DialogConfig)
+- uid: Global.DialogSystem.Show*
+  name: Show
+  href: api/Global.DialogSystem.html#Global_DialogSystem_Show_
+  commentId: Overload:Global.DialogSystem.Show
+  isSpec: "True"
+  fullName: DialogSystem.Show
+  nameWithType: DialogSystem.Show
 - uid: Global.ETowerType
   name: ETowerType
   href: api/Global.ETowerType.html
@@ -197,6 +279,12 @@ references:
   commentId: F:Global.ETowerType.Green
   fullName: ETowerType.Green
   nameWithType: ETowerType.Green
+- uid: Global.ETowerType.None
+  name: None
+  href: api/Global.ETowerType.html#Global_ETowerType_None
+  commentId: F:Global.ETowerType.None
+  fullName: ETowerType.None
+  nameWithType: ETowerType.None
 - uid: Global.ETowerType.Red
   name: Red
   href: api/Global.ETowerType.html#Global_ETowerType_Red
@@ -222,6 +310,15 @@ references:
   isSpec: "True"
   fullName: EventRegistry.GetEvent
   nameWithType: EventRegistry.GetEvent
+- uid: Global.EventRegistry.GetEvent``1(System.String)
+  name: GetEvent<TParam>(String)
+  href: api/Global.EventRegistry.html#Global_EventRegistry_GetEvent__1_System_String_
+  commentId: M:Global.EventRegistry.GetEvent``1(System.String)
+  name.vb: GetEvent(Of TParam)(String)
+  fullName: EventRegistry.GetEvent<TParam>(System.String)
+  fullName.vb: EventRegistry.GetEvent(Of TParam)(System.String)
+  nameWithType: EventRegistry.GetEvent<TParam>(String)
+  nameWithType.vb: EventRegistry.GetEvent(Of TParam)(String)
 - uid: Global.EventRegistry.GetEvent``2(System.String)
   name: GetEvent<TParam1, TParam2>(String)
   href: api/Global.EventRegistry.html#Global_EventRegistry_GetEvent__2_System_String_
@@ -231,6 +328,12 @@ references:
   fullName.vb: EventRegistry.GetEvent(Of TParam1, TParam2)(System.String)
   nameWithType: EventRegistry.GetEvent<TParam1, TParam2>(String)
   nameWithType.vb: EventRegistry.GetEvent(Of TParam1, TParam2)(String)
+- uid: Global.EventRegistry.Invoke(System.String)
+  name: Invoke(String)
+  href: api/Global.EventRegistry.html#Global_EventRegistry_Invoke_System_String_
+  commentId: M:Global.EventRegistry.Invoke(System.String)
+  fullName: EventRegistry.Invoke(System.String)
+  nameWithType: EventRegistry.Invoke(String)
 - uid: Global.EventRegistry.Invoke*
   name: Invoke
   href: api/Global.EventRegistry.html#Global_EventRegistry_Invoke_
@@ -260,6 +363,15 @@ references:
   isSpec: "True"
   fullName: EventRegistry.RegisterAction
   nameWithType: EventRegistry.RegisterAction
+- uid: Global.EventRegistry.RegisterAction``1(System.String,UnityEngine.Events.UnityAction{``0})
+  name: RegisterAction<TParam>(String, UnityAction<TParam>)
+  href: api/Global.EventRegistry.html#Global_EventRegistry_RegisterAction__1_System_String_UnityEngine_Events_UnityAction___0__
+  commentId: M:Global.EventRegistry.RegisterAction``1(System.String,UnityEngine.Events.UnityAction{``0})
+  name.vb: RegisterAction(Of TParam)(String, UnityAction(Of TParam))
+  fullName: EventRegistry.RegisterAction<TParam>(System.String, UnityEngine.Events.UnityAction<TParam>)
+  fullName.vb: EventRegistry.RegisterAction(Of TParam)(System.String, UnityEngine.Events.UnityAction(Of TParam))
+  nameWithType: EventRegistry.RegisterAction<TParam>(String, UnityAction<TParam>)
+  nameWithType.vb: EventRegistry.RegisterAction(Of TParam)(String, UnityAction(Of TParam))
 - uid: Global.EventRegistry.RegisterAction``2(System.String,UnityEngine.Events.UnityAction{``0,``1})
   name: RegisterAction<TParam1, TParam2>(String, UnityAction<TParam1, TParam2>)
   href: api/Global.EventRegistry.html#Global_EventRegistry_RegisterAction__2_System_String_UnityEngine_Events_UnityAction___0___1__
@@ -275,6 +387,18 @@ references:
   commentId: T:Global.FaceCamera
   fullName: FaceCamera
   nameWithType: FaceCamera
+- uid: Global.GameState
+  name: GameState
+  href: api/Global.GameState.html
+  commentId: T:Global.GameState
+  fullName: GameState
+  nameWithType: GameState
+- uid: Global.GameState.StartingCash
+  name: StartingCash
+  href: api/Global.GameState.html#Global_GameState_StartingCash
+  commentId: F:Global.GameState.StartingCash
+  fullName: GameState.StartingCash
+  nameWithType: GameState.StartingCash
 - uid: Global.GenericMap`1
   name: GenericMap<TKey>
   href: api/Global.GenericMap-1.html
@@ -392,32 +516,6 @@ references:
   commentId: T:Global.IUISystem
   fullName: IUISystem
   nameWithType: IUISystem
-- uid: Global.IUISystem.Create(UnityEngine.GameObject)
-  name: Create(GameObject)
-  href: api/Global.IUISystem.html#Global_IUISystem_Create_UnityEngine_GameObject_
-  commentId: M:Global.IUISystem.Create(UnityEngine.GameObject)
-  fullName: IUISystem.Create(UnityEngine.GameObject)
-  nameWithType: IUISystem.Create(GameObject)
-- uid: Global.IUISystem.Create*
-  name: Create
-  href: api/Global.IUISystem.html#Global_IUISystem_Create_
-  commentId: Overload:Global.IUISystem.Create
-  isSpec: "True"
-  fullName: IUISystem.Create
-  nameWithType: IUISystem.Create
-- uid: Global.IUISystem.Destroy
-  name: Destroy()
-  href: api/Global.IUISystem.html#Global_IUISystem_Destroy
-  commentId: M:Global.IUISystem.Destroy
-  fullName: IUISystem.Destroy()
-  nameWithType: IUISystem.Destroy()
-- uid: Global.IUISystem.Destroy*
-  name: Destroy
-  href: api/Global.IUISystem.html#Global_IUISystem_Destroy_
-  commentId: Overload:Global.IUISystem.Destroy
-  isSpec: "True"
-  fullName: IUISystem.Destroy
-  nameWithType: IUISystem.Destroy
 - uid: Global.IUISystem.Hide
   name: Hide()
   href: api/Global.IUISystem.html#Global_IUISystem_Hide
@@ -431,6 +529,19 @@ references:
   isSpec: "True"
   fullName: IUISystem.Hide
   nameWithType: IUISystem.Hide
+- uid: Global.IUISystem.Show(UnityEngine.GameObject)
+  name: Show(GameObject)
+  href: api/Global.IUISystem.html#Global_IUISystem_Show_UnityEngine_GameObject_
+  commentId: M:Global.IUISystem.Show(UnityEngine.GameObject)
+  fullName: IUISystem.Show(UnityEngine.GameObject)
+  nameWithType: IUISystem.Show(GameObject)
+- uid: Global.IUISystem.Show*
+  name: Show
+  href: api/Global.IUISystem.html#Global_IUISystem_Show_
+  commentId: Overload:Global.IUISystem.Show
+  isSpec: "True"
+  fullName: IUISystem.Show
+  nameWithType: IUISystem.Show
 - uid: Global.SerializableDictionary
   name: SerializableDictionary
   href: api/Global.SerializableDictionary.html
@@ -913,32 +1024,6 @@ references:
   commentId: T:Global.TowerMenuUISystem
   fullName: TowerMenuUISystem
   nameWithType: TowerMenuUISystem
-- uid: Global.TowerMenuUISystem.Create(UnityEngine.GameObject)
-  name: Create(GameObject)
-  href: api/Global.TowerMenuUISystem.html#Global_TowerMenuUISystem_Create_UnityEngine_GameObject_
-  commentId: M:Global.TowerMenuUISystem.Create(UnityEngine.GameObject)
-  fullName: TowerMenuUISystem.Create(UnityEngine.GameObject)
-  nameWithType: TowerMenuUISystem.Create(GameObject)
-- uid: Global.TowerMenuUISystem.Create*
-  name: Create
-  href: api/Global.TowerMenuUISystem.html#Global_TowerMenuUISystem_Create_
-  commentId: Overload:Global.TowerMenuUISystem.Create
-  isSpec: "True"
-  fullName: TowerMenuUISystem.Create
-  nameWithType: TowerMenuUISystem.Create
-- uid: Global.TowerMenuUISystem.Destroy
-  name: Destroy()
-  href: api/Global.TowerMenuUISystem.html#Global_TowerMenuUISystem_Destroy
-  commentId: M:Global.TowerMenuUISystem.Destroy
-  fullName: TowerMenuUISystem.Destroy()
-  nameWithType: TowerMenuUISystem.Destroy()
-- uid: Global.TowerMenuUISystem.Destroy*
-  name: Destroy
-  href: api/Global.TowerMenuUISystem.html#Global_TowerMenuUISystem_Destroy_
-  commentId: Overload:Global.TowerMenuUISystem.Destroy
-  isSpec: "True"
-  fullName: TowerMenuUISystem.Destroy
-  nameWithType: TowerMenuUISystem.Destroy
 - uid: Global.TowerMenuUISystem.Hide
   name: Hide()
   href: api/Global.TowerMenuUISystem.html#Global_TowerMenuUISystem_Hide
@@ -978,6 +1063,19 @@ references:
   isSpec: "True"
   fullName: TowerMenuUISystem.OnUpgradeClick
   nameWithType: TowerMenuUISystem.OnUpgradeClick
+- uid: Global.TowerMenuUISystem.Show(UnityEngine.GameObject)
+  name: Show(GameObject)
+  href: api/Global.TowerMenuUISystem.html#Global_TowerMenuUISystem_Show_UnityEngine_GameObject_
+  commentId: M:Global.TowerMenuUISystem.Show(UnityEngine.GameObject)
+  fullName: TowerMenuUISystem.Show(UnityEngine.GameObject)
+  nameWithType: TowerMenuUISystem.Show(GameObject)
+- uid: Global.TowerMenuUISystem.Show*
+  name: Show
+  href: api/Global.TowerMenuUISystem.html#Global_TowerMenuUISystem_Show_
+  commentId: Overload:Global.TowerMenuUISystem.Show
+  isSpec: "True"
+  fullName: TowerMenuUISystem.Show
+  nameWithType: TowerMenuUISystem.Show
 - uid: Global.TowerPlacementSystem
   name: TowerPlacementSystem
   href: api/Global.TowerPlacementSystem.html
@@ -1071,77 +1169,64 @@ references:
   commentId: T:Global.UIManager
   fullName: UIManager
   nameWithType: UIManager
-- uid: Global.UIManager.HideAll
-  name: HideAll()
-  href: api/Global.UIManager.html#Global_UIManager_HideAll
-  commentId: M:Global.UIManager.HideAll
-  fullName: UIManager.HideAll()
-  nameWithType: UIManager.HideAll()
-- uid: Global.UIManager.HideAll*
-  name: HideAll
-  href: api/Global.UIManager.html#Global_UIManager_HideAll_
-  commentId: Overload:Global.UIManager.HideAll
+- uid: Global.UIManager.HideMenu
+  name: HideMenu()
+  href: api/Global.UIManager.html#Global_UIManager_HideMenu
+  commentId: M:Global.UIManager.HideMenu
+  fullName: UIManager.HideMenu()
+  nameWithType: UIManager.HideMenu()
+- uid: Global.UIManager.HideMenu*
+  name: HideMenu
+  href: api/Global.UIManager.html#Global_UIManager_HideMenu_
+  commentId: Overload:Global.UIManager.HideMenu
   isSpec: "True"
-  fullName: UIManager.HideAll
-  nameWithType: UIManager.HideAll
-- uid: Global.UIManager.ShowTowerMenu(UnityEngine.GameObject)
-  name: ShowTowerMenu(GameObject)
-  href: api/Global.UIManager.html#Global_UIManager_ShowTowerMenu_UnityEngine_GameObject_
-  commentId: M:Global.UIManager.ShowTowerMenu(UnityEngine.GameObject)
-  fullName: UIManager.ShowTowerMenu(UnityEngine.GameObject)
-  nameWithType: UIManager.ShowTowerMenu(GameObject)
-- uid: Global.UIManager.ShowTowerMenu*
-  name: ShowTowerMenu
-  href: api/Global.UIManager.html#Global_UIManager_ShowTowerMenu_
-  commentId: Overload:Global.UIManager.ShowTowerMenu
+  fullName: UIManager.HideMenu
+  nameWithType: UIManager.HideMenu
+- uid: Global.UIManager.ShowMenu(UnityEngine.GameObject,System.Type)
+  name: ShowMenu(GameObject, Type)
+  href: api/Global.UIManager.html#Global_UIManager_ShowMenu_UnityEngine_GameObject_System_Type_
+  commentId: M:Global.UIManager.ShowMenu(UnityEngine.GameObject,System.Type)
+  fullName: UIManager.ShowMenu(UnityEngine.GameObject, System.Type)
+  nameWithType: UIManager.ShowMenu(GameObject, Type)
+- uid: Global.UIManager.ShowMenu*
+  name: ShowMenu
+  href: api/Global.UIManager.html#Global_UIManager_ShowMenu_
+  commentId: Overload:Global.UIManager.ShowMenu
   isSpec: "True"
-  fullName: UIManager.ShowTowerMenu
-  nameWithType: UIManager.ShowTowerMenu
-- uid: Global.UIManager.ShowUpgradeMenu(UnityEngine.GameObject)
-  name: ShowUpgradeMenu(GameObject)
-  href: api/Global.UIManager.html#Global_UIManager_ShowUpgradeMenu_UnityEngine_GameObject_
-  commentId: M:Global.UIManager.ShowUpgradeMenu(UnityEngine.GameObject)
-  fullName: UIManager.ShowUpgradeMenu(UnityEngine.GameObject)
-  nameWithType: UIManager.ShowUpgradeMenu(GameObject)
-- uid: Global.UIManager.ShowUpgradeMenu*
-  name: ShowUpgradeMenu
-  href: api/Global.UIManager.html#Global_UIManager_ShowUpgradeMenu_
-  commentId: Overload:Global.UIManager.ShowUpgradeMenu
-  isSpec: "True"
-  fullName: UIManager.ShowUpgradeMenu
-  nameWithType: UIManager.ShowUpgradeMenu
+  fullName: UIManager.ShowMenu
+  nameWithType: UIManager.ShowMenu
 - uid: Global.UpgradeMenuUISystem
   name: UpgradeMenuUISystem
   href: api/Global.UpgradeMenuUISystem.html
   commentId: T:Global.UpgradeMenuUISystem
   fullName: UpgradeMenuUISystem
   nameWithType: UpgradeMenuUISystem
-- uid: Global.UpgradeMenuUISystem.Create(UnityEngine.GameObject)
-  name: Create(GameObject)
-  href: api/Global.UpgradeMenuUISystem.html#Global_UpgradeMenuUISystem_Create_UnityEngine_GameObject_
-  commentId: M:Global.UpgradeMenuUISystem.Create(UnityEngine.GameObject)
-  fullName: UpgradeMenuUISystem.Create(UnityEngine.GameObject)
-  nameWithType: UpgradeMenuUISystem.Create(GameObject)
-- uid: Global.UpgradeMenuUISystem.Create*
-  name: Create
-  href: api/Global.UpgradeMenuUISystem.html#Global_UpgradeMenuUISystem_Create_
-  commentId: Overload:Global.UpgradeMenuUISystem.Create
+- uid: Global.UpgradeMenuUISystem.CancelTowerCreation
+  name: CancelTowerCreation()
+  href: api/Global.UpgradeMenuUISystem.html#Global_UpgradeMenuUISystem_CancelTowerCreation
+  commentId: M:Global.UpgradeMenuUISystem.CancelTowerCreation
+  fullName: UpgradeMenuUISystem.CancelTowerCreation()
+  nameWithType: UpgradeMenuUISystem.CancelTowerCreation()
+- uid: Global.UpgradeMenuUISystem.CancelTowerCreation*
+  name: CancelTowerCreation
+  href: api/Global.UpgradeMenuUISystem.html#Global_UpgradeMenuUISystem_CancelTowerCreation_
+  commentId: Overload:Global.UpgradeMenuUISystem.CancelTowerCreation
   isSpec: "True"
-  fullName: UpgradeMenuUISystem.Create
-  nameWithType: UpgradeMenuUISystem.Create
-- uid: Global.UpgradeMenuUISystem.Destroy
-  name: Destroy()
-  href: api/Global.UpgradeMenuUISystem.html#Global_UpgradeMenuUISystem_Destroy
-  commentId: M:Global.UpgradeMenuUISystem.Destroy
-  fullName: UpgradeMenuUISystem.Destroy()
-  nameWithType: UpgradeMenuUISystem.Destroy()
-- uid: Global.UpgradeMenuUISystem.Destroy*
-  name: Destroy
-  href: api/Global.UpgradeMenuUISystem.html#Global_UpgradeMenuUISystem_Destroy_
-  commentId: Overload:Global.UpgradeMenuUISystem.Destroy
+  fullName: UpgradeMenuUISystem.CancelTowerCreation
+  nameWithType: UpgradeMenuUISystem.CancelTowerCreation
+- uid: Global.UpgradeMenuUISystem.CreateTower(ETowerType)
+  name: CreateTower(ETowerType)
+  href: api/Global.UpgradeMenuUISystem.html#Global_UpgradeMenuUISystem_CreateTower_ETowerType_
+  commentId: M:Global.UpgradeMenuUISystem.CreateTower(ETowerType)
+  fullName: UpgradeMenuUISystem.CreateTower(ETowerType)
+  nameWithType: UpgradeMenuUISystem.CreateTower(ETowerType)
+- uid: Global.UpgradeMenuUISystem.CreateTower*
+  name: CreateTower
+  href: api/Global.UpgradeMenuUISystem.html#Global_UpgradeMenuUISystem_CreateTower_
+  commentId: Overload:Global.UpgradeMenuUISystem.CreateTower
   isSpec: "True"
-  fullName: UpgradeMenuUISystem.Destroy
-  nameWithType: UpgradeMenuUISystem.Destroy
+  fullName: UpgradeMenuUISystem.CreateTower
+  nameWithType: UpgradeMenuUISystem.CreateTower
 - uid: Global.UpgradeMenuUISystem.Hide
   name: Hide()
   href: api/Global.UpgradeMenuUISystem.html#Global_UpgradeMenuUISystem_Hide
@@ -1168,6 +1253,19 @@ references:
   isSpec: "True"
   fullName: UpgradeMenuUISystem.OnClick
   nameWithType: UpgradeMenuUISystem.OnClick
+- uid: Global.UpgradeMenuUISystem.Show(UnityEngine.GameObject)
+  name: Show(GameObject)
+  href: api/Global.UpgradeMenuUISystem.html#Global_UpgradeMenuUISystem_Show_UnityEngine_GameObject_
+  commentId: M:Global.UpgradeMenuUISystem.Show(UnityEngine.GameObject)
+  fullName: UpgradeMenuUISystem.Show(UnityEngine.GameObject)
+  nameWithType: UpgradeMenuUISystem.Show(GameObject)
+- uid: Global.UpgradeMenuUISystem.Show*
+  name: Show
+  href: api/Global.UpgradeMenuUISystem.html#Global_UpgradeMenuUISystem_Show_
+  commentId: Overload:Global.UpgradeMenuUISystem.Show
+  isSpec: "True"
+  fullName: UpgradeMenuUISystem.Show
+  nameWithType: UpgradeMenuUISystem.Show
 - uid: Global.UpgradeTree
   name: UpgradeTree
   href: api/Global.UpgradeTree.html
@@ -1180,6 +1278,51 @@ references:
   commentId: F:Global.UpgradeTree.valuePairs
   fullName: UpgradeTree.valuePairs
   nameWithType: UpgradeTree.valuePairs
+- uid: Global.WalletUISystem
+  name: WalletUISystem
+  href: api/Global.WalletUISystem.html
+  commentId: T:Global.WalletUISystem
+  fullName: WalletUISystem
+  nameWithType: WalletUISystem
+- uid: Global.WalletUISystem.OnCancelClick
+  name: OnCancelClick()
+  href: api/Global.WalletUISystem.html#Global_WalletUISystem_OnCancelClick
+  commentId: M:Global.WalletUISystem.OnCancelClick
+  fullName: WalletUISystem.OnCancelClick()
+  nameWithType: WalletUISystem.OnCancelClick()
+- uid: Global.WalletUISystem.OnCancelClick*
+  name: OnCancelClick
+  href: api/Global.WalletUISystem.html#Global_WalletUISystem_OnCancelClick_
+  commentId: Overload:Global.WalletUISystem.OnCancelClick
+  isSpec: "True"
+  fullName: WalletUISystem.OnCancelClick
+  nameWithType: WalletUISystem.OnCancelClick
+- uid: Global.WalletUISystem.OnOKClick
+  name: OnOKClick()
+  href: api/Global.WalletUISystem.html#Global_WalletUISystem_OnOKClick
+  commentId: M:Global.WalletUISystem.OnOKClick
+  fullName: WalletUISystem.OnOKClick()
+  nameWithType: WalletUISystem.OnOKClick()
+- uid: Global.WalletUISystem.OnOKClick*
+  name: OnOKClick
+  href: api/Global.WalletUISystem.html#Global_WalletUISystem_OnOKClick_
+  commentId: Overload:Global.WalletUISystem.OnOKClick
+  isSpec: "True"
+  fullName: WalletUISystem.OnOKClick
+  nameWithType: WalletUISystem.OnOKClick
+- uid: Global.WalletUISystem.ShowUpgradeDialog(ETowerType)
+  name: ShowUpgradeDialog(ETowerType)
+  href: api/Global.WalletUISystem.html#Global_WalletUISystem_ShowUpgradeDialog_ETowerType_
+  commentId: M:Global.WalletUISystem.ShowUpgradeDialog(ETowerType)
+  fullName: WalletUISystem.ShowUpgradeDialog(ETowerType)
+  nameWithType: WalletUISystem.ShowUpgradeDialog(ETowerType)
+- uid: Global.WalletUISystem.ShowUpgradeDialog*
+  name: ShowUpgradeDialog
+  href: api/Global.WalletUISystem.html#Global_WalletUISystem_ShowUpgradeDialog_
+  commentId: Overload:Global.WalletUISystem.ShowUpgradeDialog
+  isSpec: "True"
+  fullName: WalletUISystem.ShowUpgradeDialog
+  nameWithType: WalletUISystem.ShowUpgradeDialog
 - uid: Tests
   name: Tests
   href: api/Tests.html
@@ -1346,6 +1489,19 @@ references:
   isSpec: "True"
   fullName: Tests.MovementTests.Setup
   nameWithType: MovementTests.Setup
+- uid: Tests.MovementTests.tocheckifplayerismoving
+  name: tocheckifplayerismoving()
+  href: api/Tests.MovementTests.html#Tests_MovementTests_tocheckifplayerismoving
+  commentId: M:Tests.MovementTests.tocheckifplayerismoving
+  fullName: Tests.MovementTests.tocheckifplayerismoving()
+  nameWithType: MovementTests.tocheckifplayerismoving()
+- uid: Tests.MovementTests.tocheckifplayerismoving*
+  name: tocheckifplayerismoving
+  href: api/Tests.MovementTests.html#Tests_MovementTests_tocheckifplayerismoving_
+  commentId: Overload:Tests.MovementTests.tocheckifplayerismoving
+  isSpec: "True"
+  fullName: Tests.MovementTests.tocheckifplayerismoving
+  nameWithType: MovementTests.tocheckifplayerismoving
 - uid: Tests.TowerPlacerTests
   name: TowerPlacerTests
   href: api/Tests.TowerPlacerTests.html
