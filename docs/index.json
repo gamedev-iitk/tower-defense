@@ -2,7 +2,7 @@
   "api/Global.AbstractBattle.html": {
     "href": "api/Global.AbstractBattle.html",
     "title": "Class AbstractBattle | Tower Defense",
-    "keywords": "Class AbstractBattle Inheritance Object UnityEngine.Object UnityEngine.Component UnityEngine.Behaviour UnityEngine.MonoBehaviour AbstractBattle TowerBattle Namespace : Global Assembly : TowerDefense.dll Syntax public abstract class AbstractBattle : MonoBehaviour Fields Attack Declaration public float Attack Field Value Type Description Single Defense Declaration public float Defense Field Value Type Description Single FireRate Declaration public float FireRate Field Value Type Description Single Range Declaration public float Range Field Value Type Description Single Methods OnDetect(GameObject) Declaration public abstract void OnDetect(GameObject enemy) Parameters Type Name Description UnityEngine.GameObject enemy OnLose() Declaration public abstract void OnLose() SetRange() Declaration protected abstract void SetRange()"
+    "keywords": "Class AbstractBattle Base class for combat related functionality. Enemies and towers should implement this class. This class works closely with the Detection component. Inheritance Object UnityEngine.Object UnityEngine.Component UnityEngine.Behaviour UnityEngine.MonoBehaviour AbstractBattle TowerBattle Namespace : Global Assembly : TowerDefense.dll Syntax public abstract class AbstractBattle : MonoBehaviour Fields Attack Attack power of this unit. This is the amount that is subtracted from the enemy's health. Declaration public float Attack Field Value Type Description Single Defense Defense stat for this unit. When attacked this unit will absorb this fraction of the applied damage. Must be between 0 and 1. Declaration public float Defense Field Value Type Description Single FireRate Rate of attack for this unit. Value must be in attacks per second. Declaration public float FireRate Field Value Type Description Single Range Detection range for this unit. It will only attack when enemies are closer than this value. Declaration public float Range Field Value Type Description Single Methods OnDetect(GameObject) Called by the Detection component to start attack processes. Declaration public abstract void OnDetect(GameObject enemy) Parameters Type Name Description UnityEngine.GameObject enemy GameObject to target OnLose() A \"reset\" for the attack processes used when the target is destroyed or lost. Declaration public abstract void OnLose() SetRange() Called in the Start function for initialization. Declaration protected abstract void SetRange()"
   },
   "api/Global.AIController.html": {
     "href": "api/Global.AIController.html",
@@ -12,12 +12,12 @@
   "api/Global.Damageable.html": {
     "href": "api/Global.Damageable.html",
     "title": "Class Damageable | Tower Defense",
-    "keywords": "Class Damageable Inheritance Object UnityEngine.Object UnityEngine.Component UnityEngine.Behaviour UnityEngine.MonoBehaviour Damageable Namespace : Global Assembly : TowerDefense.dll Syntax public class Damageable : MonoBehaviour Methods ApplyDamage(Single) Subtracts the given value from health and triggers death if health reaches 0 Declaration public void ApplyDamage(float damage) Parameters Type Name Description Single damage Value to be subtracted GetHealth() Declaration public float GetHealth() Returns Type Description Single"
+    "keywords": "Class Damageable Inheritance Object UnityEngine.Object UnityEngine.Component UnityEngine.Behaviour UnityEngine.MonoBehaviour Damageable Namespace : Global Assembly : TowerDefense.dll Syntax public class Damageable : MonoBehaviour Properties IsDead Declaration public bool IsDead { get; } Property Value Type Description Boolean Methods ApplyDamage(Single) Subtracts the given value from health and triggers death if health reaches 0 Declaration public void ApplyDamage(float damage) Parameters Type Name Description Single damage Value to be subtracted GetHealth() Declaration public float GetHealth() Returns Type Description Single"
   },
   "api/Global.Detection.html": {
     "href": "api/Global.Detection.html",
     "title": "Class Detection | Tower Defense",
-    "keywords": "Class Detection Inheritance Object UnityEngine.Object UnityEngine.Component UnityEngine.Behaviour UnityEngine.MonoBehaviour Detection Namespace : Global Assembly : TowerDefense.dll Syntax public class Detection : MonoBehaviour"
+    "keywords": "Class Detection Component to detect enemies using sweeps of a \"detection cone\" Inheritance Object UnityEngine.Object UnityEngine.Component UnityEngine.Behaviour UnityEngine.MonoBehaviour Detection Namespace : Global Assembly : TowerDefense.dll Syntax public class Detection : MonoBehaviour Fields ExtremeAngle Half of the maximum angle of the detection cone. Declaration public float ExtremeAngle Field Value Type Description Single NumberOfRays The number of rays to use for the detection cone. Declaration public float NumberOfRays Field Value Type Description Single Methods Reset() Resets the tower to an idle state Declaration public void Reset()"
   },
   "api/Global.ETowerType.html": {
     "href": "api/Global.ETowerType.html",
@@ -47,7 +47,7 @@
   "api/Global.html": {
     "href": "api/Global.html",
     "title": "Namespace Global | Tower Defense",
-    "keywords": "Namespace Global Classes AbstractBattle AIController AIController class to control AI movement. Damageable Detection EventRegistry A class to orchestrate all events FaceCamera GenericMap<TKey> A wrapper around dictionary to support generic values. HealthBarUI InputSystem Manager class for handling mouse input. SerializableDictionary SerializableDictionary.Storage<T> SerializableDictionary<TKey, TValue> SerializableDictionary<TKey, TValue, TValueStorage> SerializableDictionaryBase<TKey, TValue, TValueStorage> SerializableDictionaryPropertyDrawer SerializableDictionaryStoragePropertyDrawer TDEvent An event that takes callbacks with no parameters TDEvent<TParam> An event that takes callbacks with one parameter TDEvent<TParam1, TParam2> An event that takes callbacks with two parameters TestCallback A class to test the event system.false Place callbacks here. TestEventCall A class to test the event system. Fire events here. TowerBattle TowerMenuUISystem Brings up the tower menu when a tower is selected. TowerPlacementSystem TowerPlacer Implements the tower placement location selector TowerType A component that can be attached to buttons to check what tower they are associated with in a safe way with an enum TowerTypeBoolDictionary TowerTypeBoolDictionaryPropertyDrawer UIManager Manager class that holds references to all UI layers and handles the UI stack. UpgradeMenuUISystem Manager class for tower upgrades. Handles UI and tower object instantiation/deletion. UpgradeTree This component stores information about possible upgrades in the upgrade tree. Interfaces IUISystem Exposes basic UI functionality. All MenuUISystems should implement this interface. Enums ETowerType"
+    "keywords": "Namespace Global Classes AbstractBattle Base class for combat related functionality. Enemies and towers should implement this class. This class works closely with the Detection component. AIController AIController class to control AI movement. Damageable Detection Component to detect enemies using sweeps of a \"detection cone\" EventRegistry A class to orchestrate all events FaceCamera GenericMap<TKey> A wrapper around dictionary to support generic values. HealthBarUI InputSystem Manager class for handling mouse input. SerializableDictionary SerializableDictionary.Storage<T> SerializableDictionary<TKey, TValue> SerializableDictionary<TKey, TValue, TValueStorage> SerializableDictionaryBase<TKey, TValue, TValueStorage> SerializableDictionaryPropertyDrawer SerializableDictionaryStoragePropertyDrawer TDEvent An event that takes callbacks with no parameters TDEvent<TParam> An event that takes callbacks with one parameter TDEvent<TParam1, TParam2> An event that takes callbacks with two parameters TestCallback A class to test the event system.false Place callbacks here. TestEventCall A class to test the event system. Fire events here. TowerBattle Component to handle tower attacks TowerMenuUISystem Brings up the tower menu when a tower is selected. TowerPlacementSystem TowerPlacer Implements the tower placement location selector TowerType A component that can be attached to buttons to check what tower they are associated with in a safe way with an enum TowerTypeBoolDictionary TowerTypeBoolDictionaryPropertyDrawer UIManager Manager class that holds references to all UI layers and handles the UI stack. UpgradeMenuUISystem Manager class for tower upgrades. Handles UI and tower object instantiation/deletion. UpgradeTree This component stores information about possible upgrades in the upgrade tree. Interfaces IUISystem Exposes basic UI functionality. All MenuUISystems should implement this interface. Enums ETowerType"
   },
   "api/Global.InputSystem.html": {
     "href": "api/Global.InputSystem.html",
@@ -122,7 +122,7 @@
   "api/Global.TowerBattle.html": {
     "href": "api/Global.TowerBattle.html",
     "title": "Class TowerBattle | Tower Defense",
-    "keywords": "Class TowerBattle Inheritance Object UnityEngine.Object UnityEngine.Component UnityEngine.Behaviour UnityEngine.MonoBehaviour AbstractBattle TowerBattle Inherited Members AbstractBattle.Attack AbstractBattle.Defense AbstractBattle.Range AbstractBattle.FireRate Namespace : Global Assembly : TowerDefense.dll Syntax public class TowerBattle : AbstractBattle Methods OnDetect(GameObject) Declaration public override void OnDetect(GameObject enemy) Parameters Type Name Description UnityEngine.GameObject enemy Overrides AbstractBattle.OnDetect(GameObject) OnLose() Declaration public override void OnLose() Overrides AbstractBattle.OnLose() SetRange() Declaration protected override void SetRange() Overrides AbstractBattle.SetRange()"
+    "keywords": "Class TowerBattle Component to handle tower attacks Inheritance Object UnityEngine.Object UnityEngine.Component UnityEngine.Behaviour UnityEngine.MonoBehaviour AbstractBattle TowerBattle Inherited Members AbstractBattle.Attack AbstractBattle.Defense AbstractBattle.Range AbstractBattle.FireRate Namespace : Global Assembly : TowerDefense.dll Syntax public class TowerBattle : AbstractBattle Methods OnDetect(GameObject) Declaration public override void OnDetect(GameObject enemy) Parameters Type Name Description UnityEngine.GameObject enemy Overrides AbstractBattle.OnDetect(GameObject) OnLose() Declaration public override void OnLose() Overrides AbstractBattle.OnLose() SetRange() Declaration protected override void SetRange() Overrides AbstractBattle.SetRange()"
   },
   "api/Global.TowerMenuUISystem.html": {
     "href": "api/Global.TowerMenuUISystem.html",
@@ -169,6 +169,21 @@
     "title": "Class UpgradeTree | Tower Defense",
     "keywords": "Class UpgradeTree This component stores information about possible upgrades in the upgrade tree. Inheritance Object UnityEngine.Object UnityEngine.Component UnityEngine.Behaviour UnityEngine.MonoBehaviour UpgradeTree Namespace : Global Assembly : TowerDefense.dll Syntax public class UpgradeTree : MonoBehaviour Fields valuePairs Declaration public TowerTypeBoolDictionary valuePairs Field Value Type Description TowerTypeBoolDictionary"
   },
+  "api/Tests.BattleTests.html": {
+    "href": "api/Tests.BattleTests.html",
+    "title": "Class BattleTests | Tower Defense",
+    "keywords": "Class BattleTests Inheritance Object BattleTests Namespace : Tests Assembly : RuntimeTests.dll Syntax public class BattleTests Methods SetUp() Declaration [SetUp] public void SetUp() TowersDetecEnemies() Declaration [UnityTest] public IEnumerator TowersDetecEnemies() Returns Type Description IEnumerator"
+  },
+  "api/Tests.DamageableTests.html": {
+    "href": "api/Tests.DamageableTests.html",
+    "title": "Class DamageableTests | Tower Defense",
+    "keywords": "Class DamageableTests Inheritance Object DamageableTests Namespace : Tests Assembly : RuntimeTests.dll Syntax public class DamageableTests Methods DamageTowers() Declaration [UnityTest] public IEnumerator DamageTowers() Returns Type Description IEnumerator SetUp() Declaration [SetUp] public void SetUp()"
+  },
+  "api/Tests.DetectionTests.html": {
+    "href": "api/Tests.DetectionTests.html",
+    "title": "Class DetectionTests | Tower Defense",
+    "keywords": "Class DetectionTests Inheritance Object DetectionTests Namespace : Tests Assembly : RuntimeTests.dll Syntax public class DetectionTests Methods SetUp() Declaration [SetUp] public void SetUp() TowersDetecEnemies() Declaration [UnityTest] public IEnumerator TowersDetecEnemies() Returns Type Description IEnumerator"
+  },
   "api/Tests.EditModeSampleTest.html": {
     "href": "api/Tests.EditModeSampleTest.html",
     "title": "Class EditModeSampleTest | Tower Defense",
@@ -177,7 +192,7 @@
   "api/Tests.html": {
     "href": "api/Tests.html",
     "title": "Namespace Tests | Tower Defense",
-    "keywords": "Namespace Tests Classes EditModeSampleTest Sample editor tests MovementTests Tests for player movement systems TowerPlacerTests Tests for tower placement indicator TowerTests TowerUIMenuTests Tests for the tower menu UI functions UpgradeUIMenuTests Tests for the UpgradeMenuUISystem"
+    "keywords": "Namespace Tests Classes BattleTests DamageableTests DetectionTests EditModeSampleTest Sample editor tests MovementTests Tests for player movement systems TowerPlacerTests Tests for tower placement indicator TowerUIMenuTests Tests for the tower menu UI functions UpgradeUIMenuTests Tests for the UpgradeMenuUISystem"
   },
   "api/Tests.MovementTests.html": {
     "href": "api/Tests.MovementTests.html",
@@ -188,11 +203,6 @@
     "href": "api/Tests.TowerPlacerTests.html",
     "title": "Class TowerPlacerTests | Tower Defense",
     "keywords": "Class TowerPlacerTests Tests for tower placement indicator Inheritance Object TowerPlacerTests Namespace : Tests Assembly : RuntimeTests.dll Syntax public class TowerPlacerTests Methods IndicatorCanToggle() Tests if the placement indicator can be toggled Declaration [UnityTest] public IEnumerator IndicatorCanToggle() Returns Type Description IEnumerator IndicatorColorIsRedNearObstacles() Tests if the placement indicator turns red near an object Declaration [UnityTest] public IEnumerator IndicatorColorIsRedNearObstacles() Returns Type Description IEnumerator IndicatorMovesWithCursor() Tests if the placement indicator moves if cursor moves Declaration [UnityTest] public IEnumerator IndicatorMovesWithCursor() Returns Type Description IEnumerator IndicatorPlacesTower() Tests if a tower can be placed through TowerPlacer Declaration [UnityTest] public IEnumerator IndicatorPlacesTower() Returns Type Description IEnumerator Setup() Declaration [SetUp] public void Setup()"
-  },
-  "api/Tests.TowerTests.html": {
-    "href": "api/Tests.TowerTests.html",
-    "title": "Class TowerTests | Tower Defense",
-    "keywords": "Class TowerTests Inheritance Object TowerTests Namespace : Tests Assembly : RuntimeTests.dll Syntax public class TowerTests Methods CanDamageTowersAndChangeHealthBar() Declaration [UnityTest] public IEnumerator CanDamageTowersAndChangeHealthBar() Returns Type Description IEnumerator SetUp() Declaration [SetUp] public void SetUp()"
   },
   "api/Tests.TowerUIMenuTests.html": {
     "href": "api/Tests.TowerUIMenuTests.html",

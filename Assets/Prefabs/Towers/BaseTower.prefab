@@ -78,8 +78,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c3f415b9bad6246893ee1e6c79d66a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  extremeAngle: 60
-  noOfRays: 120
+  ExtremeAngle: 30
+  NumberOfRays: 5
 --- !u!135 &8947906116660353105
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -151,7 +151,7 @@ PrefabInstance:
     - target: {fileID: 642114022979103222, guid: 5bf47b8968d95cf46a88b9b871244b15,
         type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: HealthBar
       objectReference: {fileID: 0}
     - target: {fileID: 6341978705165544364, guid: 5bf47b8968d95cf46a88b9b871244b15,
         type: 3}

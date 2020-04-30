@@ -83,7 +83,9 @@
   
   <h1 id="Global_AbstractBattle" data-uid="Global.AbstractBattle" class="text-break">Class AbstractBattle
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Base class for combat related functionality. Enemies and towers should implement this class.
+This class works closely with the Detection component.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -106,7 +108,8 @@
   
   
   <h4 id="Global_AbstractBattle_Attack" data-uid="Global.AbstractBattle.Attack">Attack</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Attack power of this unit. This is the amount that is subtracted from the enemy&apos;s health.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -130,7 +133,9 @@
   
   
   <h4 id="Global_AbstractBattle_Defense" data-uid="Global.AbstractBattle.Defense">Defense</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Defense stat for this unit. When attacked this unit will absorb this fraction of the applied damage.
+Must be between 0 and 1.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -154,7 +159,8 @@
   
   
   <h4 id="Global_AbstractBattle_FireRate" data-uid="Global.AbstractBattle.FireRate">FireRate</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Rate of attack for this unit. Value must be in attacks per second.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -178,7 +184,8 @@
   
   
   <h4 id="Global_AbstractBattle_Range" data-uid="Global.AbstractBattle.Range">Range</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Detection range for this unit. It will only attack when enemies are closer than this value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -205,7 +212,8 @@
   
   <a id="Global_AbstractBattle_OnDetect_" data-uid="Global.AbstractBattle.OnDetect*"></a>
   <h4 id="Global_AbstractBattle_OnDetect_UnityEngine_GameObject_" data-uid="Global.AbstractBattle.OnDetect(UnityEngine.GameObject)">OnDetect(GameObject)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called by the Detection component to start attack processes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -224,7 +232,8 @@
       <tr>
         <td><span class="xref">UnityEngine.GameObject</span></td>
         <td><span class="parametername">enemy</span></td>
-        <td></td>
+        <td><p>GameObject to target</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -232,7 +241,8 @@
   
   <a id="Global_AbstractBattle_OnLose_" data-uid="Global.AbstractBattle.OnLose*"></a>
   <h4 id="Global_AbstractBattle_OnLose" data-uid="Global.AbstractBattle.OnLose">OnLose()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A &quot;reset&quot; for the attack processes used when the target is destroyed or lost.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -242,7 +252,8 @@
   
   <a id="Global_AbstractBattle_SetRange_" data-uid="Global.AbstractBattle.SetRange*"></a>
   <h4 id="Global_AbstractBattle_SetRange" data-uid="Global.AbstractBattle.SetRange">SetRange()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called in the Start function for initialization.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

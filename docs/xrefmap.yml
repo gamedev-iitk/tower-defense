@@ -129,12 +129,50 @@ references:
   isSpec: "True"
   fullName: Damageable.GetHealth
   nameWithType: Damageable.GetHealth
+- uid: Global.Damageable.IsDead
+  name: IsDead
+  href: api/Global.Damageable.html#Global_Damageable_IsDead
+  commentId: P:Global.Damageable.IsDead
+  fullName: Damageable.IsDead
+  nameWithType: Damageable.IsDead
+- uid: Global.Damageable.IsDead*
+  name: IsDead
+  href: api/Global.Damageable.html#Global_Damageable_IsDead_
+  commentId: Overload:Global.Damageable.IsDead
+  isSpec: "True"
+  fullName: Damageable.IsDead
+  nameWithType: Damageable.IsDead
 - uid: Global.Detection
   name: Detection
   href: api/Global.Detection.html
   commentId: T:Global.Detection
   fullName: Detection
   nameWithType: Detection
+- uid: Global.Detection.ExtremeAngle
+  name: ExtremeAngle
+  href: api/Global.Detection.html#Global_Detection_ExtremeAngle
+  commentId: F:Global.Detection.ExtremeAngle
+  fullName: Detection.ExtremeAngle
+  nameWithType: Detection.ExtremeAngle
+- uid: Global.Detection.NumberOfRays
+  name: NumberOfRays
+  href: api/Global.Detection.html#Global_Detection_NumberOfRays
+  commentId: F:Global.Detection.NumberOfRays
+  fullName: Detection.NumberOfRays
+  nameWithType: Detection.NumberOfRays
+- uid: Global.Detection.Reset
+  name: Reset()
+  href: api/Global.Detection.html#Global_Detection_Reset
+  commentId: M:Global.Detection.Reset
+  fullName: Detection.Reset()
+  nameWithType: Detection.Reset()
+- uid: Global.Detection.Reset*
+  name: Reset
+  href: api/Global.Detection.html#Global_Detection_Reset_
+  commentId: Overload:Global.Detection.Reset
+  isSpec: "True"
+  fullName: Detection.Reset
+  nameWithType: Detection.Reset
 - uid: Global.ETowerType
   name: ETowerType
   href: api/Global.ETowerType.html
@@ -1148,6 +1186,102 @@ references:
   commentId: N:Tests
   fullName: Tests
   nameWithType: Tests
+- uid: Tests.BattleTests
+  name: BattleTests
+  href: api/Tests.BattleTests.html
+  commentId: T:Tests.BattleTests
+  fullName: Tests.BattleTests
+  nameWithType: BattleTests
+- uid: Tests.BattleTests.SetUp
+  name: SetUp()
+  href: api/Tests.BattleTests.html#Tests_BattleTests_SetUp
+  commentId: M:Tests.BattleTests.SetUp
+  fullName: Tests.BattleTests.SetUp()
+  nameWithType: BattleTests.SetUp()
+- uid: Tests.BattleTests.SetUp*
+  name: SetUp
+  href: api/Tests.BattleTests.html#Tests_BattleTests_SetUp_
+  commentId: Overload:Tests.BattleTests.SetUp
+  isSpec: "True"
+  fullName: Tests.BattleTests.SetUp
+  nameWithType: BattleTests.SetUp
+- uid: Tests.BattleTests.TowersDetecEnemies
+  name: TowersDetecEnemies()
+  href: api/Tests.BattleTests.html#Tests_BattleTests_TowersDetecEnemies
+  commentId: M:Tests.BattleTests.TowersDetecEnemies
+  fullName: Tests.BattleTests.TowersDetecEnemies()
+  nameWithType: BattleTests.TowersDetecEnemies()
+- uid: Tests.BattleTests.TowersDetecEnemies*
+  name: TowersDetecEnemies
+  href: api/Tests.BattleTests.html#Tests_BattleTests_TowersDetecEnemies_
+  commentId: Overload:Tests.BattleTests.TowersDetecEnemies
+  isSpec: "True"
+  fullName: Tests.BattleTests.TowersDetecEnemies
+  nameWithType: BattleTests.TowersDetecEnemies
+- uid: Tests.DamageableTests
+  name: DamageableTests
+  href: api/Tests.DamageableTests.html
+  commentId: T:Tests.DamageableTests
+  fullName: Tests.DamageableTests
+  nameWithType: DamageableTests
+- uid: Tests.DamageableTests.DamageTowers
+  name: DamageTowers()
+  href: api/Tests.DamageableTests.html#Tests_DamageableTests_DamageTowers
+  commentId: M:Tests.DamageableTests.DamageTowers
+  fullName: Tests.DamageableTests.DamageTowers()
+  nameWithType: DamageableTests.DamageTowers()
+- uid: Tests.DamageableTests.DamageTowers*
+  name: DamageTowers
+  href: api/Tests.DamageableTests.html#Tests_DamageableTests_DamageTowers_
+  commentId: Overload:Tests.DamageableTests.DamageTowers
+  isSpec: "True"
+  fullName: Tests.DamageableTests.DamageTowers
+  nameWithType: DamageableTests.DamageTowers
+- uid: Tests.DamageableTests.SetUp
+  name: SetUp()
+  href: api/Tests.DamageableTests.html#Tests_DamageableTests_SetUp
+  commentId: M:Tests.DamageableTests.SetUp
+  fullName: Tests.DamageableTests.SetUp()
+  nameWithType: DamageableTests.SetUp()
+- uid: Tests.DamageableTests.SetUp*
+  name: SetUp
+  href: api/Tests.DamageableTests.html#Tests_DamageableTests_SetUp_
+  commentId: Overload:Tests.DamageableTests.SetUp
+  isSpec: "True"
+  fullName: Tests.DamageableTests.SetUp
+  nameWithType: DamageableTests.SetUp
+- uid: Tests.DetectionTests
+  name: DetectionTests
+  href: api/Tests.DetectionTests.html
+  commentId: T:Tests.DetectionTests
+  fullName: Tests.DetectionTests
+  nameWithType: DetectionTests
+- uid: Tests.DetectionTests.SetUp
+  name: SetUp()
+  href: api/Tests.DetectionTests.html#Tests_DetectionTests_SetUp
+  commentId: M:Tests.DetectionTests.SetUp
+  fullName: Tests.DetectionTests.SetUp()
+  nameWithType: DetectionTests.SetUp()
+- uid: Tests.DetectionTests.SetUp*
+  name: SetUp
+  href: api/Tests.DetectionTests.html#Tests_DetectionTests_SetUp_
+  commentId: Overload:Tests.DetectionTests.SetUp
+  isSpec: "True"
+  fullName: Tests.DetectionTests.SetUp
+  nameWithType: DetectionTests.SetUp
+- uid: Tests.DetectionTests.TowersDetecEnemies
+  name: TowersDetecEnemies()
+  href: api/Tests.DetectionTests.html#Tests_DetectionTests_TowersDetecEnemies
+  commentId: M:Tests.DetectionTests.TowersDetecEnemies
+  fullName: Tests.DetectionTests.TowersDetecEnemies()
+  nameWithType: DetectionTests.TowersDetecEnemies()
+- uid: Tests.DetectionTests.TowersDetecEnemies*
+  name: TowersDetecEnemies
+  href: api/Tests.DetectionTests.html#Tests_DetectionTests_TowersDetecEnemies_
+  commentId: Overload:Tests.DetectionTests.TowersDetecEnemies
+  isSpec: "True"
+  fullName: Tests.DetectionTests.TowersDetecEnemies
+  nameWithType: DetectionTests.TowersDetecEnemies
 - uid: Tests.EditModeSampleTest
   name: EditModeSampleTest
   href: api/Tests.EditModeSampleTest.html
@@ -1283,38 +1417,6 @@ references:
   isSpec: "True"
   fullName: Tests.TowerPlacerTests.Setup
   nameWithType: TowerPlacerTests.Setup
-- uid: Tests.TowerTests
-  name: TowerTests
-  href: api/Tests.TowerTests.html
-  commentId: T:Tests.TowerTests
-  fullName: Tests.TowerTests
-  nameWithType: TowerTests
-- uid: Tests.TowerTests.CanDamageTowersAndChangeHealthBar
-  name: CanDamageTowersAndChangeHealthBar()
-  href: api/Tests.TowerTests.html#Tests_TowerTests_CanDamageTowersAndChangeHealthBar
-  commentId: M:Tests.TowerTests.CanDamageTowersAndChangeHealthBar
-  fullName: Tests.TowerTests.CanDamageTowersAndChangeHealthBar()
-  nameWithType: TowerTests.CanDamageTowersAndChangeHealthBar()
-- uid: Tests.TowerTests.CanDamageTowersAndChangeHealthBar*
-  name: CanDamageTowersAndChangeHealthBar
-  href: api/Tests.TowerTests.html#Tests_TowerTests_CanDamageTowersAndChangeHealthBar_
-  commentId: Overload:Tests.TowerTests.CanDamageTowersAndChangeHealthBar
-  isSpec: "True"
-  fullName: Tests.TowerTests.CanDamageTowersAndChangeHealthBar
-  nameWithType: TowerTests.CanDamageTowersAndChangeHealthBar
-- uid: Tests.TowerTests.SetUp
-  name: SetUp()
-  href: api/Tests.TowerTests.html#Tests_TowerTests_SetUp
-  commentId: M:Tests.TowerTests.SetUp
-  fullName: Tests.TowerTests.SetUp()
-  nameWithType: TowerTests.SetUp()
-- uid: Tests.TowerTests.SetUp*
-  name: SetUp
-  href: api/Tests.TowerTests.html#Tests_TowerTests_SetUp_
-  commentId: Overload:Tests.TowerTests.SetUp
-  isSpec: "True"
-  fullName: Tests.TowerTests.SetUp
-  nameWithType: TowerTests.SetUp
 - uid: Tests.TowerUIMenuTests
   name: TowerUIMenuTests
   href: api/Tests.TowerUIMenuTests.html
