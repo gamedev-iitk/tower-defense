@@ -55,7 +55,7 @@ public class TowerPlacer : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         count++;
-        renderer.material.color = red;
+        renderer.material.SetColor("_BaseColor", red);
         blocked = true;
     }
 
@@ -64,7 +64,7 @@ public class TowerPlacer : MonoBehaviour
         count--;
         if (count == 0)
         {
-            renderer.material.color = green;
+            renderer.material.SetColor("_BaseColor", green);
             blocked = false;
         }
     }

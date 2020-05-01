@@ -65,7 +65,7 @@ namespace Tests.Gameplay
             GameObject.Instantiate(GameObject.Find("BaseTower"), pointer.transform.position, pointer.transform.rotation);
 
             yield return new WaitForSeconds(0.5f);
-            Assert.AreEqual(new Color(1, 0, 0, 0.3f), pointer.GetComponent<Renderer>().material.color);
+            Assert.AreEqual(new Color(1, 0, 0, 0.3f), pointer.GetComponent<Renderer>().material.GetColor("_BaseColor"));
         }
 
 
