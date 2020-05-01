@@ -1,0 +1,17 @@
+name: Discord
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  issues:
+  pull_request_review:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Actions for Discord
+      uses: Ilshidur/action-discord@master
+      env:
+        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
