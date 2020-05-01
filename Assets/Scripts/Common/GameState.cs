@@ -9,6 +9,8 @@ public class GameState : MonoBehaviour
 
     private int currentCash;
 
+    public static int waveNumber=0;
+
     void Start()
     {
         currentCash = StartingCash;
