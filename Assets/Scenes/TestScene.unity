@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -915,6 +915,7 @@ MonoBehaviour:
   setNumber: 2
   cooldownPeriod: 10
   wavePeriod: 20
+  spawnPoints: []
 --- !u!1001 &1169267806
 PrefabInstance:
   m_ObjectHideFlags: 0

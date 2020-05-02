@@ -26,6 +26,10 @@ public class Damageable : MonoBehaviour
     }
     private void StartDeath()
     {
+        if(this.tag=="Enemy")
+        {
+            Spawner.enemyList.Remove(this.gameObject);
+        }
         GameObject.Destroy(this.gameObject);
     }
 
