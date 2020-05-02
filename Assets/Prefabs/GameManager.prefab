@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7927594336079272108}
   - component: {fileID: 7927594336079272109}
   - component: {fileID: 7927594336079272110}
-  - component: {fileID: 3168429896388439360}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -75,24 +74,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BaseTower: {fileID: 379762198253035637, guid: c3f33bd9d6e48cf43a6c01ebb8060a3f,
     type: 3}
---- !u!114 &3168429896388439360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7927594336079272106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fedf7740ae8e104890163170a04e855, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 7304521332059732316, guid: d4734eb4b28571d44bf71896b9ea8c56, type: 3}
-  bonusEnemy: {fileID: 7304521332059732316, guid: 2b439aacffb36a34887a6cc6a1781450,
-    type: 3}
-  bonusWave: 3
-  spawnRate: 0.33
-  waveSetSize: 3
-  setNumber: 2
-  cooldownPeriod: 10
-  wavePeriod: 20
