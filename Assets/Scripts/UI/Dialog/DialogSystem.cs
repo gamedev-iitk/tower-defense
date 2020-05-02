@@ -78,13 +78,21 @@ public struct DialogConfig
 
 public class DialogButton
 {
-    public UnityAction OnClick { get; } = () => { };
-    public bool Interactable { get; } = true;
-    public string Text { get; } = "Button";
+    public UnityAction OnClick { get; }
+    public bool Interactable { get; }
+    public string Text { get; }
 
-    public DialogButton(bool interactable = default, string text = default, UnityAction onClick = default)
+    public DialogButton(bool interactable = true, string text = "Button", UnityAction onClick = default)
     {
-        OnClick = onClick;
+        if (onClick == default)
+        {
+            OnClick = () => { };
+        }
+        else
+        {
+            OnClick = onClick;
+        }
+
         Interactable = interactable;
         Text = text;
     }

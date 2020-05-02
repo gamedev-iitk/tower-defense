@@ -39,7 +39,7 @@ public class WalletUISystem : MonoBehaviour
         DialogConfig config = new DialogConfig();
 
         // TODO: Check balance, change message accordingly to "Can't purchase"
-        int cost = 2000;
+        int cost = currentType.GetCost();
         string messageString;
         if (cost > GameState.CurrentCash)
         {
@@ -76,7 +76,7 @@ public class WalletUISystem : MonoBehaviour
     /// </summary>
     public void OnOKClick()
     {
-        GameState.CurrentCash -= 2000;
+        GameState.CurrentCash -= currentType.GetCost();
         createTower.Invoke(currentType);
     }
 
