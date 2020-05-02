@@ -67,4 +67,24 @@ static class ETowerTypeUtils
                 }
         }
     }
+
+    public static int GetCost(this ETowerType type)
+    {
+        switch (type)
+        {
+            case ETowerType.Base:
+                return 100;
+            case ETowerType.Gold:
+                return 200;
+            case ETowerType.Green:
+                return 200;
+            case ETowerType.Red:
+                return 300;
+            default:
+                {
+                    Debug.LogError("Invalid tower type: " + type);
+                    return 0;
+                }
+        }
+    }
 }

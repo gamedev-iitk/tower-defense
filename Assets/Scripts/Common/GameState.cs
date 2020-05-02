@@ -1,18 +1,7 @@
 using UnityEngine;
 
-public class GameState : MonoBehaviour
+public static class GameState
 {
-    /// <summary>
-    /// Amount of cash that players will start with.
-    /// </summary>
-    public int StartingCash = 2000;
-
-    private int currentCash;
-
-    public static int waveNumber = 0;
-
-    void Start()
-    {
-        currentCash = StartingCash;
-    }
+    public static int CurrentCash { get; set; } = 2000;
+    public static int WaveNumber { get; set; } = 0;
 }
