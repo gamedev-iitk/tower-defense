@@ -143,7 +143,7 @@ public class Spawner : MonoBehaviour
         waveTimerUI.SetHeading(headingText);
     }
 
-    void StartWave()
+    public void StartWave()
     {
         periodTimer = 0f;
         GameState.waveNumber++;
