@@ -27,7 +27,7 @@ namespace Tests.UI
             yield return null;
             GameObject waveUi=GameObject.Find("UIManager/WaveTimerUI/StateName");
             yield return null;
-            Assert.AreEqual("Wave "+GameState.waveNumber,waveUi.GetComponent<Text>().text);
+            Assert.AreEqual("Wave "+GameState.WaveNumber,waveUi.GetComponent<Text>().text);
         }
 
         [UnityTest]
@@ -35,7 +35,7 @@ namespace Tests.UI
         public IEnumerator WaveUICanShowBonusWave()
         {
             Spawner spawner=GameObject.Find("GameManager").GetComponent<Spawner>();
-            GameState.waveNumber=spawner.bonusWave-1;
+            GameState.WaveNumber=spawner.bonusWave-1;
             spawner.StartWave();
             GameObject waveUi=GameObject.Find("UIManager/WaveTimerUI/StateName");
             yield return null;
