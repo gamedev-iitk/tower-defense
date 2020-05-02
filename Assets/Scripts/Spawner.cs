@@ -70,7 +70,7 @@ public class Spawner : MonoBehaviour
         }
         if (!isOnBonusWave)
         {
-            if (GameState.waveNumber % bonusWave == 0 && GameState.waveNumber > 0)
+            if (GameState.WaveNumber % bonusWave == 0 && GameState.WaveNumber > 0)
             {
                 Debug.Log("Wave is Bonus");
                 isOnBonusWave = true;
@@ -146,15 +146,13 @@ public class Spawner : MonoBehaviour
     void StartWave()
     {
         periodTimer = 0f;
-        GameState.waveNumber++;
-        Debug.Log(GameState.waveNumber);
+        GameState.WaveNumber++;
+        Debug.Log(GameState.WaveNumber);
         toWait = false;
         isWaveActive = true;
-        headingText = "Wave " + (GameState.waveNumber).ToString();
+        headingText = "Wave " + GameState.WaveNumber.ToString();
         waveTimerUI.SetHeading(headingText);
         toSpawn = true;
         setCount++;
     }
-
-
 }

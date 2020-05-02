@@ -10,6 +10,8 @@ public class DialogSystem : MonoBehaviour
     // TODO: Add animations back to the dialog if required. The animator component on this is disabled through the editor.
     private Animator animator;
     private Text messageField;
+    private GameObject okButton;
+    private GameObject cancelButton;
     private DialogConfig activeConfig;
 
     void Start()
@@ -17,17 +19,19 @@ public class DialogSystem : MonoBehaviour
         gameObject.SetActive(false);
         animator = GetComponent<Animator>();
         messageField = transform.Find("Text")?.GetComponent<Text>();
+        okButton = transform.Find("OKButton").gameObject;
+        cancelButton = transform.Find("CancelButton").gameObject;
     }
 
     public void OKClicked()
     {
-        activeConfig.OKCallback();
+        activeConfig.OK.OnClick();
         Hide();
     }
 
     public void CancelClicked()
     {
-        activeConfig.CancelCallback();
+        activeConfig.Cancel.OnClick();
         Hide();
     }
 
@@ -37,8 +41,14 @@ public class DialogSystem : MonoBehaviour
     /// <param name="config">Settings with which the dialog should be created.</param>
     public void Show(DialogConfig config)
     {
-        messageField.text = config.Message;
         activeConfig = config;
+
+        messageField.text = config.Message;
+        okButton.GetComponent<Button>().interactable = config.OK.Interactable;
+        okButton.transform.Find("Text").GetComponent<Text>().text = config.OK.Text;
+        cancelButton.GetComponent<Button>().interactable = config.Cancel.Interactable;
+        cancelButton.transform.Find("Text").GetComponent<Text>().text = config.Cancel.Text;
+
         animator.SetBool("IsOpen", true);
         gameObject.SetActive(true);
     }
@@ -62,14 +72,20 @@ public struct DialogConfig
     /// Message to be displayed in the text field of the dialog box.
     /// </summary>
     public string Message;
+    public DialogButton OK;
+    public DialogButton Cancel;
+}
 
-    /// <summary>
-    /// Callback for the OK button on the dialog box.
-    /// </summary>
-    public UnityAction OKCallback;
+public class DialogButton
+{
+    public UnityAction OnClick { get; } = () => { };
+    public bool Interactable { get; } = true;
+    public string Text { get; } = "Button";
 
-    /// <summary>
-    /// Callback for the cancel button on the dialog box.
-    /// </summary>
-    public UnityAction CancelCallback;
+    public DialogButton(bool interactable = default, string text = default, UnityAction onClick = default)
+    {
+        OnClick = onClick;
+        Interactable = interactable;
+        Text = text;
+    }
 }
