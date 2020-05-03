@@ -1172,6 +1172,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: red
       objectReference: {fileID: 0}
+    - target: {fileID: 8396434937191328826, guid: f8da79642fd4d444586ede966e9b02bf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3619865894998565685, guid: f8da79642fd4d444586ede966e9b02bf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f8da79642fd4d444586ede966e9b02bf, type: 3}
