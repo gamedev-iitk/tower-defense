@@ -48,6 +48,7 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
+        spawnIndex=0;
         headingText = "Cooldown";
         timerText = "Wave In: " + ((int)(cooldownPeriod - periodTimer) + 1).ToString();
         waveTimerUI = GameObject.Find("UIManager/WaveTimerUI").GetComponent<WaveTimerUI>();

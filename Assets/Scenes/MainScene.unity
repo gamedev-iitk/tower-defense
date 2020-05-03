@@ -1197,11 +1197,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 427160180144582454, guid: c3f33bd9d6e48cf43a6c01ebb8060a3f,
-        type: 3}
-      propertyPath: NumberOfRays
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 809808391455027423, guid: c3f33bd9d6e48cf43a6c01ebb8060a3f,
         type: 3}
       propertyPath: m_Radius
