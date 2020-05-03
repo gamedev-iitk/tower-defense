@@ -105,7 +105,7 @@ public class Spawner : MonoBehaviour
                     Debug.Log("Spawned");
                 }
             }
-            if (enemyList.Count==0)
+            if (enemyList.Count==0 && setCount>=setNumber)
             {
                 Debug.Log("Wave Ended");
                 EndWave();
