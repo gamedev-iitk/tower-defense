@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class settingUI : MonoBehaviour
+public class settingUi : MonoBehaviour
 
 {
     string pname;

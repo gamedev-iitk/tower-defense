@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class mmenuui : MonoBehaviour
+public class mMenuui : MonoBehaviour
 {
    
     public void PlayButton ()
     {
         Debug.Log("Intialising Game");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
+        SceneManager.LoadScene("MainScene");
         Time.timeScale = 1f;
     } 
     public void QuitButton()
@@ -21,7 +21,7 @@ public class mmenuui : MonoBehaviour
     } 
     public void ReturnTomain()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex -1 );
+        SceneManager.LoadScene("menu");
     } 
      
     public void pauseButton()
