@@ -10,7 +10,7 @@ public class WaveTimerUI : MonoBehaviour
     private Text stateHeading;
 
     private Text timerText;
-    void Start()
+    void Awake()
     {
         gameManager = GameObject.Find("GameManager");
         stateHeading = transform.Find("StateName").GetComponent<Text>();

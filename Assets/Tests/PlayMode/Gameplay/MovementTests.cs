@@ -14,7 +14,7 @@ namespace Tests.Gameplay
         [SetUp]
         public void Setup()
         {
-            SceneManager.LoadScene("MainScene");
+            SceneManager.LoadScene("TestScene");
         }
 
         [UnityTest]

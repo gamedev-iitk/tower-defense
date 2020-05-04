@@ -5,9 +5,11 @@ public class Damageable : MonoBehaviour
     private float health = 100f;
     private HealthBarUI healthBar;
 
-    public bool IsDead {
-        get {
-            return health <= 0; 
+    public bool IsDead
+    {
+        get
+        {
+            return health <= 0;
         }
     }
 
@@ -26,6 +28,10 @@ public class Damageable : MonoBehaviour
     }
     private void StartDeath()
     {
+        if (this.tag == "Enemy")
+        {
+            Spawner.enemyList.Remove(this.gameObject);
+        }
         GameObject.Destroy(this.gameObject);
     }
 

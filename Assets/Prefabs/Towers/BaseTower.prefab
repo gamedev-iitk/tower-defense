@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExtremeAngle: 45
-  NumberOfRays: 20
+  NumberOfRays: 15
   isOccupied: 0
 --- !u!135 &8947906116660353105
 SphereCollider:
