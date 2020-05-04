@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7927594336079272107}
   - component: {fileID: 7927594336079272108}
   - component: {fileID: 7927594336079272110}
-  - component: {fileID: 7095125002978130792}
+  - component: {fileID: 666739470177976232}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -61,7 +61,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BaseTower: {fileID: 379762198253035637, guid: c3f33bd9d6e48cf43a6c01ebb8060a3f,
     type: 3}
---- !u!114 &7095125002978130792
+--- !u!114 &666739470177976232
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -81,4 +81,8 @@ MonoBehaviour:
   waveSetSize: 3
   setNumber: 2
   cooldownPeriod: 10
-  wavePeriod: 20
+  setPeriod: 0
+  spawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

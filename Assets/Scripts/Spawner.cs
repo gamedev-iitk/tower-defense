@@ -18,9 +18,7 @@ public class Spawner : MonoBehaviour
 
     public float cooldownPeriod;
 
-    public float wavePeriod;
-
-    float setPeriod;
+    public float setPeriod;
 
     float periodTimer = 0f;
 
@@ -42,14 +40,21 @@ public class Spawner : MonoBehaviour
     string timerText;
 
     WaveTimerUI waveTimerUI;
+    public Transform[] spawnPoints;
+
+    int spawnIndex;
+
+    public static List<GameObject> enemyList;
+
     void Start()
     {
-        setPeriod = wavePeriod / setNumber;
+        spawnIndex=0;
         headingText = "Cooldown";
         timerText = "Wave In: " + ((int)(cooldownPeriod - periodTimer) + 1).ToString();
         waveTimerUI = GameObject.Find("UIManager/WaveTimerUI").GetComponent<WaveTimerUI>();
         waveTimerUI.SetHeading(headingText);
         waveTimerUI.SetTimer(timerText);
+        enemyList=new List<GameObject>();
     }
     void Update()
     {
@@ -80,15 +85,14 @@ public class Spawner : MonoBehaviour
         }
         if (isWaveActive)
         {
-            periodTimer += Time.deltaTime;
-            timerText = "Cooldown In: " + ((int)(wavePeriod - periodTimer) + 1).ToString();
-            waveTimerUI.SetTimer(timerText);
             setTimer += Time.deltaTime;
             if (setTimer >= setPeriod)
             {
                 setCount++;
                 if (setCount <= setNumber)
                 {
+                    Debug.Log("New Set");
+                    spawnIndex=Random.Range(0, spawnPoints.Length);
                     toSpawn = true;
                 }
                 setTimer = 0f;
@@ -99,9 +103,10 @@ public class Spawner : MonoBehaviour
                 if (toSpawn)
                 {
                     Spawn();
+                    Debug.Log("Spawned");
                 }
             }
-            if (periodTimer >= wavePeriod)
+            if (enemyList.Count==0 && setCount>=setNumber)
             {
                 Debug.Log("Wave Ended");
                 EndWave();
@@ -111,15 +116,15 @@ public class Spawner : MonoBehaviour
 
     void Spawn()
     {
-        int randomX = Random.Range(0, 10);
-        int randomZ = Random.Range(0, 10);
+        int randomX = Random.Range(-2, 2);
+        int randomZ = Random.Range(-2, 2);
         if (isOnBonusWave)
         {
-            Instantiate(bonusEnemy, new Vector3(randomX, 0, randomZ), Quaternion.identity);
+            enemyList.Add(Instantiate(bonusEnemy, spawnPoints[spawnIndex].position+new Vector3(randomX, 0, randomZ), Quaternion.identity));
         }
         else
         {
-            Instantiate(enemy, new Vector3(randomX, 0, randomZ), Quaternion.identity);
+            enemyList.Add(Instantiate(enemy, spawnPoints[spawnIndex].position+new Vector3(randomX, 0, randomZ), Quaternion.identity));
         }
         count++;
         if (count == waveSetSize)
@@ -143,7 +148,7 @@ public class Spawner : MonoBehaviour
         waveTimerUI.SetHeading(headingText);
     }
 
-    void StartWave()
+    public void StartWave()
     {
         periodTimer = 0f;
         GameState.WaveNumber++;
@@ -152,7 +157,11 @@ public class Spawner : MonoBehaviour
         isWaveActive = true;
         headingText = "Wave " + GameState.WaveNumber.ToString();
         waveTimerUI.SetHeading(headingText);
+        timerText = " ";
+        waveTimerUI.SetTimer(timerText);
         toSpawn = true;
         setCount++;
+        spawnIndex=Random.Range(0, spawnPoints.Length);
+        spawnTimer=spawnRate;
     }
 }

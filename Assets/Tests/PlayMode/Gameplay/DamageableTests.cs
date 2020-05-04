@@ -12,7 +12,7 @@ namespace Tests.Gameplay
         [SetUp]
         public void SetUp()
         {
-            SceneManager.LoadScene("MainScene");
+            SceneManager.LoadScene("TestScene");
         }
 
         [UnityTest]
