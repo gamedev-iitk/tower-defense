@@ -22,7 +22,7 @@ namespace Tests.Gameplay
 
         public IEnumerator SpawnerSpawnsEnemies()
         {
-            Spawner spawner=GameObject.Find("GameManager").GetComponent<Spawner>();
+            Spawner spawner = GameObject.Find("GameManager").GetComponent<Spawner>();
             spawner.StartWave(); //Starts Wave
             yield return new WaitForSeconds(spawner.spawnRate);
             Assert.IsNotNull(GameObject.Find("Enemy(Clone)"));
@@ -32,7 +32,7 @@ namespace Tests.Gameplay
 
         public IEnumerator SpawnerSpawnsAtRegularIntervals()
         {
-            Spawner spawner=GameObject.Find("GameManager").GetComponent<Spawner>();
+            Spawner spawner = GameObject.Find("GameManager").GetComponent<Spawner>();
             spawner.StartWave(); //Starts Wave
             yield return new WaitForSeconds(spawner.spawnRate);
             GameObject.Destroy(GameObject.Find("Enemy(Clone)"));  // destroy first spawned enemy
@@ -44,8 +44,8 @@ namespace Tests.Gameplay
 
         public IEnumerator SpawnerCanTriggerBonusWave()
         {
-            Spawner spawner=GameObject.Find("GameManager").GetComponent<Spawner>();
-            GameState.WaveNumber=spawner.bonusWave-1;
+            Spawner spawner = GameObject.Find("GameManager").GetComponent<Spawner>();
+            GameState.WaveNumber = spawner.bonusWave - 1;
             spawner.StartWave();
             yield return new WaitForSeconds(spawner.spawnRate);
             Assert.IsNotNull(GameObject.Find("BonusEnemy(Clone)"));

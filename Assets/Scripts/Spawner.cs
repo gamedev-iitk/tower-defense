@@ -65,7 +65,6 @@ public class Spawner : MonoBehaviour
             waveTimerUI.SetTimer(timerText);
             if (periodTimer >= cooldownPeriod)
             {
-                Debug.Log("Wave Started");
                 StartWave();
             }
             else
@@ -77,7 +76,6 @@ public class Spawner : MonoBehaviour
         {
             if (GameState.WaveNumber % bonusWave == 0 && GameState.WaveNumber > 0)
             {
-                Debug.Log("Wave is Bonus");
                 isOnBonusWave = true;
                 headingText = "Bonus Wave";
                 waveTimerUI.SetHeading(headingText);
@@ -91,7 +89,6 @@ public class Spawner : MonoBehaviour
                 setCount++;
                 if (setCount <= setNumber)
                 {
-                    Debug.Log("New Set");
                     spawnIndex=Random.Range(0, spawnPoints.Length);
                     toSpawn = true;
                 }
@@ -103,12 +100,10 @@ public class Spawner : MonoBehaviour
                 if (toSpawn)
                 {
                     Spawn();
-                    Debug.Log("Spawned");
                 }
             }
             if (enemyList.Count==0 && setCount>=setNumber)
             {
-                Debug.Log("Wave Ended");
                 EndWave();
             }
         }
@@ -152,7 +147,6 @@ public class Spawner : MonoBehaviour
     {
         periodTimer = 0f;
         GameState.WaveNumber++;
-        Debug.Log(GameState.WaveNumber);
         toWait = false;
         isWaveActive = true;
         headingText = "Wave " + GameState.WaveNumber.ToString();
@@ -163,5 +157,7 @@ public class Spawner : MonoBehaviour
         setCount++;
         spawnIndex=Random.Range(0, spawnPoints.Length);
         spawnTimer=spawnRate;
+
+        Debug.Log("Starting wave: " + GameState.WaveNumber);
     }
 }
