@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 362618370743414663}
   - component: {fileID: 3278162851058575230}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy(Dumb)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1b3d36a23fb7ac04a825f2b8cf83dcf6, type: 2}
+  - {fileID: 2100000, guid: 63e1528cd9212c1489e5afe17957bdab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -144,7 +144,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37597d84160d348428bbb8f1272a4efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints: []
+  start: {fileID: 0}
+  end: {fileID: 0}
+  smart: 0
 --- !u!1001 &2619538092103343960
 PrefabInstance:
   m_ObjectHideFlags: 0
