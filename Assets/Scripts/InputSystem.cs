@@ -62,6 +62,7 @@ public class InputSystem : MonoBehaviour
             hideMenu.Invoke();
         }
 
+        // TODO: Use input mappings here
         // Check the X button or "place", toggle the selector
         if (Input.GetKeyDown(KeyCode.X))
         {
