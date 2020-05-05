@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 
     // TODO: Use async operations and a loading screen to change scenes
 
-    private void Start()
+    void Start()
     {
         dialog = transform.Find("Dialog").GetComponent<DialogSystem>();
     }
@@ -46,19 +46,5 @@ public class MainMenu : MonoBehaviour
         };
 
         dialog.Show(config);
-    }
-
-    public void ReturnTomain()
-    {
-        SceneManager.LoadScene("menu");
-    }
-
-    public void pauseButton()
-    {
-        Time.timeScale = 0f;
-    }
-    public void continueButton()
-    {
-        Time.timeScale = 1f;
     }
 }

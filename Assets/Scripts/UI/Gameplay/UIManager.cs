@@ -45,9 +45,8 @@ public class UIManager : MonoBehaviour
 
     public void Pause()
     {
-        Time.timeScale = 0;
-        HideMenu();
-
+        activeScreen?.Hide();
         pauseMenu.Show();
+        activeScreen = pauseMenu;
     }
 }
