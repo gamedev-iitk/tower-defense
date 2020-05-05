@@ -62,11 +62,17 @@ public class InputSystem : MonoBehaviour
             hideMenu.Invoke();
         }
 
+        // TODO: Use input mappings here
         // Check the X button or "place", toggle the selector
         if (Input.GetKeyDown(KeyCode.X))
         {
             Physics.Raycast(mainCamera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, LayerMask.GetMask("Ground"));
             EventRegistry.Invoke("togglePlacer", BaseTower, hit.point);
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            EventRegistry.Invoke("pause");
         }
     }
 }
