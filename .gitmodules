@@ -1,0 +1,3 @@
+[submodule "Assets/UserReporting"]
+	path = Assets/UserReporting
+	url = https://github.com/gamedev-iitk/UserReporting

@@ -664,10 +664,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 5c938dd1-702e-46ba-887b-66509be3d2a9
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: tower-defense
+  organizationId: gamedev-iitk
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
