@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
 {
     private UpgradeMenuUISystem upgradeMenuSystem;
     private TowerMenuUISystem towerMenuSystem;
+    private PauseMenu pauseMenu;
     private IUISystem activeScreen;
 
     void Start()
@@ -15,10 +16,12 @@ public class UIManager : MonoBehaviour
         // Initialize private fields
         towerMenuSystem = transform.Find("TowerMenuUI").GetComponent<TowerMenuUISystem>();
         upgradeMenuSystem = transform.Find("UpgradeUI").GetComponent<UpgradeMenuUISystem>();
+        pauseMenu = transform.Find("PauseMenu").GetComponent<PauseMenu>();
 
         // Register events and callbacks
         EventRegistry.RegisterAction<GameObject, Type>("showMenu", ShowMenu);
         EventRegistry.RegisterAction("hideMenu", HideMenu);
+        EventRegistry.RegisterAction("pause", Pause);
     }
 
     public void ShowMenu(GameObject tower, Type type)
@@ -38,5 +41,12 @@ public class UIManager : MonoBehaviour
     public void HideMenu()
     {
         activeScreen.Hide();
+    }
+
+    public void Pause()
+    {
+        activeScreen?.Hide();
+        pauseMenu.Show();
+        activeScreen = pauseMenu;
     }
 }

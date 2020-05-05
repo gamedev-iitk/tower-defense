@@ -1,27 +1,42 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TowerDefense", "TowerDefense.csproj", "{cde85739-42de-2cad-1c57-14f08ca57475}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TowerDefense", "TowerDefense.csproj", "{3957E8CD-DE42-AD2C-1C57-14F08CA57475}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TowerDefenseEditor", "TowerDefenseEditor.csproj", "{8cbd28d6-d2fa-0e0d-35f9-2d581a093b99}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TowerDefenseEditor", "TowerDefenseEditor.csproj", "{D628BD8C-FAD2-0D0E-35F9-2D581A093B99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuntimeTests", "RuntimeTests.csproj", "{cc6a781e-5440-8c1d-4d1c-887430aa34f5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuntimeTests", "RuntimeTests.csproj", "{1E786ACC-4054-1D8C-4D1C-887430AA34F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorTests", "EditorTests.csproj", "{59b60858-51de-3735-1c17-4438d5a17bd7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{D0D0018C-0352-4B8F-1F89-2B8E640F5E88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorTests", "EditorTests.csproj", "{5808B659-DE51-3537-1C17-4438D5A17BD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{cde85739-42de-2cad-1c57-14f08ca57475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{cde85739-42de-2cad-1c57-14f08ca57475}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8cbd28d6-d2fa-0e0d-35f9-2d581a093b99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8cbd28d6-d2fa-0e0d-35f9-2d581a093b99}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{cc6a781e-5440-8c1d-4d1c-887430aa34f5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{cc6a781e-5440-8c1d-4d1c-887430aa34f5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{59b60858-51de-3735-1c17-4438d5a17bd7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{59b60858-51de-3735-1c17-4438d5a17bd7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3957E8CD-DE42-AD2C-1C57-14F08CA57475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3957E8CD-DE42-AD2C-1C57-14F08CA57475}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3957E8CD-DE42-AD2C-1C57-14F08CA57475}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3957E8CD-DE42-AD2C-1C57-14F08CA57475}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D628BD8C-FAD2-0D0E-35F9-2D581A093B99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D628BD8C-FAD2-0D0E-35F9-2D581A093B99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D628BD8C-FAD2-0D0E-35F9-2D581A093B99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D628BD8C-FAD2-0D0E-35F9-2D581A093B99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E786ACC-4054-1D8C-4D1C-887430AA34F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E786ACC-4054-1D8C-4D1C-887430AA34F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E786ACC-4054-1D8C-4D1C-887430AA34F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E786ACC-4054-1D8C-4D1C-887430AA34F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0D0018C-0352-4B8F-1F89-2B8E640F5E88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0D0018C-0352-4B8F-1F89-2B8E640F5E88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0D0018C-0352-4B8F-1F89-2B8E640F5E88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0D0018C-0352-4B8F-1F89-2B8E640F5E88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5808B659-DE51-3537-1C17-4438D5A17BD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5808B659-DE51-3537-1C17-4438D5A17BD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5808B659-DE51-3537-1C17-4438D5A17BD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5808B659-DE51-3537-1C17-4438D5A17BD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
