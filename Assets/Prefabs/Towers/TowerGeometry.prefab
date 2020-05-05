@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5317752432761638743}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 1909822211181841058}
   - component: {fileID: 1909822211181841069}
   - component: {fileID: 1909822211181841068}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 1909822211929560380}
   - component: {fileID: 1909822211929560383}
   - component: {fileID: 1909822211929560382}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,9 +199,9 @@ GameObject:
   - component: {fileID: 1909822212337626029}
   - component: {fileID: 5056472252497722311}
   - component: {fileID: 1820694787764034131}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: TowerGeometry
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 1909822212349664674}
   - component: {fileID: 1909822212349664685}
   - component: {fileID: 1909822212349664684}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}

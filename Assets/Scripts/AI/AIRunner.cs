@@ -10,6 +10,8 @@ public class AIRunner : MonoBehaviour
 
     void Start()
     {
+        StartTransform=transform;
+        EndTransform=GameObject.FindWithTag("Base").transform;
         agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(StartTransform.position);
     }

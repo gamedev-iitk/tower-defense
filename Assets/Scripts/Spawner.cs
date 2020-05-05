@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject enemy;
+    public GameObject[] enemies;
 
     public GameObject bonusEnemy;
+
+    int enemyIndex;
 
     public int bonusWave;
 
@@ -40,6 +42,7 @@ public class Spawner : MonoBehaviour
     string timerText;
 
     WaveTimerUI waveTimerUI;
+
     public Transform[] spawnPoints;
 
     int spawnIndex;
@@ -49,6 +52,7 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         spawnIndex=0;
+        enemyIndex=0;
         headingText = "Cooldown";
         timerText = "Wave In: " + ((int)(cooldownPeriod - periodTimer) + 1).ToString();
         waveTimerUI = GameObject.Find("UIManager/WaveTimerUI").GetComponent<WaveTimerUI>();
@@ -111,6 +115,7 @@ public class Spawner : MonoBehaviour
 
     void Spawn()
     {
+        enemyIndex=Random.Range(0,enemies.Length);
         int randomX = Random.Range(-2, 2);
         int randomZ = Random.Range(-2, 2);
         if (isOnBonusWave)
@@ -119,7 +124,7 @@ public class Spawner : MonoBehaviour
         }
         else
         {
-            enemyList.Add(Instantiate(enemy, spawnPoints[spawnIndex].position+new Vector3(randomX, 0, randomZ), Quaternion.identity));
+            enemyList.Add(Instantiate(enemies[enemyIndex], spawnPoints[spawnIndex].position+new Vector3(randomX, 0, randomZ), Quaternion.identity));
         }
         count++;
         if (count == waveSetSize)
