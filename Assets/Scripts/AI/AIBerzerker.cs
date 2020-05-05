@@ -29,16 +29,13 @@ public class AIBerzerker : MonoBehaviour
         {
             Vector3 dir = EndTransform.position - transform.position;
             Ray vision_ray = new Ray(transform.position, dir);
-            int mask = (1<<9) | (1<<13) | (1<<14);
-            Debug.DrawRay(transform.position, dir * 3f, Color.red, 1f);
-            if (Physics.Raycast(vision_ray, out RaycastHit hit,mask))
+            int mask = LayerMask.GetMask("Player") | LayerMask.GetMask("Base") | LayerMask.GetMask("TowerGeometry");
+            Debug.DrawRay(transform.position, dir * 3f, Color.red, 0.5f);
+            if (Physics.Raycast(vision_ray, out RaycastHit hit, mask))
             {
-                Debug.Log("Ray hit non-enemy");
                 target = hit.transform;
-                Debug.Log("Ray hit " + target.gameObject.tag);
                 if (target.CompareTag("Tower") || target.CompareTag("Player") || target.CompareTag("Base"))
                 {
-                    Debug.Log("Moving towards " + target.gameObject.tag);
                     agent.SetDestination(target.position);
                     isFighting = true;
                     Attack();
@@ -53,7 +50,6 @@ public class AIBerzerker : MonoBehaviour
         {
             agent.SetDestination(target.position);
             Attack();
-            return;
         }
     }
 
