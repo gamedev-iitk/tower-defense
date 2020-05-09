@@ -69,8 +69,6 @@ public class UpgradeMenuUISystem : MonoBehaviour, IUISystem
     public void CreateTower(ETowerType type)
     {
         GameObject prefab;
-
-        // TODO: Can Unity use simplified "switch expressions" instead of this bulky thing?
         switch (type)
         {
             case ETowerType.Red:

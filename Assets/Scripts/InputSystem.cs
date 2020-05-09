@@ -6,8 +6,6 @@ using UnityEngine;
 /// </summary>
 public class InputSystem : MonoBehaviour
 {
-    // TODO: Have a single utils class for doing these raycasts
-
     /// <summary>
     /// Prefab that the tower placer will place by default
     /// </summary>

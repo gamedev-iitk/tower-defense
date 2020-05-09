@@ -7,7 +7,6 @@ using UnityEngine.Events;
 /// </summary>
 public class DialogSystem : MonoBehaviour
 {
-    // TODO: Add animations back to the dialog if required. The animator component on this is disabled through the editor.
     private Animator animator;
     private Text messageField;
     private GameObject okButton;
@@ -23,12 +22,18 @@ public class DialogSystem : MonoBehaviour
         cancelButton = transform.Find("CancelButton").gameObject;
     }
 
+    /// <summary>
+    /// Called when the OK button is clicked on the UI.
+    /// </summary>
     public void OKClicked()
     {
         activeConfig.OK.OnClick();
         Hide();
     }
 
+    /// <summary>
+    /// Called when the Cancel button is clicked on the UI.
+    /// </summary>
     public void CancelClicked()
     {
         activeConfig.Cancel.OnClick();
@@ -72,16 +77,44 @@ public struct DialogConfig
     /// Message to be displayed in the text field of the dialog box.
     /// </summary>
     public string Message;
+
+    /// <summary>
+    /// Settings for the OK button.
+    /// </summary>
     public DialogButton OK;
+
+    /// <summary>
+    /// Settings for the Cancel button.
+    /// </summary>
     public DialogButton Cancel;
 }
 
 public class DialogButton
 {
+    /// <summary>
+    /// Callback for the button.
+    /// </summary>
+    /// <value>A void function with zero arguments.</value>
     public UnityAction OnClick { get; }
+
+    /// <summary>
+    /// Indicates that the button is interactable.
+    /// </summary>
+    /// <value>True if is interactable.</value>
     public bool Interactable { get; }
+
+    /// <summary>
+    /// Text to be shown on the button.
+    /// </summary>
+    /// <value>String</value>
     public string Text { get; }
 
+    /// <summary>
+    /// Constructor for this settings class to allow optional parameters.
+    /// </summary>
+    /// <param name="interactable">(Optional) Is the button interactable. Default is true.</param>
+    /// <param name="text">(Optional) The text to be shown on the button. Default is "Button".</param>
+    /// <param name="onClick">(Optional) Function to be called on click. Default is an empty function.</param>
     public DialogButton(bool interactable = true, string text = "Button", UnityAction onClick = default)
     {
         if (onClick == default)

@@ -83,36 +83,34 @@
   
   <h1 id="Global_GameState" data-uid="Global.GameState" class="text-break">Class GameState
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Data class for game state variables.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">UnityEngine.Object</span></div>
-    <div class="level2"><span class="xref">UnityEngine.Component</span></div>
-    <div class="level3"><span class="xref">UnityEngine.Behaviour</span></div>
-    <div class="level4"><span class="xref">UnityEngine.MonoBehaviour</span></div>
-    <div class="level5"><span class="xref">GameState</span></div>
+    <div class="level1"><span class="xref">GameState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Global.html">Global</a></h6>
   <h6><strong>Assembly</strong>: TowerDefense.dll</h6>
   <h5 id="Global_GameState_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GameState : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GameState</code></pre>
   </div>
-  <h3 id="fields">Fields
+  <h3 id="properties">Properties
   </h3>
   
   
-  <h4 id="Global_GameState_StartingCash" data-uid="Global.GameState.StartingCash">StartingCash</h4>
-  <div class="markdown level1 summary"><p>Amount of cash that players will start with.</p>
+  <a id="Global_GameState_CurrentCash_" data-uid="Global.GameState.CurrentCash*"></a>
+  <h4 id="Global_GameState_CurrentCash" data-uid="Global.GameState.CurrentCash">CurrentCash</h4>
+  <div class="markdown level1 summary"><p>Current cash that the player has.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int StartingCash</code></pre>
+    <pre><code class="lang-csharp hljs">public static int CurrentCash { get; set; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -123,7 +121,35 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
+        <td><p>An integer value, starts at 2000.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Global_GameState_WaveNumber_" data-uid="Global.GameState.WaveNumber*"></a>
+  <h4 id="Global_GameState_WaveNumber" data-uid="Global.GameState.WaveNumber">WaveNumber</h4>
+  <div class="markdown level1 summary"><p>Wave number that the player is at.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int WaveNumber { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>An integer value, starts at 0.</p>
+</td>
       </tr>
     </tbody>
   </table>

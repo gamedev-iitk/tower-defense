@@ -25,7 +25,7 @@ namespace Tests.Gameplay
             enemy.transform.position = tower.transform.position + new Vector3(distance / 2, 0, distance / 2);
 
             yield return new WaitForSeconds(0.5f);
-            Assert.AreEqual(true, tower.GetComponent<Detection>().GetOccupied());
+            Assert.AreEqual(true, tower.GetComponent<Detection>().IsOccupied);
         }
     }
 }

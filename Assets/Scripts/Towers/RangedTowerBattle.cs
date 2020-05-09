@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 /// <summary>
-/// Component to handle tower attacks
+/// BattleComponent for Ranged Towers.
 /// </summary>
 public class RangedTowerBattle : AbstractBattle
 {
@@ -24,12 +24,13 @@ public class RangedTowerBattle : AbstractBattle
         target = null;
         isFighting = false;
         turn = false;
-        GetComponent<Detection>().SetOccupied(false);
+        GetComponent<Detection>().IsOccupied = false;
     }
 
     void Update()
     {
-        if (target == null) {
+        if (target == null)
+        {
             OnLose();
         }
 

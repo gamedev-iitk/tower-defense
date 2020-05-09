@@ -1,8 +1,5 @@
 using UnityEngine;
 
-// TODO: Move enemy selection and rotation logic from Detection to Battle
-
-
 /// <summary>
 /// Base class for combat related functionality. Enemies and towers should implement this class.
 /// This class works closely with the Detection component.

@@ -2,12 +2,12 @@
 
 
 /// <summary>
-/// Implements the tower placement location selector
+/// Implements the tower placement location selector.
 /// </summary>
 public class TowerPlacer : MonoBehaviour
 {
     /// <summary>
-    /// A reference to the tower prefab that is to be placed
+    /// A reference to the tower prefab that is to be placed.
     /// </summary>
     public GameObject TowerObject;
 
@@ -17,11 +17,19 @@ public class TowerPlacer : MonoBehaviour
     private new Renderer renderer;
     private int count;
 
+    /// <summary>
+    /// Set the tower prefab to be placed.
+    /// </summary>
+    /// <param name="reference"></param>
     public void SetTower(GameObject reference)
     {
         TowerObject = reference;
     }
 
+    /// <summary>
+    /// Instantiate the tower.
+    /// </summary>
+    /// <returns>True if successfully instantiated the tower.</returns>
     public bool PlaceTower()
     {
         if (!blocked)
@@ -48,7 +56,6 @@ public class TowerPlacer : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit, LayerMask.GetMask("Ground")))
         {
-            // TODO: Interpolate values instead of directly setting them for a smoother experience
             float oldY = transform.position.y;
             transform.position = new Vector3(hit.point.x, oldY, hit.point.z);
         }

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Enemy spawner. Implementation of the wave system.
+/// </summary>
 public class Spawner : MonoBehaviour
 {
     public GameObject[] enemies;

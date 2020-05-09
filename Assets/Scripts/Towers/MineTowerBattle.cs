@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// BattleComponent for the Mine Tower.
+/// </summary>
 public class MineTowerBattle : AbstractBattle
 {
     private GameObject[] targets;
@@ -17,7 +20,7 @@ public class MineTowerBattle : AbstractBattle
     {
         targets = null;
         isFighting = false;
-        GetComponent<Detection>().SetOccupied(false);
+        GetComponent<Detection>().IsOccupied = false;
     }
 
     void Update()

@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 
-
 /// <summary>
 /// AIController class to control AI movement.
+/// TODO: Deprecate this class?
 /// </summary>
 public class AIController : MonoBehaviour
 {

@@ -91,14 +91,24 @@
       <section><p>Base class for combat related functionality. Enemies and towers should implement this class.
 This class works closely with the Detection component.</p>
 </section>
+      <h4><a class="xref" href="Global.AIBerzerker.html">AIBerzerker</a></h4>
+      <section><p>Implementation for the berzerker&apos;s AI.</p>
+</section>
       <h4><a class="xref" href="Global.AIController.html">AIController</a></h4>
-      <section><p>AIController class to control AI movement.</p>
+      <section><p>AIController class to control AI movement.
+TODO: Deprecate this class?</p>
+</section>
+      <h4><a class="xref" href="Global.AIRunner.html">AIRunner</a></h4>
+      <section><p>Implementation for the runner&apos;s AI.</p>
 </section>
       <h4><a class="xref" href="Global.Damageable.html">Damageable</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Global.Detection.html">Detection</a></h4>
-      <section><p>Component to detect enemies using sweeps of a &quot;detection cone&quot;</p>
+      <section><p>Component that implements health.</p>
 </section>
+      <h4><a class="xref" href="Global.Detection.html">Detection</a></h4>
+      <section><p>Component to detect enemies using Physics.OverlapSphere</p>
+</section>
+      <h4><a class="xref" href="Global.DialogButton.html">DialogButton</a></h4>
+      <section></section>
       <h4><a class="xref" href="Global.DialogSystem.html">DialogSystem</a></h4>
       <section><p>Handles the apprearance and disappearance of the associated dialog box.</p>
 </section>
@@ -106,16 +116,34 @@ This class works closely with the Detection component.</p>
       <section><p>A class to orchestrate all events</p>
 </section>
       <h4><a class="xref" href="Global.FaceCamera.html">FaceCamera</a></h4>
-      <section></section>
+      <section><p>Component to make the game object always face the camera. Used for UI elements.</p>
+</section>
+      <h4><a class="xref" href="Global.FramerateMonitor.html">FramerateMonitor</a></h4>
+      <section><p>Represents a behavior that monitors the application for framerate issues and automatically submits a user report.</p>
+</section>
       <h4><a class="xref" href="Global.GameState.html">GameState</a></h4>
-      <section></section>
+      <section><p>Data class for game state variables.</p>
+</section>
       <h4><a class="xref" href="Global.GenericMap-1.html">GenericMap&lt;TKey&gt;</a></h4>
       <section><p>A wrapper around dictionary to support generic values.</p>
 </section>
       <h4><a class="xref" href="Global.HealthBarUI.html">HealthBarUI</a></h4>
-      <section></section>
+      <section><p>Implements the HealthBar UI element.</p>
+</section>
       <h4><a class="xref" href="Global.InputSystem.html">InputSystem</a></h4>
       <section><p>Manager class for handling mouse input.</p>
+</section>
+      <h4><a class="xref" href="Global.MainMenu.html">MainMenu</a></h4>
+      <section><p>Handles Main Menu behavior</p>
+</section>
+      <h4><a class="xref" href="Global.MineTowerBattle.html">MineTowerBattle</a></h4>
+      <section><p>BattleComponent for the Mine Tower.</p>
+</section>
+      <h4><a class="xref" href="Global.PauseMenu.html">PauseMenu</a></h4>
+      <section><p>Handles Pause Menu behavior.</p>
+</section>
+      <h4><a class="xref" href="Global.RangedTowerBattle.html">RangedTowerBattle</a></h4>
+      <section><p>BattleComponent for Ranged Towers.</p>
 </section>
       <h4><a class="xref" href="Global.SerializableDictionary.html">SerializableDictionary</a></h4>
       <section></section>
@@ -131,6 +159,9 @@ This class works closely with the Detection component.</p>
       <section></section>
       <h4><a class="xref" href="Global.SerializableDictionaryStoragePropertyDrawer.html">SerializableDictionaryStoragePropertyDrawer</a></h4>
       <section></section>
+      <h4><a class="xref" href="Global.Spawner.html">Spawner</a></h4>
+      <section><p>Enemy spawner. Implementation of the wave system.</p>
+</section>
       <h4><a class="xref" href="Global.TDEvent.html">TDEvent</a></h4>
       <section><p>An event that takes callbacks with no parameters</p>
 </section>
@@ -146,16 +177,14 @@ This class works closely with the Detection component.</p>
       <h4><a class="xref" href="Global.TestEventCall.html">TestEventCall</a></h4>
       <section><p>A class to test the event system. Fire events here.</p>
 </section>
-      <h4><a class="xref" href="Global.TowerBattle.html">TowerBattle</a></h4>
-      <section><p>Component to handle tower attacks</p>
-</section>
       <h4><a class="xref" href="Global.TowerMenuUISystem.html">TowerMenuUISystem</a></h4>
       <section><p>Brings up the tower menu when a tower is selected.</p>
 </section>
       <h4><a class="xref" href="Global.TowerPlacementSystem.html">TowerPlacementSystem</a></h4>
-      <section></section>
+      <section><p>System to place towers. Sets up the TowerPlacer.</p>
+</section>
       <h4><a class="xref" href="Global.TowerPlacer.html">TowerPlacer</a></h4>
-      <section><p>Implements the tower placement location selector</p>
+      <section><p>Implements the tower placement location selector.</p>
 </section>
       <h4><a class="xref" href="Global.TowerType.html">TowerType</a></h4>
       <section><p>A component that can be attached to buttons to check what tower they are associated with in a safe way with an enum</p>
@@ -173,8 +202,24 @@ This class works closely with the Detection component.</p>
       <h4><a class="xref" href="Global.UpgradeTree.html">UpgradeTree</a></h4>
       <section><p>This component stores information about possible upgrades in the upgrade tree.</p>
 </section>
+      <h4><a class="xref" href="Global.UserReportingConfigureOnly.html">UserReportingConfigureOnly</a></h4>
+      <section><p>Represents a behavior that configures user reporting, but does not provide any additional functionality.</p>
+</section>
+      <h4><a class="xref" href="Global.UserReportingMonitor.html">UserReportingMonitor</a></h4>
+      <section><p>Represents a behavior that monitors the application for issues and automatically submits a user report.</p>
+</section>
+      <h4><a class="xref" href="Global.UserReportingScript.html">UserReportingScript</a></h4>
+      <section><p>Represents a behavior for working with the user reporting client.</p>
+</section>
+      <h4><a class="xref" href="Global.UserReportingXRExtensions.html">UserReportingXRExtensions</a></h4>
+      <section><p>Represents a behavior that collects XR information for user reports.</p>
+</section>
       <h4><a class="xref" href="Global.WalletUISystem.html">WalletUISystem</a></h4>
-      <section></section>
+      <section><p>Controls the wallet UI on screen.</p>
+</section>
+      <h4><a class="xref" href="Global.WaveTimerUI.html">WaveTimerUI</a></h4>
+      <section><p>Controls the wave timer on screen.</p>
+</section>
     <h3 id="structs">Structs
   </h3>
       <h4><a class="xref" href="Global.DialogConfig.html">DialogConfig</a></h4>
@@ -189,6 +234,11 @@ This class works closely with the Detection component.</p>
   </h3>
       <h4><a class="xref" href="Global.ETowerType.html">ETowerType</a></h4>
       <section><p>Enum for tower types. This is important to refer to towers in a safe way.</p>
+</section>
+      <h4><a class="xref" href="Global.UserReportingPlatformType.html">UserReportingPlatformType</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.UserReportingState.html">UserReportingState</a></h4>
+      <section><p>Represents a user reporting state.</p>
 </section>
 </article>
           </div>

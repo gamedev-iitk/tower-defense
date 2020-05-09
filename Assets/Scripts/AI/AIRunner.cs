@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 
+/// <summary>
+/// Implementation for the runner's AI.
+/// </summary>
 public class AIRunner : MonoBehaviour
 {
     private Vector3 destination;
@@ -12,8 +15,6 @@ public class AIRunner : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(destination);
     }
-
-    // TODO: Attack shinboku on detect
 
     private void Attack()
     {

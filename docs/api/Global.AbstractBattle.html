@@ -95,7 +95,8 @@ This class works closely with the Detection component.</p>
     <div class="level3"><span class="xref">UnityEngine.Behaviour</span></div>
     <div class="level4"><span class="xref">UnityEngine.MonoBehaviour</span></div>
     <div class="level5"><span class="xref">AbstractBattle</span></div>
-      <div class="level6"><a class="xref" href="Global.TowerBattle.html">TowerBattle</a></div>
+      <div class="level6"><a class="xref" href="Global.MineTowerBattle.html">MineTowerBattle</a></div>
+      <div class="level6"><a class="xref" href="Global.RangedTowerBattle.html">RangedTowerBattle</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Global.html">Global</a></h6>
   <h6><strong>Assembly</strong>: TowerDefense.dll</h6>
@@ -211,13 +212,13 @@ Must be between 0 and 1.</p>
   
   
   <a id="Global_AbstractBattle_OnDetect_" data-uid="Global.AbstractBattle.OnDetect*"></a>
-  <h4 id="Global_AbstractBattle_OnDetect_UnityEngine_GameObject_" data-uid="Global.AbstractBattle.OnDetect(UnityEngine.GameObject)">OnDetect(GameObject)</h4>
-  <div class="markdown level1 summary"><p>Called by the Detection component to start attack processes.</p>
+  <h4 id="Global_AbstractBattle_OnDetect_UnityEngine_GameObject___" data-uid="Global.AbstractBattle.OnDetect(UnityEngine.GameObject[])">OnDetect(GameObject[])</h4>
+  <div class="markdown level1 summary"><p>Called by the Detection component to start attack processes on targets in line-of-sight.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void OnDetect(GameObject enemy)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract void OnDetect(GameObject[] targets)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -230,9 +231,9 @@ Must be between 0 and 1.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UnityEngine.GameObject</span></td>
-        <td><span class="parametername">enemy</span></td>
-        <td><p>GameObject to target</p>
+        <td><span class="xref">UnityEngine.GameObject</span>[]</td>
+        <td><span class="parametername">targets</span></td>
+        <td><p>GameObjects to target</p>
 </td>
       </tr>
     </tbody>
@@ -247,17 +248,6 @@ Must be between 0 and 1.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public abstract void OnLose()</code></pre>
-  </div>
-  
-  
-  <a id="Global_AbstractBattle_SetRange_" data-uid="Global.AbstractBattle.SetRange*"></a>
-  <h4 id="Global_AbstractBattle_SetRange" data-uid="Global.AbstractBattle.SetRange">SetRange()</h4>
-  <div class="markdown level1 summary"><p>Called in the Start function for initialization.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void SetRange()</code></pre>
   </div>
 </article>
           </div>

@@ -8,7 +8,6 @@ public class MainMenu : MonoBehaviour
 {
     private DialogSystem dialog;
 
-
     void Start()
     {
         dialog = transform.Find("Dialog").GetComponent<DialogSystem>();

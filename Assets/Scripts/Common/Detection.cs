@@ -6,7 +6,11 @@ using UnityEngine;
 /// </summary>
 public class Detection : MonoBehaviour
 {
-    private bool isOccupied = false;
+    /// <summary>
+    /// State of the object.
+    /// </summary>
+    /// <value>True if the object is attacking, False if it is idle and should detect.</value>
+    public bool IsOccupied { get; set; } = false;
     private AbstractBattle battle;
 
     void Start()
@@ -16,7 +20,7 @@ public class Detection : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!isOccupied)
+        if (!IsOccupied)
         {
             Collider[] colliders = Physics.OverlapSphere(transform.position, battle.Range, LayerMask.GetMask("Enemy"));
             if (colliders.Length > 0)
@@ -45,17 +49,7 @@ public class Detection : MonoBehaviour
 
     void Detected(GameObject[] targets)
     {
-        isOccupied = true;
+        IsOccupied = true;
         battle?.OnDetect(targets);
-    }
-
-    public void SetOccupied(bool val)
-    {
-        isOccupied = val;
-    }
-
-    public bool GetOccupied()
-    {
-        return isOccupied;
     }
 }

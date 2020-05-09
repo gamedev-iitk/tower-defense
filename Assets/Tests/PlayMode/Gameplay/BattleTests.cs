@@ -45,7 +45,7 @@ namespace Tests.Gameplay
 
             GameObject.Destroy(enemy);
             yield return new WaitForSeconds(1f);
-            Assert.AreEqual(false, tower.GetComponent<Detection>().GetOccupied());
+            Assert.AreEqual(false, tower.GetComponent<Detection>().IsOccupied);
         }
 
         [UnityTest]
@@ -63,7 +63,7 @@ namespace Tests.Gameplay
             enemy.transform.position = tower.transform.position + new Vector3(distance, 0, distance);
             yield return new WaitForSeconds(0.5f);
 
-            Assert.AreEqual(false, tower.GetComponent<Detection>().GetOccupied());
+            Assert.AreEqual(false, tower.GetComponent<Detection>().IsOccupied);
         }
     }
 }

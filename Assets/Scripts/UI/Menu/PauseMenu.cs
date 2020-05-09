@@ -96,7 +96,6 @@ public class PauseMenu : MonoBehaviour, IUISystem
 
     /// <summary>
     /// Callback for the brightness slider.
-    /// TODO: Implement settings
     /// </summary>
     public void OnBrightnessSlider()
     {

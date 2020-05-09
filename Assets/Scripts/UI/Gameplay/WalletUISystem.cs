@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Controls the wallet UI on screen.
+/// </summary>
 public class WalletUISystem : MonoBehaviour
 {
     // When upgrading towers, the type must be stored for the confirmation dialog,
@@ -38,7 +41,6 @@ public class WalletUISystem : MonoBehaviour
         currentType = type;
         DialogConfig config = new DialogConfig();
 
-        // TODO: Check balance, change message accordingly to "Can't purchase"
         int cost = currentType.GetCost();
         string messageString;
         if (cost > GameState.CurrentCash)

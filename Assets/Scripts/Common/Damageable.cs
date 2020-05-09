@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Component that implements health.
+/// </summary>
 public class Damageable : MonoBehaviour
 {
-    private float health = 100f;
-    private HealthBarUI healthBar;
 
+    /// <summary>
+    /// State of the object.
+    /// </summary>
+    /// <value>True if dead.</value>
     public bool IsDead
     {
         get
@@ -13,19 +18,14 @@ public class Damageable : MonoBehaviour
         }
     }
 
+    private float health = 100f;
+    private HealthBarUI healthBar;
+
     void Start()
     {
         healthBar = transform.Find("HealthBar")?.GetComponent<HealthBarUI>();
     }
 
-    void Update()
-    {
-        // TODO: For testing only, remove later
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            ApplyDamage(20);
-        }
-    }
     private void StartDeath()
     {
         if (this.tag == "Enemy")
@@ -53,6 +53,10 @@ public class Damageable : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Getter for the health of the object.
+    /// </summary>
+    /// <returns>A float between 0 and 100.</returns>
     public float GetHealth()
     {
         return health;
