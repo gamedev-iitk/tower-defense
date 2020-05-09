@@ -24,7 +24,7 @@ namespace Tests.Gameplay
         {
             Spawner spawner = GameObject.Find("GameManager").GetComponent<Spawner>();
             spawner.StartWave(); //Starts Wave
-            yield return new WaitForSeconds(spawner.spawnRate);
+            yield return new WaitForSeconds(spawner.spawnRate + 1);
             Assert.IsNotNull(GameObject.Find("Enemy(Clone)"));
         }
 

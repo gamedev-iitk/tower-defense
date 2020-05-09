@@ -17,6 +17,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: GreenTower
       objectReference: {fileID: 0}
+    - target: {fileID: 904232128615981435, guid: c3f33bd9d6e48cf43a6c01ebb8060a3f,
+        type: 3}
+      propertyPath: Attack
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 904232128615981435, guid: c3f33bd9d6e48cf43a6c01ebb8060a3f,
+        type: 3}
+      propertyPath: Defense
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 904232128615981435, guid: c3f33bd9d6e48cf43a6c01ebb8060a3f,
+        type: 3}
+      propertyPath: Range
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4226286948380897982, guid: c3f33bd9d6e48cf43a6c01ebb8060a3f,
         type: 3}
       propertyPath: gold

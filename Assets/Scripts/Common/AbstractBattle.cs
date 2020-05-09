@@ -1,5 +1,8 @@
 using UnityEngine;
 
+// TODO: Move enemy selection and rotation logic from Detection to Battle
+
+
 /// <summary>
 /// Base class for combat related functionality. Enemies and towers should implement this class.
 /// This class works closely with the Detection component.
@@ -28,20 +31,13 @@ public abstract class AbstractBattle : MonoBehaviour
     public float FireRate = 1;
 
     /// <summary>
-    /// Called in the Start function for initialization.
+    /// Called by the Detection component to start attack processes on targets in line-of-sight.
     /// </summary>
-    abstract protected void SetRange();
-
-    /// <summary>
-    /// Called by the Detection component to start attack processes.
-    /// </summary>
-    /// <param name="enemy">GameObject to target</param>
-    abstract public void OnDetect(GameObject enemy);
+    /// <param name="targets">GameObjects to target</param>
+    abstract public void OnDetect(GameObject[] targets);
 
     /// <summary>
     /// A "reset" for the attack processes used when the target is destroyed or lost.
     /// </summary>
     abstract public void OnLose();
-
-    void Start() { SetRange(); }
 }
