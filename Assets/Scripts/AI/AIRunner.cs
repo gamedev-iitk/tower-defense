@@ -10,18 +10,10 @@ public class AIRunner : MonoBehaviour
     {
         destination = GameObject.Find("Shinboku").transform.position;
         agent = GetComponent<NavMeshAgent>();
-    }
-
-    void FixedUpdate()
-    {
-        Move();
-    }
-
-    private void Move()
-    {
         agent.SetDestination(destination);
-        Attack();
     }
+
+    // TODO: Attack shinboku on detect
 
     private void Attack()
     {

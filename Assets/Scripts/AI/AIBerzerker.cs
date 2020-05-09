@@ -12,22 +12,19 @@ public class AIBerzerker : MonoBehaviour
     {
         destination = GameObject.Find("Shinboku").transform.position;
         agent = GetComponent<NavMeshAgent>();
+        agent.SetDestination(destination);
     }
 
+    // TODO: Attack anyone on detect.
     void FixedUpdate()
-    {
-        Move();
-    }
-
-    private void Move()
     {
         if (!isFighting)
         {
             Vector3 dir = destination - transform.position;
-            Ray vision_ray = new Ray(transform.position, dir);
-            int mask = LayerMask.GetMask("Player") | LayerMask.GetMask("Base") | LayerMask.GetMask("TowerGeometry");
+            Ray visionRay = new Ray(transform.position, dir);
+            int mask = LayerMask.GetMask(new[] {"Player", "Base", "TowerGeometry"});
             Debug.DrawRay(transform.position, dir * 3f, Color.red, 0.5f);
-            if (Physics.Raycast(vision_ray, out RaycastHit hit, mask))
+            if (Physics.Raycast(visionRay, out RaycastHit hit, mask))
             {
                 target = hit.transform;
                 if (target.CompareTag("Tower") || target.CompareTag("Player") || target.CompareTag("Base"))
@@ -44,7 +41,6 @@ public class AIBerzerker : MonoBehaviour
         }
         else
         {
-            agent.SetDestination(target.position);
             Attack();
         }
     }
