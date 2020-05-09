@@ -1,93 +1,58 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 /// <summary>
-/// Component to detect enemies using sweeps of a "detection cone"
+/// Component to detect enemies using Physics.OverlapSphere
 /// </summary>
 public class Detection : MonoBehaviour
 {
-    /// <summary>
-    /// Half of the maximum angle of the detection cone.
-    /// </summary>
-    public float ExtremeAngle;
-
-    /// <summary>
-    /// The number of rays to use for the detection cone.
-    /// </summary>
-    public float NumberOfRays;
-
+    private bool isOccupied = false;
     private AbstractBattle battle;
-    private GameObject target;
-    private Vector3 lookDirection;
-
-    private float detectionRange;
-    private float deltaAngle;
-    private float angleMade = 0f;
-    private bool shouldRotate = false;
-    public bool isOccupied = false;
-    private int sweepDirection = +1;
 
     void Start()
     {
         battle = GetComponent<AbstractBattle>();
-        detectionRange = battle.Range;
-        lookDirection = -1 * transform.forward;
-        deltaAngle = (2 * ExtremeAngle) / NumberOfRays;
     }
 
     void FixedUpdate()
     {
-        if (shouldRotate && target != null)
-        {
-            // Rotates to face enemy
-            Vector3 look = transform.position - target.transform.position;
-            look.y = 0;
-            Quaternion targetRotation = Quaternion.LookRotation(look);
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 0.1f);
-        }
-
         if (!isOccupied)
         {
-            Debug.DrawRay(transform.position, lookDirection * detectionRange, Color.white, 0.2f);
-            if (Physics.Raycast(transform.position, lookDirection, out RaycastHit hit, detectionRange, LayerMask.GetMask("Enemy")))
+            Collider[] colliders = Physics.OverlapSphere(transform.position, battle.Range, LayerMask.GetMask("Enemy"));
+            if (colliders.Length > 0)
             {
-                Debug.DrawLine(transform.position, hit.transform.position, Color.black, 2f);
-                Detected(hit.transform.gameObject);
-            }
-            lookDirection = Quaternion.Euler(0, deltaAngle * sweepDirection, 0) * lookDirection;
-            angleMade += deltaAngle * sweepDirection;
-            if (Mathf.Approximately(angleMade, ExtremeAngle * sweepDirection))
-            {
-                sweepDirection *= -1;
-            }
-        }
+                // Raycast to check if these targets are in line of sight
+                List<GameObject> targets = new List<GameObject>();
+                foreach (Collider collider in colliders)
+                {
+                    Vector3 dir = collider.transform.position - transform.position;
+                    if (Physics.Raycast(transform.position, dir, out RaycastHit hit, battle.Range))
+                    {
+                        if (Equals(hit.collider, collider))
+                        {
+                            targets.Add(collider.gameObject);
+                        }
+                    }
+                }
 
-        else
-        {
-            if (target == null || Vector3.Distance(target.transform.position, transform.position) > detectionRange)
-            {
-                battle?.OnLose();
+                Detected(targets.ToArray());
             }
         }
     }
 
-    void Detected(GameObject enemy)
+    void Detected(GameObject[] targets)
     {
         isOccupied = true;
-        shouldRotate = true;
-        target = enemy;
-        battle?.OnDetect(target);
+        battle?.OnDetect(targets);
     }
 
-    /// <summary>
-    /// Resets the tower to an idle state
-    /// </summary>
-    public void Reset()
+    public void SetOccupied(bool val)
     {
-        isOccupied = false;
-        shouldRotate = false;
-        lookDirection = -transform.forward;
-        angleMade = 0f;
-        sweepDirection = +1;
-        target = null;
+        isOccupied = val;
+    }
+
+    public bool GetOccupied()
+    {
+        return isOccupied;
     }
 }

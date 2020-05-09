@@ -27,6 +27,8 @@ public class TowerPlacer : MonoBehaviour
         if (!blocked)
         {
             Instantiate(TowerObject, transform.position, transform.rotation);
+
+            // TODO: Find a safer way to do this
             Destroy(TowerObject);
             return true;
         }

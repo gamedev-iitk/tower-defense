@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &1247872061
+--- !u!114 &3648852597298360223
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,22 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b4f1776026045846b41a148422ba83b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Attack: 60
+  Attack: 50
   Defense: 0.3
-  Range: 2
-  FireRate: 3
---- !u!114 &1247872070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2899500939617485174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57200ecd6ea7f8e448f6114a6e4f8e66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  Range: 3
+  FireRate: 5
 --- !u!1001 &3276429249400119555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -206,8 +194,8 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 3362462000056208341, guid: c3f33bd9d6e48cf43a6c01ebb8060a3f, type: 3}
-    - {fileID: 427160180144582454, guid: c3f33bd9d6e48cf43a6c01ebb8060a3f, type: 3}
+    - {fileID: 0}
+    - {fileID: 904232128615981435, guid: c3f33bd9d6e48cf43a6c01ebb8060a3f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c3f33bd9d6e48cf43a6c01ebb8060a3f, type: 3}
 --- !u!1 &2899500939617485174 stripped
 GameObject:
