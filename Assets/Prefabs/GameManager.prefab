@@ -73,8 +73,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fedf7740ae8e104890163170a04e855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 7304521332059732316, guid: d4734eb4b28571d44bf71896b9ea8c56, type: 3}
-  bonusEnemy: {fileID: 7304521332059732316, guid: 2b439aacffb36a34887a6cc6a1781450,
+  enemies:
+  - {fileID: 1890128147747476947, guid: bb7a86a2b3efe3241afba503320ea4f9, type: 3}
+  - {fileID: 214956512585621716, guid: 15c7c4d44912bc44599ea22b862d6de9, type: 3}
+  bonusEnemy: {fileID: 214956512585621716, guid: 15c7c4d44912bc44599ea22b862d6de9,
     type: 3}
   bonusWave: 3
   spawnRate: 0.33

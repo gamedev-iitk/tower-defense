@@ -3,15 +3,13 @@ using UnityEngine.AI;
 
 public class AIRunner : MonoBehaviour
 {
-    public Transform StartTransform;
-    public Transform EndTransform;
-
+    private Vector3 destination;
     private NavMeshAgent agent;
 
     void Start()
     {
+        destination = GameObject.Find("Shinboku").transform.position;
         agent = GetComponent<NavMeshAgent>();
-        agent.SetDestination(StartTransform.position);
     }
 
     void FixedUpdate()
@@ -21,7 +19,7 @@ public class AIRunner : MonoBehaviour
 
     private void Move()
     {
-        agent.SetDestination(EndTransform.position);
+        agent.SetDestination(destination);
         Attack();
     }
 

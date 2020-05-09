@@ -3,15 +3,15 @@ using UnityEngine.AI;
 
 public class AIBerzerker : MonoBehaviour
 {
-    public Transform StartTransform;
-    public Transform EndTransform;
-
+    private Vector3 destination;
     private NavMeshAgent agent;
 
+    Transform target;
+    bool isFighting = false;
     void Start()
     {
+        destination = GameObject.Find("Shinboku").transform.position;
         agent = GetComponent<NavMeshAgent>();
-        agent.SetDestination(StartTransform.position);
     }
 
     void FixedUpdate()
@@ -21,18 +21,31 @@ public class AIBerzerker : MonoBehaviour
 
     private void Move()
     {
-        Vector3 dir = EndTransform.position - transform.position;
-        Ray vision_ray = new Ray(transform.position, dir);
-        int mask = LayerMask.GetMask("Enemy");
-
-        if (Physics.Raycast(vision_ray, out RaycastHit hit, mask))
+        if (!isFighting)
         {
-            Transform target = hit.transform;
-            if (!target.CompareTag("Enemy"))
+            Vector3 dir = destination - transform.position;
+            Ray vision_ray = new Ray(transform.position, dir);
+            int mask = LayerMask.GetMask("Player") | LayerMask.GetMask("Base") | LayerMask.GetMask("TowerGeometry");
+            Debug.DrawRay(transform.position, dir * 3f, Color.red, 0.5f);
+            if (Physics.Raycast(vision_ray, out RaycastHit hit, mask))
             {
-                agent.SetDestination(target.position);
-                Attack();
+                target = hit.transform;
+                if (target.CompareTag("Tower") || target.CompareTag("Player") || target.CompareTag("Base"))
+                {
+                    agent.SetDestination(target.position);
+                    isFighting = true;
+                    Attack();
+                }
             }
+            else
+            {
+                agent.SetDestination(destination);
+            }
+        }
+        else
+        {
+            agent.SetDestination(target.position);
+            Attack();
         }
     }
 
