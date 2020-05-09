@@ -10,7 +10,7 @@ public class MineTowerBattle : AbstractBattle
     {
         targets = tgt;
         isFighting = true;
-        timer = 0f;
+        timer = FireRate - 0.5f;
     }
 
     override public void OnLose()

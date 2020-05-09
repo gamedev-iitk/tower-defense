@@ -35,7 +35,10 @@ public class Detection : MonoBehaviour
                     }
                 }
 
-                Detected(targets.ToArray());
+                if (targets.Count > 0)
+                {
+                    Detected(targets.ToArray());
+                }
             }
         }
     }
