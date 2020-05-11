@@ -22,14 +22,14 @@ namespace Tests.Gameplay
         {
             GameObject baseTower = GameObject.Find("BaseTower");
             Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, LayerMask.GetMask("Ground"));
-            EventRegistry.Invoke("togglePlacer", baseTower, hit.point);
+            EventRegistry.Invoke("togglePlacer", baseTower, hit.point, false);
 
             yield return new WaitForSeconds(1f);
             Assert.IsNotNull(GameObject.Find("PlacementIndicator(Clone)"));
 
             // Call it again to remove the placer
             // This call doesn't use the parameters so nulls should work too
-            EventRegistry.Invoke<GameObject, Vector3>("togglePlacer", null, Vector3.zero);
+            EventRegistry.Invoke<GameObject, Vector3, bool>("togglePlacer", null, Vector3.zero, false);
             yield return new WaitForSeconds(0.5f);
             Assert.IsNull(GameObject.Find("PlacementIndicator(Clone)"));
         }
@@ -39,12 +39,12 @@ namespace Tests.Gameplay
         {
             GameObject baseTower = GameObject.Find("BaseTower");
             Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, LayerMask.GetMask("Ground"));
-            EventRegistry.Invoke("togglePlacer", baseTower, hit.point);
+            EventRegistry.Invoke("togglePlacer", baseTower, hit.point, false);
             yield return new WaitForSeconds(0.5f);
 
             // Create a tower through its intended pathway
             TowerPlacer placer = GameObject.Find("PlacementIndicator(Clone)").GetComponent<TowerPlacer>();
-            placer.SetTower(GameObject.Find("BaseTower"));
+            placer.SetTower(GameObject.Find("BaseTower"), false);
             placer.PlaceTower();
 
             yield return new WaitForSeconds(0.5f);
@@ -56,7 +56,7 @@ namespace Tests.Gameplay
         {
             GameObject baseTower = GameObject.Find("BaseTower");
             Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, LayerMask.GetMask("Ground"));
-            EventRegistry.Invoke("togglePlacer", baseTower, hit.point);
+            EventRegistry.Invoke("togglePlacer", baseTower, hit.point, false);
             yield return new WaitForSeconds(0.5f);
 
             GameObject pointer = GameObject.Find("PlacementIndicator(Clone)");

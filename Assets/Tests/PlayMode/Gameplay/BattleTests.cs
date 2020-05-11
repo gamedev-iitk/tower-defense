@@ -22,10 +22,10 @@ namespace Tests.Gameplay
             GameObject tower = GameObject.FindWithTag("Tower");
             GameObject enemy = GameObject.FindWithTag("Enemy");
             tower.GetComponent<AbstractBattle>().FireRate = 0.25f; // increase so that health changes fast
-            tower.GetComponent<AbstractBattle>().OnDetect(new[] {enemy});
+            tower.GetComponent<AbstractBattle>().OnDetect(new[] { enemy });
 
             float health = enemy.GetComponent<Damageable>().GetHealth();
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
             Assert.AreNotEqual(health, enemy.GetComponent<Damageable>().GetHealth());
         }
 

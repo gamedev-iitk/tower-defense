@@ -3,7 +3,9 @@ guid: dd56f57aa650f8243952c4c8f86dabf5
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - PlacerPrefab: {fileID: 603636180280687057, guid: 633f7d526c4f0f84abe3e2240b725934,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

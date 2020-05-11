@@ -22,33 +22,50 @@ namespace Tests.Gameplay
 
         public IEnumerator SpawnerSpawnsEnemies()
         {
+            bool enemyFound = false;
             Spawner spawner = GameObject.Find("GameManager").GetComponent<Spawner>();
             spawner.StartWave(); //Starts Wave
             yield return new WaitForSeconds(spawner.spawnRate + 1);
-            Assert.IsNotNull(GameObject.Find("Enemy(Clone)"));
+            if (GameObject.Find("Runner(Clone)") != null || GameObject.Find("Berzerker(Clone)") != null)
+            {
+                enemyFound = true;
+            }
+            Assert.AreEqual(true, enemyFound);
         }
 
         [UnityTest]
 
         public IEnumerator SpawnerSpawnsAtRegularIntervals()
         {
+            bool enemyFound = false;
+            GameObject firstEnemy;
             Spawner spawner = GameObject.Find("GameManager").GetComponent<Spawner>();
             spawner.StartWave(); //Starts Wave
             yield return new WaitForSeconds(spawner.spawnRate);
-            GameObject.Destroy(GameObject.Find("Enemy(Clone)"));  // destroy first spawned enemy
+            firstEnemy = GameObject.Find("Runner(Clone)");
+            if (firstEnemy == null)
+            {
+                firstEnemy = GameObject.Find("Berzerker(Clone)");
+            }
+            GameObject.Destroy(firstEnemy);  // destroy first spawned enemy
             yield return new WaitForSeconds(spawner.spawnRate);
-            Assert.IsNotNull(GameObject.Find("Enemy(Clone)"));
+            if (GameObject.Find("Runner(Clone)") != null || GameObject.Find("Berzerker(Clone)") != null)
+            {
+                enemyFound = true;
+            }
+            Assert.AreEqual(true, enemyFound);
         }
 
         [UnityTest]
 
         public IEnumerator SpawnerCanTriggerBonusWave()
         {
+            bool enemyFound = false;
             Spawner spawner = GameObject.Find("GameManager").GetComponent<Spawner>();
             GameState.WaveNumber = spawner.bonusWave - 1;
             spawner.StartWave();
             yield return new WaitForSeconds(spawner.spawnRate);
-            Assert.IsNotNull(GameObject.Find("BonusEnemy(Clone)"));
+            Assert.IsNotNull(GameObject.Find("Runner(Clone)"));
         }
     }
 }

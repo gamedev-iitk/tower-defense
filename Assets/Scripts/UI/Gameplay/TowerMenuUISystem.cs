@@ -44,6 +44,6 @@ public class TowerMenuUISystem : MonoBehaviour, IUISystem
         Hide();
         Vector3 spawnLocation = focusedTower.transform.position;
         spawnLocation.y = 0;
-        EventRegistry.Invoke("togglePlacer", focusedTower, spawnLocation);
+        EventRegistry.Invoke("togglePlacer", focusedTower, spawnLocation, true);
     }
 }

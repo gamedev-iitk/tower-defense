@@ -626,7 +626,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -2114,6 +2114,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7927594336079272108, guid: 927097e9d8f20464ab1d304ed91ab658,
+        type: 3}
+      propertyPath: PlacerPrefab
+      value: 
+      objectReference: {fileID: 603636180280687057, guid: 633f7d526c4f0f84abe3e2240b725934,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 927097e9d8f20464ab1d304ed91ab658, type: 3}
 --- !u!1001 &8615896881528960764

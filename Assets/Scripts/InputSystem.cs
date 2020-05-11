@@ -65,7 +65,7 @@ public class InputSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X))
         {
             Physics.Raycast(mainCamera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, LayerMask.GetMask("Ground"));
-            EventRegistry.Invoke("togglePlacer", BaseTower, hit.point);
+            EventRegistry.Invoke("togglePlacer", BaseTower, hit.point, false);
         }
 
         if (Input.GetKeyDown(KeyCode.P))
