@@ -20,7 +20,8 @@ public class MainMenu : MonoBehaviour
     public void OnPlay()
     {
         Debug.Log("Pressed Play. Loading MainScene.");
-        SceneManager.LoadScene("MainScene");
+        //SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("LoadingScene");
         Time.timeScale = 1f;
 
         SceneManager.UnloadSceneAsync("MainMenu");
