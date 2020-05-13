@@ -61,6 +61,21 @@ public static class EventRegistry
         return ev;
     }
 
+    public static TDEvent<TParam1, TParam2, TParam3> GetEvent<TParam1, TParam2, TParam3>(string name)
+    {
+        TDEvent<TParam1, TParam2, TParam3> ev;
+        if (container.ContainsKey(name))
+        {
+            container.TryGetValue(name, out ev);
+        }
+        else
+        {
+            ev = new TDEvent<TParam1, TParam2, TParam3>();
+            container.Add(name, ev);
+        }
+        return ev;
+    }
+
     /// <summary>
     /// Registers a zero argument callback for an event. Creates the event if it doesn't exist.
     /// </summary>
@@ -111,6 +126,20 @@ public static class EventRegistry
             return true;
         }
     }
+    public static bool RegisterAction<TParam1, TParam2, TParam3>(string name, UnityAction<TParam1, TParam2, TParam3> callback)
+    {
+        TDEvent<TParam1, TParam2, TParam3> ev = GetEvent<TParam1, TParam2, TParam3>(name);
+        if (ev == null)
+        {
+            Debug.LogError("Failed to register callback. Type mismatch.");
+            return false;
+        }
+        else
+        {
+            ev?.AddListener(callback);
+            return true;
+        }
+    }
 
     public static void Invoke(string name)
     {
@@ -137,6 +166,19 @@ public static class EventRegistry
         else
         {
             ev.Invoke(param1, param2);
+        }
+    }
+    public static void Invoke<TParam1, TParam2, TParam3>(string name, TParam1 param1, TParam2 param2, TParam3 param3)
+    {
+        container.TryGetValue(name, out TDEvent<TParam1, TParam2, TParam3> ev);
+        if (ev == null)
+        {
+            Debug.LogError("No callback registered for the event " + name + " that supports the supplied parameters. Cannot invoke.");
+            return;
+        }
+        else
+        {
+            ev.Invoke(param1, param2, param3);
         }
     }
 }

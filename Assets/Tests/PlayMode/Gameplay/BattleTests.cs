@@ -25,7 +25,7 @@ namespace Tests.Gameplay
             tower.GetComponent<AbstractBattle>().OnDetect(new[] { enemy });
 
             float health = enemy.GetComponent<Damageable>().GetHealth();
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(1f);
             Assert.AreNotEqual(health, enemy.GetComponent<Damageable>().GetHealth());
         }
 

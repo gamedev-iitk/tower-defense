@@ -16,14 +16,17 @@ public class TowerPlacer : MonoBehaviour
     private readonly Color red = new Color(1, 0, 0, 0.3f);
     private new Renderer renderer;
     private int count;
+    private bool toDestroy;
 
     /// <summary>
     /// Set the tower prefab to be placed.
     /// </summary>
-    /// <param name="reference"></param>
-    public void SetTower(GameObject reference)
+    /// <param name="reference">The tower object to create.</param>
+    /// <param name="isMove">Whether this placer is for moving a tower or creating a new one.</param>
+    public void SetTower(GameObject reference, bool isMove)
     {
         TowerObject = reference;
+        toDestroy = isMove;
     }
 
     /// <summary>
@@ -35,9 +38,10 @@ public class TowerPlacer : MonoBehaviour
         if (!blocked)
         {
             Instantiate(TowerObject, transform.position, transform.rotation);
-
-            // TODO: Find a safer way to do this
-            Destroy(TowerObject);
+            if (toDestroy)
+            {
+                Destroy(TowerObject);
+            }
             return true;
         }
         else
