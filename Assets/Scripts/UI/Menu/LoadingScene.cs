@@ -1,28 +1,30 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+/// Handles loading scene behavior.
+/// </summary>
 public class LoadingScene : MonoBehaviour
 {
-    [SerializeField]
-    private Image _progressbar;
+    private Image progressBar;
+
     void Start()
     {
+        progressBar = GameObject.Find("BarFill").GetComponent<Image>();
         StartCoroutine(LoadAsyncOperation());
     }
 
+    ///<summary>
+    /// Load the MainScene and update progress bar.
+    /// </summary>
     IEnumerator LoadAsyncOperation()
     {
-        AsyncOperation gameLevel = SceneManager.LoadSceneAsync("MainMenu");
-        ///<summary>
-        ///Checks progress of loading up of the fame level
-        /// </summary>
-
+        AsyncOperation gameLevel = SceneManager.LoadSceneAsync("MainScene");
         while (gameLevel.progress < 1)
         {
-            _progressbar.fillAmount = gameLevel.progress;
+            progressBar.fillAmount = gameLevel.progress;
             yield return new WaitForEndOfFrame();
         }
     }
