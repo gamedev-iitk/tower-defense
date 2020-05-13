@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class TowerPlacementSystem
+    <title>Class TDEvent&lt;TParam1, TParam2, TParam3&gt;
    | Tower Defense </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class TowerPlacementSystem
+    <meta name="title" content="Class TDEvent&lt;TParam1, TParam2, TParam3&gt;
    | Tower Defense ">
     <meta name="generator" content="docfx 2.52.0.0">
     
@@ -78,95 +78,49 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Global.TowerPlacementSystem">
+            <article class="content wrap" id="_content" data-uid="Global.TDEvent`3">
   
   
-  <h1 id="Global_TowerPlacementSystem" data-uid="Global.TowerPlacementSystem" class="text-break">Class TowerPlacementSystem
+  <h1 id="Global_TDEvent_3" data-uid="Global.TDEvent`3" class="text-break">Class TDEvent&lt;TParam1, TParam2, TParam3&gt;
   </h1>
-  <div class="markdown level0 summary"><p>System to place towers. Sets up the TowerPlacer.</p>
+  <div class="markdown level0 summary"><p>An event that takes callbacks with three parameters</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">UnityEngine.Object</span></div>
-    <div class="level2"><span class="xref">UnityEngine.Component</span></div>
-    <div class="level3"><span class="xref">UnityEngine.Behaviour</span></div>
-    <div class="level4"><span class="xref">UnityEngine.MonoBehaviour</span></div>
-    <div class="level5"><span class="xref">TowerPlacementSystem</span></div>
+    <div class="level1"><span class="xref">UnityEngine.Events.UnityEventBase</span></div>
+    <div class="level2"><a class="xref" href="https://docs.unity3d.com/ScriptReference/Events.UnityEvent_3.html">UnityEvent</a>&lt;TParam1, TParam2, TParam3&gt;</div>
+    <div class="level3"><span class="xref">TDEvent&lt;TParam1, TParam2, TParam3&gt;</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Global.html">Global</a></h6>
   <h6><strong>Assembly</strong>: TowerDefense.dll</h6>
-  <h5 id="Global_TowerPlacementSystem_syntax">Syntax</h5>
+  <h5 id="Global_TDEvent_3_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TowerPlacementSystem : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class TDEvent&lt;TParam1, TParam2, TParam3&gt; : UnityEvent&lt;TParam1, TParam2, TParam3&gt;, ISerializationCallbackReceiver</code></pre>
   </div>
-  <h3 id="fields">Fields
-  </h3>
-  
-  
-  <h4 id="Global_TowerPlacementSystem_PlacerPrefab" data-uid="Global.TowerPlacementSystem.PlacerPrefab">PlacerPrefab</h4>
-  <div class="markdown level1 summary"><p>Prefab to use as the TowerPlacer.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GameObject PlacerPrefab</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.GameObject</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  
-  
-  <a id="Global_TowerPlacementSystem_TogglePlacer_" data-uid="Global.TowerPlacementSystem.TogglePlacer*"></a>
-  <h4 id="Global_TowerPlacementSystem_TogglePlacer_UnityEngine_GameObject_UnityEngine_Vector3_System_Boolean_" data-uid="Global.TowerPlacementSystem.TogglePlacer(UnityEngine.GameObject,UnityEngine.Vector3,System.Boolean)">TogglePlacer(GameObject, Vector3, Boolean)</h4>
-  <div class="markdown level1 summary"><p>Callback for the <code>togglePlacer </code> event. Toggles the TowerPlacer.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void TogglePlacer(GameObject targetTower, Vector3 location, bool isMove)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UnityEngine.GameObject</span></td>
-        <td><span class="parametername">targetTower</span></td>
-        <td><p>The tower to create with this placer.</p>
+        <td><span class="parametername">TParam1</span></td>
+        <td><p>Type of the first parameter</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">UnityEngine.Vector3</span></td>
-        <td><span class="parametername">location</span></td>
-        <td><p>The position to create the placer at.</p>
+        <td><span class="parametername">TParam2</span></td>
+        <td><p>Type of the second parameter</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">isMove</span></td>
-        <td><p>Whether we are moving or creating a new tower.</p>
+        <td><span class="parametername">TParam3</span></td>
+        <td><p>Type of the third parameter</p>
 </td>
       </tr>
     </tbody>

@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 
 namespace Tests.Gameplay
 {
-
-    // TODO: FIX
     public class BattleTests : MonoBehaviour
     {
         [SetUp]
@@ -60,9 +58,6 @@ namespace Tests.Gameplay
         {
             GameObject tower = GameObject.FindWithTag("Tower");
             GameObject enemy = GameObject.FindWithTag("Enemy");
-
-            // Destroy enemy fast
-            // tower.GetComponent<AbstractBattle>().Attack = 1000;
 
             // Place the enemy
             float distance = tower.GetComponent<AbstractBattle>().Range;

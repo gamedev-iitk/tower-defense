@@ -376,6 +376,15 @@ references:
   fullName.vb: EventRegistry.GetEvent(Of TParam1, TParam2)(System.String)
   nameWithType: EventRegistry.GetEvent<TParam1, TParam2>(String)
   nameWithType.vb: EventRegistry.GetEvent(Of TParam1, TParam2)(String)
+- uid: Global.EventRegistry.GetEvent``3(System.String)
+  name: GetEvent<TParam1, TParam2, TParam3>(String)
+  href: api/Global.EventRegistry.html#Global_EventRegistry_GetEvent__3_System_String_
+  commentId: M:Global.EventRegistry.GetEvent``3(System.String)
+  name.vb: GetEvent(Of TParam1, TParam2, TParam3)(String)
+  fullName: EventRegistry.GetEvent<TParam1, TParam2, TParam3>(System.String)
+  fullName.vb: EventRegistry.GetEvent(Of TParam1, TParam2, TParam3)(System.String)
+  nameWithType: EventRegistry.GetEvent<TParam1, TParam2, TParam3>(String)
+  nameWithType.vb: EventRegistry.GetEvent(Of TParam1, TParam2, TParam3)(String)
 - uid: Global.EventRegistry.Invoke(System.String)
   name: Invoke(String)
   href: api/Global.EventRegistry.html#Global_EventRegistry_Invoke_System_String_
@@ -398,6 +407,15 @@ references:
   fullName.vb: EventRegistry.Invoke(Of TParam1, TParam2)(System.String, TParam1, TParam2)
   nameWithType: EventRegistry.Invoke<TParam1, TParam2>(String, TParam1, TParam2)
   nameWithType.vb: EventRegistry.Invoke(Of TParam1, TParam2)(String, TParam1, TParam2)
+- uid: Global.EventRegistry.Invoke``3(System.String,``0,``1,``2)
+  name: Invoke<TParam1, TParam2, TParam3>(String, TParam1, TParam2, TParam3)
+  href: api/Global.EventRegistry.html#Global_EventRegistry_Invoke__3_System_String___0___1___2_
+  commentId: M:Global.EventRegistry.Invoke``3(System.String,``0,``1,``2)
+  name.vb: Invoke(Of TParam1, TParam2, TParam3)(String, TParam1, TParam2, TParam3)
+  fullName: EventRegistry.Invoke<TParam1, TParam2, TParam3>(System.String, TParam1, TParam2, TParam3)
+  fullName.vb: EventRegistry.Invoke(Of TParam1, TParam2, TParam3)(System.String, TParam1, TParam2, TParam3)
+  nameWithType: EventRegistry.Invoke<TParam1, TParam2, TParam3>(String, TParam1, TParam2, TParam3)
+  nameWithType.vb: EventRegistry.Invoke(Of TParam1, TParam2, TParam3)(String, TParam1, TParam2, TParam3)
 - uid: Global.EventRegistry.RegisterAction(System.String,UnityEngine.Events.UnityAction)
   name: RegisterAction(String, UnityAction)
   href: api/Global.EventRegistry.html#Global_EventRegistry_RegisterAction_System_String_UnityEngine_Events_UnityAction_
@@ -429,6 +447,15 @@ references:
   fullName.vb: EventRegistry.RegisterAction(Of TParam1, TParam2)(System.String, UnityEngine.Events.UnityAction(Of TParam1, TParam2))
   nameWithType: EventRegistry.RegisterAction<TParam1, TParam2>(String, UnityAction<TParam1, TParam2>)
   nameWithType.vb: EventRegistry.RegisterAction(Of TParam1, TParam2)(String, UnityAction(Of TParam1, TParam2))
+- uid: Global.EventRegistry.RegisterAction``3(System.String,UnityEngine.Events.UnityAction{``0,``1,``2})
+  name: RegisterAction<TParam1, TParam2, TParam3>(String, UnityAction<TParam1, TParam2, TParam3>)
+  href: api/Global.EventRegistry.html#Global_EventRegistry_RegisterAction__3_System_String_UnityEngine_Events_UnityAction___0___1___2__
+  commentId: M:Global.EventRegistry.RegisterAction``3(System.String,UnityEngine.Events.UnityAction{``0,``1,``2})
+  name.vb: RegisterAction(Of TParam1, TParam2, TParam3)(String, UnityAction(Of TParam1, TParam2, TParam3))
+  fullName: EventRegistry.RegisterAction<TParam1, TParam2, TParam3>(System.String, UnityEngine.Events.UnityAction<TParam1, TParam2, TParam3>)
+  fullName.vb: EventRegistry.RegisterAction(Of TParam1, TParam2, TParam3)(System.String, UnityEngine.Events.UnityAction(Of TParam1, TParam2, TParam3))
+  nameWithType: EventRegistry.RegisterAction<TParam1, TParam2, TParam3>(String, UnityAction<TParam1, TParam2, TParam3>)
+  nameWithType.vb: EventRegistry.RegisterAction(Of TParam1, TParam2, TParam3)(String, UnityAction(Of TParam1, TParam2, TParam3))
 - uid: Global.FaceCamera
   name: FaceCamera
   href: api/Global.FaceCamera.html
@@ -641,6 +668,12 @@ references:
   isSpec: "True"
   fullName: IUISystem.Show
   nameWithType: IUISystem.Show
+- uid: Global.LoadingScene
+  name: LoadingScene
+  href: api/Global.LoadingScene.html
+  commentId: T:Global.LoadingScene
+  fullName: LoadingScene
+  nameWithType: LoadingScene
 - uid: Global.MainMenu
   name: MainMenu
   href: api/Global.MainMenu.html
@@ -1370,6 +1403,15 @@ references:
   fullName.vb: TDEvent(Of TParam1, TParam2)
   nameWithType: TDEvent<TParam1, TParam2>
   nameWithType.vb: TDEvent(Of TParam1, TParam2)
+- uid: Global.TDEvent`3
+  name: TDEvent<TParam1, TParam2, TParam3>
+  href: api/Global.TDEvent-3.html
+  commentId: T:Global.TDEvent`3
+  name.vb: TDEvent(Of TParam1, TParam2, TParam3)
+  fullName: TDEvent<TParam1, TParam2, TParam3>
+  fullName.vb: TDEvent(Of TParam1, TParam2, TParam3)
+  nameWithType: TDEvent<TParam1, TParam2, TParam3>
+  nameWithType.vb: TDEvent(Of TParam1, TParam2, TParam3)
 - uid: Global.TestCallback
   name: TestCallback
   href: api/Global.TestCallback.html
@@ -1452,12 +1494,12 @@ references:
   commentId: F:Global.TowerPlacementSystem.PlacerPrefab
   fullName: TowerPlacementSystem.PlacerPrefab
   nameWithType: TowerPlacementSystem.PlacerPrefab
-- uid: Global.TowerPlacementSystem.TogglePlacer(UnityEngine.GameObject,UnityEngine.Vector3)
-  name: TogglePlacer(GameObject, Vector3)
-  href: api/Global.TowerPlacementSystem.html#Global_TowerPlacementSystem_TogglePlacer_UnityEngine_GameObject_UnityEngine_Vector3_
-  commentId: M:Global.TowerPlacementSystem.TogglePlacer(UnityEngine.GameObject,UnityEngine.Vector3)
-  fullName: TowerPlacementSystem.TogglePlacer(UnityEngine.GameObject, UnityEngine.Vector3)
-  nameWithType: TowerPlacementSystem.TogglePlacer(GameObject, Vector3)
+- uid: Global.TowerPlacementSystem.TogglePlacer(UnityEngine.GameObject,UnityEngine.Vector3,System.Boolean)
+  name: TogglePlacer(GameObject, Vector3, Boolean)
+  href: api/Global.TowerPlacementSystem.html#Global_TowerPlacementSystem_TogglePlacer_UnityEngine_GameObject_UnityEngine_Vector3_System_Boolean_
+  commentId: M:Global.TowerPlacementSystem.TogglePlacer(UnityEngine.GameObject,UnityEngine.Vector3,System.Boolean)
+  fullName: TowerPlacementSystem.TogglePlacer(UnityEngine.GameObject, UnityEngine.Vector3, System.Boolean)
+  nameWithType: TowerPlacementSystem.TogglePlacer(GameObject, Vector3, Boolean)
 - uid: Global.TowerPlacementSystem.TogglePlacer*
   name: TogglePlacer
   href: api/Global.TowerPlacementSystem.html#Global_TowerPlacementSystem_TogglePlacer_
@@ -1484,12 +1526,12 @@ references:
   isSpec: "True"
   fullName: TowerPlacer.PlaceTower
   nameWithType: TowerPlacer.PlaceTower
-- uid: Global.TowerPlacer.SetTower(UnityEngine.GameObject)
-  name: SetTower(GameObject)
-  href: api/Global.TowerPlacer.html#Global_TowerPlacer_SetTower_UnityEngine_GameObject_
-  commentId: M:Global.TowerPlacer.SetTower(UnityEngine.GameObject)
-  fullName: TowerPlacer.SetTower(UnityEngine.GameObject)
-  nameWithType: TowerPlacer.SetTower(GameObject)
+- uid: Global.TowerPlacer.SetTower(UnityEngine.GameObject,System.Boolean)
+  name: SetTower(GameObject, Boolean)
+  href: api/Global.TowerPlacer.html#Global_TowerPlacer_SetTower_UnityEngine_GameObject_System_Boolean_
+  commentId: M:Global.TowerPlacer.SetTower(UnityEngine.GameObject,System.Boolean)
+  fullName: TowerPlacer.SetTower(UnityEngine.GameObject, System.Boolean)
+  nameWithType: TowerPlacer.SetTower(GameObject, Boolean)
 - uid: Global.TowerPlacer.SetTower*
   name: SetTower
   href: api/Global.TowerPlacer.html#Global_TowerPlacer_SetTower_
@@ -2092,6 +2134,19 @@ references:
   isSpec: "True"
   fullName: Tests.Gameplay.BattleTests.SetUp
   nameWithType: BattleTests.SetUp
+- uid: Tests.Gameplay.BattleTests.TowerAttacksNearestEnemy
+  name: TowerAttacksNearestEnemy()
+  href: api/Tests.Gameplay.BattleTests.html#Tests_Gameplay_BattleTests_TowerAttacksNearestEnemy
+  commentId: M:Tests.Gameplay.BattleTests.TowerAttacksNearestEnemy
+  fullName: Tests.Gameplay.BattleTests.TowerAttacksNearestEnemy()
+  nameWithType: BattleTests.TowerAttacksNearestEnemy()
+- uid: Tests.Gameplay.BattleTests.TowerAttacksNearestEnemy*
+  name: TowerAttacksNearestEnemy
+  href: api/Tests.Gameplay.BattleTests.html#Tests_Gameplay_BattleTests_TowerAttacksNearestEnemy_
+  commentId: Overload:Tests.Gameplay.BattleTests.TowerAttacksNearestEnemy
+  isSpec: "True"
+  fullName: Tests.Gameplay.BattleTests.TowerAttacksNearestEnemy
+  nameWithType: BattleTests.TowerAttacksNearestEnemy
 - uid: Tests.Gameplay.BattleTests.TowerRevertsToIdleOnTargetLose
   name: TowerRevertsToIdleOnTargetLose()
   href: api/Tests.Gameplay.BattleTests.html#Tests_Gameplay_BattleTests_TowerRevertsToIdleOnTargetLose

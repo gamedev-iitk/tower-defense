@@ -15,13 +15,11 @@ public class MainMenu : MonoBehaviour
 
     /// <summary>
     /// Callback for the play button. Loads the next scene.
-    /// TODO: Use async operations and a loading screen to change scenes
     /// </summary>
     public void OnPlay()
     {
-        SceneManager.LoadScene("LoadingScene");
+        SceneManager.LoadSceneAsync("LoadingScene");
         Time.timeScale = 1f;
-
         SceneManager.UnloadSceneAsync("MainMenu");
     }
 
