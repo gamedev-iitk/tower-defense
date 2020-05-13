@@ -9,25 +9,22 @@ public class RangedTowerBattle : AbstractBattle
     private bool isFighting = false;
     private bool turn = false;
     private float timer;
-    private float minDistance;
-    private GameObject nearestTarget;
-    
+
     override public void OnDetect(GameObject[] targets)
     {
-        // TODO: Select the closest target instead of the first
-       nearestTarget = targets[0];
-        minDistance = (nearestTarget.transform.position - transform.position).magnitude;
-       
-        foreach (GameObject targeti in targets) {
-            if ((targeti.transform.position - transform.position).magnitude <= minDistance){
+        // Select the nearest target
+        GameObject nearestTarget = targets[0];
+        float minDistance = (nearestTarget.transform.position - transform.position).magnitude;
+        foreach (GameObject targeti in targets)
+        {
+            if ((targeti.transform.position - transform.position).magnitude <= minDistance)
+            {
                 minDistance = (targeti.transform.position - transform.position).magnitude;
-                nearestTarget = targeti; 
+                nearestTarget = targeti;
+            }
 
-            } 
-            
         }
 
-     
         target = nearestTarget;
         isFighting = true;
         turn = true;
@@ -44,7 +41,7 @@ public class RangedTowerBattle : AbstractBattle
 
     void Update()
     {
-        
+
         if (target == null)
         {
             OnLose();
