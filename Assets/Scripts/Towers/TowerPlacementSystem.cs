@@ -35,7 +35,8 @@ public class TowerPlacementSystem : MonoBehaviour
     /// </summary>
     /// <param name="targetTower">The tower to create with this placer.</param>
     /// <param name="location">The position to create the placer at.</param>
-    public void TogglePlacer(GameObject targetTower, Vector3 location, bool action)
+    /// <param name="isMove">Whether we are moving or creating a new tower.</param>
+    public void TogglePlacer(GameObject targetTower, Vector3 location, bool isMove)
     {
         if (isActive)
         {
@@ -43,15 +44,15 @@ public class TowerPlacementSystem : MonoBehaviour
         }
         else
         {
-            CreatePlacer(targetTower, location, action);
+            CreatePlacer(targetTower, location, isMove);
         }
     }
 
-    private void CreatePlacer(GameObject targetTower, Vector3 location, bool action)
+    private void CreatePlacer(GameObject targetTower, Vector3 location, bool isMove)
     {
-        location.y = 0;  //so that indicator spawn on the ground
+        location.y = 0;  // so that the indicator spawns on the ground
         instance = Instantiate(PlacerPrefab, location, Quaternion.identity);
-        instance.GetComponent<TowerPlacer>().SetTower(targetTower, action);
+        instance.GetComponent<TowerPlacer>().SetTower(targetTower, isMove);
         isActive = true;
     }
 

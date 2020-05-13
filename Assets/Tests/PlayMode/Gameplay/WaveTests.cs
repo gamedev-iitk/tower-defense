@@ -60,10 +60,10 @@ namespace Tests.Gameplay
 
         public IEnumerator SpawnerCanTriggerBonusWave()
         {
-            bool enemyFound = false;
             Spawner spawner = GameObject.Find("GameManager").GetComponent<Spawner>();
             GameState.WaveNumber = spawner.bonusWave - 1;
             spawner.StartWave();
+            
             yield return new WaitForSeconds(spawner.spawnRate);
             Assert.IsNotNull(GameObject.Find("Runner(Clone)"));
         }

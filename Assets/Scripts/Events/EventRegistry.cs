@@ -60,6 +60,7 @@ public static class EventRegistry
         }
         return ev;
     }
+
     public static TDEvent<TParam1, TParam2, TParam3> GetEvent<TParam1, TParam2, TParam3>(string name)
     {
         TDEvent<TParam1, TParam2, TParam3> ev;

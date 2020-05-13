@@ -19,7 +19,7 @@ public class TDEvent<TParam> : UnityEvent<TParam> { }
 public class TDEvent<TParam1, TParam2> : UnityEvent<TParam1, TParam2> { }
 
 /// <summary>
-/// An event that takes callbacks with two parameters
+/// An event that takes callbacks with three parameters
 /// </summary>
 /// <typeparam name="TParam1">Type of the first parameter</typeparam>
 /// <typeparam name="TParam2">Type of the second parameter</typeparam>
