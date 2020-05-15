@@ -53,12 +53,12 @@ namespace Tests.UI
             GameObject baseTower = GameObject.Find("BaseTower");
             EventRegistry.Invoke("showMenu", baseTower, typeof(TowerMenuUISystem));
             GameObject towerMenu = GameObject.Find("TowerMenuUI");
-
             // Bring up the move tool
             towerMenu.GetComponent<TowerMenuUISystem>().OnMoveClick();
             GameObject indicator = GameObject.Find("PlacementIndicator(Clone)");
-            bool check = indicator.GetComponent<TowerPlacer>().PlaceTower();
-
+            indicator.GetComponent<TowerPlacer>().PlaceTower();
+            indicator.GetComponent<TowerPlacer>().MoveTransaction(true);
+            bool check = indicator.GetComponent<TowerPlacer>().CheckTransaction();
             yield return null;
             Assert.IsTrue(check);
             Assert.IsNotNull(GameObject.Find("BaseTower(Clone)"));

@@ -92,4 +92,29 @@ static class ETowerTypeUtils
                 }
         }
     }
+
+    /// <summary>
+    /// Get the cost for moving the tower.
+    /// </summary>
+    /// <param name="type">The type of tower to move.</param>
+    /// <returns>Integer cost for the movement of that tower.</returns>
+    public static int GetMoveCost(this ETowerType type)
+    {
+        switch (type)
+        {
+            case ETowerType.Base:
+                return 50;
+            case ETowerType.Gold:
+                return 75;
+            case ETowerType.Green:
+                return 75;
+            case ETowerType.Red:
+                return 100;
+            default:
+                {
+                    Debug.LogError("Invalid tower type: " + type);
+                    return 0;
+                }
+        }
+    }
 }

@@ -11,12 +11,20 @@ public class TowerPlacer : MonoBehaviour
     /// </summary>
     public GameObject TowerObject;
 
+    private GameObject newTower;
+
     private bool blocked = false;
     private readonly Color green = new Color(0, 1, 0, 0.3f);
     private readonly Color red = new Color(1, 0, 0, 0.3f);
     private new Renderer renderer;
     private int count;
     private bool toDestroy;
+
+    private bool isActionComplete = false;
+
+    private Vector3 placePoint;
+
+    private TDEvent<ETowerType> showMoveDialog;
 
     /// <summary>
     /// Set the tower prefab to be placed.
@@ -35,12 +43,19 @@ public class TowerPlacer : MonoBehaviour
     /// <returns>True if successfully instantiated the tower.</returns>
     public bool PlaceTower()
     {
+        placePoint = transform.position;
         if (!blocked)
         {
-            Instantiate(TowerObject, transform.position, transform.rotation);
             if (toDestroy)
             {
-                Destroy(TowerObject);
+                string type = ETowerTypeUtils.GetString(TowerObject.GetComponent<TowerType>().Type);
+                ETowerType requestedType = ETowerTypeUtils.GetTowerType(type);
+                showMoveDialog.Invoke(requestedType);
+            }
+            else
+            {
+                isActionComplete = true;
+                Instantiate(TowerObject, placePoint, transform.rotation);
             }
             return true;
         }
@@ -50,9 +65,27 @@ public class TowerPlacer : MonoBehaviour
         }
     }
 
-    void Start()
+    public bool CheckTransaction()
+    {
+        return isActionComplete;
+    }
+
+    public void MoveTransaction(bool confirmation)
+    {
+        if (confirmation)
+        {
+            Instantiate(TowerObject, placePoint, transform.rotation);
+            Destroy(TowerObject);
+        }
+        isActionComplete = true;
+    }
+
+    void Awake()
     {
         renderer = GetComponent<Renderer>();
+        showMoveDialog = EventRegistry.GetEvent<ETowerType>("showMoveDialog");
+        EventRegistry.RegisterAction<bool>("moveTransaction", MoveTransaction);
+        toDestroy = false;
     }
 
     void LateUpdate()

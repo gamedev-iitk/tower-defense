@@ -13,6 +13,9 @@ public class WalletUISystem : MonoBehaviour
     private Text cashDisplay;
 
     private TDEvent<ETowerType> createTower;
+
+    private TDEvent<bool> moveTransaction;
+
     private TDEvent cancelTowerCreation;
 
     void Start()
@@ -23,7 +26,9 @@ public class WalletUISystem : MonoBehaviour
         // Register events and callbacks
         createTower = EventRegistry.GetEvent<ETowerType>("createTower");
         cancelTowerCreation = EventRegistry.GetEvent("cancelTowerCreation");
+        moveTransaction = EventRegistry.GetEvent<bool>("moveTransaction");
         EventRegistry.RegisterAction<ETowerType>("showUpgradeDialog", ShowUpgradeDialog);
+        EventRegistry.RegisterAction<ETowerType>("showMoveDialog", ShowMoveDialog);
     }
 
     void Update()
@@ -58,13 +63,13 @@ public class WalletUISystem : MonoBehaviour
         }
         else
         {
-            messageString = "Upgrade to " + type.GetString() + "will cost $" + cost + ". You have $" + GameState.CurrentCash;
+            messageString = "Upgrade to " + type.GetString() + " will cost $" + cost + ". You have $" + GameState.CurrentCash;
             config.OK = new DialogButton(
-                onClick: OnOKClick,
+                onClick: OnOKClickUpgrade,
                 text: "Upgrade"
             );
             config.Cancel = new DialogButton(
-                onClick: OnCancelClick,
+                onClick: OnCancelClickUpgrade,
                 text: "Cancel"
             );
         }
@@ -74,9 +79,52 @@ public class WalletUISystem : MonoBehaviour
     }
 
     /// <summary>
-    /// Passed an a callback for the OK button on the upgrade dialog.
+    /// Callback for "showMoveDialog" event. Generates content for the move confirmation
+    /// dialog and enables it.
     /// </summary>
-    public void OnOKClick()
+    /// <param name="type"></param>
+    public void ShowMoveDialog(ETowerType type)
+    {
+        currentType = type;
+        DialogConfig config = new DialogConfig();
+
+        int cost = currentType.GetMoveCost();
+        string messageString;
+        if (cost > GameState.CurrentCash)
+        {
+            messageString = "You don't have enough cash. Required: " + cost + ". You have $" + GameState.CurrentCash;
+
+            // As both buttons won't do anything special in this case, you could leave the callback
+            config.OK = new DialogButton(
+                interactable: false,
+                text: "Move"
+            );
+            config.Cancel = new DialogButton(
+                onClick: OnCancelClickMove,
+                text: "Cancel"
+            );
+        }
+        else
+        {
+            messageString = "Moving " + type.GetString() + " will cost $" + cost + ". You have $" + GameState.CurrentCash;
+            config.OK = new DialogButton(
+                onClick: OnOKClickMove,
+                text: "Move"
+            );
+            config.Cancel = new DialogButton(
+                onClick: OnCancelClickMove,
+                text: "Cancel"
+            );
+        }
+
+        config.Message = messageString;
+        dialogSystem.Show(config);
+    }
+
+    /// <summary>
+    /// Passed as a callback for the OK button on the upgrade dialog.
+    /// </summary>
+    public void OnOKClickUpgrade()
     {
         GameState.CurrentCash -= currentType.GetCost();
         createTower.Invoke(currentType);
@@ -85,8 +133,25 @@ public class WalletUISystem : MonoBehaviour
     /// <summary>
     /// Passed as a callback for the Cancel button on the upgrade dialog.
     /// </summary>
-    public void OnCancelClick()
+    public void OnCancelClickUpgrade()
     {
         cancelTowerCreation.Invoke();
+    }
+
+    /// <summary>
+    /// Passed as a callback for the OK button on the move dialog.
+    /// </summary>
+    public void OnOKClickMove()
+    {
+        GameState.CurrentCash -= currentType.GetMoveCost();
+        moveTransaction.Invoke(true);
+    }
+
+    /// <summary>
+    /// Passed as a callback for the Cancel button on the move dialog.
+    /// </summary>
+    public void OnCancelClickMove()
+    {
+        moveTransaction.Invoke(false);
     }
 }

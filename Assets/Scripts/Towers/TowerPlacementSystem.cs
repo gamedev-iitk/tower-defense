@@ -14,6 +14,8 @@ public class TowerPlacementSystem : MonoBehaviour
     private GameObject focus;
     private bool isActive = false;
 
+    private bool isChecking = false;
+
     void Start()
     {
         EventRegistry.RegisterAction<GameObject, Vector3, bool>("togglePlacer", TogglePlacer);
@@ -21,13 +23,25 @@ public class TowerPlacementSystem : MonoBehaviour
 
     void Update()
     {
-        if (isActive && Input.GetButtonDown("Fire1"))
+        if (isChecking)
         {
-            if (instance.GetComponent<TowerPlacer>().PlaceTower())
+            if (isActive && instance.GetComponent<TowerPlacer>().CheckTransaction())
             {
+                isChecking = false;
                 DestroyPlacer();
             }
         }
+        else
+        {
+            if (isActive && Input.GetButtonDown("Fire1"))
+            {
+                if (instance.GetComponent<TowerPlacer>().PlaceTower())
+                {
+                    isChecking = true;
+                }
+            }
+        }
+
     }
 
     /// <summary>
@@ -54,6 +68,7 @@ public class TowerPlacementSystem : MonoBehaviour
         instance = Instantiate(PlacerPrefab, location, Quaternion.identity);
         instance.GetComponent<TowerPlacer>().SetTower(targetTower, isMove);
         isActive = true;
+        isChecking = false;
     }
 
     private void DestroyPlacer()
