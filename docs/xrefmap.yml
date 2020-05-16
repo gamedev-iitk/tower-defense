@@ -1513,6 +1513,32 @@ references:
   commentId: T:Global.TowerPlacer
   fullName: TowerPlacer
   nameWithType: TowerPlacer
+- uid: Global.TowerPlacer.CheckTransaction
+  name: CheckTransaction()
+  href: api/Global.TowerPlacer.html#Global_TowerPlacer_CheckTransaction
+  commentId: M:Global.TowerPlacer.CheckTransaction
+  fullName: TowerPlacer.CheckTransaction()
+  nameWithType: TowerPlacer.CheckTransaction()
+- uid: Global.TowerPlacer.CheckTransaction*
+  name: CheckTransaction
+  href: api/Global.TowerPlacer.html#Global_TowerPlacer_CheckTransaction_
+  commentId: Overload:Global.TowerPlacer.CheckTransaction
+  isSpec: "True"
+  fullName: TowerPlacer.CheckTransaction
+  nameWithType: TowerPlacer.CheckTransaction
+- uid: Global.TowerPlacer.MoveTransaction(System.Boolean)
+  name: MoveTransaction(Boolean)
+  href: api/Global.TowerPlacer.html#Global_TowerPlacer_MoveTransaction_System_Boolean_
+  commentId: M:Global.TowerPlacer.MoveTransaction(System.Boolean)
+  fullName: TowerPlacer.MoveTransaction(System.Boolean)
+  nameWithType: TowerPlacer.MoveTransaction(Boolean)
+- uid: Global.TowerPlacer.MoveTransaction*
+  name: MoveTransaction
+  href: api/Global.TowerPlacer.html#Global_TowerPlacer_MoveTransaction_
+  commentId: Overload:Global.TowerPlacer.MoveTransaction
+  isSpec: "True"
+  fullName: TowerPlacer.MoveTransaction
+  nameWithType: TowerPlacer.MoveTransaction
 - uid: Global.TowerPlacer.PlaceTower
   name: PlaceTower()
   href: api/Global.TowerPlacer.html#Global_TowerPlacer_PlaceTower
@@ -2038,32 +2064,71 @@ references:
   commentId: T:Global.WalletUISystem
   fullName: WalletUISystem
   nameWithType: WalletUISystem
-- uid: Global.WalletUISystem.OnCancelClick
-  name: OnCancelClick()
-  href: api/Global.WalletUISystem.html#Global_WalletUISystem_OnCancelClick
-  commentId: M:Global.WalletUISystem.OnCancelClick
-  fullName: WalletUISystem.OnCancelClick()
-  nameWithType: WalletUISystem.OnCancelClick()
-- uid: Global.WalletUISystem.OnCancelClick*
-  name: OnCancelClick
-  href: api/Global.WalletUISystem.html#Global_WalletUISystem_OnCancelClick_
-  commentId: Overload:Global.WalletUISystem.OnCancelClick
+- uid: Global.WalletUISystem.OnCancelClickMove
+  name: OnCancelClickMove()
+  href: api/Global.WalletUISystem.html#Global_WalletUISystem_OnCancelClickMove
+  commentId: M:Global.WalletUISystem.OnCancelClickMove
+  fullName: WalletUISystem.OnCancelClickMove()
+  nameWithType: WalletUISystem.OnCancelClickMove()
+- uid: Global.WalletUISystem.OnCancelClickMove*
+  name: OnCancelClickMove
+  href: api/Global.WalletUISystem.html#Global_WalletUISystem_OnCancelClickMove_
+  commentId: Overload:Global.WalletUISystem.OnCancelClickMove
   isSpec: "True"
-  fullName: WalletUISystem.OnCancelClick
-  nameWithType: WalletUISystem.OnCancelClick
-- uid: Global.WalletUISystem.OnOKClick
-  name: OnOKClick()
-  href: api/Global.WalletUISystem.html#Global_WalletUISystem_OnOKClick
-  commentId: M:Global.WalletUISystem.OnOKClick
-  fullName: WalletUISystem.OnOKClick()
-  nameWithType: WalletUISystem.OnOKClick()
-- uid: Global.WalletUISystem.OnOKClick*
-  name: OnOKClick
-  href: api/Global.WalletUISystem.html#Global_WalletUISystem_OnOKClick_
-  commentId: Overload:Global.WalletUISystem.OnOKClick
+  fullName: WalletUISystem.OnCancelClickMove
+  nameWithType: WalletUISystem.OnCancelClickMove
+- uid: Global.WalletUISystem.OnCancelClickUpgrade
+  name: OnCancelClickUpgrade()
+  href: api/Global.WalletUISystem.html#Global_WalletUISystem_OnCancelClickUpgrade
+  commentId: M:Global.WalletUISystem.OnCancelClickUpgrade
+  fullName: WalletUISystem.OnCancelClickUpgrade()
+  nameWithType: WalletUISystem.OnCancelClickUpgrade()
+- uid: Global.WalletUISystem.OnCancelClickUpgrade*
+  name: OnCancelClickUpgrade
+  href: api/Global.WalletUISystem.html#Global_WalletUISystem_OnCancelClickUpgrade_
+  commentId: Overload:Global.WalletUISystem.OnCancelClickUpgrade
   isSpec: "True"
-  fullName: WalletUISystem.OnOKClick
-  nameWithType: WalletUISystem.OnOKClick
+  fullName: WalletUISystem.OnCancelClickUpgrade
+  nameWithType: WalletUISystem.OnCancelClickUpgrade
+- uid: Global.WalletUISystem.OnOKClickMove
+  name: OnOKClickMove()
+  href: api/Global.WalletUISystem.html#Global_WalletUISystem_OnOKClickMove
+  commentId: M:Global.WalletUISystem.OnOKClickMove
+  fullName: WalletUISystem.OnOKClickMove()
+  nameWithType: WalletUISystem.OnOKClickMove()
+- uid: Global.WalletUISystem.OnOKClickMove*
+  name: OnOKClickMove
+  href: api/Global.WalletUISystem.html#Global_WalletUISystem_OnOKClickMove_
+  commentId: Overload:Global.WalletUISystem.OnOKClickMove
+  isSpec: "True"
+  fullName: WalletUISystem.OnOKClickMove
+  nameWithType: WalletUISystem.OnOKClickMove
+- uid: Global.WalletUISystem.OnOKClickUpgrade
+  name: OnOKClickUpgrade()
+  href: api/Global.WalletUISystem.html#Global_WalletUISystem_OnOKClickUpgrade
+  commentId: M:Global.WalletUISystem.OnOKClickUpgrade
+  fullName: WalletUISystem.OnOKClickUpgrade()
+  nameWithType: WalletUISystem.OnOKClickUpgrade()
+- uid: Global.WalletUISystem.OnOKClickUpgrade*
+  name: OnOKClickUpgrade
+  href: api/Global.WalletUISystem.html#Global_WalletUISystem_OnOKClickUpgrade_
+  commentId: Overload:Global.WalletUISystem.OnOKClickUpgrade
+  isSpec: "True"
+  fullName: WalletUISystem.OnOKClickUpgrade
+  nameWithType: WalletUISystem.OnOKClickUpgrade
+- uid: Global.WalletUISystem.ShowMoveDialog(ETowerType)
+  name: ShowMoveDialog(ETowerType)
+  href: api/Global.WalletUISystem.html#Global_WalletUISystem_ShowMoveDialog_ETowerType_
+  commentId: M:Global.WalletUISystem.ShowMoveDialog(ETowerType)
+  fullName: WalletUISystem.ShowMoveDialog(ETowerType)
+  nameWithType: WalletUISystem.ShowMoveDialog(ETowerType)
+- uid: Global.WalletUISystem.ShowMoveDialog*
+  name: ShowMoveDialog
+  href: api/Global.WalletUISystem.html#Global_WalletUISystem_ShowMoveDialog_
+  commentId: Overload:Global.WalletUISystem.ShowMoveDialog
+  isSpec: "True"
+  fullName: WalletUISystem.ShowMoveDialog
+  nameWithType: WalletUISystem.ShowMoveDialog
 - uid: Global.WalletUISystem.ShowUpgradeDialog(ETowerType)
   name: ShowUpgradeDialog(ETowerType)
   href: api/Global.WalletUISystem.html#Global_WalletUISystem_ShowUpgradeDialog_ETowerType_

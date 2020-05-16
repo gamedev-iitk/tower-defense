@@ -73,7 +73,7 @@ static class ETowerTypeUtils
     /// </summary>
     /// <param name="type">The type of tower to upgrade to.</param>
     /// <returns>Integer cost for that tower.</returns>
-    public static int GetCost(this ETowerType type)
+    public static int GetUpgradeCost(this ETowerType type)
     {
         switch (type)
         {

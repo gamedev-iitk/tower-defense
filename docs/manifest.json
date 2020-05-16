@@ -496,7 +496,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.TowerPlacer.html",
-          "hash": "NtDnpGve4CNGkyNWvMPiIw=="
+          "hash": "6Ws1BRwoGdfC2J9DhyXJvw=="
         }
       },
       "is_incremental": false,
@@ -652,7 +652,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.WalletUISystem.html",
-          "hash": "eKtA1c374z/aQHyrAuBLTA=="
+          "hash": "BT4cA4UbZhZ6LJywuxoOjg=="
         }
       },
       "is_incremental": false,
@@ -975,7 +975,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 69,
-          "skipped_file_count": 59
+          "skipped_file_count": 66
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

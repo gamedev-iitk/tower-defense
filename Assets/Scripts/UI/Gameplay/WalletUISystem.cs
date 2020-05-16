@@ -46,7 +46,7 @@ public class WalletUISystem : MonoBehaviour
         currentType = type;
         DialogConfig config = new DialogConfig();
 
-        int cost = currentType.GetCost();
+        int cost = currentType.GetUpgradeCost();
         string messageString;
         if (cost > GameState.CurrentCash)
         {
@@ -126,7 +126,7 @@ public class WalletUISystem : MonoBehaviour
     /// </summary>
     public void OnOKClickUpgrade()
     {
-        GameState.CurrentCash -= currentType.GetCost();
+        GameState.CurrentCash -= currentType.GetUpgradeCost();
         createTower.Invoke(currentType);
     }
 
