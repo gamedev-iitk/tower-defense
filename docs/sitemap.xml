@@ -2,433 +2,433 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.AbstractBattle.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.AIBerzerker.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.AIController.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.AIRunner.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.Damageable.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.Detection.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.DialogButton.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.DialogConfig.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.DialogSystem.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.ETowerType.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.EventRegistry.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.FaceCamera.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.FramerateMonitor.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.GameState.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.GenericMap-1.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.HealthBarUI.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.InputSystem.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.IUISystem.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.LoadingScene.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.MainMenu.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.MineTowerBattle.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.PauseMenu.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.RangedTowerBattle.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.SerializableDictionary.Storage-1.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.SerializableDictionary.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.SerializableDictionary-2.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.SerializableDictionary-3.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.SerializableDictionaryBase-3.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.SerializableDictionaryPropertyDrawer.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.SerializableDictionaryStoragePropertyDrawer.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.Spawner.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.TDEvent.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.TDEvent-1.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.TDEvent-2.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.TDEvent-3.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.TestCallback.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.TestEventCall.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.TowerMenuUISystem.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.TowerPlacementSystem.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.TowerPlacer.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.TowerType.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.TowerTypeBoolDictionary.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.TowerTypeBoolDictionaryPropertyDrawer.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.UIManager.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.UpgradeMenuUISystem.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.UpgradeTree.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.UserReportingConfigureOnly.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.UserReportingMonitor.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.UserReportingPlatformType.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.UserReportingScript.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.UserReportingState.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.UserReportingXRExtensions.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.WalletUISystem.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.WaveTimerUI.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Global.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Tests.Gameplay.BattleTests.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Tests.Gameplay.DamageableTests.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Tests.Gameplay.DetectionTests.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Tests.Gameplay.EditModeSampleTest.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Tests.Gameplay.MovementTests.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Tests.Gameplay.TowerPlacerTests.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Tests.Gameplay.WaveTests.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Tests.Gameplay.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Tests.UI.DialogTests.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Tests.UI.TowerUIMenuTests.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Tests.UI.UpgradeUIMenuTests.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Tests.UI.WalletUITests.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Tests.UI.WaveUITests.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/api/Tests.UI.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/index.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/manual/Events.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://gamedev-iitk.github.io/tower-defense/manual/SerializableDictionary.html</loc>
-    <lastmod>2020-05-13T03:06:29+05:30</lastmod>
+    <lastmod>2020-05-16T08:38:49+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

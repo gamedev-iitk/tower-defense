@@ -11,9 +11,7 @@ public class TowerPlacementSystem : MonoBehaviour
     public GameObject PlacerPrefab;
 
     private GameObject instance;
-    private GameObject focus;
     private bool isActive = false;
-
     private bool isChecking = false;
 
     void Start()
