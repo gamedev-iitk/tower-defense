@@ -122,6 +122,75 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 094e3f4313ce55945a8c7d77fa522b8b, type: 2}
+--- !u!1001 &831797858
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5951486267733696227, guid: deb1d5ec0798dfd4f86c3b7eec1235bd,
+        type: 3}
+      propertyPath: m_Name
+      value: Barrel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263379184053333232, guid: deb1d5ec0798dfd4f86c3b7eec1235bd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.882
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263379184053333232, guid: deb1d5ec0798dfd4f86c3b7eec1235bd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.038
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263379184053333232, guid: deb1d5ec0798dfd4f86c3b7eec1235bd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.952
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263379184053333232, guid: deb1d5ec0798dfd4f86c3b7eec1235bd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00000008146035
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263379184053333232, guid: deb1d5ec0798dfd4f86c3b7eec1235bd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.00000004371139
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263379184053333232, guid: deb1d5ec0798dfd4f86c3b7eec1235bd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 3.6219773e-15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263379184053333232, guid: deb1d5ec0798dfd4f86c3b7eec1235bd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263379184053333232, guid: deb1d5ec0798dfd4f86c3b7eec1235bd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263379184053333232, guid: deb1d5ec0798dfd4f86c3b7eec1235bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263379184053333232, guid: deb1d5ec0798dfd4f86c3b7eec1235bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263379184053333232, guid: deb1d5ec0798dfd4f86c3b7eec1235bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: deb1d5ec0798dfd4f86c3b7eec1235bd, type: 3}
 --- !u!1 &838470604
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,9 +337,9 @@ GameObject:
   - component: {fileID: 1337933912}
   - component: {fileID: 1337933911}
   - component: {fileID: 1337933910}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: Cube
-  m_TagString: Base
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
